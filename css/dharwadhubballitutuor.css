@@ -191,7 +191,7 @@ dd {
   bottom: 0;
 }
 .blink_me1 {
-  animation: blinker 1s linear infinite;
+  animation: blinker 2s linear infinite;
   background-color: #f8c000;
   color: #2a0a5e;
   padding: 15px;
