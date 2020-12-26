@@ -295,13 +295,13 @@ button:hover {
   color: white;
 }
 .footercircle {
-  height: 150px;
-  width: 150px;
-  border-radius: 100px;
+  height: 180;
+  width: 180;
+  border-radius: 300px;
   background: #dc3c4d;
   /* vertical-align: middle; */
   margin-left: 5px;
-  margin-top: 30px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -310,14 +310,15 @@ button:hover {
   color: white;
 }
 .rightsemi {
-  height: 90px;
+  height: 107px;
   max-width: 50%;
   border-radius: 0 90px 90px 0;
   background: #f8c000;
   margin-left: 5px;
+  margin-right: 5px;
 }
 .leftsemi {
-  height: 90px;
+  height: 107px;
   max-width: 50%;
   border-radius: 90px 0 0 90px;
   background: white;
@@ -331,16 +332,18 @@ button:hover {
 }
 .arc {
   max-width: 100%;
-  height: 158px;
-  border-top-left-radius: 500px;
-  border-top-right-radius: 500px;
-  border: 60px solid #dc3c4d;
+  height: 120px;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 201px;
+  border: 45px solid #dc3c4d;
   border-bottom: 0;
   margin-left: 5px;
+  margin-bottom: 05px;
 }
+
 .rect {
   max-width: 100%;
-  height: 95px;
+  height: 125px;
   border: 1px solid #000;
   background: #f8c000;
   margin-left: 5px;
