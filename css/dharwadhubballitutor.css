@@ -286,7 +286,7 @@ button:hover {
   cursor: pointer;
 }
 .footersemi {
-  height: 250px;
+  height: 300px;
 
   border-radius: 0 0 130px 130px;
   background: #ffc5f6;
@@ -310,29 +310,30 @@ button:hover {
   color: white;
 }
 .rightsemi {
-  height: 107px;
+  height: 120px;
   max-width: 50%;
-  border-radius: 0 90px 90px 0;
+  border-radius: 0 95px 95px 0;
   background: #f8c000;
   margin-left: 5px;
   margin-right: 5px;
 }
 .leftsemi {
-  height: 107px;
+  height: 120px;
   max-width: 50%;
-  border-radius: 90px 0 0 90px;
+  border-radius: 95px 0 0 95px;
   background: white;
 }
 .upsemi {
-  height: 162px;
+  height: 168px;
   max-width: 100%;
   border-radius: 100px 100px 0 0;
   background: #dc3c4d;
   margin-left: 5px;
+  margin-top: 10px;
 }
 .arc {
   max-width: 100%;
-  height: 120px;
+  height: 130px;
   border-top-left-radius: 200px;
   border-top-right-radius: 201px;
   border: 45px solid #dc3c4d;
@@ -343,7 +344,7 @@ button:hover {
 
 .rect {
   max-width: 100%;
-  height: 125px;
+  height: 164px;
   border: 1px solid #000;
   background: #f8c000;
   margin-left: 5px;
@@ -354,22 +355,23 @@ button:hover {
   border-radius: 90px 90px 0 0;
   background: white;
   margin-left: 27px;
-  margin-top: 22px;
+  margin-top: 90px;
 }
 .lastsemi {
-  height: 140px;
+  height: 200px;
   max-width: 100%;
   border-radius: 0 0 90px 90px;
   background: #ffc5f6;
   margin-left: 5px;
 }
 .lastcircle {
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80;
   border-radius: 90px;
   background: #dc3c4d;
   /* vertical-align: middle; */
-  margin-top: 60px;
+  margin-left: 5px;
+  margin-top: 95px;
   display: flex;
   justify-content: center;
 }
@@ -379,5 +381,10 @@ button:hover {
   border-radius: 90px 90px 0 0;
   background: #f8c000;
   margin-left: 10px;
-  margin-top: 20px;
+  margin-top: 23px;
+}
+.footrect {
+  background-color: #dc3c4d;
+  color: white;
+  padding: 10px;
 }
