@@ -79,47 +79,10 @@
     </div>
 </body>
 </html>
-
 <?php
 
-require "Model/Registration.php";
-require "Utilities/Sanitization.php";
 
-require "DB Operations/RegistrationOps.php";
 
-  if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $reg=new Registration();
-    $reg->set_name(Sanitization::test_input($_POST["name"]));
-    $reg->set_email(Sanitization::test_input($_POST["email"]));
-    $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
-    $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
-    DBregistration::insert($reg); 
-  }
-  
+
+
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
