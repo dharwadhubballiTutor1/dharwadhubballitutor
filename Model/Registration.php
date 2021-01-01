@@ -6,7 +6,6 @@
     private $Email;
     private $Phone;
     private $Trainings;
-    private $table_name="candidates";
   function set_name($name) {
     $this->Name = $name;
   }

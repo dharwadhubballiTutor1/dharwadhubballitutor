@@ -78,51 +78,11 @@
       </div>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </html>
-
-
 <?php
 
-require "Model/Registration.php";
-require "Utilities/Sanitization.php";
 
-require "DB Operations/RegistrationOps.php";
 
-  if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $reg=new Registration();
-    $reg->set_name(Sanitization::test_input($_POST["name"]));
-    $reg->set_email(Sanitization::test_input($_POST["email"]));
-    $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
-    $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
-    DBregistration::insert($reg); 
-  }
-  
+
+
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
