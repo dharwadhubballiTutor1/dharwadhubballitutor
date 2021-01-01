@@ -11,15 +11,17 @@
   </head>
   <body>
     <section class="top-header">
-      <div class="brand-class container">
+      <div class="brand-class container-fluid">
        <div class="row">
          <div class="col-md-6">
            <img src="media/img/logo.png"> </img>
              <a class="navbar-brand" href="#">DharwadHubballiTutor</a>
          </div>
-         <div class="col-md-6 text-right pad-m-5">
-             <a class="blink_me" href="#" > <strong>JOB ASSISTANCE</strong></a>
-         </div>
+         <div class="col-md-6">
+          <div class="semicircle">
+            <a class="blink_me" href="Jobassist.html"> Job Assistance</a>
+          </div>
+        </div>
        </div>
       </div>
     </section>
@@ -59,7 +61,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="#" class="nav-item nav-link px-2">Register</a>
+            <a href="action-page.php" class="nav-item nav-link px-2" data-toggle="modal" data-target="#exampleModalCenter">Register</a>
           </li>
         </ul>
       </div>
@@ -159,6 +161,52 @@
             <a href="" class="btn btn-warning" download="">DOWNLOAD FULL SYLLABUS</a>
           </div>
         </div>
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+             <div class="modal-content">
+                <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+                </div>
+                <div class="modal-body">
+                   <form class="modal-content" action="action-page.php" method="POST">
+                      <div class="container">
+                         <h1 style="color:#2a0a5e">Sign Up</h1>
+                         <p style="color:#2a0a5e">Please fill in this form to create an account.</p>
+                         <hr>
+                          <label class="label" for="name"><b>Name</b></label>
+                          <input type="text" name="name" class="form-control" placeholder="Name" required>
+    
+                          <label class="label" for="email"><b>Email</b></label>
+                          <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        
+                         
+                          <label class="label"  for="phone"><b>Enter your number:</b></label>
+                          <input type="tel" name="phone" class="form-control" id="exampleFormControlInput1" placeholder="Number"   required>
+        
+                          <label class="label"  for="name"><b>Trainings</b></label>
+                           <select class="custom-select" name="trainings">
+                             <option value="SELECT YOUR INTEREST">SELECT YOUR INTEREST</option>
+                             <option value="WEB DESIGNING AND DEVELOPMENT">WEB DESIGNING AND DEVELOPMENT</option>
+                             <option value="CIVIL DESIGN SOFTWARES">CIVIL DESIGN SOFTWARES</option>
+                             <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
+                             <option value="ANDROID DEVELOPMENT">ANDROID DEVELOPMENT</option>
+                          </select> 
+                            <div class="modal-footer">
+                              <button type="button" class="closebtn" data-dismiss="modal">Close</button>
+                              <button type="submit" class="signupbtn">Submit</button>
+                            </div>
+                         </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
         </div>
       </body>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
