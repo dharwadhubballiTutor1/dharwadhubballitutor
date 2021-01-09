@@ -24,7 +24,7 @@ a {
 }
 .navbar-brand {
   color: white;
-  font-size: 1.25em;
+  font-size: 1.7em;
 }
 a:hover {
   background-color: #f8c000;
@@ -66,7 +66,7 @@ li span {
 dt {
   color: white;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .brand-class {
     text-align: center;
   }
@@ -90,7 +90,7 @@ dd {
 }
 .p1 {
   color: #f8c000;
-  font-size: 20px;
+  font-size: 25px;
 }
 .blink_me {
   animation: blinker 1s linear infinite;
@@ -102,7 +102,10 @@ dd {
   width: 190px;
   border-radius: 0 0 140px 140px;
   float: right;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  font-size: 40px;
 }
 
 @keyframes blinker {
@@ -212,10 +215,6 @@ body {
 .label {
   color: #2a0a5e;
 }
-.closebtn {
-  padding: 14px 20px;
-  background-color: #2a0a5e;
-}
 
 * {
   box-sizing: border-box;
@@ -223,19 +222,19 @@ body {
 
 /* Full-width input fields */
 input[type="text"],
-input[type="password"],
+input[type="email"],
 input[type="tel"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
-  display: inline-block;
+
   border: none;
   background: #f1f1f1;
 }
 
 /* Add a background color when the inputs get focus */
 input[type="text"]:focus,
-input[type="password"]:focus,
+input[type="email"]:focus,
 input[type="tel"]:focus {
   background-color: #ddd;
   outline: none;
@@ -294,9 +293,10 @@ button:hover {
 .para {
   color: white;
 }
+
 .footercircle {
-  height: 180;
-  width: 180;
+  height: 180px;
+  width: 180px;
   border-radius: 300px;
   background: #dc3c4d;
   /* vertical-align: middle; */
