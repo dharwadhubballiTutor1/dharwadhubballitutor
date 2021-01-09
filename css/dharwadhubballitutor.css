@@ -24,7 +24,7 @@ a {
 }
 .navbar-brand {
   color: white;
-  font-size: 1.7em;
+  font-size: 1.8em;
 }
 a:hover {
   background-color: #f8c000;
@@ -66,7 +66,7 @@ li span {
 dt {
   color: white;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .brand-class {
     text-align: center;
   }
@@ -293,10 +293,9 @@ button:hover {
 .para {
   color: white;
 }
-
 .footercircle {
-  height: 180px;
-  width: 180px;
+  height: 180;
+  width: 180;
   border-radius: 300px;
   background: #dc3c4d;
   /* vertical-align: middle; */
