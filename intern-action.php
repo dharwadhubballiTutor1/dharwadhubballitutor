@@ -91,17 +91,18 @@
                            <h1 style="color:#2a0a5e">Sign Up</h1>
                            <p style="color:#2a0a5e">Please fill in this form to create an account.</p>
                            <hr>
-                           <label class="label" for="name1"><b>Name</b></label>
-                          <input type="text" name="name1" class="form-control" id="name1" placeholder="Name" required />
-
-                          <label class="label" for="email1"><b>Email</b></label>
-                          <input type="email" name="email1" class="form-control" id="email1" placeholder="name@example.com" />
-
-                          <label class="label" for="phone1"><b>Enter your number:</b></label>
-                          <input type="tel" name="phone1" class="form-control" id="phone1" placeholder="Number" required />
-
-                          <label class="label" for="internship1"><b>Internships</b></label>
-                          <select class="custom-select" id="internship1" name="internship1">
+                            <label class="label" for="name"><b>Name</b></label>
+                            <input type="text" name="name" class="form-control" placeholder="Name" required>
+      
+                            <label class="label" for="email"><b>Email</b></label>
+                            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          
+                           
+                            <label class="label"  for="phone"><b>Enter your number:</b></label>
+                            <input type="tel" name="phone" class="form-control" id="exampleFormControlInput1" placeholder="Number"   required>
+          
+                            <label class="label"  for="name"><b>Trainings</b></label>
+                             <select class="custom-select" name="trainings">
                                <option value="SELECT YOUR INTEREST">SELECT YOUR INTEREST</option>
                                <option value="WEB DESIGNING AND DEVELOPMENT">WEB DESIGNING AND DEVELOPMENT</option>
                                <option value="CIVIL DESIGN SOFTWARES">CIVIL DESIGN SOFTWARES</option>
@@ -137,10 +138,10 @@ require "DB Operations/RegistrationOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $reg=new Registration();
-    $reg->set_name(Sanitization::test_input($_POST["name1"]));
-    $reg->set_email(Sanitization::test_input($_POST["email1"]));
-    $reg->set_phone(Sanitization::test_input($_POST["phone1"]));
-    $reg->set_internship(Sanitization::test_input($_POST["internship1"]));
+    $reg->set_name(Sanitization::test_input($_POST["name"]));
+    $reg->set_email(Sanitization::test_input($_POST["email"]));
+    $reg->set_phone(Sanitization::test_input($_POST["phone"]));
+    $reg->set_internship(Sanitization::test_input($_POST["internship"]));
     DBregistration::insert($reg); 
   }
   

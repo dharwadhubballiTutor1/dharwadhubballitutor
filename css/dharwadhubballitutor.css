@@ -1,65 +1,15 @@
-@media (max-width: 320px) {
-  /* CSS in here for mobile only */
-  .h3 {
-    font-size: 18px;
-  }
+@media (min-width: 320px) {
+}
+@media (min-width: 470px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
 }
 
 .img-fluid {
   max-width: 100%;
   height: auto;
-}
-.social {
-  font-size: 21px !important;
-}
-
-.container-fluid1 {
-  overflow: hidden;
-  margin-top: 250px;
-  background: #f8c000;
-  color: #2a0a5e;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.fa {
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  color: white;
-  border-radius: 60%;
-}
-
-.facebook-bg {
-  background: #3b5998;
-}
-.facebook:hover {
-  background-color: #4c70ba;
-}
-.twitter-bg {
-  background: #55acee;
-}
-.twitter:hover {
-  background-color: #83c3f3;
-}
-.instagram-bg {
-  background: #8a3ab9;
-}
-.instagram:hover {
-  background-color: #548cb9;
-}
-.fa-whatsapp {
-  background: #4fce5d;
-}
-.whatsapp:hover {
-  background-color: #afe53b;
-}
-.fa-youtube {
-  background-color: #e52d27;
-}
-.youtube:hover {
-  background-color: #ea5955;
 }
 
 a {
@@ -74,7 +24,7 @@ a {
 }
 .navbar-brand {
   color: white;
-  font-size: 1.7em;
+  font-size: 1.8em;
 }
 a:hover {
   background-color: #f8c000;
@@ -82,7 +32,6 @@ a:hover {
 }
 body {
   background-color: #2a0a5e;
-  color: white;
 }
 .h1 {
   color: white;
@@ -117,7 +66,7 @@ li span {
 dt {
   color: white;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .brand-class {
     text-align: center;
   }
@@ -142,7 +91,6 @@ dd {
 .p1 {
   color: #f8c000;
   font-size: 25px;
-  word-wrap: break-word;
 }
 .blink_me {
   animation: blinker 1s linear infinite;
@@ -345,10 +293,9 @@ button:hover {
 .para {
   color: white;
 }
-
 .footercircle {
-  height: 180px;
-  width: 180px;
+  height: 180;
+  width: 180;
   border-radius: 300px;
   background: #dc3c4d;
   /* vertical-align: middle; */
@@ -439,7 +386,4 @@ button:hover {
   background-color: #dc3c4d;
   color: white;
   padding: 10px;
-}
-.dlresponsive {
-  margin: 20px;
 }
