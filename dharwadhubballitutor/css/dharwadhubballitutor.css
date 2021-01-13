@@ -1,0 +1,379 @@
+@media (min-width: 320px) {
+}
+@media (min-width: 470px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #f8c000;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.navbar {
+  padding: 0%;
+}
+.navbar-brand {
+  color: white;
+  font-size: 1.25em;
+}
+a:hover {
+  background-color: #f8c000;
+  color: #2a0a5e;
+}
+body {
+  background-color: #2a0a5e;
+}
+.h1 {
+  color: white;
+}
+.themecolor {
+  color: #2a0a5e;
+}
+.btn-outline-primary {
+  border-color: #2a0a5e;
+  border-radius: 25px;
+  color: #2a0a5e;
+  font-family: "Be Vietnam", sans-serif;
+}
+.btn-outline-primary:hover {
+  background-color: #2a0a5e;
+}
+.card {
+  height: 100%;
+}
+.h3,
+h4 {
+  color: #f8c000;
+}
+li {
+  font-size: 18px;
+  color: #f8c000;
+}
+li span {
+  font-size: 22px;
+  color: white;
+}
+dt {
+  color: white;
+}
+@media (max-width: 992px) {
+  .brand-class {
+    text-align: center;
+  }
+}
+
+dt {
+  float: left;
+  width: auto;
+  text-align: right;
+  font-weight: bold;
+  color: #f8c000;
+  font-size: 20px;
+}
+dt::after {
+  content: ":";
+}
+dd {
+  font-size: 18px;
+  margin: 0 0 0 420px;
+  padding: 0 0 0.7em 0;
+}
+.p1 {
+  color: #f8c000;
+  font-size: 20px;
+}
+.blink_me {
+  animation: blinker 1s linear infinite;
+  color: #2a0a5e;
+  font-size: 20px;
+}
+.semicircle {
+  background-color: #f8c000;
+  height: 90px;
+  width: 190px;
+  border-radius: 0 0 140px 140px;
+  float: right;
+  text-align: center;
+}
+
+@keyframes blinker {
+  45% {
+    opacity: 0;
+  }
+}
+.card-wrapper {
+  margin-bottom: 30px;
+}
+.card-image .card .card-img-wrapper {
+  height: 100%;
+}
+.card-image .card .card-body {
+  display: none;
+}
+.card-image-title-description .card .card-img-wrapper {
+  max-height: 160px;
+}
+.card-image-title-description .card {
+  position: relative;
+  min-height: 300px;
+}
+.card-image-title-description .card .card-body {
+  height: auto;
+  position: relative;
+  top: 0;
+  margin-bottom: -70px;
+}
+.card-image-title-description .card:hover .card-body {
+  top: -70px;
+}
+.card-image-title-description .card .card-body .card-title {
+  margin-bottom: 0.75rem;
+}
+.card {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  height: 100%;
+}
+.card:hover {
+  box-shadow: 8px 12px 31px -10px #ab98ab;
+}
+.card-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  overflow: hidden;
+}
+.card-img-wrapper img {
+  transition: 1.5s ease;
+}
+.card:hover .card-img-wrapper img {
+  transform: scale(1.15);
+}
+.card-body .card-title {
+  margin-bottom: calc(50% + 20px);
+  transition: 1.5s ease;
+}
+.card:hover .card-body .card-title {
+  margin-bottom: 0.75rem;
+}
+
+.card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #fff;
+  transition: 1.5s ease;
+}
+.card-content {
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: 1.5s ease;
+}
+.card:hover .card-body {
+  height: 80%;
+}
+.card:hover .card-content {
+  bottom: 0;
+}
+.blink_me1 {
+  animation: blinker 2s linear infinite;
+  background-color: #f8c000;
+  color: #2a0a5e;
+  padding: 0%;
+  font-size: 30px;
+}
+
+@keyframes blinker {
+  45% {
+    opacity: 0;
+  }
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2a0a5e;
+}
+.label {
+  color: #2a0a5e;
+}
+.closebtn {
+  padding: 14px 20px;
+  background-color: #2a0a5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #2a0a5e;
+  color: #f8c000;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+.container {
+  padding: 16px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #f8c000;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #2a0a5e;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+.footersemi {
+  height: 250px;
+
+  border-radius: 0 0 130px 130px;
+  background: #ffc5f6;
+}
+.para {
+  color: white;
+}
+.footercircle {
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  background: #dc3c4d;
+  /* vertical-align: middle; */
+  margin-left: 5px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+.rightsemi {
+  height: 90px;
+  width: 40px;
+  border-radius: 0 90px 90px 0;
+  background: #f8c000;
+  margin-left: 5px;
+}
+.leftsemi {
+  height: 90px;
+  width: 40px;
+  border-radius: 90px 0 0 90px;
+  background: white;
+}
+.upsemi {
+  height: 100px;
+  width: 85px;
+  border-radius: 90px 90px 0 0;
+  background: #dc3c4d;
+  margin-top: 60px;
+}
+.arc {
+  width: 169px;
+  height: 90px;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  border: 30px solid #dc3c4d;
+  border-bottom: 0;
+}
+.rect {
+  width: 169px;
+  height: 95px;
+  border: 1px solid #000;
+  background: #f8c000;
+}
+.recsemi {
+  height: 70px;
+  width: 140px;
+  border-radius: 90px 90px 0 0;
+  background: white;
+  margin-left: 27px;
+  margin-top: 22px;
+}
+.lastsemi {
+  height: 140px;
+  width: 150px;
+  border-radius: 0 0 90px 90px;
+  background: #ffc5f6;
+  margin-left: 10px;
+}
+.lastcircle {
+  height: 70px;
+  width: 70px;
+  border-radius: 90px;
+  background: #dc3c4d;
+  /* vertical-align: middle; */
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+.lastupsemi {
+  height: 101px;
+  width: 170px;
+  border-radius: 90px 90px 0 0;
+  background: #f8c000;
+
+  margin-top: 20px;
+}
