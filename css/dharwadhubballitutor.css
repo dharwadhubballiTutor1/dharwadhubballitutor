@@ -1,45 +1,15 @@
-@media screen and (max-width: 320px) {
-  /* CSS in here for mobile only */
-  .h3 {
-    font-size: 18px;
-  }
+@media (min-width: 320px) {
 }
-
-.p2 {
-  font-size: 18px;
+@media (min-width: 470px) {
 }
-
-.fbicon:hover {
-  color: #4c70ba;
+@media (min-width: 1024px) {
 }
-
-.twittericon:hover {
-  color: #83c3f3;
-}
-
-.instaicon:hover {
-  color: #548cb9;
-}
-
-.whatsappicon:hover {
-  color: #afe53b;
+@media (min-width: 1200px) {
 }
 
 .img-fluid {
   max-width: 100%;
   height: auto;
-}
-.social {
-  font-size: 21px !important;
-}
-
-.container-fluid1 {
-  overflow: hidden;
-  margin-top: 250px;
-  background: #f8c000;
-  color: #2a0a5e;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 a {
@@ -54,7 +24,7 @@ a {
 }
 .navbar-brand {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 a:hover {
   background-color: #f8c000;
@@ -62,7 +32,6 @@ a:hover {
 }
 body {
   background-color: #2a0a5e;
-  color: white;
 }
 .h1 {
   color: white;
@@ -78,10 +47,6 @@ body {
 }
 .btn-outline-primary:hover {
   background-color: #2a0a5e;
-}
-.btn-warning {
-  background-color: #2a0a5e;
-  color: #f8c000;
 }
 .card {
   height: 100%;
@@ -101,7 +66,7 @@ li span {
 dt {
   color: white;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .brand-class {
     text-align: center;
   }
@@ -126,7 +91,6 @@ dd {
 .p1 {
   color: #f8c000;
   font-size: 25px;
-  word-wrap: break-word;
 }
 .blink_me {
   animation: blinker 1s linear infinite;
@@ -303,6 +267,8 @@ button:hover {
   width: 100%; /* Could be more or less, depending on screen size */
 }
 
+/* Style the horizontal ruler */
+
 /* The Close Button (x) */
 .close {
   position: absolute;
@@ -327,10 +293,9 @@ button:hover {
 .para {
   color: white;
 }
-
 .footercircle {
-  height: 180px;
-  width: 180px;
+  height: 180;
+  width: 180;
   border-radius: 300px;
   background: #dc3c4d;
   /* vertical-align: middle; */
@@ -421,7 +386,4 @@ button:hover {
   background-color: #dc3c4d;
   color: white;
   padding: 10px;
-}
-.dlresponsive {
-  margin: 20px;
 }
