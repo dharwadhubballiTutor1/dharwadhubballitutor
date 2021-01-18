@@ -4,6 +4,12 @@
     font-size: 18px;
   }
 }
+.brandName{
+  font-family: 'League Spartan Bold';
+}
+.web-text{
+  font-family: 'Libre Baskerville', serif;
+}
 
 .p2 {
   font-size: 18px;
@@ -34,8 +40,7 @@
 }
 
 .container-fluid1 {
-  overflow: hidden;
-  margin-top: 250px;
+ 
   background: #f8c000;
   color: #2a0a5e;
   margin-bottom: 0;
@@ -46,8 +51,7 @@ a {
   color: #f8c000;
   text-decoration: none;
   background-color: transparent;
-  font-size: 1.2rem;
-  padding: 10px;
+  
 }
 .navbar {
   padding: 0%;
@@ -91,7 +95,6 @@ h4 {
   color: #f8c000;
 }
 li {
-  font-size: 18px;
   color: #f8c000;
 }
 li span {
@@ -141,7 +144,7 @@ dd {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 40px;
+  
 }
 
 @keyframes blinker {
@@ -231,12 +234,15 @@ dd {
 .card:hover .card-content {
   bottom: 0;
 }
+.card-text{
+  text-align: justify;
+  font-size: 13px;
+}
 .blink_me1 {
   animation: blinker 2s linear infinite;
   background-color: #f8c000;
   color: #2a0a5e;
   padding: 0%;
-  font-size: 30px;
 }
 
 @keyframes blinker {
@@ -245,7 +251,7 @@ dd {
   }
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Libre Baskerville', serif;
   color: #2a0a5e;
 }
 .label {
@@ -424,4 +430,7 @@ button:hover {
 }
 .dlresponsive {
   margin: 20px;
+}
+.social-icon{
+  padding: 10px;
 }
