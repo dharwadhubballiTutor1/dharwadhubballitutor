@@ -4,27 +4,46 @@
     font-size: 18px;
   }
 }
-.brandName{
-  font-family: 'League Spartan Bold';
+.brandName {
+  font-family: "League Spartan Bold";
 }
-.web-text{
-  font-family: 'Libre Baskerville', serif;
+.web-text {
+  font-family: "Libre Baskerville", serif;
+}
+
+.footer-a {
+  color: aliceblue;
 }
 
 .p2 {
   font-size: 18px;
 }
 
+.fbicon {
+  color: #3b5998;
+}
 .fbicon:hover {
   color: #4c70ba;
+}
+
+.twittericon {
+  color: #55acee;
 }
 
 .twittericon:hover {
   color: #83c3f3;
 }
 
+.instaicon {
+  color: #8a3ab9;
+}
+
 .instaicon:hover {
   color: #548cb9;
+}
+
+.whatsappicon {
+  color: #4fce5d;
 }
 
 .whatsappicon:hover {
@@ -40,7 +59,6 @@
 }
 
 .container-fluid1 {
- 
   background: #f8c000;
   color: #2a0a5e;
   margin-bottom: 0;
@@ -51,7 +69,6 @@ a {
   color: #f8c000;
   text-decoration: none;
   background-color: transparent;
-  
 }
 .navbar {
   padding: 0%;
@@ -67,6 +84,7 @@ a:hover {
 body {
   background-color: #2a0a5e;
   color: white;
+  overflow-x: hidden;
 }
 .h1 {
   color: white;
@@ -144,7 +162,6 @@ dd {
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
 @keyframes blinker {
@@ -234,7 +251,7 @@ dd {
 .card:hover .card-content {
   bottom: 0;
 }
-.card-text{
+.card-text {
   text-align: justify;
   font-size: 13px;
 }
@@ -251,7 +268,7 @@ dd {
   }
 }
 body {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   color: #2a0a5e;
 }
 .label {
@@ -431,6 +448,6 @@ button:hover {
 .dlresponsive {
   margin: 20px;
 }
-.social-icon{
+.social-icon {
   padding: 10px;
 }

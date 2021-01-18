@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/dharwadhubballitutor.css" />
     <link href="https://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
   </head>
   <body>
     <section class="top-header">
@@ -78,7 +79,7 @@
       </picture>
     </div>
     <br />
-    <div class="container" style="text-align: justify">
+    <div class="container">
       <div class="row row-eq-height">
         <div class="w-100 text-light">
           <div class="row">
@@ -162,7 +163,7 @@
           <div class="modal-body">
             <form class="modal-content" action="action-page.php" method="POST">
               <div class="container">
-                <h1 style="color: #2a0a5e">Sign Up</h1>
+                <h1 style="color: #2a0a5e">Register</h1>
                 <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
                 <hr />
                 <label class="label" for="name"><b>Name</b></label>
@@ -183,8 +184,8 @@
                   <option value="ANDROID DEVELOPMENT">ANDROID DEVELOPMENT</option>
                 </select>
                 <div class="modal-footer">
-                  <button type="button" class="closebtn" data-dismiss="modal">Close</button>
-                  <button type="submit" class="signupbtn">Submit</button>
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -263,56 +264,67 @@
                 <br />
                 <div class="text-center">
                   <div class="col-md-12">
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal1">ENROLL NOW</button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal2">ENROLL NOW</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="modal-content" action="intern-action.php" method="POST">
-              <div class="container">
-                <h1 style="color: #2a0a5e">Sign Up</h1>
-                <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
-                <hr />
-                <label class="label" for="name1"><b>Name</b></label>
-                <input type="text" name="name1" class="form-control" id="name1" placeholder="Name" required />
-
-                <label class="label" for="email1"><b>Email</b></label>
-                <input type="email" name="email1" class="form-control" id="email1" placeholder="name@example.com" />
-
-                <label class="label" for="phone1"><b>Enter your number:</b></label>
-                <input type="tel" name="phone1" class="form-control" id="phone1" placeholder="Number" required />
-
-                <label class="label" for="internship1"><b>Internships</b></label>
-                <select class="custom-select" id="internship1" name="internship1">
-                  <option value="AREA OF INTEREST">AREA OF INTEREST</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                </select>
-                <br />
-                <div class="modal-footer">
-                  <button type="button" class="closebtn" data-dismiss="modal">Close</button>
-                  <button type="submit" class="signupbtn">Submit</button>
-                </div>
+        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-            </form>
+              <div class="modal-body">
+                <form class="modal-content" action="footermodal-action.php" method="POST">
+                  <div class="container">
+                    <h1 style="color: #2a0a5e">Enroll Now</h1>
+                    <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
+
+                    <label class="label" for="name2"><b>Name</b></label>
+                    <input type="text" name="name2" class="form-control" id="name1" placeholder="Name" required />
+
+                    <label class="label" for="email2"><b>Email</b></label>
+                    <input type="email" name="email2" class="form-control" id="email1" placeholder="name@example.com" />
+
+                    <label class="label" for="phone2"><b>Enter your number:</b></label>
+                    <input type="tel" name="phone2" class="form-control" id="phone1" placeholder="Number" required />
+
+                    <label class="label" for="trainings2"><b>Trainings</b></label>
+                    <select class="custom-select" id="trainings2" name="trainings2">
+                      <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                      <option value="Web Designing and Development">Web Designing and Development</option>
+                      <option value="Python Programming">Python Programming</option>
+                      <option value="Civil Design Softwares">Civil Design Softwares</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Android Development">Android Development</option>
+                      <option value="Cloud Computing">Cloud Computing</option></select
+                    ><br />
+
+                    <label class="label" for="internship2"><b>Internships</b></label>
+                    <select class="custom-select" id="internship2" name="internship2">
+                      <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                      <option value="Web Designing and Development">Web Designing and Development</option>
+                      <option value="Python Programming">Python Programming</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Android Development">Android Development</option>
+                    </select>
+                    <br />
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-warning">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
