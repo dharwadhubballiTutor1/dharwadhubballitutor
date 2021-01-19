@@ -3,6 +3,9 @@
   .h3 {
     font-size: 18px;
   }
+  .p {
+    font-size: 18px;
+  }
 }
 .brandName {
   font-family: "League Spartan Bold";
@@ -113,6 +116,18 @@ body {
   background-color: #2a0a5e;
   color: #f8c000;
 }
+.btn-outline-warning {
+  color: #2a0a5e;
+}
+.btn-primary {
+  background-color: #2a0a5e;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #2a0a5e;
+  color: #f8c000;
+}
+
 .card {
   height: 100%;
 }
@@ -178,7 +193,7 @@ dd {
   }
 }
 .card-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .card-image .card .card-img-wrapper {
   height: 100%;
@@ -209,7 +224,7 @@ dd {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  min-height: 400px;
+
   height: 100%;
 }
 .card:hover {
@@ -231,6 +246,7 @@ dd {
 .card-body .card-title {
   margin-bottom: calc(50% + 20px);
   transition: 1.5s ease;
+  text-align: center;
 }
 .card:hover .card-body .card-title {
   margin-bottom: 0.75rem;
