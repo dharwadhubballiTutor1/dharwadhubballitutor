@@ -23,7 +23,7 @@
   color: #3b5998;
 }
 .fbicon:hover {
-  color: #4c70ba;
+  color: #4f5ccf;
 }
 
 .twittericon {
@@ -42,12 +42,20 @@
   color: #548cb9;
 }
 
+.linkedinicon {
+  color: #007bb5;
+}
+
+.linkedinicon:hover {
+  color: #0b5e86;
+}
+
 .whatsappicon {
   color: #4fce5d;
 }
 
 .whatsappicon:hover {
-  color: #afe53b;
+  color: #46a925;
 }
 
 .img-fluid {
