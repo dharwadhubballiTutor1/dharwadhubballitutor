@@ -1,12 +1,30 @@
-@media screen and (max-width: 320px) {
+@media only screen and (max-width: 320px) and (max-width: 480px) {
   /* CSS in here for mobile only */
-  .h3 {
-    font-size: 18px;
+  .h3,
+  .h4,
+  .h5,
+  li span {
+    font-size: 16px !important;
   }
-  .p {
-    font-size: 18px;
+  .p2 {
+    font-size: 16px !important;
+  }
+  .semicircle {
+    display: none;
   }
 }
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS */
+}
+@media (min-width: 1281px) {
+  .mobileshow {
+    display: none;
+  }
+}
+
 .brandName {
   font-family: "League Spartan Bold";
 }
@@ -20,6 +38,8 @@
 
 .p2 {
   font-size: 18px;
+  text-align: justify;
+  word-spacing: -2px;
 }
 
 .fbicon {
@@ -132,14 +152,16 @@ body {
   height: 100%;
 }
 .h3,
-h4 {
+h4,
+.h5 {
   color: #f8c000;
 }
+
 li {
   color: #f8c000;
 }
 li span {
-  font-size: 22px;
+  font-size: 18px;
   color: white;
 }
 dt {
@@ -224,7 +246,7 @@ dd {
   display: inline-block;
   position: relative;
   overflow: hidden;
-
+  min-height: 400px;
   height: 100%;
 }
 .card:hover {
@@ -277,7 +299,8 @@ dd {
 }
 .card-text {
   text-align: justify;
-  font-size: 13px;
+  font-size: 18px;
+  word-spacing: -2px;
 }
 .blink_me1 {
   animation: blinker 2s linear infinite;
