@@ -12,6 +12,18 @@
   .semicircle {
     display: none;
   }
+  .mobileshow {
+    background-color: #f8c000;
+    color: #2a0a5e;
+    padding: 5px 15px;
+  }
+  .logoimg {
+    display: none;
+  }
+  .navbar-nav .nav-link {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 }
 @media (min-width: 481px) and (max-width: 767px) {
   /* CSS */
@@ -23,6 +35,20 @@
   .mobileshow {
     display: none;
   }
+}
+
+.col-md-5 {
+  background: #2a0a5e;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.contact-form label {
+  font-weight: 600;
+}
+
+.col-sm-4 {
+  color: #2a0a5e;
+  width: auto;
 }
 
 .brandName {
@@ -43,42 +69,68 @@
 }
 
 .fbicon {
-  color: #3b5998;
+  color: #4267b2;
 }
 .fbicon:hover {
-  color: #4f5ccf;
+  color: black;
+}
+.fbheader {
+  color: white;
+}
+.fbheader:hover {
+  color: #4267b2;
 }
 
 .twittericon {
-  color: #55acee;
+  color: #1da1f2;
 }
-
 .twittericon:hover {
-  color: #83c3f3;
+  color: black;
+}
+.twitterheader {
+  color: white;
+}
+.twitterheader:hover {
+  color: #1da1f2;
 }
 
 .instaicon {
   color: #8a3ab9;
 }
-
 .instaicon:hover {
-  color: #548cb9;
+  color: black;
+}
+.instaheader {
+  color: white;
+}
+.instaheader:hover {
+  color: #8a3ab9;
 }
 
 .linkedinicon {
-  color: #007bb5;
+  color: #2867b2;
 }
-
 .linkedinicon:hover {
-  color: #0b5e86;
+  color: black;
+}
+.linkedinheader {
+  color: white;
+}
+.linkedinheader:hover {
+  color: #2867b2;
 }
 
 .whatsappicon {
   color: #4fce5d;
 }
-
 .whatsappicon:hover {
-  color: #46a925;
+  color: black;
+}
+.whatsappheader {
+  color: white;
+}
+.whatsappheader:hover {
+  color: #4fce5d;
 }
 
 .img-fluid {
@@ -207,6 +259,7 @@ dd {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 22px;
 }
 
 @keyframes blinker {
@@ -496,5 +549,9 @@ button:hover {
   margin: 20px;
 }
 .social-icon {
+  padding: 8px;
+}
+.social-icon:hover {
   padding: 10px;
+  background-color: transparent;
 }

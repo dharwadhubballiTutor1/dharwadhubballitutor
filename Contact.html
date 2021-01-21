@@ -21,13 +21,21 @@
     <div class="brand-class container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <img src="media/img/logo.png" alt="DharwadHubballiTutor logo" />
+          <!-- <img src="media/img/logo.png" class="logoimg" alt="DharwadHubballiTutor logo" /> -->
           <a class="navbar-brand brandName" href="#">DharwadHubballiTutor</a>
+          <br />
+
+          <a class="social-icon fbicon" target="_blank" href="https://www.facebook.com/DharwadhubballiTutor"><i class="fab fa-facebook fa-lg fbicon fbheader"></i></a>
+          <a class="social-icon twittericon" target="_blank" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
+          <a class="social-icon instaicon" target="_blank" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-lg instaicon instaheader"></i></a>
+          <a class="social-icon instaicon" target="_blank" href="http://www.linkedin.com/in/dharwadhubballitutor"><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader"></i></a>
+          <a class="social-icon whatsappicon" target="_blank" href="https://api.whatsapp.com/send?phone=917204817334&amp;text=Hi there! I have a question :)"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
         </div>
         <div class="col-md-6">
           <div class="semicircle">
             <a class="blink_me" href="Job-Assistance.html"> Job Assistance</a>
           </div>
+          <button type="button" class="mobileshow">Job Assistance</button>
         </div>
       </div>
     </div>
@@ -73,34 +81,63 @@
       </div>
     </nav>
     <br />
-    <div class="container" style="text-align: justify">
+    <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
           <br />
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.8847855951285!2d75.01758341432938!3d15.436768560177267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d370eace81bb%3A0xf20b739d863002a2!2sDharwadHubballiTutor!5e0!3m2!1sen!2sin!4v1608529670560!5m2!1sen!2sin" width="500" height="400" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.8847855951285!2d75.01758341432938!3d15.436768560177267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d370eace81bb%3A0xf20b739d863002a2!2sDharwadHubballiTutor!5e0!3m2!1sen!2sin!4v1608529670560!5m2!1sen!2sin" width="300" height="300" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
+          <br />
+          <h4 class="h4">LOCATED AT</h4>
+          <br />
+          <address style="font-size: 24px; color: #f8c000">
+            <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 20px; color: #f8c000"></i>
+            J G Nippani Complex, Beside SBI Gandhinagar, Dharwad.
+          </address>
+          <i class="fa fa-phone" style="font-size: 20px; color: #f8c000"></i>
+          <a href="tel:+917204817334">+917204817334</a>
+          <a href="tel:+918007961759">+918007961759</a>
+          <br /><br />
+          <i class="fa fa-envelope" style="font-size: 20px; color: #f8c000"></i>
+          <a href="dharwadhubballitutor@gmail.com">dharwadhubballitutor@gmail.com</a>
         </div>
-        <br />
-        <div class="col-md-6">
-          <br />
-          <h2 style="color: #f8c000">LOCATED AT</h2>
-          <br />
-          <div class="container">
-            <address style="font-size: 30px; color: #f8c000">
-              <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 36px; color: #f8c000"></i>
-              J G Nippani Complex, Beside SBI Gandhinagar, Dharwad.
-            </address>
-            <i class="fa fa-phone" style="font-size: 36px; color: #f8c000"></i>
-            <a href="tel:+917204817334">+917204817334</a>
-            <a href="tel:+918007961759">+918007961759</a>
-            <br /><br />
-            <i class="fa fa-envelope" style="font-size: 36px; color: #f8c000"></i>
-            <a href="dharwadhubballitutor@gmail.com">dharwadhubballitutor@gmail.com</a>
+        <div class="col-md-5">
+          <div class="contact-form">
+            <form class="modal-content" action="action-page.php" method="POST">
+              <div class="container">
+                <h1 style="color: #2a0a5e">Contact Us</h1>
+                <hr />
+
+                <label class="label" for="name"><b>Name</b></label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
+
+                <label class="label" for="email"><b>Email</b></label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
+
+                <label class="label" for="phone"><b>Enter your number:</b></label>
+                <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
+
+                <label class="label" for="trainings"><b>Trainings</b></label>
+                <select class="custom-select" id="trainings" name="trainings">
+                  <option value="SELECT YOUR INTEREST">SELECT YOUR INTEREST</option>
+                  <option value="WEB DESIGNING AND DEVELOPMENT">WEB DESIGNING AND DEVELOPMENT</option>
+                  <option value="CIVIL DESIGN SOFTWARES">CIVIL DESIGN SOFTWARES</option>
+                  <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
+                  <option value="ANDROID DEVELOPMENT">ANDROID DEVELOPMENT</option>
+                </select>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <br />
+
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -133,8 +170,8 @@
                   <option value="ANDROID DEVELOPMENT">ANDROID DEVELOPMENT</option>
                 </select>
                 <div class="modal-footer">
-                  <button type="button" class="closebtn" data-dismiss="modal">Close</button>
-                  <button type="submit" class="signupbtn">Submit</button>
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -142,6 +179,7 @@
         </div>
       </div>
     </div>
+    <br /><br />
     <footer class="container-fluid container-fluid1 justify-content-center">
       <div class="row justify-content-center py-3">
         <div class="col-md-3" style="text-align: left">
@@ -202,11 +240,11 @@
 
         <div class="col-md-3">
           <h6>Follow us</h6>
-          <a class="social-icon fbicon" target="_blank" href="https://www.facebook.com/DharwadhubballiTutor"><i class="fab fa-facebook fbicon"></i></a>
-          <a class="social-icon twittericon" target="_blank" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter twittericon"></i></a>
-          <a class="social-icon instaicon" target="_blank" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram instaicon"></i></a>
-          <a class="social-icon instaicon" target="_blank" href="http://www.linkedin.com/in/dharwadhubballitutor"><i class="fab fa-linkedin linkedinicon"></i></a>
-          <a class="social-icon whatsappicon" target="_blank" href="https://api.whatsapp.com/send?phone=917204817334&amp;text=Hi there! I have a question :)"><i class="fab fa-whatsapp whatsappicon"></i></a>
+          <a class="social-icon fbicon" target="_blank" href="https://www.facebook.com/DharwadhubballiTutor"><i class="fab fa-facebook fa-2x fbicon"></i></a>
+          <a class="social-icon twittericon" target="_blank" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-2x twittericon"></i></a>
+          <a class="social-icon instaicon" target="_blank" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-2x instaicon"></i></a>
+          <a class="social-icon instaicon" target="_blank" href="http://www.linkedin.com/in/dharwadhubballitutor"><i class="fab fa-linkedin fa-2x linkedinicon"></i></a>
+          <a class="social-icon whatsappicon" target="_blank" href="https://api.whatsapp.com/send?phone=917204817334&amp;text=Hi there! I have a question :)"><i class="fab fa-whatsapp fa-2x whatsappicon"></i></a>
           <br />
           <br />
           <div class="text-center">
