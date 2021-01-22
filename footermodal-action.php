@@ -93,51 +93,7 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-               <div class="modal-content">
-                  <div class="modal-header">
-                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                   </button>
-                  </div>
-                  <div class="modal-body">
-                     <form class="modal-content" action="action-page.php" method="POST">
-                        <div class="container">
-                           <h1 style="color:#2a0a5e">Sign Up</h1>
-                           <p style="color:#2a0a5e">Please fill in this form to create an account.</p>
-                           <hr>
-                           <label class="label" for="name1"><b>Name</b></label>
-                          <input type="text" name="name1" class="form-control" id="name1" placeholder="Name" required />
-
-                          <label class="label" for="email1"><b>Email</b></label>
-                          <input type="email" name="email1" class="form-control" id="email1" placeholder="name@example.com" />
-
-                          <label class="label" for="phone1"><b>Enter your number:</b></label>
-                          <input type="tel" name="phone1" class="form-control" id="phone1" placeholder="Number" required />
-
-                          <label class="label" for="internship1"><b>Internships</b></label>
-                          <select class="custom-select" id="internship1" name="internship1">
-                               <option value="SELECT YOUR INTEREST">SELECT YOUR INTEREST</option>
-                               <option value="WEB DESIGNING AND DEVELOPMENT">WEB DESIGNING AND DEVELOPMENT</option>
-                               <option value="CIVIL DESIGN SOFTWARES">CIVIL DESIGN SOFTWARES</option>
-                               <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
-                               <option value="ANDROID DEVELOPMENT">ANDROID DEVELOPMENT</option>
-                            </select> 
-                              <div class="modal-footer">
-                                <button type="button" class="closebtn" data-dismiss="modal">Close</button>
-                                <button type="submit" class="signupbtn">Submit</button>
-                              </div>
-                           </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> 
-              </div>
-            </div>
-          </div>
+    
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -156,7 +112,7 @@ require "DB Operations/RegistrationOps.php";
     $reg->set_name(Sanitization::test_input($_POST["name2"]));
     $reg->set_email(Sanitization::test_input($_POST["email2"]));
     $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
-    $reg->set_internship(Sanitization::test_input($_POST["trainings2"]));
+    $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
     $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
     DBregistration::insert($reg); 
   }
