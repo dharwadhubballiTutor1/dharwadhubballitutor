@@ -62,6 +62,15 @@
   }
 }
 
+.row {
+  margin-right: 0% !important;
+  margin-left: 0% !important;
+}
+.container-fluid {
+  padding-right: 0% !important;
+  padding-left: 0% !important;
+}
+
 .col-md-5 {
   background: #2a0a5e;
   border-top-right-radius: 0.5rem;
