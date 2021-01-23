@@ -1,5 +1,4 @@
 @media only screen and (max-width: 767px) {
-  /* CSS in here for mobile only */
   .h3,
   .h4,
   .h5,
@@ -8,6 +7,9 @@
   }
   .p2 {
     font-size: 16px !important;
+  }
+  .p1 {
+    font-size: 17px !important;
   }
   .semicircle {
     display: none;
@@ -27,8 +29,6 @@
   .social-icon {
     padding: 6px;
   }
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .brandName {
@@ -61,16 +61,14 @@
     padding: 8px;
   }
 }
-
 .row {
-  margin-right: 0% !important;
-  margin-left: 0% !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 .container-fluid {
-  padding-right: 0% !important;
-  padding-left: 0% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
-
 .col-md-5 {
   background: #2a0a5e;
   border-top-right-radius: 0.5rem;
@@ -79,94 +77,84 @@
 .contact-form label {
   font-weight: 600;
 }
-
 .col-sm-4 {
   color: #2a0a5e;
   width: auto;
 }
-
 .brandName {
   font-family: "League Spartan Bold";
 }
 .web-text {
   font-family: "Libre Baskerville", serif;
 }
-
 .footer-a {
-  color: aliceblue;
+  color: #f0f8ff;
 }
-
 .p2 {
   font-size: 18px;
   text-align: justify;
   word-spacing: -2px;
 }
-
 .fbicon {
   color: #4267b2;
 }
 .fbicon:hover {
-  color: black;
+  color: #000;
 }
 .fbheader {
-  color: white;
+  color: #fff;
 }
 .fbheader:hover {
   color: #4267b2;
 }
-
 .twittericon {
   color: #1da1f2;
 }
 .twittericon:hover {
-  color: black;
+  color: #000;
 }
 .twitterheader {
-  color: white;
+  color: #fff;
 }
 .twitterheader:hover {
   color: #1da1f2;
 }
-
 .instaicon {
   color: #8a3ab9;
 }
 .instaicon:hover {
-  color: black;
+  color: #000;
 }
 .instaheader {
-  color: white;
+  color: #fff;
 }
 .instaheader:hover {
   color: #8a3ab9;
 }
-
 .linkedinicon {
   color: #2867b2;
 }
 .linkedinicon:hover {
-  color: black;
+  color: #000;
 }
 .linkedinheader {
-  color: white;
+  color: #fff;
 }
 .linkedinheader:hover {
   color: #2867b2;
 }
-
 .whatsappicon {
   color: #4fce5d;
 }
 .whatsappicon:hover {
-  color: black;
+  color: #000;
 }
 .whatsappheader {
-  color: white;
+  color: #fff;
 }
 .whatsappheader:hover {
   color: #4fce5d;
 }
-
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -174,24 +162,22 @@
 .social {
   font-size: 21px !important;
 }
-
 .container-fluid1 {
   background: #f8c000;
   color: #2a0a5e;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-
 a {
   color: #f8c000;
   text-decoration: none;
   background-color: transparent;
 }
 .navbar {
-  padding: 0%;
+  padding: 0;
 }
 .navbar-brand {
-  color: white;
+  color: #fff;
   font-size: 1.5em;
 }
 a:hover {
@@ -200,10 +186,10 @@ a:hover {
 }
 body {
   background-color: #2a0a5e;
-  color: white;
+  color: #fff;
 }
 .h1 {
-  color: white;
+  color: #fff;
 }
 .themecolor {
   color: #2a0a5e;
@@ -226,43 +212,40 @@ body {
 }
 .btn-primary {
   background-color: #2a0a5e;
-  color: white;
+  color: #fff;
 }
 .btn-primary:hover {
   background-color: #2a0a5e;
   color: #f8c000;
 }
-
 .card {
   height: 100%;
 }
 .h3,
-h4,
-.h5 {
+.h5,
+h4 {
   color: #f8c000;
 }
-
 li {
   color: #f8c000;
 }
 li span {
   font-size: 18px;
-  color: white;
+  color: #fff;
 }
 dt {
-  color: white;
+  color: #fff;
 }
 @media (max-width: 768px) {
   .brand-class {
     text-align: center;
   }
 }
-
 dt {
   float: left;
   width: auto;
   text-align: right;
-  font-weight: bold;
+  font-weight: 700;
   color: #f8c000;
   font-size: 20px;
 }
@@ -272,7 +255,7 @@ dt::after {
 dd {
   font-size: 18px;
   margin: 0 0 0 420px;
-  padding: 0 0 0.7em 0;
+  padding: 0 0 0.7em;
 }
 .p1 {
   color: #f8c000;
@@ -294,7 +277,6 @@ dd {
   text-align: center;
   font-size: 22px;
 }
-
 @keyframes blinker {
   45% {
     opacity: 0;
@@ -323,7 +305,7 @@ dd {
   margin-bottom: -70px;
 }
 .card-image-title-description .card:hover .card-body {
-  top: -0px;
+  top: 0;
 }
 .card-image-title-description .card .card-body .card-title {
   margin-bottom: 0.75rem;
@@ -352,14 +334,13 @@ dd {
   transform: scale(1.15);
 }
 .card-body .card-title {
-  margin-bottom: calc(50% + 20px);
+  margin-bottom: calc(50%+20px);
   transition: 1.5s ease;
   text-align: center;
 }
 .card:hover .card-body .card-title {
   margin-bottom: 0.8rem;
 }
-
 .card-body {
   position: absolute;
   bottom: 0;
@@ -392,9 +373,8 @@ dd {
   animation: blinker 1s linear infinite;
   background-color: #2a0a5e;
   color: #f8c000;
-  padding: 0%;
+  padding: 0;
 }
-
 @keyframes blinker {
   45% {
     opacity: 0;
@@ -407,64 +387,52 @@ body {
 .label {
   color: #2a0a5e;
 }
-
 * {
   box-sizing: border-box;
 }
-
-/* Full-width input fields */
-input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="text"] {
   width: 100%;
   padding: 15px;
-  margin: 5px 0 22px 0;
-
-  border: none;
+  margin: 5px 0 22px;
+  border: 0;
   background: #f1f1f1;
 }
-
-/* Add a background color when the inputs get focus */
-input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus {
+input[type="tel"]:focus,
+input[type="text"]:focus {
   background-color: #ddd;
-  outline: none;
+  outline: 0;
 }
-
-/* Set a style for all buttons */
 button {
   background-color: #2a0a5e;
   color: #f8c000;
   padding: 14px 20px;
   margin: 8px 0;
-  border: none;
+  border: 0;
   cursor: pointer;
   width: auto;
   opacity: 0.9;
 }
-
 button:hover {
   opacity: 1;
 }
 .container {
   padding: 16px;
 }
-
-/* Modal Content/Box */
 .modal-content {
   background-color: #f8c000;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 5% auto 15%;
   border: 1px solid #888;
-  width: 100%; /* Could be more or less, depending on screen size */
+  width: 100%;
 }
 .para {
-  color: white;
+  color: #fff;
 }
 .dlresponsive {
   margin: 20px;
 }
-
 .social-icon:hover {
   padding: 10px;
   background-color: transparent;
