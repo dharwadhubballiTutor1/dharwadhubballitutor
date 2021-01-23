@@ -88,8 +88,10 @@
 <li data-target=#carouselExampleCaptions data-slide-to=3></li>
 </ol>
 <div class=carousel-inner>
-  <div class="d-flex justify-content-center">
-    
+<div class="d-flex justify-content-center">
+<div class="spinner-border text-warning" style=width:3rem;height:3rem role=status>
+<span class=sr-only>Loading...</span>
+</div>
 </div>
 <div class="carousel-item active">
 <picture>
@@ -373,11 +375,11 @@
 <a class=footer-a href=dharwadhubballitutor@gmail.com>dharwadhubballitutor@gmail.com</a>
 </address>
 </div>
-<div class=col-md-6 style=text-align:left >
+<div class=col-md-6>
 <h6><u>Important Links</u></h6>
 <div class=row>
-  <div class=col-md-6 style=text-align:left>
-    <ul class=list-unstyled>
+<div class=col-md-6>
+<ul>
 <li>
 <a class=footer-a href=index.html>Home </a>
 </li>
@@ -483,16 +485,7 @@
   </div>
   </div>
   </div>
-  <div id="loading" class="container-fluid row">
-		<div class="col-md-12 text-center">
-			<iframe src="https://giphy.com/embed/xFmuT64Jto3mRO4w3G" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/oc-css-hourglass-xFmuT64Jto3mRO4w3G">via GIPHY</a></p>
-		</div>
-    </div>
-    <script>
-			$(window).on('load',function() {
-				$('#loading').hide();
-			});
-		</script>
 <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip()});</script>
+<script>$(document).ready(function(){$(".spinner-border").hide()});</script>
 </body>
 </html>

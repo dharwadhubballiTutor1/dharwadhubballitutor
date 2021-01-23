@@ -45,15 +45,7 @@
     font-size: 14px !important;
   }
 }
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .mobileshow {
-    display: none;
-  }
-  .social-icon {
-    padding: 6px;
-  }
-}
-@media (min-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1441px) {
   .mobileshow {
     display: none;
   }
