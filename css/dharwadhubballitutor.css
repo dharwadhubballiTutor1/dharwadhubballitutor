@@ -1,4 +1,5 @@
 @media only screen and (max-width: 767px) {
+  /* CSS in here for mobile only */
   .h3,
   .h4,
   .h5,
@@ -7,9 +8,6 @@
   }
   .p2 {
     font-size: 16px !important;
-  }
-  .p1 {
-    font-size: 17px !important;
   }
   .semicircle {
     display: none;
@@ -29,6 +27,8 @@
   .social-icon {
     padding: 6px;
   }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .brandName {
@@ -61,21 +61,16 @@
     padding: 8px;
   }
 }
-<<<<<<< Updated upstream
-=======
-.rounded-circle{
-  border-radius: 40%!important;
-}
 
->>>>>>> Stashed changes
 .row {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
+  margin-right: 0% !important;
+  margin-left: 0% !important;
 }
 .container-fluid {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
+  padding-right: 0% !important;
+  padding-left: 0% !important;
 }
+
 .col-md-5 {
   background: #2a0a5e;
   border-top-right-radius: 0.5rem;
@@ -84,84 +79,94 @@
 .contact-form label {
   font-weight: 600;
 }
+
 .col-sm-4 {
   color: #2a0a5e;
   width: auto;
 }
+
 .brandName {
   font-family: "League Spartan Bold";
 }
 .web-text {
   font-family: "Libre Baskerville", serif;
 }
+
 .footer-a {
-  color: #f0f8ff;
+  color: aliceblue;
 }
+
 .p2 {
   font-size: 18px;
   text-align: justify;
   word-spacing: -2px;
 }
+
 .fbicon {
   color: #4267b2;
 }
 .fbicon:hover {
-  color: #000;
+  color: black;
 }
 .fbheader {
-  color: #fff;
+  color: white;
 }
 .fbheader:hover {
   color: #4267b2;
 }
+
 .twittericon {
   color: #1da1f2;
 }
 .twittericon:hover {
-  color: #000;
+  color: black;
 }
 .twitterheader {
-  color: #fff;
+  color: white;
 }
 .twitterheader:hover {
   color: #1da1f2;
 }
+
 .instaicon {
   color: #8a3ab9;
 }
 .instaicon:hover {
-  color: #000;
+  color: black;
 }
 .instaheader {
-  color: #fff;
+  color: white;
 }
 .instaheader:hover {
   color: #8a3ab9;
 }
+
 .linkedinicon {
   color: #2867b2;
 }
 .linkedinicon:hover {
-  color: #000;
+  color: black;
 }
 .linkedinheader {
-  color: #fff;
+  color: white;
 }
 .linkedinheader:hover {
   color: #2867b2;
 }
+
 .whatsappicon {
   color: #4fce5d;
 }
 .whatsappicon:hover {
-  color: #000;
+  color: black;
 }
 .whatsappheader {
-  color: #fff;
+  color: white;
 }
 .whatsappheader:hover {
   color: #4fce5d;
 }
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -169,32 +174,24 @@
 .social {
   font-size: 21px !important;
 }
-<<<<<<< Updated upstream
-=======
 
-.services,{
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-}
-
->>>>>>> Stashed changes
 .container-fluid1 {
   background: #f8c000;
   color: #2a0a5e;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
 a {
   color: #f8c000;
   text-decoration: none;
   background-color: transparent;
 }
 .navbar {
-  padding: 0;
+  padding: 0%;
 }
 .navbar-brand {
-  color: #fff;
+  color: white;
   font-size: 1.5em;
 }
 a:hover {
@@ -203,10 +200,10 @@ a:hover {
 }
 body {
   background-color: #2a0a5e;
-  color: #fff;
+  color: white;
 }
 .h1 {
-  color: #fff;
+  color: white;
 }
 .themecolor {
   color: #2a0a5e;
@@ -229,40 +226,43 @@ body {
 }
 .btn-primary {
   background-color: #2a0a5e;
-  color: #fff;
+  color: white;
 }
 .btn-primary:hover {
   background-color: #2a0a5e;
   color: #f8c000;
 }
+
 .card {
   height: 100%;
 }
 .h3,
-.h5,
-h4 {
+h4,
+.h5 {
   color: #f8c000;
 }
+
 li {
   color: #f8c000;
 }
 li span {
   font-size: 18px;
-  color: #fff;
+  color: white;
 }
 dt {
-  color: #fff;
+  color: white;
 }
 @media (max-width: 768px) {
   .brand-class {
     text-align: center;
   }
 }
+
 dt {
   float: left;
   width: auto;
   text-align: right;
-  font-weight: 700;
+  font-weight: bold;
   color: #f8c000;
   font-size: 20px;
 }
@@ -272,7 +272,7 @@ dt::after {
 dd {
   font-size: 18px;
   margin: 0 0 0 420px;
-  padding: 0 0 0.7em;
+  padding: 0 0 0.7em 0;
 }
 .p1 {
   color: #f8c000;
@@ -294,6 +294,7 @@ dd {
   text-align: center;
   font-size: 22px;
 }
+
 @keyframes blinker {
   45% {
     opacity: 0;
@@ -322,7 +323,7 @@ dd {
   margin-bottom: -70px;
 }
 .card-image-title-description .card:hover .card-body {
-  top: 0;
+  top: -0px;
 }
 .card-image-title-description .card .card-body .card-title {
   margin-bottom: 0.75rem;
@@ -351,13 +352,14 @@ dd {
   transform: scale(1.15);
 }
 .card-body .card-title {
-  margin-bottom: calc(50%+20px);
+  margin-bottom: calc(50% + 20px);
   transition: 1.5s ease;
   text-align: center;
 }
 .card:hover .card-body .card-title {
   margin-bottom: 0.8rem;
 }
+
 .card-body {
   position: absolute;
   bottom: 0;
@@ -390,8 +392,9 @@ dd {
   animation: blinker 1s linear infinite;
   background-color: #2a0a5e;
   color: #f8c000;
-  padding: 0;
+  padding: 0%;
 }
+
 @keyframes blinker {
   45% {
     opacity: 0;
@@ -399,57 +402,69 @@ dd {
 }
 body {
   font-family: "Libre Baskerville", serif;
-  background-color: #2a0a5e;
+  color: #2a0a5e;
 }
 .label {
   color: #2a0a5e;
 }
+
 * {
   box-sizing: border-box;
 }
+
+/* Full-width input fields */
+input[type="text"],
 input[type="email"],
-input[type="tel"],
-input[type="text"] {
+input[type="tel"] {
   width: 100%;
   padding: 15px;
-  margin: 5px 0 22px;
-  border: 0;
+  margin: 5px 0 22px 0;
+
+  border: none;
   background: #f1f1f1;
 }
+
+/* Add a background color when the inputs get focus */
+input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus {
+input[type="tel"]:focus {
   background-color: #ddd;
-  outline: 0;
+  outline: none;
 }
+
+/* Set a style for all buttons */
 button {
   background-color: #2a0a5e;
   color: #f8c000;
   padding: 14px 20px;
   margin: 8px 0;
-  border: 0;
+  border: none;
   cursor: pointer;
   width: auto;
   opacity: 0.9;
 }
+
 button:hover {
   opacity: 1;
 }
 .container {
   padding: 16px;
 }
+
+/* Modal Content/Box */
 .modal-content {
   background-color: #f8c000;
-  margin: 5% auto 15%;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 100%;
+  width: 100%; /* Could be more or less, depending on screen size */
 }
 .para {
-  color: #fff;
+  color: white;
 }
 .dlresponsive {
   margin: 20px;
 }
+
 .social-icon:hover {
   padding: 10px;
   background-color: transparent;
