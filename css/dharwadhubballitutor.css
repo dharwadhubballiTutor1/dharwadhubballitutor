@@ -61,6 +61,13 @@
     padding: 8px;
   }
 }
+<<<<<<< Updated upstream
+=======
+.rounded-circle{
+  border-radius: 40%!important;
+}
+
+>>>>>>> Stashed changes
 .row {
   margin-right: 0 !important;
   margin-left: 0 !important;
@@ -162,6 +169,16 @@
 .social {
   font-size: 21px !important;
 }
+<<<<<<< Updated upstream
+=======
+
+.services,.col-md-3{
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+}
+
+>>>>>>> Stashed changes
 .container-fluid1 {
   background: #f8c000;
   color: #2a0a5e;
@@ -382,7 +399,7 @@ dd {
 }
 body {
   font-family: "Libre Baskerville", serif;
-  color: #2a0a5e;
+  background-color: #2a0a5e;
 }
 .label {
   color: #2a0a5e;
