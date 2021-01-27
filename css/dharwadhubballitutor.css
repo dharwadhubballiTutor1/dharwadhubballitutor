@@ -62,6 +62,14 @@
   }
 }
 
+.container-services {
+  display: table;
+  width: 100%;
+}
+.col-md-4 {
+  display: table-cell;
+  padding: 28px;
+}
 .row {
   margin-right: 0% !important;
   margin-left: 0% !important;
