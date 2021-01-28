@@ -197,8 +197,8 @@
               <div class="modal-body">
                 <form class="modal-content" action="action-page.php" method="POST">
                   <div class="container">
-                    <h1 style="color: #2a0a5e">Register</h1>
-                    <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
+                    <h2 style="color: #2a0a5e">Register</h2>
+                    <p style="color: #2a0a5e">Please fill in this form.</p>
                     <hr />
                     <label class="label" for="name"><b>Name</b></label>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
@@ -239,7 +239,7 @@
       <a class=footer-a href=tel:+917204817334 style=padding:5px>+917204817334</a><br />
       <a class=footer-a href=tel:+918007961759 style=padding:5px>+918007961759</a>
       <br />
-      <a class=footer-a href=dharwadhubballitutor@gmail.com>dharwadhubballitutor@gmail.com</a>
+      <a class=footer-a href="mailto:dharwadhubballitutor@gmail.com">dharwadhubballitutor@gmail.com</a>
       </address>
       </div>
       <div class=col-md-6 style=text-align:left >
@@ -357,6 +357,31 @@
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()
       })
+    </script>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Would appreciate your ratings</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="media/img/Starrating.gif" alt="Stars" width=466 height=130>
+          </div>
+          <div class="modal-footer">
+            <a href="https://g.page/dharwadhubballitutor/review?gm"><button type="button" class="btn btn-warning">Rate Now</button></a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    setTimeout(function() {
+      $('#myModal').modal();
+    }, 5000);
     </script>
   </body>
 </html>

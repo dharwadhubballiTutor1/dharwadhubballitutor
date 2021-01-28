@@ -229,6 +229,10 @@ body {
   background-color: #2a0a5e;
   color: #f8c000;
 }
+.btn-warning:hover {
+  background-color: #2a0a5e;
+  color: #f8c000;
+}
 .btn-outline-warning {
   color: #2a0a5e;
 }

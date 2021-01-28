@@ -100,14 +100,15 @@
                           <label class="label" for="phone1"><b>Enter your number:</b></label>
                           <input type="tel" name="phone1" class="form-control" id="phone1" placeholder="Number" required />
 
-                          <label class="label" for="internship1"><b>Internships</b></label>
-                          <select class="custom-select" id="internship1" name="internship1">
-                               <option value="SELECT YOUR INTEREST">SELECT YOUR INTEREST</option>
-                               <option value="WEB DESIGNING AND DEVELOPMENT">WEB DESIGNING AND DEVELOPMENT</option>
-                               <option value="CIVIL DESIGN SOFTWARES">CIVIL DESIGN SOFTWARES</option>
-                               <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
-                               <option value="ANDROID DEVELOPMENT">ANDROID DEVELOPMENT</option>
-                            </select> 
+                          <label class=label for=trainings><b>Trainings</b></label>
+<select class=custom-select id=trainings name=trainings>
+<option value="SELECT YOUR INTEREST">Select your Interest</option>
+<option value="Web Designing and Development">Web Designing and Development</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Civil Design Softwares">Civil Design Softwares</option>
+<option value="Digital Marketing">Digital Marketing</option>
+<option value="Android Development">Android Development</option>
+<option value="Cloud Computing">Cloud Computing</option></select><br />
                               <div class="modal-footer">
                                 <button type="button" class="closebtn" data-dismiss="modal">Close</button>
                                 <button type="submit" class="signupbtn">Submit</button>

@@ -122,12 +122,14 @@
 
                 <label class="label" for="trainings"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings" name="trainings">
-                  <option value="SELECT YOUR INTEREST">SELECT YOUR INTEREST</option>
-                  <option value="WEB DESIGNING AND DEVELOPMENT">WEB DESIGNING AND DEVELOPMENT</option>
-                  <option value="CIVIL DESIGN SOFTWARES">CIVIL DESIGN SOFTWARES</option>
-                  <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
-                  <option value="ANDROID DEVELOPMENT">ANDROID DEVELOPMENT</option>
-                </select>
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <option value="Web Designing and Development">Web Designing and Development</option>
+                  <option value="Python Programming">Python Programming</option>
+                  <option value="Civil Design Softwares">Civil Design Softwares</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="Android Development">Android Development</option>
+                  <option value="Cloud Computing">Cloud Computing</option></select
+                ><br />
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
@@ -150,8 +152,8 @@
           <div class="modal-body">
             <form class="modal-content" action="action-page.php" method="POST">
               <div class="container">
-                <h1 style="color: #2a0a5e">Register</h1>
-                <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
+                <h2 style="color: #2a0a5e">Register</h2>
+                <p style="color: #2a0a5e">Please fill in this form.</p>
                 <hr />
                 <label class="label" for="name"><b>Name</b></label>
                 <input type="text" name="name" id="name" class="form-control" placeholder="Name" required />
@@ -193,7 +195,7 @@
             <a class="footer-a" href="tel:+918007961759" style="padding: 5px">+918007961759</a>
 
             <br />
-            <a class="footer-a" href="dharwadhubballitutor@gmail.com">dharwadhubballitutor@gmail.com</a>
+            <a class="footer-a" href="mailto:dharwadhubballitutor@gmail.com">dharwadhubballitutor@gmail.com</a>
           </address>
         </div>
         <div class="col-md-6">
@@ -312,6 +314,30 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Would appreciate your ratings</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="media/img/Starrating.gif" alt="Stars" width="466" height="130" />
+          </div>
+          <div class="modal-footer">
+            <a href="https://g.page/dharwadhubballitutor/review?gm"><button type="button" class="btn btn-warning">Rate Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      setTimeout(function () {
+        $("#myModal").modal()
+      }, 5000)
+    </script>
 
     <script>
       $(document).ready(function () {
