@@ -481,3 +481,12 @@ button:hover {
   padding: 10px;
   background-color: transparent;
 }
+.btn-floating i {
+  font-size: 2rem;
+  line-height: 60px;
+  display: inline-block;
+  width: inherit;
+  text-align: center;
+  color: #f8c000;
+  background-color: #2a0a5e;
+}
