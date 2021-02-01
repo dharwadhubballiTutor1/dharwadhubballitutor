@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dharwadhubballitutor</title>
+    <title>Registeration</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
     <meta name="title" content="DharwadHubballiTutor" />
     <meta name="description" content="DharwadHubballiTutor provides Trainings on various courses and helps upgrade Skills so as to make everyone Job ready" />
