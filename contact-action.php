@@ -141,7 +141,7 @@ require "DB Operations/RegistrationOps.php";
     $reg->set_name(Sanitization::test_input($_POST["name1"]));
     $reg->set_email(Sanitization::test_input($_POST["email1"]));
     $reg->set_phone(Sanitization::test_input($_POST["phone1"]));
-    $reg->set_internship(Sanitization::test_input($_POST["internship1"]));
+    $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
     DBregistration::insert($reg); 
   }
   
