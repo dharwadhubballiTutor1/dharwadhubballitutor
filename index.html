@@ -117,7 +117,7 @@
 <img src=media/img/slide1.jpg alt=Registeration-image class="d-block img-fluid" />
 </picture>
 <div class="carousel-caption d-none d-md-block">
-<button type=button class="btn btn-outline-primary btn-lg">Register For Demo Classes</button>
+<button type=button class="btn btn-outline-primary btn-lg" data-toggle=modal data-target=#demomodal >Register For Demo Classes</button>
 <br />
 <p class=themecolor>Discover your potenial through our wide range of courses and get trained by the best trainers with Industry experience</p>
 </div>
@@ -526,6 +526,53 @@
         <a href="https://g.page/dharwadhubballitutor/review?gm"><button type="button" class="btn btn-warning">Rate Now</button></a>
         
       </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="demomodal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+        <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="text-align: right;">
+           <span aria-hidden="true">&times;</span>
+         </button>
+        </div>
+        <div class="modal-body">
+           <form class="modal-content" action="demo-action.php" method="POST">
+              <div class="container">
+                 <h1 style="color:#2a0a5e">Register for Demo Class</h1>
+                 <label class="label" for="name4"><b>Name</b></label>
+                <input type="text" name="name4" class="form-control" id="name4" placeholder="Name" required />
+
+                <label class="label" for="email4"><b>Email</b></label>
+                <input type="email" name="email4" class="form-control" id="email4" placeholder="name@example.com" />
+
+                <label class="label" for="phone4"><b>Enter your number:</b></label>
+                <input type="tel" name="phone4" class="form-control" id="phone4" placeholder="Number" required />
+
+                <label class="label" for="demo"><b>Demo class In</b></label>
+                <select class="custom-select" id="demo" name="demo">
+                  <option value="SELECT YOUR INTEREST">SELECT YOUR INTEREST</option>
+                  <option value="Web Designing and Development">Web Designing and Development</option>
+                  <option value="Python Programming">Python Programming</option>
+                  <option value="Andorid Development">Andorid Development</option>
+                  <option value="Cloud Computing">Cloud Computing</option>
+                  <option value="Civil Design Softwares">Civil Design Softwares</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="Programming Languages">Programming Languages</option>
+                  <option value="Basic Computers">Basic Computers</option>
+                </select> 
+                    <div class="modal-footer">
+                      <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
+                      <button type=submit class="btn btn-warning">Submit</button>
+                    </div>
+                 </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
     </div>
   </div>
 </div>

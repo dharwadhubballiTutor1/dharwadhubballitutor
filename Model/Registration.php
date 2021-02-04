@@ -8,6 +8,7 @@
     private $Trainings;
     private $Internship;
     private $Services;
+    private $Demo;
     private $table_name="candidates";
   function set_name($name) {
     $this->Name = $name;
@@ -47,6 +48,12 @@
   }
   function get_services() {
     return $this->Services;
+  }
+  function set_demo($demo) {
+    $this->Demo = $demo;
+  }
+  function get_demo() {
+    return $this->Demo;
   }
  }
 ?>
