@@ -490,3 +490,6 @@ button:hover {
   color: #f8c000;
   background-color: #2a0a5e;
 }
+.modal-header {
+  border-bottom: 0px;
+}
