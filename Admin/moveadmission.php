@@ -1,0 +1,156 @@
+<?php
+include "../DB Operations/dbconnection.php";
+include "../Admin/navbar.php";
+?>
+<html>
+  <head><title> Move to Admission</title>
+</head>
+<link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css "/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.7/css/all.css />
+<body>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-10">
+  <h3 style="color:#2a0a5e">MIGRATING ENQUIRIES TO ADMISSIONS</h3> </BR> </br>
+  <?php 
+   $name1=$_GET['name'];
+   $email1=$_GET['email'];
+   $phone1=$_GET['phone'];
+   $qualification1=$_GET['qualification'];
+  ?>
+  <form class="form-horizontal" action="newadmissions.php" method="POST" role="form">
+              <br>
+                <h2 style="color:#f8c000">Admission Form</h2>
+                <div class="row g-3">
+                <div class="col-md-12">
+                    <label for="name" class="col-md-6 control-label">Full Name</label>
+                    <div class="col-sm-12">
+                        <input type="text" id="name" placeholder="Full Name" name="name" class="form-control" value= "<?php
+                         echo $name1;
+                          ?>">
+                         
+                        
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                    <label for="phone" class="col-sm-3 control-label">Phone</label>
+                    <div class="col-sm-12">
+                        <input type="tel" id="phone" placeholder="Phone" name="phone" class="form-control" value= "<?php
+                         echo $phone1;
+                          ?>">
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                    <label for="email" class="col-md-6 control-label">Email</label>
+                    <div class="col-sm-12">
+                        <input type="email" id="email" placeholder="Email" name="email" class="form-control" value= "<?php
+                         echo $email1;
+                          ?>">
+                    </div>
+                </div>
+               <br/>
+
+                <div class="col-md-6">
+                    <label for="dateofbirth" class="col-md-6 control-label">Date of Birth</label>
+                    <div class="col-sm-12">
+                        <input type="date" id="dateofbirth" name="dateofbirth" class="form-control">
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                    <label for="qualification" class="col-md-6 control-label">Qualification</label>
+                    <div class="col-sm-12">
+                        <input type="text" id="qualification"  name="qualification" placeholder="Your Qualification" class="form-control" value= "<?php
+                         echo $qualification1;
+                          ?>">
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                    <label for="guardiansname" class="col-md-6 control-label">Guardians Name</label>
+                    <div class="col-sm-12">
+                        <input type="text" id="guardiansname" name="guardiansname" placeholder="Guardians Name"class="form-control">
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                    <label for="guardiansphone" class="col-md-6 control-label">Guardians Phone Number</label>
+                    <div class="col-sm-12">
+                        <input type="text" id="guardiansphone" name="guardiansphone" placeholder="Guardians Phone Number" class="form-control">
+                    </div>
+                </div>
+                <br/>
+
+
+                <div class="col-md-6">
+                    <label for="coursesopted" class="col-md-6 control-label">Courses Opted</label>
+                    <div class="col-sm-12">
+                    <select class="form-select" id="coursesopted" name="coursesopted">
+                    <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                    <option value="Web Designing and Development">Web Designing and Development</option>
+                  <option value="Python Programming">Python Programming</option>
+                  <option value="Civil Design Softwares">Civil Design Softwares</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="Android Development">Android Development</option>
+                  <option value="Cloud Computing">Cloud Computing</option>
+                  <option value="Programming Languages">Programming Languages</option>
+                  <option value="Basic Computers">Basic Computers</option>
+                  <option value="School Academics">School Academics</option>
+                </select>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                    <label for="address" class="col-md-6 control-label">Address</label>
+                    <div class="col-sm-12">
+                        <input type="address" id="address" name="address" placeholder="Residential Address" class="form-control">
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                    <label for="adhaarno" class="col-md-6 control-label">Adhaar Number</label>
+                    <div class="col-sm-12">
+                        <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control">
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                <label for="adhaarfile" class="form-label">Upload Your Adhaar</label>
+                <div class="col-sm-12">
+                    <input class="form-control" type="file" name="adhaarfile" id="adhaarfile">
+                    </div>
+                </div>
+                <br/>
+
+                <div class="col-md-6">
+                <label for="photofile" class="form-label">Upload Passport Size Photo</label>
+                <div class="col-sm-12">
+                    <input class="form-control" type="file" name="photofile" id="photofile">
+                    </div>
+                </div>
+                <br/>
+
+                <div class="form-group">
+                    <div class="col-sm-12 " style=text-align:center>
+                        <button type="submit" class="btn btn-warning">Register</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
+
+
+         
+
+</body>
+</html>
