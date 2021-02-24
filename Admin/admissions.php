@@ -79,7 +79,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-12">
                     <label for="name" class="col-md-6 control-label">Full Name</label>
                     <div class="col-sm-12">
-                        <input type="text" id="name" placeholder="Full Name" name="name" class="form-control" autofocus>
+                        <input type="text" id="name" placeholder="Full Name" name="name" class="form-control" pattern="[a-zA-Z\-\ ]+" required>
                     </div>
                 </div>
                 <br/>
@@ -87,7 +87,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="phone" class="col-sm-3 control-label">Phone</label>
                     <div class="col-sm-12">
-                        <input type="tel" id="phone" placeholder="Phone" name="phone" class="form-control">
+                        <input type="tel" id="phone" placeholder="Phone" name="phone" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
                     </div>
                 </div>
                 <br/>
@@ -95,7 +95,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="email" class="col-md-6 control-label">Email</label>
                     <div class="col-sm-12">
-                        <input type="email" id="email" placeholder="Email" name="email" class="form-control">
+                        <input type="email" id="email" placeholder="Email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     </div>
                 </div>
                <br/>
@@ -103,7 +103,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="dateofbirth" class="col-md-6 control-label">Date of Birth</label>
                     <div class="col-sm-12">
-                        <input type="date" id="dateofbirth" name="dateofbirth" class="form-control">
+                        <input type="date" id="dateofbirth" name="dateofbirth" class="form-control" required>
                     </div>
                 </div>
                 <br/>
@@ -111,7 +111,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="qualification" class="col-md-6 control-label">Qualification</label>
                     <div class="col-sm-12">
-                        <input type="text" id="qualification"  name="qualification" placeholder="Your Qualification" class="form-control">
+                        <input type="text" id="qualification"  name="qualification" placeholder="Your Qualification" class="form-control" pattern="[A-Za-z]+" required>
                     </div>
                 </div>
                 <br/>
@@ -119,7 +119,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="guardiansname" class="col-md-6 control-label">Guardians Name</label>
                     <div class="col-sm-12">
-                        <input type="text" id="guardiansname" name="guardiansname" placeholder="Guardians Name"class="form-control">
+                        <input type="text" id="guardiansname" name="guardiansname" placeholder="Guardians Name"class="form-control"  pattern="[a-zA-Z\-\ ]+" required>
                     </div>
                 </div>
                 <br/>
@@ -127,7 +127,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="guardiansphone" class="col-md-6 control-label">Guardians Phone Number</label>
                     <div class="col-sm-12">
-                        <input type="text" id="guardiansphone" name="guardiansphone" placeholder="Guardians Phone Number" class="form-control">
+                        <input type="text" id="guardiansphone" name="guardiansphone" placeholder="Guardians Phone Number" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
                     </div>
                 </div>
                 <br/>
@@ -136,7 +136,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="coursesopted" class="col-md-6 control-label">Courses Opted</label>
                     <div class="col-sm-12">
-                    <select class="form-select" id="coursesopted" name="coursesopted">
+                    <select class="form-select" id="coursesopted" name="coursesopted" required>
                     <option value="SELECT YOUR INTEREST">Select your Interest</option>
                     <option value="Web Designing and Development">Web Designing and Development</option>
                   <option value="Python Programming">Python Programming</option>
@@ -155,7 +155,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="address" class="col-md-6 control-label">Address</label>
                     <div class="col-sm-12">
-                        <input type="address" id="address" name="address" placeholder="Residential Address" class="form-control">
+                        <input type="address" id="address" name="address" placeholder="Residential Address" class="form-control" required>
                     </div>
                 </div>
                 <br/>
@@ -163,7 +163,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="adhaarno" class="col-md-6 control-label">Adhaar Number</label>
                     <div class="col-sm-12">
-                        <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control">
+                        <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
                     </div>
                 </div>
                 <br/>
@@ -171,7 +171,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                 <label for="adhaarfile" class="form-label">Upload Your Adhaar</label>
                 <div class="col-sm-12">
-                    <input class="form-control" type="file" name="adhaarfile" id="adhaarfile">
+                    <input class="form-control" type="file" name="adhaarfile" id="adhaarfile" required>
                     </div>
                 </div>
                 <br/>
@@ -179,7 +179,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                 <label for="photofile" class="form-label">Upload Passport Size Photo</label>
                 <div class="col-sm-12">
-                    <input class="form-control" type="file" name="photofile" id="photofile">
+                    <input class="form-control" type="file" name="photofile" id="photofile" required>
                     </div>
                 </div>
                 <br/>
