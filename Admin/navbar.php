@@ -2,7 +2,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css "/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.7/css/all.css />
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -54,6 +56,24 @@ body {
   margin-right: auto;
   display: block;
 }
+.sidebar-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+}
+
+.sidebar-footer > a {
+  flex-grow: 1;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+}
+.btn-warning {
+  background-color:#f8c000 ;
+  color:#2a0a5e ;
+}
 
 </style>
 </head>
@@ -61,6 +81,7 @@ body {
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-1">
+        
             <div class="sidenav">
                  <h3 class="navbar-brand brandName">DharwadHubballiTutor</h3> <br>
                  <div class="sidebar-header">
@@ -74,6 +95,9 @@ body {
                  
                  <a href="enquiries.php">Enquiries</a>
                  <a href="admissions.php">Admissions</a>
+                 <div class="sidebar-footer">
+                <button class="btn btn-warning" onclick()="logout.php"> Logout  <i class="fa fa-power-off"></i></button>
+                </div>
            </div>
        </div> 
        <div class="col-md-11"></div> 

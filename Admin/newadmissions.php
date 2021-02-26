@@ -1,10 +1,11 @@
 <?php
 
-require "../Model/Admissionsmodel.php";
+require "../Admin/Model/Admissionsmodel.php";
 require "../Utilities/Sanitization.php";
-// require "navbar.php";
+require "../Admin/Utilities/Helper.php";
+// require "../Admin/navbar.php";
 
-require "../DB Operations/AdmissionsOps.php";
+require "../Admin/DB Operations/AdmissionsOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $admit=new Admissions();
@@ -18,9 +19,22 @@ require "../DB Operations/AdmissionsOps.php";
     $admit->set_coursesopted(Sanitization::test_input($_POST["coursesopted"]));
     $admit->set_address(Sanitization::test_input($_POST["address"]));
     $admit->set_adhaarno(Sanitization::test_input($_POST["adhaarno"]));
-    $admit->set_adhaarfile(Sanitization::test_input($_POST["adhaarfile"]));
-    $admit->set_photofile(Sanitization::test_input($_POST["photofile"]));
+    $filetoupload=$_FILES["adhaarfile"];
+    Helper::fileupload($filetoupload);
+    $filetoupload=$_FILES["photofile"];
+    Helper::fileupload($filetoupload);
+    $admit->set_adhaarfile($_FILES["adhaarfile"]['name']);
+    $admit->set_photofile($_FILES["photofile"]['name']);
     DBadmission::insert($admit); 
   }
   
 ?>
+<html>
+<head> <title> New Admission </title>
+</head>
+<body>
+
+
+
+</body>
+</html>

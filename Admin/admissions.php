@@ -2,7 +2,7 @@
 <html>
   <head> <title>Admissions </title>
   <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css "/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
   <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.7/css/all.css />
 </head>
 <body>
@@ -36,6 +36,7 @@
               <th>Phone</th>
               <th>Qualification</th>
               <th> Move to Admission </th>  
+             
               </tr>
               <?php 
 include "../DB Operations/dbconnection.php";
@@ -55,6 +56,7 @@ if (isset($_POST['submit']))
         echo '<td>'. $row["Phone"]. '</td>';
         echo '<td>'. $row["Qualification"]. '</td>';
         echo '<td>'.'<a class="btn btn-warning" href="moveadmission.php?name='.$row['Name'].'&email='.$row['Email'].'&phone='.$row['Phone'].'&qualification='.$row['Qualification'].'" role="button" type="submit">Move </a>'.'</td></tr>' ;
+       
 
      }
     } else {
@@ -72,11 +74,11 @@ if (isset($_POST['submit']))
        include "../Admin/navbar.php";
       ?>
   <div class="container" id="pills-newadmit">
-            <form class="form-horizontal" action="newadmissions.php" method="POST" role="form">
+            <form class="form-horizontal" action="newadmissions.php" method="POST" role="form" enctype="multipart/form-data">
               <br>
                 <h2 style="color:#f8c000">Admission Form</h2>
                 <div class="row g-3">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <label for="name" class="col-md-6 control-label">Full Name</label>
                     <div class="col-sm-12">
                         <input type="text" id="name" placeholder="Full Name" name="name" class="form-control" pattern="[a-zA-Z\-\ ]+" required>
@@ -85,9 +87,9 @@ if (isset($_POST['submit']))
                 <br/>
 
                 <div class="col-md-6">
-                    <label for="phone" class="col-sm-3 control-label">Phone</label>
+                    <label for="phone" class="col-md-6 control-label">Phone</label>
                     <div class="col-sm-12">
-                        <input type="tel" id="phone" placeholder="Phone" name="phone" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                        <input type="tel" id="phone" placeholder="Phone" name="phone" class="form-control"  required>
                     </div>
                 </div>
                 <br/>
@@ -125,9 +127,9 @@ if (isset($_POST['submit']))
                 <br/>
 
                 <div class="col-md-6">
-                    <label for="guardiansphone" class="col-md-6 control-label">Guardians Phone Number</label>
+                    <label for="guardiansphone" class="col-md-8 control-label">Guardians Phone Number</label>
                     <div class="col-sm-12">
-                        <input type="text" id="guardiansphone" name="guardiansphone" placeholder="Guardians Phone Number" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                        <input type="text" id="guardiansphone" name="guardiansphone" placeholder="Guardians Phone Number" class="form-control"  required>
                     </div>
                 </div>
                 <br/>
@@ -169,15 +171,17 @@ if (isset($_POST['submit']))
                 <br/>
 
                 <div class="col-md-6">
-                <label for="adhaarfile" class="form-label">Upload Your Adhaar</label>
+                <label for="adhaarfile" class=" col-md-6 form-label">Upload Your Adhaar</label>
                 <div class="col-sm-12">
-                    <input class="form-control" type="file" name="adhaarfile" id="adhaarfile" required>
+               
+                    <input type="file" name="adhaarfile" id="adhaarfile" class="form-control">
+                
                     </div>
                 </div>
                 <br/>
 
                 <div class="col-md-6">
-                <label for="photofile" class="form-label">Upload Passport Size Photo</label>
+                <label for="photofile" class=" col-md-6 form-label">Upload Your Photo</label>
                 <div class="col-sm-12">
                     <input class="form-control" type="file" name="photofile" id="photofile" required>
                     </div>
@@ -209,6 +213,7 @@ if (isset($_POST['submit']))
       <th>AdhaarNo</th>
       <th>AdhaarFile</th>
       <th>PhotoFile</th>
+      <th> View Profile</th>
 
     </tr>
      <?php
@@ -221,12 +226,15 @@ if (isset($_POST['submit']))
 
    if (mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
-         echo "<tr><td> " . $row["id"]."</td><td>" . $row["Name"]. "</td><td>" . $row["Phone"]. "</td><td>" . $row["Email"]. "</td><td>". $row["DateofBirth"]. "</td><td>". $row["Qualification"]. "</td><td>" . $row["Guardians_Name"]. "</td><td>". $row["Guardians_Phone"]. "</td><td>" . $row["CoursesOpted"]. "</td><td>". $row["Address"]. "</td><td>". $row["AdhaarNo"]. "</td><td>".  $row["AdhaarFile"]. "</td><td>".$row["PhotoFile"]. "</td></tr>";
+         echo "<tr><td> " . $row["id"]."</td><td>" . $row["Name"]. "</td><td>" . $row["Phone"]. "</td><td>" . $row["Email"]. "</td><td>". $row["DateofBirth"]. "</td><td>". $row["Qualification"]. "</td><td>" . $row["Guardians_Name"]. "</td><td>". $row["Guardians_Phone"]. "</td><td>" . $row["CoursesOpted"]. "</td><td>". $row["Address"]. "</td><td>". $row["AdhaarNo"]. "</td><td>".  $row["AdhaarFile"]. "</td><td>".$row["PhotoFile"]. "</td><td>" .'<a class="btn btn-warning" href="viewprofile.php" role="button" type="submit">View </a>'."</td></tr>";
       }
    } else {
       echo "0 results";
    }
 ?>
+
+
+
   </table>
   </div> 
     </div>
