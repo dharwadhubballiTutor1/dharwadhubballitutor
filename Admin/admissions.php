@@ -24,13 +24,17 @@
 </ul>
 <div class="tab-content" id="pills-tabContent">
 <div class="tab-pane fade show active" id="pills-enquiry" role="tabpanel" aria-labelledby="pills-enquiry-tab">
-<form action="" method="post">
-<input type="text" name="search">
-<input type="submit" name="submit" value="Search">
-</form></br>
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <div class="input-group-append">
+      <button class="btn btn-secondary" type="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+<br/>
 <table id=enquiries >
-            <tr>
-                <th>Id</th>
+            <tr cellspacing="0">
               <th>Name</th>
               <th>Email</th>
               <th>Phone</th>
@@ -50,7 +54,7 @@ if (isset($_POST['submit']))
 
   if (mysqli_num_rows($result) > 0) {
      while($row = mysqli_fetch_assoc($result)) {
-        echo '<tr><td> ' . $row["id"]. '</td>' ; 
+        echo '<tr>' ; 
         echo '<td> ' . $row["Name"]. '</td>' ; 
         echo '<td>' . $row["Email"]. '</td> ';
         echo '<td>'. $row["Phone"]. '</td>';
@@ -110,6 +114,8 @@ if (isset($_POST['submit']))
                 </div>
                 <br/>
 
+
+
                 <div class="col-md-6">
                     <label for="qualification" class="col-md-6 control-label">Qualification</label>
                     <div class="col-sm-12">
@@ -165,7 +171,7 @@ if (isset($_POST['submit']))
                 <div class="col-md-6">
                     <label for="adhaarno" class="col-md-6 control-label">Adhaar Number</label>
                     <div class="col-sm-12">
-                        <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+                        <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control" pattern="[0-9]{4}[0-9]{4}[0-9]{4}" required>
                     </div>
                 </div>
                 <br/>
@@ -200,20 +206,15 @@ if (isset($_POST['submit']))
   <div class="tab-pane fade" id="pills-admissions" role="tabpanel" aria-labelledby="pills-admissions-tab">
   <table id=enquiries class="center">
     <tr>
-      <th>ID</th>
+      
       <th>Name</th>
       <th>Phone</th>
       <th>Email</th>
-      <th>DateofBirth</th>
       <th>Qualification</th>
-      <th>Guardians Name</th>
       <th>Guardians Phone</th>
       <th>CoursesOpted</th>
-      <th>Address</th>
       <th>AdhaarNo</th>
-      <th>AdhaarFile</th>
-      <th>PhotoFile</th>
-      <th> View Profile</th>
+      <th> Action</th>
 
     </tr>
      <?php
@@ -226,7 +227,7 @@ if (isset($_POST['submit']))
 
    if (mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
-         echo "<tr><td> " . $row["id"]."</td><td>" . $row["Name"]. "</td><td>" . $row["Phone"]. "</td><td>" . $row["Email"]. "</td><td>". $row["DateofBirth"]. "</td><td>". $row["Qualification"]. "</td><td>" . $row["Guardians_Name"]. "</td><td>". $row["Guardians_Phone"]. "</td><td>" . $row["CoursesOpted"]. "</td><td>". $row["Address"]. "</td><td>". $row["AdhaarNo"]. "</td><td>".  $row["AdhaarFile"]. "</td><td>".$row["PhotoFile"]. "</td><td>" .'<a class="btn btn-warning" href="viewprofile.php" role="button" type="submit">View </a>'."</td></tr>";
+         echo "<tr><td> "  . $row["Name"]. "</td><td>" . $row["Phone"]. "</td><td>" . $row["Email"]. "</td><td>". $row["Qualification"]. "</td><td>". $row["Guardians_Phone"]. "</td><td>" . $row["CoursesOpted"]."</td><td>". $row["AdhaarNo"]. "</td><td>" .'<a class="btn btn-warning" href="viewprofile.php?name='.$row['Name'].'&email='.$row['Email'].'&phone='.$row['Phone'].'&qualification='.$row['Qualification'].'&dateofbirth='. $row["DateofBirth"].'&guardiansname='. $row["Guardians_Name"].'&guardiansno='.$row['Guardians_Phone'].'&courseopted='.$row['CoursesOpted'].'&address='.$row['Address'].'&adhaarno='.$row['AdhaarNo'].'&photofile='.$row['PhotoFile'].'" role="button" type="submit">View </a>'.'</td></tr>' ;
       }
    } else {
       echo "0 results";

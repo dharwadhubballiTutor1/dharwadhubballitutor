@@ -118,7 +118,7 @@ require "../Admin/Utilities/Helper.php";
                 <div class="col-md-6">
                     <label for="adhaarno" class="col-md-6 control-label">Adhaar Number</label>
                     <div class="col-sm-12">
-                        <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+                        <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control" pattern="[0-9]{4}[0-9]{4}[0-9]{4}" required>
                     </div>
                 </div>
                 <br/>
