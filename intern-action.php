@@ -89,7 +89,7 @@
     <div class="container">
       <div class="row row-eq-height">
         <div class="w-100 text-light">
-          <h3 class="h3">THANK YOU FOR REGISTERING AT DHARWADHUBBALLITUTOR...WE WILL GET BACK TO YOU VERY SOON.</h3>
+          <h3 class="h3">THANK YOU FOR ShOWING INTEREST IN INTERNSHIPS AT DHARWADHUBBALLITUTOR...WE WILL GET BACK TO YOU VERY SOON.</h3>
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@
                    </button>
                   </div>
                   <div class="modal-body">
-                     <form class="modal-content" action="action-page.php" method="POST">
+                     <form class="modal-content" action="intern-action.php" method="POST">
                         <div class="container">
                            <h1 style="color:#2a0a5e">Sign Up</h1>
                            <p style="color:#2a0a5e">Please fill in this form to create an account.</p>
@@ -116,6 +116,9 @@
                           <label class="label" for="phone1"><b>Enter your number:</b></label>
                           <input type="tel" name="phone1" class="form-control" id="phone1" placeholder="Number" required />
 
+                          <label class=label for=qualification1><b>Your Qualification:</b></label>
+                          <input type=text name=qualification1 class=form-control id=qualification1 placeholder=Qualification required />
+
                           <label class="label" for="internship1"><b>Internships</b></label>
                           <select class="custom-select" id="internship1" name="internship1">
                                <option value="SELECT YOUR INTEREST">SELECT YOUR INTEREST</option>
@@ -123,7 +126,7 @@
                                <option value="CIVIL DESIGN SOFTWARES">CIVIL DESIGN SOFTWARES</option>
                                <option value="DIGITAL MARKETING">DIGITAL MARKETING</option>
                                <option value="ANDROID DEVELOPMENT">ANDROID DEVELOPMENT</option>
-                            </select> 
+                          </select> 
                               <div class="modal-footer">
                                 <button type="button" class="closebtn" data-dismiss="modal">Close</button>
                                 <button type="submit" class="signupbtn">Submit</button>
@@ -156,6 +159,8 @@ require "DB Operations/RegistrationOps.php";
     $reg->set_name(Sanitization::test_input($_POST["name1"]));
     $reg->set_email(Sanitization::test_input($_POST["email1"]));
     $reg->set_phone(Sanitization::test_input($_POST["phone1"]));
+    echo $_POST["qualification1"];
+    $reg->set_qualification(Sanitization::test_input($_POST["qualification1"]));
     $reg->set_internship(Sanitization::test_input($_POST["internship1"]));
     DBregistration::insert($reg); 
   }

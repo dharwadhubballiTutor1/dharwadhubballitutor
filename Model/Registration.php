@@ -9,6 +9,7 @@
     private $Internship;
     private $Services;
     private $Demo;
+    private $Qualification;
     private $table_name="candidates";
   function set_name($name) {
     $this->Name = $name;
@@ -54,6 +55,13 @@
   }
   function get_demo() {
     return $this->Demo;
+  }
+  function set_qualification($qualification) {
+    $this->Qualification = $qualification;
+    echo $this->Qualification;
+  }
+  function get_qualification() {
+    return $this->Qualification;
   }
  }
 ?>
