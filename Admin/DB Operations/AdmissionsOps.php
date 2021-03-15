@@ -6,8 +6,8 @@ require "../DB Operations/dbconnection.php";
       {
         $db=ConnectDb::getInstance();
         $connectionObj=$db->getConnection();
-         $sql = "insert into admissions (`Name`, `Phone`, `Email`, `DateofBirth`,`Qualification`,`Guardians_Name`,`Guardians_Phone`,`CoursesOpted`,`Address`,`AdhaarNo`,`AdhaarFile`,`PhotoFile`) 
-                values ('".$admissionObj->get_name()."','".$admissionObj->get_phone()."','".$admissionObj->get_email()."','".$admissionObj->get_dateofbirth()."', '".$admissionObj->get_qualification()."','".$admissionObj->get_guardiansname()."','".$admissionObj->get_guardiansphone()."','".$admissionObj->get_coursesopted()."','".$admissionObj->get_address()."','".$admissionObj->get_adhaarno()."','".$admissionObj->get_adhaarfile()."','".$admissionObj->get_photofile()."')";
+         $sql = "insert into admissions (`Name`, `Phone`, `Email`, `DateofBirth`,`Qualification`,`Guardians_Name`,`Guardians_Phone`,`CoursesOpted`,`Address`,`AdhaarNo`,`AdhaarFile`,`PhotoFile`,`Resume`) 
+                values ('".$admissionObj->get_name()."','".$admissionObj->get_phone()."','".$admissionObj->get_email()."','".$admissionObj->get_dateofbirth()."', '".$admissionObj->get_qualification()."','".$admissionObj->get_guardiansname()."','".$admissionObj->get_guardiansphone()."','".$admissionObj->get_coursesopted()."','".$admissionObj->get_address()."','".$admissionObj->get_adhaarno()."','".$admissionObj->get_adhaarfile()."','".$admissionObj->get_photofile()."','".$admissionObj->get_resume()."')";
                 
                 if ($connectionObj->query($sql) === TRUE) {
         } else {
@@ -38,6 +38,7 @@ require "../DB Operations/dbconnection.php";
          $view->set_adhaarno($row['AdhaarNo']);
          $view->set_adhaarfile($row['AdhaarFile']);
          $view->set_photofile($row['PhotoFile']);
+         $view->set_resume($row['Resume']);
         
          
    } else {
@@ -99,6 +100,8 @@ require "../DB Operations/dbconnection.php";
         $view->set_adhaarno($row['AdhaarNo']);
         $view->set_adhaarfile($row['AdhaarFile']);
         $view->set_photofile($row['PhotoFile']);
+        $view->set_resume($row['Resume']);
+
         array_push($admissionlist,$view);
       }
       } else {
@@ -115,7 +118,7 @@ require "../DB Operations/dbconnection.php";
       $db=ConnectDb::getInstance();
       $connectionObj=$db->getConnection();
       $status=true;
-      $sql = "UPDATE admissions SET Name='".$admission->get_name()."', Phone='".$admission->get_phone()."', Email='".$admission->get_email()."', DateofBirth='".$admission->get_dateofbirth()."',Qualification='".$admission->get_qualification()."',Guardians_Name='".$admission->get_guardiansname()."', Guardians_Phone='".$admission->get_guardiansphone()."',CoursesOpted='".$admission->get_coursesopted()."',Address='".$admission->get_address()."',AdhaarNo='".$admission->get_adhaarno()."' where id='".$admission->get_id()."' " ;
+      $sql = "UPDATE admissions SET Name='".$admission->get_name()."', Phone='".$admission->get_phone()."', Email='".$admission->get_email()."', DateofBirth='".$admission->get_dateofbirth()."',Qualification='".$admission->get_qualification()."',Guardians_Name='".$admission->get_guardiansname()."', Guardians_Phone='".$admission->get_guardiansphone()."',CoursesOpted='".$admission->get_coursesopted()."',Address='".$admission->get_address()."',AdhaarNo='".$admission->get_adhaarno()."',AdhaarFile='".$admission->get_adhaarfile()."',Resume='".$admission->get_resume()."' where id='".$admission->get_id()."' " ;
       $result = mysqli_query($db->getConnection(), $sql);
       if ($connectionObj->query($sql) === TRUE)
       {

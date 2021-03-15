@@ -3,7 +3,7 @@
 require "../Admin/Model/Admissionsmodel.php";
 require "../Utilities/Sanitization.php";
 require "../Admin/Utilities/Helper.php";
-require "../Admin/navbar.php";
+//require "../Admin/navbar.php";
 require "../Admin/DB Operations/AdmissionsOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -20,6 +20,12 @@ require "../Admin/DB Operations/AdmissionsOps.php";
     $admit->set_coursesopted(Sanitization::test_input($_POST["coursesopted"]));
     $admit->set_address(Sanitization::test_input($_POST["address"]));
     $admit->set_adhaarno(Sanitization::test_input($_POST["adhaarno"]));
+    $filetoupload=$_FILES["adhaarfile"];
+    Helper::fileupload($filetoupload);
+    $filetoupload=$_FILES["resume"];
+    Helper::fileupload($filetoupload);
+    $admit->set_adhaarfile($_FILES["adhaarfile"]['name']);
+    $admit->set_resume($_FILES["resume"]['name']);
     DBadmission::updateadmission($admit);
   }
 ?>

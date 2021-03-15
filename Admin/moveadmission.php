@@ -17,9 +17,9 @@ require "../Model/Registration.php";
   <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-10">
-  <h3 style="color:#2a0a5e">MIGRATING ENQUIRIES TO ADMISSIONS</h3> </BR> </br>
+  <h3 style="color:#2a0a5e">Migrating from Enquiries to Admissions</h3> </BR> </br>
   <?php 
-  $name1=$_GET['name'];
+  $name1=$_GET['name'];  
   $email1=$_GET['email'];
   $phone1=$_GET['phone'];
   $qualification1=$_GET['qualification'];
@@ -142,6 +142,13 @@ require "../Model/Registration.php";
                 <label for="photofile" class=" col-md-6 form-label">Upload Your Photo</label>
                 <div class="col-sm-12">
                     <input class="form-control" type="file" name="photofile" id="photofile" required>
+                    </div>
+                </div>
+                <br/>
+                <div class="col-md-6">
+                <label for="resume" class=" col-md-6 form-label">Upload Your Resume</label>
+                <div class="col-sm-12">
+                    <input class="form-control" type="file" name="resume" id="resume" required>
                     </div>
                 </div>
                 <br/>

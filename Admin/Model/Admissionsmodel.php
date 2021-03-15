@@ -15,6 +15,7 @@
     private $AdhaarNo;
     private $Adhaarfile;
     private $Photofile;
+    private $Resume;
     private $table_name="admissions";
     
     function set_id($id) {
@@ -106,6 +107,11 @@
   function get_photofile() {
     return $this->PhotoFile;
   }
- 
- }
+  function set_resume($resume) {
+    $this->Resume = $resume ;  
+  }          
+  function get_resume() {
+    return $this->Resume;
+  }
+}
 ?>

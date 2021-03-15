@@ -76,8 +76,8 @@ table {
   margin-bottom: 0.5em;
 }
 .btn-warning {
-  background-color: #2a0a5e !important;
-  color: #f8c000 !important;
+  background-color: #f8c000 !important;
+  color: #2a0a5e !important;
 }
 
 .btn-warning:hover {

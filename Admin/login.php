@@ -42,18 +42,19 @@
   background-color: #2a0a5e;
   height: 100vh;
 }
-#login .container #login-row #login-column #login-box {
-  margin-top: 120px;
+#login  #login-box {
+  margin-top: 80px;
   max-width: 400px;
-  height: 320px;
+  height: 350px;
   border: 1px solid #9C9C9C;
   background-color: #f8c000;
+  border-radius:20px;
 }
-#login .container #login-row #login-column #login-box #login-form {
+#login  #login-box #login-form {
   padding: 20px;
 }
-#login .container #login-row #login-column #login-box #login-form #register-link {
-  margin-top: -85px;
+#login  #login-box #login-form #register-link {
+  margin-top: 1px;
 }
 .label{
    color:#2a0a5e;
@@ -72,13 +73,13 @@
    
    <body >
    <div id="login">
-        <h3 class="text-center text-white pt-5">Admin Login</h3>
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-4">
+        <h2 class="text-center text-white pt-5">Welcome to DharwadHubballiTutor </h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
                     <div id="login-box" class="col-md-6">
                         <form id="login-form" class="form" action="" method="post">
-                        <h2 style="color: #2a0a5e" class="text-center">Login</h2>
+                           <h2 style="color: #2a0a5e">Login</h2><br/>
                             <div class="form-group">
                                 <label for="admin_name" class="label"><b>Admin-name:</b></label><br>
                                 <input type="text" name="admin_name" id="admin_name" class="form-control" required>
@@ -89,6 +90,21 @@
                             </div>
                             <div class="form-group">
                             <button type="submit" class="btn btn-warning">Submit</button>
-                            </div>
+                            </div> 
+                     </div>
+                  </div>
+                  <div class="col-md-8">
+                  <div  class="col-md-6">
+                  <img src="../Admin/media/admin.png" />
+                   </div>
+</div>
+               </div>
+          </div>
+   </div>
+
+
+                               
+                              
+
    </body>
 </html>

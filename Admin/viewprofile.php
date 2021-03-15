@@ -28,7 +28,7 @@ include "../Admin/newadmissions.php";
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="<?php echo 'uploads/', $admission->get_photofile(); ?>" alt="Admin" class="rounded-circle" width="100" height="100">
                     <div class="mt-3">
-                    <?php echo $admission->get_photofile();?>
+                    <?php echo $admission->get_name();?>
                     </div>
                   </div>
                 </div>
@@ -158,7 +158,23 @@ include "../Admin/newadmissions.php";
                 <div class="col-sm-12">
                     <a href="uploads/" $.adhaarfile class="form-control"> Click here to download Resume</a>
                     </div>
+                </div>     
+                <div class="col-md-6">
+                <label for="adhaarfile" class=" col-md-6 form-label">Upload Adhaar</label>
+                <div class="col-sm-12">
+               
+                    <input type="file" name="adhaarfile" id="adhaarfile" class="form-control">
+                
+                    </div>
                 </div>
+                <div class="col-md-6">
+                <label for="resume" class=" col-md-6 form-label">Upload Resume</label>
+                <div class="col-sm-12">
+               
+                    <input type="file" name="resume" id="resume" class="form-control">
+                
+                    </div>
+                </div>                   
                 <button class="btn btn-success" type="submit" name="submit">Update</button>
                 <br/>
               </div>

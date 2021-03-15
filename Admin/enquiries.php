@@ -1,3 +1,4 @@
+<?php include "../Admin/navbar.php";?>
 <html>
   <head><title>ENQUIRIES</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -8,7 +9,7 @@
   <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-10">
-         <h3 style="color:#2a0a5e">ENQUIRIES AT DHARWADHUBBALLITUTOR</h3>  </br>
+         <h3 style="color:#2a0a5e">Enquiries at DharwadHubballiTutor</h3>  </br>
          <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="trainings-tab" data-bs-toggle="tab" data-bs-target="#trainings" type="button" role="tab" aria-controls="trainings" aria-selected="true"><b>Trainings</b></button>
@@ -37,9 +38,7 @@
 
              <?php
                include "../DB Operations/dbconnection.php";
-                include "../Admin/navbar.php";
-     
-
+          
                $db=ConnectDb::getInstance();
                $sql = "SELECT * FROM candidates WHERE Trainings IS NOT NULL AND TRIM(Trainings) <> '' ";
               $result = mysqli_query($db->getConnection(), $sql);
@@ -66,10 +65,7 @@
               </tr>
 
              <?php
-               
-                include "../Admin/navbar.php";
-     
-
+              
                $db=ConnectDb::getInstance();
                $sql = "SELECT * FROM candidates WHERE Internship IS NOT NULL AND TRIM(Internship) <> '' ";
               $result = mysqli_query($db->getConnection(), $sql);
@@ -96,10 +92,7 @@
               </tr>
 
              <?php
-               
-                include "../Admin/navbar.php";
-     
-
+              
                $db=ConnectDb::getInstance();
                $sql = "SELECT * FROM candidates WHERE Demo IS NOT NULL AND TRIM(Demo) <> '' ";
               $result = mysqli_query($db->getConnection(), $sql);
@@ -127,9 +120,6 @@
 
              <?php
                
-                include "../Admin/navbar.php";
-     
-
                $db=ConnectDb::getInstance();
                $sql = "SELECT * FROM candidates WHERE Services IS NOT NULL AND TRIM(Services) <> '' ";
               $result = mysqli_query($db->getConnection(), $sql);

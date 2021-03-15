@@ -41,6 +41,28 @@ body {
 .sidenav a:active {
   background-color:#f8c000;
 }
+.sidebar-menu ul li a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 30px 8px 20px;
+}
+
+.sidebar-wrapper .sidebar-menu ul li a i {
+  margin-right: 15px;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.sidebar-wrapper .sidebar-menu ul li a:hover > i::before {
+  display: inline-block;
+  animation: swing ease-in-out 0.5s 1 alternate;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -60,10 +82,7 @@ body {
   margin-right: auto;
   display: block;
 }
-.btn-warning {
-  background-color: #f8c000 !important;
-  color:#2a0a5e  !important;
-}
+
 .sidebar-footer {
   position: absolute;
   width: 100%;
@@ -98,13 +117,13 @@ body {
                           <span class="user-role">Administrator</span>
                       </div>
                  </div><hr>
-
-                 <a href="enquiries.php">Enquiries</a>
-                 <a href="admissions.php">Admissions</a>
-                 <br/><br/>
-                  <div class="sidebar-footer">
-                    <a  class="footer btn btn-warning" type="button" href="logout.php"> LOG OUT<i class="fa fa-power-off"></i></a>
-</div>
+                  <div class="sidebar-menu">
+                   
+                 <a href="enquiries.php"> <i class="fas fa-search-plus"></i> <span> Enquiries</span></a>
+                 <a href="admissions.php"> <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span> Admissions </span></a>
+                <a href="trainers.php"><i class="fas fa-user-circle" aria-hidden="true"></i> <span> Trainers </span></a>
+                </div>
+            <a  type="button" href="logout.php"><i class="fa fa-power-off"></i> Log Out</a>
            </div>
        </div>
        <div class="col-md-11"></div>

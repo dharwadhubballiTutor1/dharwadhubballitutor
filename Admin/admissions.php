@@ -13,7 +13,7 @@
   <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-10">
-<h3 style="color:#2a0a5e">ADMISSIONS AT DHARWADHUBBALLITUTOR</h3>  </br>
+<h3 style="color:#2a0a5e">Admissions at DharwadHubballiTutor</h3>  </br>
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 <li class="nav-item" role="presentation">
     <button class="nav-link active" id="pills-enquiry-tab" data-bs-toggle="pill" data-bs-target="#pills-enquiry" type="button" role="tab" aria-controls="pills-enquiry" aria-selected="true">From Enquiry</button>
@@ -168,6 +168,13 @@
                     </div>
                 </div>
                 <br/>
+                                                    
+                <div class="col-md-6">
+                <label for="resume" class=" col-md-6 form-label">Upload Your Resume</label>
+                <div class="col-sm-12">
+                    <input class="form-control" type="file" name="resume" id="resume" required>
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <div class="col-sm-12 " style=text-align:center>
@@ -196,7 +203,7 @@
      $admissionlist= DBadmission::selectall();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
      foreach($admissionlist as $admission) 
      {
-        echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-warning" href="viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button" type="submit">View </a>'.'</td></tr>' ;
+        echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button" type="submit">View </a>'.'</td></tr>' ;
      }
      
     ?>
