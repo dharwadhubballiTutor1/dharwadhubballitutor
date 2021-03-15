@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../Admin/navbar.php";
+// include "../Admin/navbar.php";
 include "../Admin/newadmissions.php";
 ?>
 <html>

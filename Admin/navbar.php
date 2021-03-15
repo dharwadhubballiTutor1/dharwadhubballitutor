@@ -140,6 +140,7 @@
                                     Admissions </span></a>
                             <a href="trainers.php"><i class="fas fa-user-circle" aria-hidden="true"></i> <span> Trainers
                                 </span></a>
+                                <a href="courses.php"> <i class="fa fa-book"></i> <span> Courses</span></a>
                         </div>
                         <a type="button" href="logout.php"><i class="fa fa-power-off"></i> Log Out</a>
                     </div>

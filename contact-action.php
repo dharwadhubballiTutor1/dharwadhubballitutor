@@ -139,10 +139,10 @@ require "DB Operations/RegistrationOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $reg=new Registration();
-    $reg->set_name(Sanitization::test_input($_POST["name1"]));
-    $reg->set_email(Sanitization::test_input($_POST["email1"]));
-    $reg->set_phone(Sanitization::test_input($_POST["phone1"]));
-    $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
+    $reg->set_name(Sanitization::test_input($_POST["name5"]));
+    $reg->set_email(Sanitization::test_input($_POST["email5"]));
+    $reg->set_phone(Sanitization::test_input($_POST["phone5"]));
+    $reg->set_trainings(Sanitization::test_input($_POST["trainings5"]));
     DBregistration::insert($reg); 
   }
   

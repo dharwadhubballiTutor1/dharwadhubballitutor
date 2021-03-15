@@ -15,4 +15,28 @@ require "../DB Operations/dbconnection.php";
         }
         
       }
+      public static function selectall()
+    {
+      $db=ConnectDb::getInstance();
+      $connectionObj=$db->getConnection();
+      $sql = 'SELECT * FROM courses';
+      $result = mysqli_query($db->getConnection(), $sql);
+      $courseslist=[];
+      if (mysqli_num_rows($result) > 0) {
+      while($row = mysqli_fetch_assoc($result)) {
+        $view=new Admissions();
+        $view->set_id($row['id']);
+        $view->set_cname($row['Cname']);
+        $view->set_ctype($row['Ctype']);
+        $view->set_cduration($row['Cduration']);
+
+        array_push($courseslist,$view);
+      }
+      } else {
+      echo "0 results";
+    }
+    
+    return $courseslist;
+
+    }
     }

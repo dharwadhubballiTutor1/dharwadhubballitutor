@@ -6,6 +6,7 @@
     private $Phone;
     private $Email;
     private $DateofBirth;
+    private $Gender;
     private $Qualification;
     private $Guardians_Name;
     private $Guardians_Phone;
@@ -51,6 +52,13 @@
   }
   function get_dateofbirth() {
     return $this->DateofBirth;
+  }
+
+  function set_gender($gender) {
+    $this->Gender = $gender;
+  }
+  function get_gender() {
+    return $this->Gender;
   }
 
   function set_qualification($qualification) {

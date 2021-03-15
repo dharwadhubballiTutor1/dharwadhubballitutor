@@ -112,6 +112,19 @@ include "../Admin/navbar.php";
                                             </div>
                                         </div>
                                         <br />
+                                        <div class="col-md-6">
+                                            <label for="gender" class="col-md-6 control-label">Gender</label>
+                                            <div class="col-sm-12">
+                                                <select class="form-select" id="gender" name="gender" required>
+                                                    <option value=" ">Select</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Male">Male</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br />
+
+
 
                                         <div class="col-md-6">
                                             <label for="qualification"

@@ -79,7 +79,7 @@ require "../Model/Registration.php";
                                 <label for="qualification" class="col-md-6 control-label">Qualification</label>
                                 <div class="col-sm-12">
                                     <input type="text" id="qualification" name="qualification"
-                                        placeholder="Your Qualification" class="form-control" pattern="[A-Za-z]+"
+                                        placeholder="Your Qualification" class="form-control" 
                                         required value="<?php
                          echo "$qualification1";
                          ?>">

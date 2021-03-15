@@ -39,7 +39,7 @@ require "../Admin/DB Operations/AdmissionsOps.php";
 
     <body>
         <?php 
-
+ header("location:admissions.php");
 ?>
 
 

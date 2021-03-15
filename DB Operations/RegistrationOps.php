@@ -7,7 +7,7 @@ require "DB Operations/dbconnection.php";
         $db=ConnectDb::getInstance();
         $connectionObj=$db->getConnection();
          $sql = "insert into candidates (`Name`, `Email`, `Phone`, `Trainings`,`Internship`,`Services`,`Demo`,`Qualification`) 
-                values ('".$registrationObj->get_name()."','".$registrationObj->get_email()."',".$registrationObj->get_phone().",'".$registrationObj->get_trainings()."', '".$registrationObj->get_internship()."','".$registrationObj->get_services()."','".$registrationObj->get_demo()."','".$registrationObj->get_qualification()."')";
+                values ('".$registrationObj->get_name()."','".$registrationObj->get_email()."','".$registrationObj->get_phone()."','".$registrationObj->get_trainings()."', '".$registrationObj->get_internship()."','".$registrationObj->get_services()."','".$registrationObj->get_demo()."','".$registrationObj->get_qualification()."')";
                 
                 if ($connectionObj->query($sql) === TRUE) {
         } else {
