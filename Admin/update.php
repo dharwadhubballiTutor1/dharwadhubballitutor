@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require "../Admin/Model/Admissionsmodel.php";
 require "../Utilities/Sanitization.php";
 require "../Admin/Utilities/Helper.php";
@@ -30,23 +30,25 @@ require "../Admin/DB Operations/AdmissionsOps.php";
   }
 ?>
 <html>
-<head> <title> Updated Information </title>
-<style>
-.h2{
-    
-    text-align:center;
-    color:#2a0a5e;
-    margin-top:3rem;  }
-</style>
-</head>
-<body>
-<div class="container-fluid">
-  <div class="row">
-     <div class="col-md-2"></div>
-      <div class="col-md-10">
-      <div class="container">
-      <h2 class="h2">
-      <?php
+    <head>
+        <title> Updated Information </title>
+        <style>
+        .h2 {
+
+            text-align: center;
+            color: #2a0a5e;
+            margin-top: 3rem;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-10">
+                    <div class="container">
+                        <h2 class="h2">
+                            <?php
    $status=DBadmission::updateadmission($admit);
    if ($status===TRUE)
    {
@@ -55,7 +57,7 @@ require "../Admin/DB Operations/AdmissionsOps.php";
    }else{
      echo "error in updating record";
    }
-      ?> </h2>
-
-</body>
+      ?> 
+      </h2>
+    </body>
 </html>

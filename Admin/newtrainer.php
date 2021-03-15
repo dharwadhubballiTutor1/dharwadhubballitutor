@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require "../Admin/Model/Trainermodel.php";
 require "../Utilities/Sanitization.php";
 require "../Admin/Utilities/Helper.php";
@@ -27,13 +27,17 @@ require "../Admin/DB Operations/TrainerOps.php";
   }
 ?>
 <html>
-<head> <title> New Admission </title>
-</head>
-<body>
-<?php 
+
+    <head>
+        <title> New Admission </title>
+    </head>
+
+    <body>
+        <?php 
  header("location:admissions.php");
 ?>
 
 
-</body>
+    </body>
+
 </html>

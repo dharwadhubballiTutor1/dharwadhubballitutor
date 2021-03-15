@@ -1,5 +1,4 @@
 <?php
-
    class Helper{
      public static function fileupload($filetoupload)
      {
@@ -19,9 +18,9 @@
 
         if(file_exists($filetoupload['name'],$target_dir)) {
            unlink($filetoupload['name'],$target_dir);
-//Place it into your "uploads" folder mow using the move_uploaded_file() function
-        
+         //Place it into your "uploads" folder mow using the move_uploaded_file() function
         } 
+      }
         if ($uploadOk == 0) {
            echo "Sorry, your file was not uploaded.";
       
@@ -32,10 +31,7 @@
              echo "Sorry, there was an error uploading your file." ;
           }
         }
-       
-         
       }
      }
-    }
    
 ?>

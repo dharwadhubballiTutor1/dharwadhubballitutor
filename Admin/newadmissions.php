@@ -1,10 +1,9 @@
 <?php
-
+session_start();
 require "../Admin/Model/Admissionsmodel.php";
 require "../Utilities/Sanitization.php";
- require "../Admin/Utilities/Helper.php";
+require "../Admin/Utilities/Helper.php";
 //require "../Admin/navbar.php";
-
 require "../Admin/DB Operations/AdmissionsOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -33,13 +32,17 @@ require "../Admin/DB Operations/AdmissionsOps.php";
   }
 ?>
 <html>
-<head> <title> New Admission </title>
-</head>
-<body>
-<?php 
+
+    <head>
+        <title> New Admission </title>
+    </head>
+
+    <body>
+        <?php 
 
 ?>
 
 
-</body>
+    </body>
+
 </html>
