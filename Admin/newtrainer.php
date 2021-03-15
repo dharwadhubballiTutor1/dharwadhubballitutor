@@ -1,5 +1,5 @@
 <?php
-session_start();
+require "session.php";
 require "../Admin/Model/Trainermodel.php";
 require "../Utilities/Sanitization.php";
 require "../Admin/Utilities/Helper.php";

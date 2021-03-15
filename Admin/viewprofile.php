@@ -1,5 +1,5 @@
 <?php
-session_start();
+require "session.php";
 // include "../Admin/navbar.php";
 include "../Admin/newadmissions.php";
 ?>

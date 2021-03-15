@@ -1,5 +1,5 @@
 <?php  
-session_start();
+require "session.php";
 include "../Admin/DB Operations/AdmissionsOps.php";
 require "../Admin/Model/Admissionsmodel.php";
 include "../Admin/navbar.php";
@@ -20,7 +20,7 @@ include "../Admin/navbar.php";
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-10">
-                    <h3 style="color:#2a0a5e">Admissions at DharwadHubballiTutor</h3> </br>
+                <h2 class="display-2">Admission</h2>
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="pills-enquiry-tab" data-bs-toggle="pill"

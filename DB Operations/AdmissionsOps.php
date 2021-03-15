@@ -1,4 +1,5 @@
 <?php
+
 require "../DB Operations/dbconnection.php";
     class DBadmission
     {
@@ -13,7 +14,6 @@ require "../DB Operations/dbconnection.php";
         } else {
           echo "Error: " . $sql . "<br>" . $connectionObj->error;
         }
-        
     }
   }
 ?>

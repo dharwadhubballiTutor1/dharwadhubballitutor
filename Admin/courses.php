@@ -1,5 +1,5 @@
 <?php  
-session_start();
+require "session.php";
 include "../Admin/DB Operations/CoursesOps.php";
 require "../Admin/Model/Coursesmodel.php";
 include "../Admin/navbar.php";

@@ -1,5 +1,5 @@
 <?php
-require "../DB Operations/dbconnection.php";
+
     class DBcourse
     {
       public static function insert($courseObj)
@@ -17,8 +17,8 @@ require "../DB Operations/dbconnection.php";
       }
       public static function selectall()
     {
-      $db=ConnectDb::getInstance();
-      $connectionObj=$db->getConnection();
+      // $db=ConnectDb::getInstance();
+      // $connectionObj=$db->getConnection();
       $sql = 'SELECT * FROM courses';
       $result = mysqli_query($db->getConnection(), $sql);
       $courseslist=[];

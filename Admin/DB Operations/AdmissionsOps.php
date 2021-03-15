@@ -1,5 +1,5 @@
 <?php
-require "../DB Operations/dbconnection.php";
+//require "../DB Operations/dbconnection.php";
     class DBadmission
     {
       public static function insert($admissionObj)
@@ -18,8 +18,8 @@ require "../DB Operations/dbconnection.php";
 
     public static function viewadmission($viewObj)
     {
-      $db=ConnectDb::getInstance();
-      $connectionObj=$db->getConnection();
+      //$db=ConnectDb::getInstance();
+      //$connectionObj=$db->getConnection();
        $sql = "select * from admissions where id=$viewObj";
        $result = mysqli_query($db->getConnection(), $sql);
        $view= new Admissions();
@@ -47,8 +47,6 @@ require "../DB Operations/dbconnection.php";
    } 
    return $view;
     }
-
-    
   public static function search()
   {
        $db=ConnectDb::getInstance();
@@ -75,8 +73,7 @@ require "../DB Operations/dbconnection.php";
   
   return $enquirylist;
 
-}
-
+  }
     public static function selectall()
     {
       $db=ConnectDb::getInstance();
@@ -101,18 +98,13 @@ require "../DB Operations/dbconnection.php";
         $view->set_adhaarfile($row['AdhaarFile']);
         $view->set_photofile($row['PhotoFile']);
         $view->set_resume($row['Resume']);
-
         array_push($admissionlist,$view);
       }
       } else {
       echo "0 results";
     }
-    
     return $admissionlist;
-
     }
-
-
     public static function updateadmission($admission)
     {
       $db=ConnectDb::getInstance();

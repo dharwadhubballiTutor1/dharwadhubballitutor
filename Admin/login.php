@@ -1,6 +1,6 @@
 <?php
+   
    include "../DB Operations/dbconnection.php";
-   session_start();
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
@@ -18,7 +18,7 @@
 		
       if($count == 1) {
          // echo "Validateed successfully";
-         
+         session_start();
          $_SESSION['login_user'] = $myusername;
          
          header("location: enquiries.php");
