@@ -112,14 +112,18 @@ include "../Admin/navbar.php";
                                             </div>
                                         </div>
                                         <br />
+
                                         <div class="col-md-6">
                                             <label for="gender" class="col-md-6 control-label">Gender</label>
-                                            <div class="col-sm-12">
-                                                <select class="form-select" id="gender" name="gender" required>
-                                                    <option value=" ">Select</option>
-                                                    <option value="Female">Female</option>
-                                                    <option value="Male">Male</option>
-                                                </select>
+                                            <div class="col-md-12">
+                                                <div class="col-md-4 form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
+                                                    <label class="form-check-label" for="inlineRadio1">Female</label>
+                                                </div>
+                                                <div class="col-md-4 form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="Male">
+                                                    <label class="form-check-label" for="gender">Male</label>
+                                                </div>
                                             </div>
                                         </div>
                                         <br />
@@ -242,6 +246,11 @@ include "../Admin/navbar.php";
                     </div>
                     <div class="tab-pane fade" id="pills-admissions" role="tabpanel"
                         aria-labelledby="pills-admissions-tab">
+                        <form class="form-inline mr-auto mb-4" method="POST" action="">
+                                <input class="form-control" name="search" type="text" placeholder="Search" id="search">
+                                <button class="btn btn-danger" type="submit" name="submit">Search</button>
+                            </form>
+                            <section id="#pills-admissions">
                         <table id=enquiries class="center">
                             <tr>
                                 <th> Id</th>
@@ -255,17 +264,20 @@ include "../Admin/navbar.php";
                                 <th> Action</th>
                             </tr>
                             <?php
-  
-     $admissionlist= DBadmission::selectall();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-     foreach($admissionlist as $admission) 
-     {
-        echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button" type="submit">View </a>'.'</td></tr>' ;
-     }
-     
-    ?>
+                    //  $admissionlist= DBadmission::selectall();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                    // foreach($admissionlist as $admission) 
+                    // {
+                    //    echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button" type="submit">View </a>'.'</td></tr>' ;
+                    // }
+                   $admissionlist= DBadmission::searchadmission();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                   foreach($admissionlist as $admission) 
+                   {
+                       echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button">View </a>'.'</td></tr>' ;
+                   }
+                   ?>
                         </table>
-
                     </div>
+                    </section>
                 </div>
             </div>
         </div>

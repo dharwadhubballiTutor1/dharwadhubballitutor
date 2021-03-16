@@ -75,6 +75,21 @@ require "../Model/Registration.php";
                             <br />
 
                             <div class="col-md-6">
+                                <label for="gender" class="col-md-6 control-label">Gender</label>
+                                    <div class="col-md-12">
+                                        <div class="col-md-4 form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
+                                            <label class="form-check-label" for="inlineRadio1">Female</label>
+                                        </div>
+                                        <div class="col-md-4 form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="gender" value="Male">
+                                            <label class="form-check-label" for="gender">Male</label>
+                                        </div>
+                                    </div>
+                            </div>
+                                        <br />
+
+                            <div class="col-md-6">
                                 <label for="qualification" class="col-md-6 control-label">Qualification</label>
                                 <div class="col-sm-12">
                                     <input type="text" id="qualification" name="qualification"

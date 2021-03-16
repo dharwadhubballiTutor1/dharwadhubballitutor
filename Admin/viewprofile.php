@@ -1,7 +1,8 @@
 <?php
 require "session.php";
 // include "../Admin/navbar.php";
-include "../Admin/newadmissions.php";
+include "../Admin/DB Operations/AdmissionsOps.php";
+include "../Admin/Model/Admissionsmodel.php";
 ?>
 <html>
     <head>
@@ -93,6 +94,26 @@ include "../Admin/newadmissions.php";
                                             </div>
                                         </div>
                                         <br />
+
+                                        <div class="col-md-6">
+                                            <label for="gender" class="col-md-6 control-label">Gender</label>
+                                            <div class="col-md-12">
+                                                <div class="col-md-4 form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="<?php
+                         echo $admission->get_gender();
+                         ?>">
+                                                    <label class="form-check-label" for="inlineRadio1">Female</label>
+                                                </div>
+                                                <div class="col-md-4 form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="<?php
+                         echo $admission->get_gender();
+                         ?>">
+                                                    <label class="form-check-label" for="gender">Male</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+
 
                                         <div class="col-md-6">
                                             <label for="qualification"

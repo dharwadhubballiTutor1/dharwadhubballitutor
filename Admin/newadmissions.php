@@ -13,6 +13,7 @@ require "../Admin/DB Operations/AdmissionsOps.php";
     $admit->set_phone(Sanitization::test_input($_POST["phone"]));
     $admit->set_email(Sanitization::test_input($_POST["email"]));
     $admit->set_dateofbirth(Sanitization::test_input($_POST["dateofbirth"]));
+    $admit->set_gender(Sanitization::test_input($_POST["gender"]));
     $admit->set_qualification(Sanitization::test_input($_POST["qualification"]));
     $admit->set_guardiansname(Sanitization::test_input($_POST["guardiansname"]));
     $admit->set_guardiansphone(Sanitization::test_input($_POST["guardiansphone"]));

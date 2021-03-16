@@ -1,5 +1,6 @@
 <?php
 //require "../DB Operations/dbconnection.php";
+
     class DBadmission
     {
       public static function insert($admissionObj)
@@ -18,8 +19,8 @@
 
     public static function viewadmission($viewObj)
     {
-      //$db=ConnectDb::getInstance();
-      //$connectionObj=$db->getConnection();
+      $db=ConnectDb::getInstance();
+      $connectionObj=$db->getConnection();
        $sql = "select * from admissions where id=$viewObj";
        $result = mysqli_query($db->getConnection(), $sql);
        $view= new Admissions();
@@ -30,6 +31,7 @@
          $view->set_phone($row['Phone']);
          $view->set_email($row['Email']);
          $view->set_dateofbirth($row['DateofBirth']);
+         $view->set_gender($row['Gender']);
          $view->set_qualification($row['Qualification']);
          $view->set_guardiansname($row['Guardians_Name']);
          $view->set_guardiansphone($row['Guardians_Phone']);
@@ -73,6 +75,38 @@
   
   return $enquirylist;
 
+  }
+
+  public static function searchadmission()
+  {
+       $db=ConnectDb::getInstance();
+       $connectionObj=$db->getConnection();
+       
+       $searchadmission="";
+       if (isset($_POST['submit']))
+       $searchadmission=$_POST["search"];
+       echo $searchadmission;
+       $sql = "SELECT id,Name,Email,Phone,Qualification,Guardians_Phone,CoursesOpted,AdhaarNo,PhotoFile From admissions where Name like '%$searchadmission%' ";
+       $result = mysqli_query($db->getConnection(), $sql);
+       $admissionlist=[];
+       if (mysqli_num_rows($result) > 0) {
+       while($row = mysqli_fetch_assoc($result)) {
+        $view=new Admissions();
+        $view->set_id($row['id']);
+        $view->set_name($row['Name']);
+        $view->set_phone($row['Phone']);
+        $view->set_email($row['Email']);
+        $view->set_qualification($row['Qualification']);
+        $view->set_guardiansphone($row['Guardians_Phone']);
+         $view->set_coursesopted($row['CoursesOpted']);
+         $view->set_adhaarno($row['AdhaarNo']);
+         $view->set_photofile($row['PhotoFile']);
+        array_push($admissionlist,$view);
+  } 
+} else {
+    echo "0 results";
+  }
+  return $admissionlist;
   }
     public static function selectall()
     {
