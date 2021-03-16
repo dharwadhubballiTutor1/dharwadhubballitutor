@@ -4,7 +4,7 @@ body {
 table {
   position: relative;
 }
-#enquiries {
+.enquiries {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 80%;
@@ -18,27 +18,27 @@ table {
   width: 25% !important;
 }
 
-#enquiries td,
-#enquiries th {
+.enquiries td,
+.enquiries th {
   padding: 8px;
   color: #2a0a5e;
   border-bottom: #2a0a5e !important;
 }
 
-#enquiries th {
+.enquiries th {
   top: 0;
   position: sticky;
 }
-#enquiries tr:nth-child(even) {
+.enquiries tr:nth-child(even) {
   background-color: #f89700;
 }
 
-#enquiries tr:hover {
+.enquiries tr:hover {
   background-color: darkgrey;
   color: #f8c000;
 }
 
-#enquiries th {
+.enquiries th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;

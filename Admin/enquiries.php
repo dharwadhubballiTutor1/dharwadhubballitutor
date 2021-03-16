@@ -1,6 +1,8 @@
 <?php 
 require "session.php";
-include "../Admin/navbar.php";?>
+include "../Admin/navbar.php";
+include "../Admin/DB Operations/enqueryOps.php";
+?>
 <html>
 
     <head>
@@ -8,6 +10,32 @@ include "../Admin/navbar.php";?>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel=stylesheet href=../Admin/css/dharwadhubballitutoradmin.css />
+        <style>
+         #training_length{
+             float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;
+         }
+         #Internship_length{
+            float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px; 
+         }
+         #democlasstable_length{
+            float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px; 
+         }
+         #Services_length{
+            float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;  
+         }
+        </style>
     </head>
 
     <body>
@@ -15,7 +43,7 @@ include "../Admin/navbar.php";?>
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-10">
-                <h2 class="display-2">Equiries</h2>
+                    <h2 class="display-2">Equiries</h2>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="trainings-tab" data-bs-toggle="tab"
@@ -25,7 +53,7 @@ include "../Admin/navbar.php";?>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="internship-tab" data-bs-toggle="tab"
                                 data-bs-target="#internship" type="button" role="tab" aria-controls="internship"
-                                aria-selected="false"><b>Internship</b></button>
+                                aria-selected="false" ><b>Internship</b></button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="democlass-tab" data-bs-toggle="tab" data-bs-target="#democlass"
@@ -39,38 +67,34 @@ include "../Admin/navbar.php";?>
                         </li>
                     </ul>
                     <br />
+
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="trainings" role="tabpanel"
                             aria-labelledby="trainings-tab">
-                            <table id=enquiries>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Qualification</th>
-                                    <th>Trainings</th>
-                                </tr>
-
+                            <table id="training" class="display enquiries">
+                                <thead>
+                                    <tr>
+                                        <th>Name<i class="bi bi-arrow-down-up"></i></th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Qualification</th>
+                                        <th>Trainings</th>
+                                    </tr>
+                                </thead>
                                 <?php
-            //    include "../DB Operations/dbconnection.php";
-          
-            //    $db=ConnectDb::getInstance();
-               $sql = "SELECT * FROM candidates WHERE Trainings IS NOT NULL AND TRIM(Trainings) <> '' ";
-              $result = mysqli_query($db->getConnection(), $sql);
-
-                if (mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                  echo "<tr><td> " . $row["Name"]. "</td><td>" . $row["Email"]. "</td><td>" . $row["Phone"]. "</td><td>". $row["Qualification"]. "</td><td>". $row["Trainings"]. "</td></tr>";
+               $enquirylist= DBenquery::getAllEnquery("Trainings");
+               echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                foreach($enquirylist as $enquiry) 
+                {
+                    echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>". $enquiry->get_enqueryFor(). "</td></tr>";
                 }
-                } else {
-                     echo "0 results";
-                }
-    
-             ?>
+                echo "</tbody>";
+                                ?>
                             </table>
                         </div>
                         <div class="tab-pane fade" id="internship" role="tabpanel" aria-labelledby="internship-tab">
-                            <table id=enquiries>
+                            <table class="display enquiries" id="Internship">
+                            <thead>
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
@@ -78,26 +102,23 @@ include "../Admin/navbar.php";?>
                                     <th>Qualification</th>
                                     <th>Internship</th>
                                 </tr>
-
+                            </thead>
                                 <?php
               
-            //    $db=ConnectDb::getInstance();
-               $sql = "SELECT * FROM candidates WHERE Internship IS NOT NULL AND TRIM(Internship) <> '' ";
-              $result = mysqli_query($db->getConnection(), $sql);
-
-                if (mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                  echo "<tr><td> " . $row["Name"]. "</td><td>" . $row["Email"]. "</td><td>" . $row["Phone"]. "</td><td>". $row["Qualification"]. "</td><td>". $row["Internship"]. "</td></tr>";
-                }
-                } else {
-                     echo "0 results";
-                }
-    
+           
+            $enquirylist= DBenquery::getAllEnquery("Internship");
+            echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+             foreach($enquirylist as $enquiry) 
+             {
+                 echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>". $enquiry->get_enqueryFor(). "</td></tr>";
+             }
+             echo "</tbody>";
              ?>
                             </table>
                         </div>
                         <div class="tab-pane fade" id="democlass" role="tabpanel" aria-labelledby="democlass-tab">
-                            <table id=enquiries>
+                            <table class="enquiries" id="democlasstable">
+                            <thead>
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
@@ -105,26 +126,23 @@ include "../Admin/navbar.php";?>
                                     <th>Qualification</th>
                                     <th>Demo</th>
                                 </tr>
-
+                                </thead>
                                 <?php
               
             //    $db=ConnectDb::getInstance();
-               $sql = "SELECT * FROM candidates WHERE Demo IS NOT NULL AND TRIM(Demo) <> '' ";
-              $result = mysqli_query($db->getConnection(), $sql);
-
-                if (mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                  echo "<tr><td> " . $row["Name"]. "</td><td>" . $row["Email"]. "</td><td>" . $row["Phone"]. "</td><td>". $row["Qualification"]. "</td><td>". $row["Demo"]. "</td></tr>";
-                }
-                } else {
-                     echo "0 results";
-                }
-    
+            $enquirylist= DBenquery::getAllEnquery("Demo");
+            echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+             foreach($enquirylist as $enquiry) 
+             {
+                 echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>". $enquiry->get_enqueryFor(). "</td></tr>";
+             }
+             echo "</tbody>";
              ?>
                             </table>
                         </div>
                         <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
-                            <table id=enquiries>
+                            <table class="enquiries display" id="Services">
+                            <thead>
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
@@ -132,29 +150,20 @@ include "../Admin/navbar.php";?>
                                     <th>Qualification</th>
                                     <th>Services</th>
                                 </tr>
-
+                            </thead>
                                 <?php
                
-            //    $db=ConnectDb::getInstance();
-               $sql = "SELECT * FROM candidates WHERE Services IS NOT NULL AND TRIM(Services) <> '' ";
-              $result = mysqli_query($db->getConnection(), $sql);
-
-                if (mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                  echo "<tr><td> " . $row["Name"]. "</td><td>" . $row["Email"]. "</td><td>" . $row["Phone"]. "</td><td>". $row["Qualification"]. "</td><td>". $row["Services"]. "</td></tr>";
+               $enquirylist= DBenquery::getAllEnquery("Services");
+               echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                foreach($enquirylist as $enquiry) 
+                {
+                    echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>". $enquiry->get_enqueryFor(). "</td></tr>";
                 }
-                } else {
-                     echo "0 results";
-                }
-    
-             ?>
+                echo "</tbody>";
+                ?>
                             </table>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
         </div>
@@ -164,6 +173,26 @@ include "../Admin/navbar.php";?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
             integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
         </script>
-    </body>
 
+
+        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+        <script>
+        var table = $('#training').DataTable();
+        var internship=$('#Internship').DataTable();
+        var DemoClass=$("#democlasstable").DataTable();
+        var Services=$("#Services").DataTable();
+        // #column3_search is a <input type="text"> element
+        $('#column3_search').on('keyup', function() {
+            table.columns(0).search(this.value).draw();
+            internship.columns(0).search(this.value).draw();
+            DemoClass.columns(0).search(this.value).draw();
+            Services.columns(0).search(this.value).draw();
+        });
+        $(document).ready(function(){
+            $("[type=search]").addClass("form-control").attr("placeholder","Type to search...").attr("style","margin-left:50px");
+            $("select").addClass("form-select").attr("aria-label","Default select example");
+
+        });
+        </script>
+    </body>
 </html>

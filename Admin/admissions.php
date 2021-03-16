@@ -13,6 +13,20 @@ include "../Admin/navbar.php";
             integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
             crossorigin="anonymous" />
         <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.7/css/all.css />
+        <style>
+             #enquery_length{
+             float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;
+         }
+         #addmissionlist_length{
+             float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;
+         }
+        </style>
     </head>
 
     <body>
@@ -41,12 +55,8 @@ include "../Admin/navbar.php";
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-enquiry" role="tabpanel"
                             aria-labelledby="pills-enquiry-tab">
-                            <form class="form-inline mr-auto mb-4" method="POST" action="">
-                                <input class="form-control" name="search" type="text" placeholder="Search" id="search">
-                                <button class="btn btn-danger" type="submit" name="submit">Search</button>
-                            </form>
-                            <br />
-                            <table id=enquiries>
+                            <table class=enquiries id="enquery">
+                                <thead>
                                 <tr cellspacing="0">
 
                                     <th>Name</th>
@@ -55,15 +65,16 @@ include "../Admin/navbar.php";
                                     <th>Qualification</th>
                                     <th> Move to Admission </th>
                                 </tr>
+                                </thead>
                                 <?php 
-    
-    $enquirylist= DBadmission::search();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-    foreach($enquirylist as $enquiry) 
-     {
-        echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>"  .'<a class="btn btn-danger" href="moveadmission.php?name='.$enquiry->get_name().'&phone='.$enquiry->get_phone().'&email='.$enquiry->get_email().'&qualification='.$enquiry->get_qualification().'" role="button" type="submit" >Move </a>'.'</td></tr>' ;
-     }
-     
-     ?>
+                                echo  "<tbody>";
+                                $enquirylist= DBadmission::search();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                foreach($enquirylist as $enquiry) 
+                                {
+                                    echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>"  .'<a class="btn btn-danger" href="moveadmission.php?name='.$enquiry->get_name().'&phone='.$enquiry->get_phone().'&email='.$enquiry->get_email().'&qualification='.$enquiry->get_qualification().'" role="button" type="submit" >Move </a>'.'</td></tr>' ;
+                                }
+                                echo  "</tbody>";
+                                ?>
                             </table>
                         </div>
                         <div class="tab-pane fade " id="pills-newadmit" role="tabpanel"
@@ -246,12 +257,10 @@ include "../Admin/navbar.php";
                     </div>
                     <div class="tab-pane fade" id="pills-admissions" role="tabpanel"
                         aria-labelledby="pills-admissions-tab">
-                        <form class="form-inline mr-auto mb-4" method="POST" action="">
-                                <input class="form-control" name="search" type="text" placeholder="Search" id="search">
-                                <button class="btn btn-danger" type="submit" name="submit">Search</button>
-                            </form>
+                        
                             <section id="#pills-admissions">
-                        <table id=enquiries class="center">
+                        <table class="enquiries center" id="addmissionlist">
+                            <thead>
                             <tr>
                                 <th> Id</th>
                                 <th>Name</th>
@@ -263,17 +272,16 @@ include "../Admin/navbar.php";
                                 <th>AdhaarNo</th>
                                 <th> Action</th>
                             </tr>
+                            </thead>
                             <?php
-                    //  $admissionlist= DBadmission::selectall();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                    // foreach($admissionlist as $admission) 
-                    // {
-                    //    echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button" type="submit">View </a>'.'</td></tr>' ;
-                    // }
+                    
+                    echo  "<tbody>";
                    $admissionlist= DBadmission::searchadmission();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                    foreach($admissionlist as $admission) 
                    {
                        echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button">View </a>'.'</td></tr>' ;
                    }
+                   echo  "</tbody>";
                    ?>
                         </table>
                     </div>
@@ -287,6 +295,19 @@ include "../Admin/navbar.php";
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
             integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
         </script>
-    </body>
+         <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+         <script>
+        var table = $('#enquery').DataTable();
+        var addmissionList = $('#addmissionlist').DataTable();
+             $('#column3_search').on('keyup', function() {
+            table.columns(0).search(this.value).draw();
+            addmissionList.columns(0).search(this.value).draw();
+             });
 
-</html>
+            $(document).ready(function(){
+            $("[type=search]").addClass("form-control").attr("placeholder","Type to search...").attr("style","margin-left:50px");
+            $("select").addClass("form-select").attr("aria-label","Default select example");
+        });
+        </script>
+    </body>
+</html> 
