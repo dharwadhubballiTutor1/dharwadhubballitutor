@@ -3,6 +3,8 @@ require "session.php";
 include "../Admin/DB Operations/TrainerOps.php";
 include "../Admin/Model/Trainermodel.php";
 include "../Admin/navbar.php";
+include "../Admin/DB Operations/CoursesOps.php";
+include "../Admin/Model/Coursesmodel.php";
 ?>
 <html>
     <head>
@@ -35,11 +37,6 @@ include "../Admin/navbar.php";
                             <button class="nav-link " id="pills-trainers-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-trainers" type="button" role="tab" aria-controls="pills-trainers"
                                 aria-selected="false">Trainers list</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-admissions-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-admissions" type="button" role="tab"
-                                aria-controls="pills-admissions" aria-selected="false">Admission List</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
@@ -90,67 +87,20 @@ include "../Admin/navbar.php";
                                     <div class="col-md-12">
                                         <label for="coursesassigned" class="col-md-6 control-label"
                                             name="coursesassigned">Courses Assigned</label>
-                                        <div class="col-md-12">
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    value="option1">
-                                                <label class="form-check-label" for="coursesassigned">Web Designing and
-                                                    Development</label>
+                                            <div class="col-md-12">
+                                             <select class="form-select" multiple aria-label="multiple select example" id="coursesassigned" name="coursesassigned[]">
+                                                 <option value=''>-----SELECT-----</option>
+                                                <?php  
+                                                   
+                                                    $courselist=DBcourse::selectcourse();
+                                                    foreach($courselist as $clist) 
+                                                    {
+                                                      echo "<option value='".$clist->get_id()."'>".$clist->get_cname()."</option>"; 
+                                                    }
+                                                 
+                                                ?>
+                                             </select>
                                             </div>
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    name="courses" value="option2">
-                                                <label class="form-check-label" for="coursesassigned">Python
-                                                    Programming</label>
-                                            </div>
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    name="coursesassigned" value="option3">
-                                                <label class="form-check-label" for="coursesassigned">Cloud
-                                                    Computing</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    name="coursesassigned" value="option4">
-                                                <label class="form-check-label" for="coursesassigned">Programming
-                                                    Languages</label>
-                                            </div>
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    name="coursesassigned" value="option5">
-                                                <label class="form-check-label" for="coursesassigned">Civil Design
-                                                    Softwares</label>
-                                            </div>
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    name="coursesassigned" value="option6">
-                                                <label class="form-check-label" for="coursesassigned">Android
-                                                    Development</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    name="coursesassigned" value="option7">
-                                                <label class="form-check-label" for="coursesassigned">Digital
-                                                    Marketing</label>
-                                            </div>
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    name="coursesassigned" value="option8">
-                                                <label class="form-check-label" for="coursesassigned">Basics Of
-                                                    Computers </label>
-                                            </div>
-                                            <div class="col-md-3 form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="coursesassigned"
-                                                    name="coursesassigned" value="option9">
-                                                <label class="form-check-label" for="coursesassigned">School
-                                                    Academics</label>
-                                            </div>
-                                        </div>
-
                                     </div>
                                     <br />
 
@@ -197,6 +147,17 @@ include "../Admin/navbar.php";
                                         </div>
                                     </div>
                             </form>
+                        </div>
+                        <div class="tab-pane fade" id="pills-trainers" role="tabpanel"
+                               aria-labelledby="pills-trainers-tab">
+                                                
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         </div>
                     </div>
                 </div>
