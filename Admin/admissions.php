@@ -258,7 +258,7 @@ include "../Admin/navbar.php";
                     <div class="tab-pane fade" id="pills-admissions" role="tabpanel"
                         aria-labelledby="pills-admissions-tab">
                         
-                            <section id="#pills-admissions">
+                        <section id="#pills-admissions">
                         <table class="enquiries center" id="addmissionlist">
                             <thead>
                             <tr>

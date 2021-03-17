@@ -7,7 +7,7 @@
     private $Phone;
     private $Email;
     private $Qualification;
-    private $Coursesassigned;
+    private $Coursesassigned=array();
     private $Address;
     private $AdhaarNo;
     private $Adhaarfile;
@@ -54,7 +54,7 @@
     function set_coursesassigned($coursesassigned) {
     $this->Coursesassigned= $coursesassigned;
     }
-    function get_coursesopted() {
+    function get_coursesassigned() {
     return $this->Coursesassigned;
     }
 

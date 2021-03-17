@@ -18,6 +18,13 @@ include "../Admin/Model/Coursesmodel.php";
         .form-check-label {
             color: white;
         }
+       
+         #trainerslist_length{
+             float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;
+         }
         </style>
     </head>
 
@@ -146,24 +153,61 @@ include "../Admin/Model/Coursesmodel.php";
                                             <button type="submit" class="btn btn-warning">Register</button>
                                         </div>
                                     </div>
-                            </form>
+                                </div>
+                             </form>
                         </div>
+                      
                         <div class="tab-pane fade" id="pills-trainers" role="tabpanel"
                                aria-labelledby="pills-trainers-tab">
-                                                
-                        
-                        
-                        
-                        
-                        
-                        
+                         <table class="enquiries center" id="trainerslist"> 
+                            <thead>
+                            <tr>
+                                <th> Id</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Qualification</th>
+                               
+                                <th>AdhaarNo</th>
+                                <th> Action</th>
+                            </tr>
+                            </thead>
+                            <?php       
+                               echo  "<tbody>";
+                                $trainerslist= DBtrainer::searchtrainer();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                foreach($trainerslist as $trainer) 
+                                {
+                                    echo "<tr><td> "  . $trainer->get_id(). "</td><td>"  . $trainer->get_name(). "</td><td>". $trainer->get_phone(). "</td><td>" .$trainer->get_email(). "</td><td>". $trainer->get_qualification(). "</td><td>" . $trainer->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewtrainer.php?id='.$trainer->get_id().'&photofile='.$trainer->get_photofile().'" role="button">View </a>'.'</td></tr>' ;
+                                }
+                                 echo  "</tbody>";
+                            ?>
+                         </table>
                         
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+            integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+            integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
+        </script>
+         <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+         <script>
+       
+        var trainerslist = $('#trainerslist').DataTable();
+             $('#column3_search').on('keyup', function() {
+            
+            trainerslist.columns(0).search(this.value).draw();
+             });
 
+            $(document).ready(function(){
+            $("[type=search]").addClass("form-control").attr("placeholder","Type to search...").attr("style","margin-left:50px");
+            $("select").addClass("form-select").attr("aria-label","Default select example");
+        });
+        </script>
     </body>
 
 </html>
