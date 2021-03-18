@@ -1,14 +1,14 @@
 <?php
-require "session.php";
-// include "../Admin/navbar.php";
-include "../Admin/DB Operations/AdmissionsOps.php";
-include "../Admin/Model/Admissionsmodel.php";
+require "../../Admin/session.php";
+include "../../Admin/navbar.php";
+include "../../Admin/DB Operations/AdmissionsOps.php";
+include "../../Admin/Model/Admissionsmodel.php";
 ?>
 <html>
     <head>
         <title>Student Profile</title>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css " />
+        <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css " />
     </head>
     <body>
         <div class="container-fluid">
@@ -17,10 +17,8 @@ include "../Admin/Model/Admissionsmodel.php";
                 <div class="col-md-10">
                     <div class="container">
                         <h2 class="h2">Students Details </h2>
-                        <?php   
-        $id=$_GET['id'];
-        $admission= DBadmission::viewadmission($id);
-        ?>
+                        <?php $id=$_GET['id'];
+                              $admission= DBadmission::viewadmission($id);?>
                         <br />
                         <div class="row gutters-sm">
                             <div class="col-md-3 mb-3">
@@ -39,12 +37,10 @@ include "../Admin/Model/Admissionsmodel.php";
                                 <div class="form-check text-center">
                                     <input type="radio" class="btn-check" name="options" id="option2">
                                     <label class="btn btn-danger" for="option2">Edit</label>
-
                                 </div>
                             </div>
-
                             <div class="col-md-8">
-                                <form class="form" action="update.php" method="POST" id="myForm"
+                                <form class="form" action="stdprofileupdate.php" method="POST" id="myForm"
                                     enctype="multipart/form-data">
                                     <div class="row g-3">
                                         <div class="col-md-6">
@@ -59,7 +55,6 @@ include "../Admin/Model/Admissionsmodel.php";
                                             </div>
                                         </div>
                                         <br />
-
                                         <div class="col-md-6">
                                             <label for="phone" class="col-md-6 control-label">Phone</label>
                                             <div class="col-sm-12">
@@ -70,7 +65,6 @@ include "../Admin/Model/Admissionsmodel.php";
                                             </div>
                                         </div>
                                         <br />
-
                                         <div class="col-md-6">
                                             <label for="email" class="col-md-6 control-label">Email</label>
                                             <div class="col-sm-12">
@@ -99,13 +93,15 @@ include "../Admin/Model/Admissionsmodel.php";
                                             <label for="gender" class="col-md-6 control-label">Gender</label>
                                             <div class="col-md-12">
                                                 <div class="col-md-4 form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="<?php
+                                                    <input class="form-check-input" type="radio" name="gender"
+                                                        id="gender" value="<?php
                          echo $admission->get_gender();
                          ?>">
                                                     <label class="form-check-label" for="inlineRadio1">Female</label>
                                                 </div>
                                                 <div class="col-md-4 form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="<?php
+                                                    <input class="form-check-input" type="radio" name="gender"
+                                                        id="gender" value="<?php
                          echo $admission->get_gender();
                          ?>">
                                                     <label class="form-check-label" for="gender">Male</label>
@@ -113,8 +109,6 @@ include "../Admin/Model/Admissionsmodel.php";
                                             </div>
                                         </div>
                                         <br />
-
-
                                         <div class="col-md-6">
                                             <label for="qualification"
                                                 class="col-md-6 control-label">Qualification</label>
@@ -194,7 +188,7 @@ include "../Admin/Model/Admissionsmodel.php";
                                         <div class="col-md-6">
                                             <label for="adhaarfile" class=" col-md-6 form-label">Adhaar File</label>
                                             <div class="col-sm-12">
-                                                <a href="<?php echo 'uploads/', $admission->get_adhaarfile(); ?>"
+                                                <a href="<?php echo "uploads/". $admission->get_adhaarfile(); ?>"
                                                     class="form-control" download> Click here to download Adhaar
                                                     file</a>
                                             </div>
@@ -202,7 +196,7 @@ include "../Admin/Model/Admissionsmodel.php";
                                         <div class="col-md-6">
                                             <label for="adhaarfile" class=" col-md-6 form-label">Resume</label>
                                             <div class="col-sm-12">
-                                                <a href="uploads/" $.adhaarfile class="form-control"> Click here to
+                                                <a href="<?php echo "uploads/".$admission->get_resume(); ?>" class="form-control"> Click here to
                                                     download Resume</a>
                                             </div>
                                         </div>

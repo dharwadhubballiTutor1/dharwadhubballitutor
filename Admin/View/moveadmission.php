@@ -1,17 +1,17 @@
 <?php
-require "session.php";
-include "../Admin/navbar.php";
-require "../Admin/Utilities/Helper.php";
-include "../Admin/DB Operations/AdmissionsOps.php";
-require "../Admin/Model/Admissionsmodel.php";
-require "../Model/Registration.php";
+require "../../Admin/session.php";
+include "../../Admin/navbar.php";
+require "../../Admin/Utilities/Helper.php";
+include "../../Admin/DB Operations/AdmissionsOps.php";
+require "../../Admin/Model/Admissionsmodel.php";
+require "../../Model/Registration.php";
 ?>
 <html>
 
     <head>
         <title> Move to Admission</title>
     </head>
-    <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css " />
+    <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css " />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.7/css/all.css />

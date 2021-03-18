@@ -21,7 +21,7 @@
          session_start();
          $_SESSION['login_user'] = $myusername;
          
-         header("location: enquiries.php");
+         header("location: ../enquiries.php");
       }else {
          echo "Your Login Name or Password is invalid";
       }

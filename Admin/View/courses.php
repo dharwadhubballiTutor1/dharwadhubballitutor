@@ -1,14 +1,14 @@
 <?php  
-require "session.php";
-include "../Admin/DB Operations/CoursesOps.php";
-require "../Admin/Model/Coursesmodel.php";
-include "../Admin/navbar.php";
+require "../../Admin/session.php";
+include "../../Admin/DB Operations/CoursesOps.php";
+require "../../Admin/Model/Coursesmodel.php";
+include "../../Admin/navbar.php";
        ?>
 <html>
 
     <head>
         <title>Courses </title>
-        <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css " />
+        <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css " />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
             integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
             crossorigin="anonymous" />
@@ -86,7 +86,7 @@ include "../Admin/navbar.php";
                      <div class="tab-pane fade" id="pills-courses" role="tabpanel"
                           aria-labelledby="pills-courses-tab">
                          
-                          <table id=enquiries>
+                          <table class="enquiries center">
                                 <tr cellspacing="0">
                                 <th>id</th>
                                     <th>CName</th>

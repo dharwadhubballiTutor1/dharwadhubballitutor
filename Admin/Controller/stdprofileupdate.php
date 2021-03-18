@@ -1,10 +1,10 @@
 <?php
 require "session.php";
-require "../Admin/Model/Admissionsmodel.php";
-require "../Utilities/Sanitization.php";
-require "../Admin/Utilities/Helper.php";
+require "../../Admin/Model/Admissionsmodel.php";
+require "../../Utilities/Sanitization.php";
+require "../../Admin/Utilities/Helper.php";
 //require "../Admin/navbar.php";
-require "../Admin/DB Operations/AdmissionsOps.php";
+require "../../Admin/DB Operations/AdmissionsOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {

@@ -7,11 +7,12 @@
     private $Phone;
     private $Email;
     private $Qualification;
-    private $Coursesassigned;
+    private $Coursesassigned=array();
     private $Address;
     private $AdhaarNo;
     private $Adhaarfile;
     private $Photofile;
+    private $Resume;
     private $table_name="trainers";
     
     function set_id($id) {
@@ -54,7 +55,7 @@
     function set_coursesassigned($coursesassigned) {
     $this->Coursesassigned= $coursesassigned;
     }
-    function get_coursesopted() {
+    function get_coursesassigned() {
     return $this->Coursesassigned;
     }
 
@@ -82,7 +83,12 @@
     function get_photofile() {
     return $this->PhotoFile;
     }
- 
+    function set_resume($resume) {
+      $this->Resume = $resume;
+      }
+      function get_resume() {
+      return $this->Resume;
+      }
  }
  
 ?>

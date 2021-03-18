@@ -1,7 +1,7 @@
 <?php 
-require "session.php";
-include "../Admin/navbar.php";
-include "../Admin/DB Operations/enqueryOps.php";
+// require "session.php";
+include "../../Admin/navbar.php";
+include "../../Admin/DB Operations/enqueryOps.php";
 ?>
 <html>
 
@@ -9,7 +9,7 @@ include "../Admin/DB Operations/enqueryOps.php";
         <title>ENQUIRIES</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel=stylesheet href=../Admin/css/dharwadhubballitutoradmin.css />
+        <link rel=stylesheet href=../../Admin/css/dharwadhubballitutoradmin.css />
         <style>
          #training_length{
              float: left;
@@ -34,6 +34,10 @@ include "../Admin/DB Operations/enqueryOps.php";
              width: 50%;
              display: inline;
              margin-left:100px;  
+         }
+         .px-2{
+            margin-right: 0.5rem;
+    margin-left: 30rem;
          }
         </style>
     </head>
@@ -64,6 +68,11 @@ include "../Admin/DB Operations/enqueryOps.php";
                             <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services"
                                 type="button" role="tab" aria-controls="services"
                                 aria-selected="false"><b>Services</b></button>
+                        </li>
+                        <li class="nav-item " role="presentation" >
+                            <button class="nav-item nav-link px-2" id="enquiry-tab" data-bs-toggle="tab" data-bs-target="#enquiry"
+                                type="button" role="tab" aria-controls="enquiry"
+                                aria-selected="false"><b>Add Enquiry</b></button>
                         </li>
                     </ul>
                     <br />
@@ -153,15 +162,87 @@ include "../Admin/DB Operations/enqueryOps.php";
                             </thead>
                                 <?php
                
-               $enquirylist= DBenquery::getAllEnquery("Services");
-               echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                foreach($enquirylist as $enquiry) 
-                {
-                    echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>". $enquiry->get_enqueryFor(). "</td></tr>";
-                }
-                echo "</tbody>";
-                ?>
+                                   $enquirylist= DBenquery::getAllEnquery("Services");
+                                   echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                   foreach($enquirylist as $enquiry) 
+                                   {
+                                      echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>". $enquiry->get_enqueryFor(). "</td></tr>";
+                                   }
+                                   echo "</tbody>";
+                                ?>
                             </table>
+                        </div>
+                        <div class="tab-pane fade" id="enquiry" role="tabpanel" aria-labelledby="enquiry-tab">
+                        
+                         <form class="form-horizontal" action="../Admin/Controller/newenquiry.php" method="POST" role="form"
+                                enctype="multipart/form-data">
+                                <h2 style="color:#f8c000">New Enquiry</h2>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class=label for=name2><b>Name</b></label>
+                                        <div class="col-sm-12">
+                                           <input type=text name=name2 class=form-control id=name2 placeholder=Name required />
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="col-md-6">
+                                        <label class=label for=email2><b>Email</b></label>
+                                        <div class="col-sm-12">
+                                           <input type=email name=email2 class=form-control id=email2 placeholder=name@example.com />
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="col-md-6">
+                                        <label class=label for=phone2><b>Phone:</b></label>
+                                         <div class="col-sm-12">
+                                            <input type=tel name=phone2 class=form-control id=phone2 placeholder=Number required />
+                                        </div>
+                                    </div>
+                                      <br/>
+                                    <div class="col-md-6">
+                                        <label class=label for=trainings2><b>Trainings</b></label>
+                                        <div class="col-sm-12">
+                                            <select class=custom-select id=trainings2 name=trainings2>
+                                            <option value=" ">Select your Interest</option>
+                                            <option value="Web Designing and Development">Web Designing and Development</option>
+                                            <option value="Python Programming">Python Programming</option>
+                                            <option value="Civil Design Softwares">Civil Design Softwares</option>
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Android Development">Android Development</option>
+                                            <option value="Cloud Computing">Cloud Computing</option>
+                                            <option value="Programming Languages">Programming Languages</option>
+                                            <option value="Basic Computers">Basic Computers</option>
+                                            <option value="School Academics">School Academics</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                   <div class="col-md-6">
+                                        <label class=label for=internship2><b>Internships</b></label>
+                                        <div class="col-sm-12">
+                                            <select class=custom-select id=internship2 name=internship2>
+                                                 <option value="">Select your Interest</option>
+                                                <option value="Web Designing and Development">Web Designing and Development</option>
+                                                <option value="Python Programming">Python Programming</option>
+                                                <option value="Digital Marketing">Digital Marketing</option>
+                                                <option value="Android Development">Android Development</option>
+                                            </select>
+                                        </div>  
+                                    </div> 
+                                    <br />
+                                    <div class="form-group">
+                                        <div class="col-sm-12 " style=text-align:center>
+                                            <button type="submit" class="btn btn-warning">Register</button>
+                                            <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+  </div>
+  </div>
+  </div>
+
                         </div>
                     </div>
                 </div>

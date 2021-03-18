@@ -1,14 +1,14 @@
 <?php  
-require "session.php";
-include "../Admin/DB Operations/AdmissionsOps.php";
-require "../Admin/Model/Admissionsmodel.php";
-include "../Admin/navbar.php";
+// require "session.php";
+include "../../Admin/DB Operations/AdmissionsOps.php";
+require "../../Admin/Model/Admissionsmodel.php";
+ include "../../Admin/navbar.php";
        ?>
 <html>
 
     <head>
         <title>Admissions </title>
-        <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css " />
+        <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css " />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
             integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
             crossorigin="anonymous" />
@@ -258,7 +258,7 @@ include "../Admin/navbar.php";
                     <div class="tab-pane fade" id="pills-admissions" role="tabpanel"
                         aria-labelledby="pills-admissions-tab">
                         
-                            <section id="#pills-admissions">
+                        <section id="#pills-admissions">
                         <table class="enquiries center" id="addmissionlist">
                             <thead>
                             <tr>
@@ -279,7 +279,7 @@ include "../Admin/navbar.php";
                    $admissionlist= DBadmission::searchadmission();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                    foreach($admissionlist as $admission) 
                    {
-                       echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button">View </a>'.'</td></tr>' ;
+                       echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="../View/viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button">View </a>'.'</td></tr>' ;
                    }
                    echo  "</tbody>";
                    ?>

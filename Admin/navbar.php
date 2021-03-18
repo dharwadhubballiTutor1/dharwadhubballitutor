@@ -1,4 +1,8 @@
+<?php 
+
+// require "session.php";?>
 <!DOCTYPE html>
+
 <html>
 
     <head>
@@ -125,7 +129,7 @@
                         <div class="sidebar-header">
                             <div class="user-pic">
                                 <img class="img-responsive rounded-circle mx-auto d-block"
-                                    style="text-align:center; width:100px; height:100px" src="../Admin/admin.png"
+                                    style="text-align:center; width:100px; height:100px" src="../../Admin/admin.png"
                                     alt="User picture">
                             </div>
                             <div class="user-info">
@@ -135,14 +139,14 @@
                         <hr>
                         <div class="sidebar-menu">
 
-                            <a href="enquiries.php"> <i class="fas fa-search-plus"></i> <span> Enquiries</span></a>
-                            <a href="admissions.php"> <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>
+                            <a href="../View/enquiries.php"> <i class="fas fa-search-plus"></i> <span> Enquiries</span></a>
+                            <a href="../View/admissions.php"> <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>
                                     Admissions </span></a>
-                            <a href="trainers.php"><i class="fas fa-user-circle" aria-hidden="true"></i> <span> Trainers
+                            <a href="../View/trainers.php"><i class="fas fa-user-circle" aria-hidden="true"></i> <span> Trainers
                                 </span></a>
                                 <a href="courses.php"> <i class="fa fa-book"></i> <span> Courses</span></a>
                         </div>
-                        <a type="button" href="logout.php"><i class="fa fa-power-off"></i> Log Out</a>
+                        <a type="button" href="../logout.php"><i class="fa fa-power-off"></i> Log Out</a>
                     </div>
                 </div>
                 <div class="col-md-11"></div>
