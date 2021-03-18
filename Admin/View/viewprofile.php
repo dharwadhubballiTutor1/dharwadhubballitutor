@@ -1,14 +1,14 @@
 <?php
-require "session.php";
-// include "../Admin/navbar.php";
-include "../Admin/DB Operations/AdmissionsOps.php";
-include "../Admin/Model/Admissionsmodel.php";
+require "../../Admin/session.php";
+include "../../Admin/navbar.php";
+include "../../Admin/DB Operations/AdmissionsOps.php";
+include "../../Admin/Model/Admissionsmodel.php";
 ?>
 <html>
     <head>
         <title>Student Profile</title>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css " />
+        <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css " />
     </head>
     <body>
         <div class="container-fluid">

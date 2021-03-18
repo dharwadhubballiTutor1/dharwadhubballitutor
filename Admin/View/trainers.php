@@ -1,15 +1,15 @@
 <?php
-require "session.php";
-include "../Admin/DB Operations/TrainerOps.php";
-include "../Admin/Model/Trainermodel.php";
-include "../Admin/navbar.php";
-include "../Admin/DB Operations/CoursesOps.php";
-include "../Admin/Model/Coursesmodel.php";
+require "../../Admin/session.php";
+include "../../Admin/DB Operations/TrainerOps.php";
+include "../../Admin/Model/Trainermodel.php";
+include "../../Admin/navbar.php";
+include "../../Admin/DB Operations/CoursesOps.php";
+include "../../Admin/Model/Coursesmodel.php";
 ?>
 <html>
     <head>
         <title>Trainers at DharwadHubballiTutor</title>
-        <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css " />
+        <link rel=stylesheet href="../css/dharwadhubballitutoradmin.css " />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
             integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
             crossorigin="anonymous" />
@@ -49,7 +49,7 @@ include "../Admin/Model/Coursesmodel.php";
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-newtrainer" role="tabpanel"
                             aria-labelledby="pills-newtrainer-tab">
-                            <form class="form-horizontal" action="newtrainer.php" method="POST" role="form"
+                            <form class="form-horizontal" action="../Controller/newtrainer.php" method="POST" role="form"
                                 enctype="multipart/form-data">
                                 <br>
                                 <h2 style="color:#f8c000">NEW TRAINER DETAILS</h2>
@@ -91,7 +91,7 @@ include "../Admin/Model/Coursesmodel.php";
                                     </div>
                                     <br />
 
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <label for="coursesassigned" class="col-md-6 control-label"
                                             name="coursesassigned">Courses Assigned</label>
                                             <div class="col-md-12">
@@ -131,7 +131,7 @@ include "../Admin/Model/Coursesmodel.php";
                                     <br />
 
                                     <div class="col-md-6">
-                                        <label for="adhaarfile" class=" col-md-6 form-label">Upload Your Adhaar</label>
+                                        <label for="adhaarfile" class=" col-md-6 form-label">Upload Adhaar</label>
                                         <div class="col-sm-12">
 
                                             <input type="file" name="adhaarfile" id="adhaarfile" class="form-control">
@@ -141,13 +141,23 @@ include "../Admin/Model/Coursesmodel.php";
                                     <br />
 
                                     <div class="col-md-6">
-                                        <label for="photofile" class=" col-md-6 form-label">Upload Your Photo</label>
+                                        <label for="photofile" class=" col-md-6 form-label">Upload Photo</label>
                                         <div class="col-sm-12">
                                             <input class="form-control" type="file" name="photofile" id="photofile"
                                                 required>
                                         </div>
                                     </div>
                                     <br />
+
+                                    <div class="col-md-6">
+                                        <label for="resume" class=" col-md-6 form-label">Upload Resume</label>
+                                        <div class="col-sm-12">
+                                            <input class="form-control" type="file" name="resume" id="resume"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <br />
+
                                     <div class="form-group">
                                         <div class="col-sm-12 " style=text-align:center>
                                             <button type="submit" class="btn btn-warning">Register</button>
@@ -177,7 +187,7 @@ include "../Admin/Model/Coursesmodel.php";
                                 $trainerslist= DBtrainer::searchtrainer();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                                 foreach($trainerslist as $trainer) 
                                 {
-                                    echo "<tr><td> "  . $trainer->get_id(). "</td><td>"  . $trainer->get_name(). "</td><td>". $trainer->get_phone(). "</td><td>" .$trainer->get_email(). "</td><td>". $trainer->get_qualification(). "</td><td>" . $trainer->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="viewtrainer.php?id='.$trainer->get_id().'&photofile='.$trainer->get_photofile().'" role="button">View </a>'.'</td></tr>' ;
+                                    echo "<tr><td> "  . $trainer->get_id(). "</td><td>"  . $trainer->get_name(). "</td><td>". $trainer->get_phone(). "</td><td>" .$trainer->get_email(). "</td><td>". $trainer->get_qualification(). "</td><td>" . $trainer->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="../View/viewtrainer.php?id='.$trainer->get_id().'&photofile='.$trainer->get_photofile().'" role="button">View </a>'.'</td></tr>' ;
                                 }
                                  echo  "</tbody>";
                             ?>

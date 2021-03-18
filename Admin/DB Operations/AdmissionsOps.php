@@ -1,5 +1,7 @@
 <?php
-//require "../DB Operations/dbconnection.php";
+// require "../../Admin/session.php";
+require "../../DB Operations/dbconnection.php";
+
 
     class DBadmission
     {

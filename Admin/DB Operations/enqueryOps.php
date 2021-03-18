@@ -1,5 +1,8 @@
 <?php
-require "../Admin/Model/EnqueryModel.php";
+// require "../Admin/session.php";
+require "../../DB Operations/dbconnection.php";
+
+require "../../Admin/Model/EnqueryModel.php";
 class DBenquery{
 
     public static function getAllEnquery($enqueryFor){
@@ -24,6 +27,19 @@ class DBenquery{
                      echo "0 results";
                 }
                 return $enquirylist;
+    }
+    public static function insert($registrationObj)
+      {
+        $db=ConnectDb::getInstance();
+        $connectionObj=$db->getConnection();
+         $sql = "insert into candidates (`Name`, `Email`, `Phone`, `Trainings`,`Internship`,`Services`,`Demo`,`Qualification`) 
+                values ('".$registrationObj->get_name()."','".$registrationObj->get_email()."','".$registrationObj->get_phone()."','".$registrationObj->get_trainings()."', '".$registrationObj->get_internship()."','".$registrationObj->get_services()."','".$registrationObj->get_demo()."','".$registrationObj->get_qualification()."')";
+                
+                if ($connectionObj->query($sql) === TRUE) {
+        } else {
+          echo "Error: " . $sql . "<br>" . $connectionObj->error;
+        }
+        
     }
 }
 
