@@ -1,11 +1,34 @@
 <?php
 // require "../Admin/session.php";
-require "../../DB Operations/dbconnection.php";
+require_once "../../DB Operations/dbconnection.php";
 
-require "../../Admin/Model/EnqueryModel.php";
+require_once "../../Admin/Model/EnqueryModel.php";
 class DBenquery{
 
-    public static function getAllEnquery($enqueryFor){
+  public static function getAllEnquery(){
+    $db=ConnectDb::getInstance();
+    $connectionObj=$db->getConnection();
+    $sql = "SELECT * FROM candidates";
+    $result = mysqli_query($connectionObj, $sql);
+    $enquirylist=[];
+        if (mysqli_num_rows($result) > 0) {
+          
+        while($row = mysqli_fetch_assoc($result)) {
+            $enqueryModel=new enquery();
+            $enqueryModel->set_Id($row["id"]);
+            $enqueryModel->set_name($row["Name"]);
+            $enqueryModel->set_phone($row["Email"]);
+            $enqueryModel->set_phone($row["Phone"]);
+            $enqueryModel->set_qualification($row["Qualification"]);
+            array_push($enquirylist,$enqueryModel);
+        }
+        
+        } else {
+             echo "0 results";
+        }
+        return $enquirylist;
+}
+    public static function getAllEnqueryBySection($enqueryFor){
             $db=ConnectDb::getInstance();
             $connectionObj=$db->getConnection();
             $sql = "SELECT * FROM candidates WHERE ".$enqueryFor."!=''";
@@ -15,6 +38,7 @@ class DBenquery{
                   
                 while($row = mysqli_fetch_assoc($result)) {
                     $enqueryModel=new enquery();
+                    $enqueryModel->set_Id($row["id"]);
                     $enqueryModel->set_name($row["Name"]);
                     $enqueryModel->set_phone($row["Email"]);
                     $enqueryModel->set_phone($row["Phone"]);

@@ -36,7 +36,7 @@ include "../../Admin/navbar.php";
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-newcourse" role="tabpanel"
                             aria-labelledby="pills-newcourse-tab">
-                            <form class="form-horizontal" action="newcourse.php" method="POST" role="form"
+                            <form class="form-horizontal" action="../Controller/newcourse.php" method="POST" role="form"
                                 enctype="multipart/form-data">
                                 <br>
                                 <h2 style="color:#f8c000">New Course Details</h2>

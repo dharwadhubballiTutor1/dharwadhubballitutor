@@ -1,14 +1,15 @@
 <?php
-require "session.php";
-require "../Admin/Model/Admissionsmodel.php";
-require "../Utilities/Sanitization.php";
-require "../Admin/Utilities/Helper.php";
+require_once "../session.php";
+require_once "../Model/Admissionsmodel.php";
+require_once "../Utilities/Sanitization.php";
+require_once "../Utilities/Helper.php";
 //require "../Admin/navbar.php";
-require "../Admin/DB Operations/AdmissionsOps.php";
+require_once "../DB Operations/AdmissionsOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
     $admit=new Admissions();
+    $admit->set_enqueryId(Sanitization::test_input($_POST["id"]));
     $admit->set_name(Sanitization::test_input($_POST["name"]));
     $admit->set_phone(Sanitization::test_input($_POST["phone"]));
     $admit->set_email(Sanitization::test_input($_POST["email"]));
@@ -40,7 +41,7 @@ require "../Admin/DB Operations/AdmissionsOps.php";
 
     <body>
         <?php 
- header("location:admissions.php");
+ header("location:../View/admissions.php");
 ?>
 
 

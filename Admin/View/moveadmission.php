@@ -22,12 +22,13 @@ require "../../Model/Registration.php";
                 <div class="col-md-10">
                 <h2 class="display-2">Admission</h2>
                     <?php 
+  $id=$_GET["id"];                  
   $name1=$_GET['name'];  
   $email1=$_GET['email'];
   $phone1=$_GET['phone'];
   $qualification1=$_GET['qualification'];
   ?>
-                    <form class="form-horizontal" action="newadmissions.php" method="POST" role="form"
+                    <form class="form-horizontal" action="../Controller/newadmissions.php" method="POST" role="form"
                         enctype="multipart/form-data">
                         <br>
                         <h2 style="color:#f8c000">Admission Form</h2>
@@ -39,6 +40,7 @@ require "../../Model/Registration.php";
                                         class="form-control" pattern="[a-zA-Z\-\ ]+" value="<?php
                          echo "$name1";
                          ?>">
+                         <input type="hidden" name="id" id="id" value="<?php echo $id?>">
                                 </div>
                             </div>
                             <br />
@@ -180,7 +182,7 @@ require "../../Model/Registration.php";
                             <div class="col-md-6">
                                 <label for="resume" class=" col-md-6 form-label">Upload Your Resume</label>
                                 <div class="col-sm-12">
-                                    <input class="form-control" type="file" name="resume" id="resume" required>
+                                    <input class="form-control" type="file" name="resume" id="resume" >
                                 </div>
                             </div>
                             <br />

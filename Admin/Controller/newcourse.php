@@ -1,11 +1,11 @@
 <?php
-require "session.php";
-require "../Admin/Model/Coursesmodel.php";
+//require "session.php";
+require "../Model/Coursesmodel.php";
 require "../Utilities/Sanitization.php";
-require "../Admin/Utilities/Helper.php";
+require "../Utilities/Helper.php";
 // require "../Admin/navbar.php";
 
-require "../Admin/DB Operations/CoursesOps.php";
+require "../DB Operations/CoursesOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
@@ -24,7 +24,7 @@ require "../Admin/DB Operations/CoursesOps.php";
 
     <body>
         <?php 
-//  header("location:admissions.php");
+ header("location:../View/courses.php");
 ?>
 
 

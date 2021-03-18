@@ -1,7 +1,8 @@
 <?php  
 // require "session.php";
-include "../../Admin/DB Operations/AdmissionsOps.php";
-require "../../Admin/Model/Admissionsmodel.php";
+require_once "../DB Operations/enqueryOps.php";
+require_once "../../Admin/DB Operations/AdmissionsOps.php";
+require_once "../../Admin/Model/Admissionsmodel.php";
  include "../../Admin/navbar.php";
        ?>
 <html>
@@ -68,10 +69,10 @@ require "../../Admin/Model/Admissionsmodel.php";
                                 </thead>
                                 <?php 
                                 echo  "<tbody>";
-                                $enquirylist= DBadmission::search();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                $enquirylist= DBenquery::getAllEnquery();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                                 foreach($enquirylist as $enquiry) 
                                 {
-                                    echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>"  .'<a class="btn btn-danger" href="moveadmission.php?name='.$enquiry->get_name().'&phone='.$enquiry->get_phone().'&email='.$enquiry->get_email().'&qualification='.$enquiry->get_qualification().'" role="button" type="submit" >Move </a>'.'</td></tr>' ;
+                                    echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>"  .'<a class="btn btn-danger" href="moveadmission.php?id='.$enquiry->get_id().'&name='.$enquiry->get_name().'&phone='.$enquiry->get_phone().'&email='.$enquiry->get_email().'&qualification='.$enquiry->get_qualification().'" role="button" type="submit" >Move </a>'.'</td></tr>' ;
                                 }
                                 echo  "</tbody>";
                                 ?>
@@ -81,7 +82,7 @@ require "../../Admin/Model/Admissionsmodel.php";
                             aria-labelledby="pills-newadmit-tab">
 
                             <div class="container" id="pills-newadmit">
-                                <form class="form-horizontal" action="newadmissions.php" method="POST" role="form"
+                                <form class="form-horizontal" action="../Controller/newadmissions.php" method="POST" role="form"
                                     enctype="multipart/form-data">
                                     <br>
                                     <h2 style="color:#f8c000">Admission Form</h2>
@@ -91,6 +92,7 @@ require "../../Admin/Model/Admissionsmodel.php";
                                             <div class="col-sm-12">
                                                 <input type="text" id="name" placeholder="Full Name" name="name"
                                                     class="form-control" pattern="[a-zA-Z\-\ ]+" required>
+                                                    <input type="hidden" name="id" id="id" value="">
                                             </div>
                                         </div>
                                         <br />
@@ -295,7 +297,8 @@ require "../../Admin/Model/Admissionsmodel.php";
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
             integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
         </script>
-         <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+         <script type="text/javascript" src="../DataTables/datatables.min.js"></script>
          <script>
         var table = $('#enquery').DataTable();
         var addmissionList = $('#addmissionlist').DataTable();

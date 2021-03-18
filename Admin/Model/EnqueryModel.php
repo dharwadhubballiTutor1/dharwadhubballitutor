@@ -1,11 +1,18 @@
 <?php
 class enquery{
+public $id;
  public $name;
  public $email;
  public $phone;
  public $qualification;
  public $enqueryFor;
+ public function set_Id($IdValue){
+    $this->id=$IdValue;
+}
 
+public function get_Id(){
+    return $this->id;
+}
  public function set_name($nameValue){
      $this->name=$nameValue;
  }

@@ -1,5 +1,5 @@
 <?php
-require "../../DB Operations/dbconnection.php";
+require_once "../../DB Operations/dbconnection.php";
     class DBtrainer
     {
       public static function insert($trainerObj)
@@ -15,7 +15,6 @@ require "../../DB Operations/dbconnection.php";
                   // $cselected= implode(',',$_POST['coursesassigned']);
                   foreach( $trainerObj->get_coursesassigned() as $courses) {
                     $sql="insert into trainercoursemapping(`trainerid`,`courseid`) values (".$last_id.",".$courses.")";
-                    echo $sql;
                     $connectionObj->query($sql);
                   }
         } else {
@@ -34,7 +33,7 @@ require "../../DB Operations/dbconnection.php";
            $sql = "SELECT id,Name,Email,Phone,Qualification,AdhaarNo,PhotoFile From trainers where Name like '%$searchtrainer%' ";
            $result = mysqli_query($db->getConnection(), $sql);
            $trainerslist=[];
-           if (mysqli_num_rows($result) > 0) {
+           if ($result) {
            while($row = mysqli_fetch_assoc($result)) {
             $view=new Trainer();
             $view->set_id($row['id']);

@@ -1,6 +1,6 @@
 <?php
 // require "../../Admin/session.php";
-require "../../DB Operations/dbconnection.php";
+require_once "../../DB Operations/dbconnection.php";
 
 
     class DBadmission
@@ -9,10 +9,13 @@ require "../../DB Operations/dbconnection.php";
       {
         $db=ConnectDb::getInstance();
         $connectionObj=$db->getConnection();
-         $sql = "insert into admissions (`Name`, `Phone`, `Email`, `DateofBirth`,`Gender`,`Qualification`,`Guardians_Name`,`Guardians_Phone`,`CoursesOpted`,`Address`,`AdhaarNo`,`AdhaarFile`,`PhotoFile`,`Resume`) 
-                values ('".$admissionObj->get_name()."','".$admissionObj->get_phone()."','".$admissionObj->get_email()."','".$admissionObj->get_dateofbirth()."','".$admissionObj->get_gender()."', '".$admissionObj->get_qualification()."','".$admissionObj->get_guardiansname()."','".$admissionObj->get_guardiansphone()."','".$admissionObj->get_coursesopted()."','".$admissionObj->get_address()."','".$admissionObj->get_adhaarno()."','".$admissionObj->get_adhaarfile()."','".$admissionObj->get_photofile()."','".$admissionObj->get_resume()."')";
+         $sql = "insert into admissions (`enquiry_id`,`Name`, `Phone`, `Email`, `DateofBirth`,`Gender`,`Qualification`,`Guardians_Name`,`Guardians_Phone`,`CoursesOpted`,`Address`,`AdhaarNo`,`AdhaarFile`,`PhotoFile`,`Resume`) 
+                values ('".$admissionObj->get_enqueryId()."','".$admissionObj->get_name()."','".$admissionObj->get_phone()."','".$admissionObj->get_email()."','".$admissionObj->get_dateofbirth()."','".$admissionObj->get_gender()."', '".$admissionObj->get_qualification()."','".$admissionObj->get_guardiansname()."','".$admissionObj->get_guardiansphone()."','".$admissionObj->get_coursesopted()."','".$admissionObj->get_address()."','".$admissionObj->get_adhaarno()."','".$admissionObj->get_adhaarfile()."','".$admissionObj->get_photofile()."','".$admissionObj->get_resume()."')";
                 
                 if ($connectionObj->query($sql) === TRUE) {
+                  if($admissionObj->get_enqueryId()>0){
+                    
+                  }
         } else {
           echo "Error: " . $sql . "<br>" . $connectionObj->error;
         }

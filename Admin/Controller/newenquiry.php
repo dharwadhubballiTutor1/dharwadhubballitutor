@@ -18,12 +18,11 @@ include "../../Admin/DB Operations/enqueryOps.php";
 <html>
 
 <head>
-    <title> New Admission </title>
 </head>
 
 <body>
     <?php 
-header("location:../enquiries.php");
+header("location:../View/enquiries.php");
 ?>
 
 

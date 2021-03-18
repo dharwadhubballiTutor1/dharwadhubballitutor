@@ -3,13 +3,8 @@
 include "../../Admin/navbar.php";
 include "../../Admin/DB Operations/enqueryOps.php";
 ?>
-<html>
-
-    <head>
-        <title>ENQUIRIES</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel=stylesheet href=../../Admin/css/dharwadhubballitutoradmin.css />
+        <title>Enquiries</title>
+       
         <style>
          #training_length{
              float: left;
@@ -70,7 +65,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
                                 aria-selected="false"><b>Services</b></button>
                         </li>
                         <li class="nav-item " role="presentation" >
-                            <button class="nav-item nav-link px-2" id="enquiry-tab" data-bs-toggle="tab" data-bs-target="#enquiry"
+                            <button class="nav-link " id="enquiry-tab" data-bs-toggle="tab" data-bs-target="#enquiry"
                                 type="button" role="tab" aria-controls="enquiry"
                                 aria-selected="false"><b>Add Enquiry</b></button>
                         </li>
@@ -91,7 +86,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
                                     </tr>
                                 </thead>
                                 <?php
-               $enquirylist= DBenquery::getAllEnquery("Trainings");
+               $enquirylist= DBenquery::getAllEnqueryBySection("Trainings");
                echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                 foreach($enquirylist as $enquiry) 
                 {
@@ -115,7 +110,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
                                 <?php
               
            
-            $enquirylist= DBenquery::getAllEnquery("Internship");
+            $enquirylist= DBenquery::getAllEnqueryBySection("Internship");
             echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
              foreach($enquirylist as $enquiry) 
              {
@@ -139,7 +134,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
                                 <?php
               
             //    $db=ConnectDb::getInstance();
-            $enquirylist= DBenquery::getAllEnquery("Demo");
+            $enquirylist= DBenquery::getAllEnqueryBySection("Demo");
             echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
              foreach($enquirylist as $enquiry) 
              {
@@ -162,7 +157,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
                             </thead>
                                 <?php
                
-                                   $enquirylist= DBenquery::getAllEnquery("Services");
+                                   $enquirylist= DBenquery::getAllEnqueryBySection("Services");
                                    echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                                    foreach($enquirylist as $enquiry) 
                                    {
@@ -174,7 +169,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
                         </div>
                         <div class="tab-pane fade" id="enquiry" role="tabpanel" aria-labelledby="enquiry-tab">
                         
-                         <form class="form-horizontal" action="../Admin/Controller/newenquiry.php" method="POST" role="form"
+                         <form class="form-horizontal" action="../Controller/newenquiry.php" method="POST" role="form"
                                 enctype="multipart/form-data">
                                 <h2 style="color:#f8c000">New Enquiry</h2>
                                 <div class="row g-3">
@@ -233,7 +228,6 @@ include "../../Admin/DB Operations/enqueryOps.php";
                                     <div class="form-group">
                                         <div class="col-sm-12 " style=text-align:center>
                                             <button type="submit" class="btn btn-warning">Register</button>
-                                            <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
                                         </div>
                                     </div>
                                 </div>
@@ -254,9 +248,9 @@ include "../../Admin/DB Operations/enqueryOps.php";
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
             integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
         </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-
-        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+        <script type="text/javascript" src="../DataTables/datatables.min.js"></script>
         <script>
         var table = $('#training').DataTable();
         var internship=$('#Internship').DataTable();

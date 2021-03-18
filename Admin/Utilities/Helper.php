@@ -2,7 +2,7 @@
    class Helper{
      public static function fileupload($filetoupload)
      {
-      $target_dir = "../Admin/uploads/";
+      $target_dir = "../../Admin/uploads/";
       $target_file = $target_dir . basename($filetoupload["name"]);
       $uploadOk = 1;
       $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));

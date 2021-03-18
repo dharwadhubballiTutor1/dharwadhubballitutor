@@ -17,6 +17,7 @@
     private $Photofile;
     private $Resume;
     private $table_name="admissions";
+    private $enqueryId;
     
     function set_id($id) {
       $this->id = $id;
@@ -120,5 +121,12 @@
   function get_resume() {
     return $this->Resume;
   }
+  function set_enqueryId($enqueryIdValue) {
+    $this->enqueryId = $enqueryIdValue ;  
+  }          
+  function get_enqueryId() {
+    return $this->enqueryId;
+  }
+
 }
 ?>
