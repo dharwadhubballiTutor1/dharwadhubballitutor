@@ -14,7 +14,7 @@
           $uploadOk = 1;
         }  else if ($filetoupload['type'] == "application/pdf" || pathinfo($filetoupload['name'], PATHINFO_EXTENSION) == "docx") {
           $source_file = $filetoupload['tmp_name'];
-          $target_file = "../Admin/uploads/resume/".$filetoupload['name'];
+          $target_file = "../../Admin/uploads/resume/".$filetoupload['name'];
 
         if(file_exists($filetoupload['name'],$target_dir)) {
            unlink($filetoupload['name'],$target_dir);

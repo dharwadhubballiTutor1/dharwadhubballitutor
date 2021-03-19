@@ -41,7 +41,7 @@ require_once "../DB Operations/AdmissionsOps.php";
 
     <body>
         <?php 
- header("location:../View/admissions.php");
+//  header("location:../View/admissions.php");
 ?>
 
 

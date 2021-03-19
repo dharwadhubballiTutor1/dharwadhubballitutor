@@ -1,5 +1,5 @@
 <?php
-require "session.php";
+// require "session.php";
 require "../../Admin/Model/Admissionsmodel.php";
 require "../../Utilities/Sanitization.php";
 require "../../Admin/Utilities/Helper.php";
@@ -24,8 +24,12 @@ require "../../Admin/DB Operations/AdmissionsOps.php";
     Helper::fileupload($filetoupload);
     $filetoupload=$_FILES["resume"];
     Helper::fileupload($filetoupload);
+    $filetoupload=$_FILES["photofile"];
+    Helper::fileupload($filetoupload);
     $admit->set_adhaarfile($_FILES["adhaarfile"]['name']);
     $admit->set_resume($_FILES["resume"]['name']);
+    $admit->set_photofile($_FILES["photofile"]['name']);
+    echo  "here im". $_FILES["photofile"]['name'];
     DBadmission::updateadmission($admit);
   }
 ?>

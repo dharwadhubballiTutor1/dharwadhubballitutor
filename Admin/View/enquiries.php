@@ -83,6 +83,8 @@ include "../../Admin/DB Operations/enqueryOps.php";
                                         <th>Phone</th>
                                         <th>Qualification</th>
                                         <th>Trainings</th>
+                                        
+                                        
                                     </tr>
                                 </thead>
                                 <?php
@@ -90,7 +92,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
                echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                 foreach($enquirylist as $enquiry) 
                 {
-                    echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>". $enquiry->get_enqueryFor(). "</td></tr>";
+                    echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>". $enquiry->get_enqueryFor().  "</td></tr>" ;
                 }
                 echo "</tbody>";
                                 ?>

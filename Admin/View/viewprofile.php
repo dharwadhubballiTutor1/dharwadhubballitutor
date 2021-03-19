@@ -3,6 +3,7 @@ require "../../Admin/session.php";
 include "../../Admin/navbar.php";
 include "../../Admin/DB Operations/AdmissionsOps.php";
 include "../../Admin/Model/Admissionsmodel.php";
+include "../../Admin/Utilities/Helper.php";
 ?>
 <html>
     <head>
@@ -25,11 +26,16 @@ include "../../Admin/Model/Admissionsmodel.php";
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="d-flex flex-column align-items-center text-center">
-                                            <img src="<?php echo 'uploads/', $admission->get_photofile(); ?>"
-                                                alt="Admin" class="rounded-circle" width="100" height="100">
-                                            <div class="mt-3">
+                                            <img src="<?php echo '../uploads/', $admission->get_photofile(); ?>"
+                                                alt="Admin" class="rounded-circle" width="100" height="100"/>
+                                                <div>
+                                                    <label class="btn btn-default">
+                                                      <i class="fa fa-camera fa-2x" aria-hidden="true"></i> 
+                                                      <input type="file" name="photofile" id="photofile" class="form-control" form="myForm">
+                                                    </label></div>
+                                             <div class="mt-3">
                                                 <?php echo $admission->get_name();?>
-                                            </div>
+                                             </div>
                                         </div>
                                     </div>
                                 </div>
@@ -40,7 +46,7 @@ include "../../Admin/Model/Admissionsmodel.php";
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <form class="form" action="stdprofileupdate.php" method="POST" id="myForm"
+                                <form class="form" action="../Controller/stdprofileupdate.php" method="POST" id="myForm"
                                     enctype="multipart/form-data">
                                     <div class="row g-3">
                                         <div class="col-md-6">
@@ -193,6 +199,7 @@ include "../../Admin/Model/Admissionsmodel.php";
                                                     file</a>
                                             </div>
                                         </div>
+
                                         <div class="col-md-6">
                                             <label for="adhaarfile" class=" col-md-6 form-label">Resume</label>
                                             <div class="col-sm-12">

@@ -14,7 +14,8 @@ require_once "../../DB Operations/dbconnection.php";
                 
                 if ($connectionObj->query($sql) === TRUE) {
                   if($admissionObj->get_enqueryId()>0){
-                    
+                    $sql="Update candidates Set status=1 where id=".$admissionObj->get_enqueryId() ;
+                    echo $sql;
                   }
         } else {
           echo "Error: " . $sql . "<br>" . $connectionObj->error;
@@ -149,7 +150,7 @@ require_once "../../DB Operations/dbconnection.php";
       $db=ConnectDb::getInstance();
       $connectionObj=$db->getConnection();
       $status=true;
-      $sql = "UPDATE admissions SET Name='".$admission->get_name()."', Phone='".$admission->get_phone()."', Email='".$admission->get_email()."', DateofBirth='".$admission->get_dateofbirth()."',Qualification='".$admission->get_qualification()."',Guardians_Name='".$admission->get_guardiansname()."', Guardians_Phone='".$admission->get_guardiansphone()."',CoursesOpted='".$admission->get_coursesopted()."',Address='".$admission->get_address()."',AdhaarNo='".$admission->get_adhaarno()."',AdhaarFile='".$admission->get_adhaarfile()."',Resume='".$admission->get_resume()."' where id='".$admission->get_id()."' " ;
+      $sql = "UPDATE admissions SET Name='".$admission->get_name()."', Phone='".$admission->get_phone()."', Email='".$admission->get_email()."', DateofBirth='".$admission->get_dateofbirth()."',Qualification='".$admission->get_qualification()."',Guardians_Name='".$admission->get_guardiansname()."', Guardians_Phone='".$admission->get_guardiansphone()."',CoursesOpted='".$admission->get_coursesopted()."',Address='".$admission->get_address()."',AdhaarNo='".$admission->get_adhaarno()."',AdhaarFile='".$admission->get_adhaarfile()."',PhotoFile='".$admission->get_photofile()."',Resume='".$admission->get_resume()."' where id='".$admission->get_id()."' " ;
       $result = mysqli_query($db->getConnection(), $sql);
       if ($connectionObj->query($sql) === TRUE)
       {
