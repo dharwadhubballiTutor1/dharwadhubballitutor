@@ -8,11 +8,7 @@ class DBenquery{
   public static function getAllEnquery(){
     $db=ConnectDb::getInstance();
     $connectionObj=$db->getConnection();
-<<<<<<< Updated upstream
-    $sql = "SELECT * FROM candidates where status=0" ;
-=======
     $sql = "SELECT * FROM candidates where status=1" ;
->>>>>>> Stashed changes
     $result = mysqli_query($connectionObj, $sql);
     $enquirylist=[];
         if (mysqli_num_rows($result) > 0) {
@@ -35,11 +31,7 @@ class DBenquery{
     public static function getAllEnqueryBySection($enqueryFor){
             $db=ConnectDb::getInstance();
             $connectionObj=$db->getConnection();
-<<<<<<< Updated upstream
-            $sql = "SELECT * FROM candidates WHERE status=0 and ".$enqueryFor."!=''";
-=======
             $sql = "SELECT * FROM candidates WHERE status=1 and ".$enqueryFor."!=''";
->>>>>>> Stashed changes
             $result = mysqli_query($connectionObj, $sql);
             $enquirylist=[];
                 if (mysqli_num_rows($result) > 0) {

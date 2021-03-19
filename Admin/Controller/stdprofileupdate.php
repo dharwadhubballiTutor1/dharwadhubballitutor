@@ -21,18 +21,6 @@ require "../../Admin/DB Operations/AdmissionsOps.php";
     $admit->set_coursesopted(Sanitization::test_input($_POST["coursesopted"]));
     $admit->set_address(Sanitization::test_input($_POST["address"]));
     $admit->set_adhaarno(Sanitization::test_input($_POST["adhaarno"]));
-<<<<<<< Updated upstream
-    $filetoupload=$_FILES["adhaarfile"];
-    Helper::fileupload($filetoupload);
-    $filetoupload=$_FILES["resume"];
-    Helper::fileupload($filetoupload);
-    $filetoupload=$_FILES["photofile"];
-    Helper::fileupload($filetoupload);
-    $admit->set_adhaarfile($_FILES["adhaarfile"]['name']);
-    $admit->set_resume($_FILES["resume"]['name']);
-    $admit->set_photofile($_FILES["photofile"]['name']);
-    echo  "here im". $_FILES["photofile"]['name'];
-=======
     if ($_FILES['adhaarfile']['size'] != 0 && $_FILES['adhaarfile']['error'] == 0)
     {
       $filetoupload=$_FILES["adhaarfile"];
@@ -53,7 +41,6 @@ require "../../Admin/DB Operations/AdmissionsOps.php";
       $admit->set_photofile($_FILES["photofile"]['name']);
     }
     
->>>>>>> Stashed changes
     DBadmission::updateadmission($admit);
   }
 ?>
