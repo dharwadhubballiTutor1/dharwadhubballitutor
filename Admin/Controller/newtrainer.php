@@ -2,7 +2,7 @@
 require "../../Admin/Model/Trainermodel.php";
 require "../../Utilities/Sanitization.php";
 require "../../Admin/Utilities/Helper.php";
-// require "../Admin/navbar.php";
+require "../Admin/navbar.php";
 
 require "../../Admin/DB Operations/TrainerOps.php";
 
@@ -36,8 +36,8 @@ require "../../Admin/DB Operations/TrainerOps.php";
 
     <body>
         <?php 
-  header("location:../admissions.php");
-?>
+          header("location:../admissions.php");
+        ?>
 
 
     </body>
