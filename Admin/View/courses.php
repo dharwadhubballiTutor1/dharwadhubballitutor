@@ -23,18 +23,41 @@ include "../../Admin/navbar.php";
                   <h2 style=color:#2a0a5e>Courses available at DharwadHubballiTutor</h2>
                   <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-newcourse-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-newcourse" type="button" role="tab"
-                                aria-controls="pills-newcourse" aria-selected="true">New Trainer</button>
+                            <button class="nav-link active" id="pills-courses-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-courses" type="button" role="tab" aria-controls="pills-courses"
+                                aria-selected="true">Courses list</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link " id="pills-courses-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-courses" type="button" role="tab" aria-controls="pills-courses"
-                                aria-selected="false">Courses list</button>
+                            <button class="nav-link " id="pills-newcourse-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-newcourse" type="button" role="tab"
+                                aria-controls="pills-newcourse" aria-selected="false">New Couses</button>
                         </li>
+                       
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-newcourse" role="tabpanel"
+                    <div class="tab-pane fade show active" id="pills-courses" role="tabpanel"
+                          aria-labelledby="pills-courses-tab">
+                         
+                          <table class="enquiries center">
+                                <tr cellspacing="0">
+                                <th>id</th>
+                                    <th>CName</th>
+                                    <th>Ctype</th>
+                                    <th>Cduration</th>
+                                    
+                                </tr>
+                                <?php 
+    
+                                    $courseslist=DBcourse::selectall();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                    foreach($courseslist as $course) 
+                                    {
+                                        echo "<tr><td> "  . $course->get_id(). "</td><td>"  . $course->get_cname(). "</td><td>". $course->get_ctype(). "</td><td>" .$course->get_cduration(). '</td></tr>' ;
+                                    }
+                                ?>
+                        
+                           </table>
+                        </div> 
+                        <div class="tab-pane fade"  id="pills-newcourse" role="tabpanel"
                             aria-labelledby="pills-newcourse-tab">
                             <form class="form-horizontal" action="../Controller/newcourse.php" method="POST" role="form"
                                 enctype="multipart/form-data">
@@ -83,28 +106,7 @@ include "../../Admin/navbar.php";
                             </form>
                          </div>
 
-                     <div class="tab-pane fade" id="pills-courses" role="tabpanel"
-                          aria-labelledby="pills-courses-tab">
-                         
-                          <table class="enquiries center">
-                                <tr cellspacing="0">
-                                <th>id</th>
-                                    <th>CName</th>
-                                    <th>Ctype</th>
-                                    <th>Cduration</th>
-                                    
-                                </tr>
-                                <?php 
-    
-                                    $courseslist=DBcourse::selectall();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                                    foreach($courseslist as $course) 
-                                    {
-                                        echo "<tr><td> "  . $course->get_id(). "</td><td>"  . $course->get_cname(). "</td><td>". $course->get_ctype(). "</td><td>" .$course->get_cduration(). '</td></tr>' ;
-                                    }
-                                ?>
-                        
-                           </table>
-                        </div> 
+
                     </div>
                 </div>
             </div>

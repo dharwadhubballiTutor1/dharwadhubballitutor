@@ -107,18 +107,27 @@
     $this->AdhaarFile = $adhaarfile;
   }
   function get_adhaarfile() {
+    if(empty($this->AdhaarFile)){
+      return "";
+    }
     return $this->AdhaarFile;
   }
   function set_photofile($photofile) {
     $this->PhotoFile = $photofile;
   }
   function get_photofile() {
+    if(empty($this->PhotoFile)){
+      return "";
+    }
     return $this->PhotoFile;
   }
   function set_resume($resume) {
     $this->Resume = $resume ;  
   }          
   function get_resume() {
+    if(empty($this->Resume)){
+      return "";
+    }
     return $this->Resume;
   }
   function set_enqueryId($enqueryIdValue) {

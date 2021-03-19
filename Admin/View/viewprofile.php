@@ -99,19 +99,39 @@ include "../../Admin/Utilities/Helper.php";
                                             <label for="gender" class="col-md-6 control-label">Gender</label>
                                             <div class="col-md-12">
                                                 <div class="col-md-4 form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="gender"
-                                                        id="gender" value="<?php
-                         echo $admission->get_gender();
-                         ?>">
+                                                <?php 
+                                                if ($admission->get_gender()=="Female"){
+                                                    echo '<input class="form-check-input" type="radio" name="gender"
+                                                        id="gender" value="Female" checked>
                                                     <label class="form-check-label" for="inlineRadio1">Female</label>
                                                 </div>
                                                 <div class="col-md-4 form-check-inline">
                                                     <input class="form-check-input" type="radio" name="gender"
-                                                        id="gender" value="<?php
-                         echo $admission->get_gender();
-                         ?>">
+                                                        id="gender" value="Male">
                                                     <label class="form-check-label" for="gender">Male</label>
-                                                </div>
+                                                </div>';
+                                                } else  if ($admission->get_gender()=="Male") {
+                                                    echo '<input class="form-check-input" type="radio" name="gender"
+                                                    id="gender" value="Female" >
+                                                <label class="form-check-label" for="inlineRadio1">Female</label>
+                                            </div>
+                                            <div class="col-md-4 form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="gender" value="Male" checked>
+                                                <label class="form-check-label" for="gender" >Male</label>
+                                            </div>';
+                                                }
+                                                else{
+                                                    echo '<input class="form-check-input" type="radio" name="gender"
+                                                    id="gender" value="Female" >
+                                                <label class="form-check-label" for="inlineRadio1">Female</label>
+                                            </div>
+                                            <div class="col-md-4 form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="gender" value="Male">
+                                                <label class="form-check-label" for="gender" >Male</label>
+                                            </div>';
+                                                }?>
                                             </div>
                                         </div>
                                         <br />
@@ -159,7 +179,7 @@ include "../../Admin/Utilities/Helper.php";
                                             <label for="coursesopted" class="col-md-6 control-label">Courses
                                                 Opted</label>
                                             <div class="col-sm-12">
-                                                <input type="text" class="form-select" id="coursesopted"
+                                                <input type="text" class="form-control" id="coursesopted"
                                                     name="coursesopted" required value="<?php
                          echo $admission->get_coursesopted();
                          ?>">
@@ -194,7 +214,7 @@ include "../../Admin/Utilities/Helper.php";
                                         <div class="col-md-6">
                                             <label for="adhaarfile" class=" col-md-6 form-label">Adhaar File</label>
                                             <div class="col-sm-12">
-                                                <a href="<?php echo "uploads/". $admission->get_adhaarfile(); ?>"
+                                                <a href="<?php echo "../uploads/". $admission->get_adhaarfile(); ?>"
                                                     class="form-control" download> Click here to download Adhaar
                                                     file</a>
                                             </div>
@@ -203,7 +223,7 @@ include "../../Admin/Utilities/Helper.php";
                                         <div class="col-md-6">
                                             <label for="adhaarfile" class=" col-md-6 form-label">Resume</label>
                                             <div class="col-sm-12">
-                                                <a href="<?php echo "uploads/".$admission->get_resume(); ?>" class="form-control"> Click here to
+                                                <a href="<?php echo "../uploads/resume/".$admission->get_resume(); ?>" class="form-control"> Click here to
                                                     download Resume</a>
                                             </div>
                                         </div>

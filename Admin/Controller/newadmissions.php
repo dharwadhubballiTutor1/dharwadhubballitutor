@@ -9,7 +9,12 @@ require_once "../DB Operations/AdmissionsOps.php";
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
     $admit=new Admissions();
-    $admit->set_enqueryId(Sanitization::test_input($_POST["id"]));
+    if(!empty($_POST["id"]))
+    {
+      $admit->set_enqueryId(Sanitization::test_input($_POST["id"]));
+    }else{
+      $admit->set_enqueryId(0);
+    }
     $admit->set_name(Sanitization::test_input($_POST["name"]));
     $admit->set_phone(Sanitization::test_input($_POST["phone"]));
     $admit->set_email(Sanitization::test_input($_POST["email"]));
