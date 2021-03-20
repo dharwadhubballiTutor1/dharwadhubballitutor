@@ -14,8 +14,13 @@ require_once "../../DB Operations/dbconnection.php";
                 
                 if ($connectionObj->query($sql) === TRUE) {
                   if($admissionObj->get_enqueryId()>0){
-                    $sql="Update candidates Set status=1 where id=".$admissionObj->get_enqueryId() ;
-                    echo $sql;
+                    $sql="Update candidates Set status=0 where id=".$admissionObj->get_enqueryId() ;
+                    $result = mysqli_query($db->getConnection(), $sql);
+                    if ($result) {
+                      echo "Record updated successfully";
+                     } else {
+                      echo "Error updating record: " . $connectionObj->error;
+                     }
                   }
         } else {
           echo "Error: " . $sql . "<br>" . $connectionObj->error;
