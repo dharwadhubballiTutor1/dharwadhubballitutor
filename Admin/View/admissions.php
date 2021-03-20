@@ -273,6 +273,7 @@ require_once "../../Admin/Model/Admissionsmodel.php";
                                 <th>CoursesOpted</th>
                                 <th>AdhaarNo</th>
                                 <th> Action</th>
+                               
                             </tr>
                             </thead>
                             <?php
