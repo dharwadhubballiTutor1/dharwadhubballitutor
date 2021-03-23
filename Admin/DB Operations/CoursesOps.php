@@ -1,6 +1,7 @@
 <?php
 // require "../Admin/session.php";
 require_once "../../DB Operations/dbconnection.php";
+require_once "../../Admin/Model/Coursesmodel.php";
 
     class DBcourse
     {

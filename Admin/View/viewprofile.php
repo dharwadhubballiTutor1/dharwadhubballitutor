@@ -4,6 +4,7 @@ include "../../Admin/navbar.php";
 include "../../Admin/DB Operations/AdmissionsOps.php";
 include "../../Admin/Model/Admissionsmodel.php";
 include "../../Admin/Utilities/Helper.php";
+include "../../Admin/DB Operations/CoursesOps.php";
 ?>
 <html>
     <head>
@@ -179,10 +180,23 @@ include "../../Admin/Utilities/Helper.php";
                                             <label for="coursesopted" class="col-md-6 control-label">Courses
                                                 Opted</label>
                                             <div class="col-sm-12">
-                                                <input type="text" class="form-control" id="coursesopted"
-                                                    name="coursesopted" required value="<?php
-                         echo $admission->get_coursesopted();
-                         ?>">
+                                            <select class="form-select" id="coursesopted" name="coursesopted"
+                                                    required>
+                                                    <?php 
+                                                    $option="";
+                                                    $courselist=DBcourse::selectall();
+                                                    foreach($courselist as $course) {
+                                                        $option.= "<option value='". $course->get_id()."'";
+                                                          if($course->get_id()==$admission->get_courseid()){
+                                                           $option.= "selected";
+                                                          }
+                                                          $option.=  ">".$course->get_cname()."</option>";
+                                                    }
+
+                                                    echo $option;
+                                                   
+                                                    ?>
+                                                </select>
                                             </div>
                                         </div>
                                         <br />

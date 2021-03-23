@@ -4,7 +4,7 @@ include "../../Admin/DB Operations/TrainerOps.php";
 include "../../Admin/Model/Trainermodel.php";
 include "../../Admin/navbar.php";
 include "../../Admin/DB Operations/CoursesOps.php";
-include "../../Admin/Model/Coursesmodel.php";
+// include "../../Admin/Model/Coursesmodel.php";
 ?>
 <html>
 

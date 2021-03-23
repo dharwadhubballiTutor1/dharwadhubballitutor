@@ -63,7 +63,6 @@ require_once "../../DB Operations/dbconnection.php";
            $view->set_name($row['Name']);
            $view->set_phone($row['Phone']);
            $view->set_email($row['Email']);
-          
            $view->set_qualification($row['Qualification']);
            $view->set_address($row['Address']);
            $view->set_adhaarno($row['AdhaarNo']);

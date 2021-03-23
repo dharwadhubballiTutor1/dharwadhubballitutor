@@ -16,6 +16,7 @@
     private $Adhaarfile;
     private $Photofile;
     private $Resume;
+    private $Courseid;
     private $table_name="admissions";
     private $enqueryId;
     
@@ -130,12 +131,16 @@
     }
     return $this->Resume;
   }
-  function set_enqueryId($enqueryIdValue) {
-    $this->enqueryId = $enqueryIdValue ;  
-  }          
-  function get_enqueryId() {
-    return $this->enqueryId;
+  function set_courseid($courseid) {
+    $this->Courseid = $courseid;
   }
+  function get_courseid() {
+    return $this->Courseid;
+  }
+  
+
+
+  
 
 }
 ?>
