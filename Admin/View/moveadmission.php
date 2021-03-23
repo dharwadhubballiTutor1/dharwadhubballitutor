@@ -5,6 +5,8 @@ require "../../Admin/Utilities/Helper.php";
 include "../../Admin/DB Operations/AdmissionsOps.php";
 require "../../Admin/Model/Admissionsmodel.php";
 require "../../Model/Registration.php";
+include "../../Admin/DB Operations/CoursesOps.php";
+
 ?>
 <html>
 
@@ -27,6 +29,7 @@ require "../../Model/Registration.php";
   $email1=$_GET['email'];
   $phone1=$_GET['phone'];
   $qualification1=$_GET['qualification'];
+  $admission= DBadmission::viewadmission($id);
   ?>
                     <form class="form-horizontal" action="../Controller/newadmissions.php" method="POST" role="form"
                         enctype="multipart/form-data">
@@ -125,24 +128,26 @@ require "../../Model/Registration.php";
 
 
                             <div class="col-md-6">
-                                <label for="coursesopted" class="col-md-6 control-label">Courses Opted</label>
-                                <div class="col-sm-12">
-                                    <select class="form-select" id="coursesopted" name="coursesopted" required>
-                                        <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                                        <option value="Web Designing and Development">Web Designing and Development
-                                        </option>
-                                        <option value="Python Programming">Python Programming</option>
-                                        <option value="Civil Design Softwares">Civil Design Softwares</option>
-                                        <option value="Digital Marketing">Digital Marketing</option>
-                                        <option value="Android Development">Android Development</option>
-                                        <option value="Cloud Computing">Cloud Computing</option>
-                                        <option value="Programming Languages">Programming Languages</option>
-                                        <option value="Basic Computers">Basic Computers</option>
-                                        <option value="School Academics">School Academics</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <br />
+                                            <label for="coursesopted" class="col-md-6 control-label">Courses
+                                                Opted</label>
+                                            <div class="col-sm-12">
+                                            <select class="form-select" id="coursesopted" name="coursesopted"
+                                                    required>
+                                                    <?php 
+                                                    $option="";
+                                                    $courselist=DBcourse::selectall();
+                                                    foreach($courselist as $course) {
+                                                        $option.= "<option 
+                                                         >".$course->get_cname()."</option>";
+                                                    }
+
+                                                    echo $option;
+                                                   
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br />
 
                             <div class="col-md-6">
                                 <label for="address" class="col-md-6 control-label">Address</label>
