@@ -12,6 +12,7 @@
     private $DueDate;
     private $PaymentMode;
     private $PaymentDescription;
+    private $Modified_Date;
     private $table_name="fees";
     
     function set_admitid($admitid) {
@@ -74,7 +75,11 @@
     $this->DueDate = $duedate;
   }
   function get_duedate() {
-    return $this->DueDate;
+    if($this->DueDate==""){
+      return NULL;
+    }else{
+     return $this->DueDate;
+    }
   }
 
   function set_pmode($pmode) {
@@ -91,7 +96,14 @@
   function get_pdescription() {
     return $this->PaymentDescription;
   }
-
+  function set_modifieddate($modifieddate) {
+    $this->Modified_Date = $modifieddate;
+    
+  }
+  function get_modifieddate() {
+    return $this->Modified_Date;
+  }
+  
  
  
 

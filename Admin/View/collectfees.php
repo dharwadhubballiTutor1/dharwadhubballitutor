@@ -10,6 +10,20 @@ include "../../Admin/Utilities/Helper.php";
         <title>Student Profile</title>
         
         <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css " />
+        <style>
+             #enquery_length{
+             float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;
+         }
+         #feepaymentlist_length{
+             float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;
+         }
+        </style>
     </head>
     <body>
         <div class="container-fluid">
@@ -116,7 +130,7 @@ include "../../Admin/Utilities/Helper.php";
 
                                         <div id="duedatediv" class="col-md-6"  style="display: none">
                                              <label for="duedate" class="col-md-6 control-label"> Next payment on:</label> 
-                                               <div class="col-sm-12">
+                                               <div class="col-sm-12" style="display: none" >
                                                  <input type="date" id="duedate" name="duedate"
                                                     class="form-control" required/>
                                                </div>
@@ -156,8 +170,33 @@ include "../../Admin/Utilities/Helper.php";
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <br/></br>
+            <table class="enquiries center" id="feepaymentlist">
+                            <thead>
+                            <tr>
+                               
+                                <th>Paid Date</th>
+                                <th>Paid Fees</th>
+                                <th>Pending Fees</th>
+                                <th>Payment Mode</th>
+                            </tr>
+                            </thead>  
+                            <?php
+                    
+                    echo  "<tbody>";
+                   $feesdetails= DBfees::viewfeesdetails($id);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                   foreach($feesdetails as $fees) 
+                   {
+                       echo "<tr><td> "  .  $fees->get_modifieddate(). "</td><td>"  . $fees->get_pfees(). "</td><td>". $fees->get_pendingfees(). "</td><td>" .$fees->get_pmode(). "</td></tr>" ;
+                   }
+                   echo  "</tbody>";
+                   ?>
+                        </table>
+            </div>
                 </div>
             </div>
+            
         </div>
           <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         
@@ -170,6 +209,7 @@ include "../../Admin/Utilities/Helper.php";
                     });
                     
                         $("#feesplan").change(function () {
+                            
                             if ($(this).val() == "Part Payment") {
                                 $("#duedatediv").show();
                                 var today = new Date();
@@ -181,21 +221,23 @@ include "../../Admin/Utilities/Helper.php";
 
                                 $("#duedate").attr("min",today);
                             } else {
-                                $("#duedatediv").hide();
+                                $("#duedate").attr('disabled', true);
                             }
                         });
-                   
-                    
-                        $("#pfees"). change(function()  {
-                            
-                            
+                       
+                        $("#pfees").change(function()  {
+                          
                             if (parseInt ($(this).val()) < parseInt($("#tfees").val())){
-                               var pendingfees=$("#pendingfees").val()- $("#pfees").val();
+                                if( $("#pendingfees").val() == ""){
+                                    var pendingfees=$("#tfees").val()- $("#pfees").val();
+                                }else {
+                                    var pendingfees=$("#pendingfees").val()- $("#pfees").val();
                                
+                                    
+                                }
                                 $("#pendingfees").val(pendingfees);
-                            }else {
-                                alert('No fees pending');
                             }
+                        
                            
                         });
                      
