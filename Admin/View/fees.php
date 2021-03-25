@@ -44,11 +44,7 @@ include "../../Admin/navbar.php";
                                 data-bs-target="#pills-fees" type="button" role="tab" aria-controls="pills-fees"
                                 aria-selected="true">Fees Details</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link " id="pills-AddFees-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-AddFees" type="button" role="tab" aria-controls="pills-AddFees"
-                                aria-selected="false">Add Fees</button>
-                        </li>
+                       
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                        <div class="tab-pane fade show active" id="pills-fees" role="tabpanel"

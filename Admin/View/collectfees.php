@@ -10,6 +10,20 @@ include "../../Admin/Utilities/Helper.php";
         <title>Student Profile</title>
         
         <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css " />
+        <style>
+             #enquery_length{
+             float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;
+         }
+         #feepaymentlist_length{
+             float: left;
+             width: 50%;
+             display: inline;
+             margin-left:100px;
+         }
+        </style>
     </head>
     <body>
         <div class="container-fluid">
@@ -73,6 +87,17 @@ include "../../Admin/Utilities/Helper.php";
                                         <br />
 
                                         <div class="col-md-6">
+                                            <label for="phone" class="col-md-6 control-label">Phone</label>
+                                            <div class="col-sm-12">
+                                                <input type="tel" id="phone" placeholder="Phone" name="phone"
+                                                    class="form-control" value="<?php
+                                                    echo $collectfees->get_phone();
+                                                    ?>">
+                                            </div>
+                                        </div>
+                                        <br />
+
+                                        <div class="col-md-6">
                                             <label for="tfees" class="col-md-6 control-label">Total fees</label>
                                             <div class="col-sm-12">
                                                 <input type="text" id="tfees" name="tfees"
@@ -116,7 +141,7 @@ include "../../Admin/Utilities/Helper.php";
 
                                         <div id="duedatediv" class="col-md-6"  style="display: none">
                                              <label for="duedate" class="col-md-6 control-label"> Next payment on:</label> 
-                                               <div class="col-sm-12">
+                                               <div class="col-sm-12"   >
                                                  <input type="date" id="duedate" name="duedate"
                                                     class="form-control" required/>
                                                </div>
@@ -148,7 +173,7 @@ include "../../Admin/Utilities/Helper.php";
                                         <br/>
                                        
                                         <div>
-                                        <button class="btn btn-success" type="submit" name="submit">Update</button>
+                                        <button class="btn btn-success" id="btn"type="submit" name="submit">Update</button>
                                         <br />
                                     </div>
                                 </form>
@@ -156,8 +181,33 @@ include "../../Admin/Utilities/Helper.php";
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <br/></br>
+            <table class="enquiries center" id="feepaymentlist">
+                            <thead>
+                            <tr>
+                               
+                                <th>Paid Date</th>
+                                <th>Paid Fees</th>
+                                <th>Pending Fees</th>
+                                <th>Payment Mode</th>
+                            </tr>
+                            </thead>  
+                            <?php
+                    
+                    echo  "<tbody>";
+                   $feesdetails= DBfees::viewfeesdetails($id);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                   foreach($feesdetails as $fees) 
+                   {
+                       echo "<tr><td> "  .  $fees->get_modifieddate(). "</td><td>"  . $fees->get_pfees(). "</td><td>". $fees->get_pendingfees(). "</td><td>" .$fees->get_pmode(). "</td></tr>" ;
+                   }
+                   echo  "</tbody>";
+                   ?>
+                        </table>
+            </div>
                 </div>
             </div>
+            
         </div>
           <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         
@@ -170,6 +220,7 @@ include "../../Admin/Utilities/Helper.php";
                     });
                     
                         $("#feesplan").change(function () {
+                            
                             if ($(this).val() == "Part Payment") {
                                 $("#duedatediv").show();
                                 var today = new Date();
@@ -180,22 +231,31 @@ include "../../Admin/Utilities/Helper.php";
                                 today = yyyy + '-' + mm + '-' + dd;
 
                                 $("#duedate").attr("min",today);
+                                $("#duedate").attr('disabled', false);
+                                $("#btn").attr("disabled", false);
                             } else {
-                                $("#duedatediv").hide();
+                               debugger;
+                                if(parseInt($("#pfees").val()) > 0 &&  parseInt($("#pendingfees").val()) != 0){
+                                    $("#btn").attr("disabled", true);
+                                    alert("Fees is still due");
+                                }
+                                
+                                $("#duedate").attr('disabled', true);
                             }
                         });
-                   
-                    
-                        $("#pfees"). change(function()  {
-                            
-                            
+                       
+                        $("#pfees").change(function()  {
+                          
                             if (parseInt ($(this).val()) < parseInt($("#tfees").val())){
-                               var pendingfees=$("#pendingfees").val()- $("#pfees").val();
+                                if( $("#pendingfees").val() == 0){
+                                    var pendingfees=$("#tfees").val()- $("#pfees").val();
+                                }else {
+                                    var pendingfees=$("#pendingfees").val()- $("#pfees").val();
                                
+                                }
                                 $("#pendingfees").val(pendingfees);
-                            }else {
-                                alert('No fees pending');
                             }
+                        
                            
                         });
                      
