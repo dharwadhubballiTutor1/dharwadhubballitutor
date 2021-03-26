@@ -1,12 +1,18 @@
+<?php 
+require_once "DB Operations/dbconnection.php";
+require_once "Admin/Model/Coursesmodel.php";
+require_once "Admin/DB Operations/CoursesOps.php";
+$courselist=DBcourse::selectall();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Best School Academics Training in Dharwad.</title>
+    <title>Contact us for the Best Training and Services.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="Along with trainings in different courses we also provide tuition classes for class 8th,9th & 10th std students." />
-    <meta name="keywords" content="tuition classes in dharwad,tuition class near me,maths tuition in dhawrad,maths tuition near me,science tuition in dharwad,science tuition near me,9th std maths,8th std maths,10th std maths,mathematics tuition,science tuition,8th science,9th science,10th science,maths tuition classes in dharwad,science tuition classes in dharwadmaths tuition online,science tuition online,maths online,sciencce online." />
+    <meta name="description" content="If you have any issues or doubts regarding any courses,we're here to help.Check here for contact details" />
+    <meta name="keywords" content="Contact us,Coaching center near me,coaching center in dharwad,training center near me,training center in dharwad" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -52,10 +58,10 @@
         </div>
         <div class="col-md-6">
           <div class="semicircle">
-            <a class="blink_me" href="Job-Assistance.html"> Job Assistance</a>
+            <a class="blink_me" href="Job-Assistance.php"> Job Assistance</a>
           </div>
           <div class="container">
-            <a href="Job-Assistance.html" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
+            <a href="Job-Assistance.php" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
           </div>
         </div>
         <div class="col text-right">
@@ -65,41 +71,41 @@
       </div>
     </div>
     <br />
-    <nav class="navbar navbar-expand-md bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-sm bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Aboutus.html">About</a>
+            <a class="nav-link" href="Aboutus.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Contact.html">Contact</a>
+            <a class="nav-link" href="Contact.php">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Web-Designing-and-Development-Training.html">Web Designing and Development</a>
-              <a class="dropdown-item" href="Python-Programming-Training.html">Python Programming </a>
-              <a class="dropdown-item" href="Cloud-Computing-Training.html">Cloud Computing</a>
-              <a class="dropdown-item" href="Android-Development-Training.html">Android Development</a>
-              <a class="dropdown-item" href="Civil-Design-Softwares-Training.html">Civil Design Softwares</a>
-              <a class="dropdown-item" href="Programming-Languages-Training.html">Programming Languages</a>
-              <a class="dropdown-item" href="Digital-Marketing-Training.html">Digital Marketing</a>
-              <a class="dropdown-item" href="Basics-of-Computer-Training.html">Basics of Computer</a>
-              <a class="dropdown-item" href="School-Academics-Training.html">School Academics</a>
+              <a class="dropdown-item" href="Web-Designing-and-Development-Training.php">Web Designing and Development</a>
+              <a class="dropdown-item" href="Python-Programming-Training.php">Python Programming </a>
+              <a class="dropdown-item" href="Cloud-Computing-Training.php">Cloud Computing</a>
+              <a class="dropdown-item" href="Android-Development-Training.php">Android Development</a>
+              <a class="dropdown-item" href="Civil-Design-Softwares-Training.php">Civil Design Softwares</a>
+              <a class="dropdown-item" href="Programming-Languages-Training.php">Programming Languages</a>
+              <a class="dropdown-item" href="Digital-Marketing-Training.php">Digital Marketing</a>
+              <a class="dropdown-item" href="Basics-of-Computer-Training.php">Basics of Computer</a>
+              <a class="dropdown-item" href="School-Academics-Training.php">School Academics</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Internship.html">Internships</a>
+            <a class="nav-link" href="Internship.php">Internships</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Services.html">Services</a>
+            <a class="nav-link" href="Services.php">Services</a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -110,44 +116,66 @@
       </div>
     </nav>
     <br />
-    <div style="text-align: center">
-      <picture>
-        <source srcset="media/img/schoolmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/SchoolWELCOME.jpg" alt="School Academics" class="img-fluid" />
-      </picture>
-    </div>
-    <br />
-    <div class="container" style="text-align: justify">
-      <div class="row row-eq-height">
-        <div class="w-100 text-light">
-          <h3 class="h3">NEED EXTRA HELP WITH THE SCHOOL WORK??</h3>
-          <br />
-          <p class="p2">Give your child the advantage of online studies,help them achieve academic excellence with our online tutoring sessions. Here at DharwadHubballiTutor we offer tutoring services <span style="color: #f8c000">(ONLINE\OFFLINE)</span> for the students of Classes <span style="color: #f8c000">8th,9th and 10th</span>,across all the boards<span style="color: #f8c000">(State,CBSE,ICSE)</span>.</p>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="row">
-        <div class="w-100 text-light">
-          <h3 class="h3">HOW ONLINE TUTORING WORKS?</h3>
-          <ul>
-            <li><span>In some ways, online tutoring is not that different from in-person tutoring: the child will cover the same task, get the same input level, and have their work marked and their own tutor provide feedback.</span></li>
-            <li><span>The individualized essence of one-to-one tuition ensures that tutors proceed at the rate of the student and describe things in a way that suits their style of learning.</span></li>
-            <li><span>For online tutoring, using programs such as Zoom and Skype, and features such as sharing screens, technology is well set up.</span></li>
-          </ul>
-          <h3 class="h3">BENEFITS OF ONLINE TUTORING</h3>
+        <div class="col-md-7">
           <br />
-          <h5 class="h5">Convenience and Flexibility</h5>
-          <p class="p2">Not having to drive to your tutoring session means that when your session is and with whom your session is you can have more versatility.</p>
-          <h5 class="h5">Familiar Medium</h5>
-          <p class="p2">As an outsider, the idea of learning through the web might strike you, but this is second nature to your kids. Students are regularly skyping and facetiming, so the idea of video learning is not something that they are unfamiliar with.</p>
-          <h5 class="h5">No compromises</h5>
-          <p class="p2">Perhaps the most advantageous aspect in online tutoring is that it provides the same possibilities as individual learning. Using a webcam guarantees that tutors can always see when a child is struggling and, when they need it, display excitement and motivation.</p>
-          <h5 class="h5">Feedback</h5>
-          <p class="p2">Online tutoring programs provide a feedback form for their tutors where they can make notes and provide updates about the child's results and improvements, as well as what has been discussed in the session.</p>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.8847855951285!2d75.01758341432938!3d15.436768560177267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d370eace81bb%3A0xf20b739d863002a2!2sDharwadHubballiTutor!5e0!3m2!1sen!2sin!4v1608529670560!5m2!1sen!2sin" width="300" height="300" style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <br />
+          <h4 class="h4">LOCATED AT</h4>
+          <br />
+          <address style="font-size: 24px; color: #f8c000">
+            <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 20px; color: #f8c000"></i>
+            J G Nippani Complex, Beside SBI Gandhinagar, Dharwad.
+          </address>
+          <i class="fa fa-phone" style="font-size: 20px; color: #f8c000"></i>
+          <a href="tel:+917204817334">+917204817334</a>
+          <a href="tel:+918007961759">+918007961759</a>
+          <br /><br />
+          <i class="fa fa-envelope" style="font-size: 20px; color: #f8c000"></i>
+          <a href="mailto:dharwadhubballitutor@gmail.com">dharwadhubballitutor@gmail.com</a>
+        </div>
+        <div class="col-md-5">
+          <div class="contact-form">
+            <form class="modal-content" action="contact-action.php" method="POST">
+              <div class="container">
+                <h1 style="color: #2a0a5e">Contact Us</h1>
+                <hr />
+
+                <label class="label" for="name5"><b>Name</b></label>
+                <input type="text" name="name5" class="form-control" id="name5" placeholder="Name" required />
+
+                <label class="label" for="email"><b>Email</b></label>
+                <input type="email" name="email5" class="form-control" id="email5" placeholder="name@example.com" />
+
+                <label class="label" for="phone5"><b>Enter your number:</b></label>
+                <input type="tel" name="phone5" class="form-control" id="phone5" placeholder="Number" required />
+
+                <label class="label" for="trainings5"><b>Trainings</b></label>
+                <select class="custom-select" id="trainings5" name="trainings5">
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <option value="Web Designing and Development">Web Designing and Development</option>
+                  <option value="Python Programming">Python Programming</option>
+                  <option value="Civil Design Softwares">Civil Design Softwares</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="Android Development">Android Development</option>
+                  <option value="Cloud Computing">Cloud Computing</option>
+                  <option value="Programming Languages">Programming Languages</option>
+                  <option value="Basic Computers">Basic Computers</option>
+                  <option value="School Academics">School Academics</option></select
+                ><br />
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-warning">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
+    <br />
 
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -162,29 +190,29 @@
             <form class="modal-content" action="action-page.php" method="POST">
               <div class="container">
                 <label class="label" for="name"><b>Name</b></label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
+                <input type="text" name="name" id="name" class="form-control" placeholder="Name" required />
 
                 <label class="label" for="email"><b>Email</b></label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
+                <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com" />
 
                 <label class="label" for="phone"><b>Enter your number:</b></label>
-                <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
+                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Number" required />
 
                 <label class="label" for="trainings"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings" name="trainings">
-                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Basics of Computers">Basics of Computers</option>
-                  <option value="School Academics">School Academics</option>
-                </select>
+                <option value="SELECT YOUR INTEREST">Select your Interest</option>
+
+<?php
+
+
+foreach($courselist as $course) {
+    echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+}
+ ?>
+ </select><br />
                 <div class="modal-footer">
-                  <button type="button" class="closebtn" data-dismiss="modal">Close</button>
-                  <button type="submit" class="signupbtn">Submit</button>
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -192,6 +220,8 @@
         </div>
       </div>
     </div>
+
+    <br /><br />
     <footer class="container-fluid container-fluid1 justify-content-center">
       <div class="row justify-content-center py-3">
         <div class="col-md-3" style="text-align: left">
@@ -212,38 +242,38 @@
             <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="index.html">Home </a>
+                  <a class="footer-a" href="index.php">Home </a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Internship.html">Internships</a>
+                  <a class="footer-a" href="Internship.php">Internships</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Contact.html">Contact Us</a>
+                  <a class="footer-a" href="Contact.php">Contact Us</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Web-Designing-and-Development-Training.html">Web development</a>
+                  <a class="footer-a" href="Web-Designing-and-Development-Training.php">Web development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Python-Programming-Training.html">Python Programming</a>
+                  <a class="footer-a" href="Python-Programming-Training.php">Python Programming</a>
                 </li>
               </ul>
             </div>
             <div class="col-md-6" style="text-align: left">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="Cloud-Computing-Training.html">Cloud computing</a>
+                  <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Civil-Design-Softwares-Training.html">Civildesign</a>
+                  <a class="footer-a" href="Civil-Design-Softwares-Training.php">Civildesign</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Digital-Marketing-Training.html">Digital Marketing</a>
+                  <a class="footer-a" href="Digital-Marketing-Training.php">Digital Marketing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Android-Development-Training.html">Android Development</a>
+                  <a class="footer-a" href="Android-Development-Training.php">Android Development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Programming-Languages-Training.html">Programming Language</a>
+                  <a class="footer-a" href="Programming-Languages-Training.php">Programming Language</a>
                 </li>
               </ul>
             </div>
@@ -292,6 +322,8 @@
           <div class="modal-body">
             <form class="modal-content" action="footermodal-action.php" method="POST">
               <div class="container">
+                <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
+
                 <label class="label" for="name2"><b>Name</b></label>
                 <input type="text" name="name2" class="form-control" id="name2" placeholder="Name" required />
 
@@ -303,20 +335,20 @@
 
                 <label class="label" for="trainings2"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings2" name="trainings2">
-                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Basics of Computers">Basics of Computers</option>
-                  <option value="School Academics">School Academics</option></select
-                ><br />
+                <option value="">Select your Interest</option>
+
+<?php
+
+
+foreach($courselist as $course) {
+    echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+}
+ ?>
+ </select><br />
 
                 <label class="label" for="internship2"><b>Internships</b></label>
                 <select class="custom-select" id="internship2" name="internship2">
-                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <option value="">Select your Interest</option>
                   <option value="Web Designing and Development">Web Designing and Development</option>
                   <option value="Python Programming">Python Programming</option>
                   <option value="Digital Marketing">Digital Marketing</option>
@@ -333,17 +365,6 @@
         </div>
       </div>
     </div>
-    <!-- <div id="loading" class="container-fluid row">
-      <div class="col-md-12 text-center">
-        <iframe src="https://giphy.com/embed/xFmuT64Jto3mRO4w3G" width="480" height="360" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
-        <p><a href="https://giphy.com/gifs/oc-css-hourglass-xFmuT64Jto3mRO4w3G">via GIPHY</a></p>
-      </div>
-    </div>
-    <script>
-      $(window).on("load", function () {
-        $("#loading").hide()
-      })
-    </script> -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -368,6 +389,7 @@
         $("#myModal").modal()
       }, 30000)
     </script>
+
     <script>
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()

@@ -1,15 +1,21 @@
+<?php
+ require_once "DB Operations/dbconnection.php";
+  require_once "Admin/DB Operations/CoursesOps.php";
+  require_once "Admin/Model/Coursesmodel.php";
+  $courselist=DBcourse::selectall();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Best Web Designing and Development Training in Dharwad.</title>
+    <title>Great Internships in Dharwad.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="Want to build your website but have no idea where to begin with??then od visit us at DharwadHubballiTutor where we help you fulfill your dream with our excellent training in Website Designing and Development" />
-    <meta name="keywords" content="web designing and development course in dharwad,web design course,web development course,web designing training,web designing coaching,web develpoment coaching in dharwad,web development coaching near me,how to design website,web development training in dharwad,	web designing and development services,Website designing and develpoment training institute,web designing coaching in dharwad,web designing coaching near me,website development,website designing,website designer,website developer,build website,website building," />
+    <meta name="description" content="Get experience before you complete your graduation,DharwadHubballiTutor offers internships on Live projects which will boost your career." />
+    <meta name="keywords" content="Internships in Dharwad,Internships,Digital Marketing internship,Android internship,Web designing Internship,web development Internship,Python Internship,Civil design software internship,civil design softwares internship in dharwad,python internship in dharwad,web designing internship in dhawrad,web development internship in dharwad,digital marketing internship in dharwad." />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel="stylesheet" />
@@ -40,6 +46,7 @@
     <div class="brand-class container-fluid">
       <div class="row">
         <div class="col-md-6">
+          <!-- <img src="media/img/logo.png" class="logoimg" alt="DharwadHubballiTutor logo" /> -->
           <a class="navbar-brand brandName" href="#">DharwadHubballiTutor</a>
           <br />
 
@@ -51,10 +58,10 @@
         </div>
         <div class="col-md-6">
           <div class="semicircle">
-            <a class="blink_me" href="Job-Assistance.html"> Job Assistance</a>
+            <a class="blink_me" href="Job-Assistance.php"> Job Assistance</a>
           </div>
           <div class="container">
-            <a href="Job-Assistance.html" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
+            <a href="Job-Assistance.php" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
           </div>
         </div>
         <div class="col text-right">
@@ -63,43 +70,42 @@
         </div>
       </div>
     </div>
-
     <br />
-    <nav class="navbar navbar-expand-md bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-sm bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Aboutus.html">About</a>
+            <a class="nav-link" href="Aboutus.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Contact.html">Contact</a>
+            <a class="nav-link" href="Contact.php">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Web-Designing-and-Development-Training.html">Web Designing and Development</a>
-              <a class="dropdown-item" href="Python-Programming-Training.html">Python Programming </a>
-              <a class="dropdown-item" href="Cloud-Computing-Training.html">Cloud Computing</a>
-              <a class="dropdown-item" href="Android-Development-Training.html">Android Development</a>
-              <a class="dropdown-item" href="Civil-Design-Softwares-Training.html">Civil Design Softwares</a>
-              <a class="dropdown-item" href="Programming-Languages-Training.html">Programming Languages</a>
-              <a class="dropdown-item" href="Digital-Marketing-Training.html">Digital Marketing</a>
-              <a class="dropdown-item" href="Basics-of-Computer-Training.html">Basics of Computer</a>
-              <a class="dropdown-item" href="School-Academics-Training.html">School Academics</a>
+              <a class="dropdown-item" href="Web-Designing-and-Development-Training.php">Web Designing and Development</a>
+              <a class="dropdown-item" href="Python-Programming-Training.php">Python Programming </a>
+              <a class="dropdown-item" href="Cloud-Computing-Training.php">Cloud Computing</a>
+              <a class="dropdown-item" href="Android-Development-Training.php">Android Development</a>
+              <a class="dropdown-item" href="Civil-Design-Softwares-Training.php">Civil Design Softwares</a>
+              <a class="dropdown-item" href="Programming-Languages-Training.php">Programming Languages</a>
+              <a class="dropdown-item" href="Digital-Marketing-Training.php">Digital Marketing</a>
+              <a class="dropdown-item" href="Basics-of-Computer-Training.php">Basics of Computer</a>
+              <a class="dropdown-item" href="School-Academics-Training.php">School Academics</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Internship.html">Internships</a>
+            <a class="nav-link" href="Internship.php">Internships</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Services.html">Services</a>
+            <a class="nav-link" href="Services.php">Services</a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -112,82 +118,24 @@
     <br />
     <div style="text-align: center">
       <picture>
-        <source srcset="media/img/webmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/WdWELCOME.jpg" alt="Web designing and development" class="img-fluid" />
+        <source srcset="media/img/internshipmobile.jpg" media="(max-width: 768px)" />
+        <img src="media/img/InternshipWELCOME.jpg" alt="Internship image" class="img-fluid" />
       </picture>
     </div>
     <br />
     <div class="container">
       <div class="w-100 text-light">
-        <h3 class="h3">WHAT IS WEB DESIGNING AND DEVELOPMENT?</h3>
+        <h3 class="h3">WHY IS AN INTERNSHIP IMPORTANT</h3>
+        <p class="p2">In today's age, an internship is a vital part of a student's future. Based on their previous volunteering and internship experience, graduates are provided with jobs, serving a significant advantage in their careers. In addition, as a working professional, it also helps you to obtain first-hand experience while helping you to learn expertise, knowledge & understanding of the workings of a workplace.</p>
         <br />
-        <p class="p2">Website Designing is what creates the general look and feel when you're utilizing a site. It's the way toward arranging and building the components of your site, from structure and design to pictures, shadings, textual styles and illustrations where as Web development means building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience.</p>
-        <br />
-        <h3 class="h3">WHY IS WEB DESIGNING AND DEVELOPMENT IMPORTANT?</h3>
-        <br />
-        <p class="p2">Large or small businesses certainly need to build a successful website in today's business climate to beat the competition. Web development services enable your business to increase product awareness, maintain contact between you and potential buyers, market your goods or services, generate business leads and increase your company's visibility and much more..</p>
-        <br />
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h4 class="h4" style="text-align: justify">SCOPE OF WEB DEVELOPMENT</h4>
-          <br />
-          <ul>
-            <li><span> It’s one of the top 10 best-paying tech jobs.</span></li>
-            <li><span>There’s always room for growth and creativity.</span></li>
-            <li><span>Web developers are highly sought after.</span></li>
-            <li><span>There Are Always Freelance Opportunities.</span></li>
-            <li><span>Work from anywhere.</span></li>
-            <li><span>It brings out or improves your creativity.</span></li>
-          </ul>
-        </div>
-        <br />
-        <div class="col-md-6">
-          <h4 class="h4">CAREER AND JOBS</h4>
-          <br />
-          <ul>
-            <li><span>Front end web developer</span></li>
-            <li><span>Back end web developer</span></li>
-            <li><span>Web application developer</span></li>
-            <li><span>Design and layout analyst</span></li>
-            <li><span>Senior web analyst</span></li>
-            <li><span>Web marketing analyst</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="w-100 text-light">
-        <br />
-        <h3 class="h3">COURSE SYLLABUS</h3>
-        <br />
-        <h5 class="h5">Basics of Web Designing</h5>
-        <p class="p2">To begin with a simple introduction to familiarize students with the fundamentals of designing a website with its tools, software applications and themes is presented in the web design course syllabus. Here are the main topics discussed in the web design introduction:</p>
-
-        <h5 class="h5">Introduction to Web Technologies</h5>
-        <p class="p2">Students learn about the technological aspects of building a website as well as the types of websites under the theme of introduction to Web Technologies in the syllabus.</p>
-
-        <h5 class="h5">HTML</h5>
-        <p class="p2">HTML is an integral part of a syllabus for a web design course and is defined as a Hypertext Markup Language. In this subject, you will get to understand how HTML develops the general structure of a web page design as well as tags and the definition of HTML files. It is a key element of creating a website.</p>
-
-        <h5 class="h5">CSS</h5>
-        <p class="p2">Cascading style sheets a.k.a CSS is the language used to understand the overall appearance of a web page that consists of its layout, fonts, colours and themes..</p>
-
-        <h5 class="h5">Javascript</h5>
-        <p class="p2">Another programming language that is a key part of the course syllabus for web design is JavaScript. In programming and interactive websites, it is a logical language with cool tabs, sliders, calls to action and other dynamic features generated with JavaScript.</p>
-
-        <h5 class="h5">JQuery</h5>
-        <p class="p2">The aim of jQuery is to make using JavaScript on your website much easier. JQuery takes a variety of common tasks to achieve, involving several lines of JavaScript code, and wraps them in methods that can be called with a single line of code.</p>
-
-        <h5 class="h5">Bootstrap</h5>
-        <p class="p2">Bootstrap is a free front-end platform that allows web development quicker and easier.It contains typography, shapes, buttons, tables, navigation, modals, image carousels and several other HTML and CSS-based interface templates, as well as optional JavaScript plugins. It also offers you the opportunity to build responsive designs quickly.</p>
-
-        <h5 class="h5">Backend Platform</h5>
-        <p class="p2">PHP is a language for server scripting and a powerful tool for creating web pages that are dynamic and interactive. For rivals such as Microsoft's ASP, PHP is a commonly used, secure, and successful alternative.</p>
+        <h3 class="h3">WE PROVIDE INTERNSHIP ON BELOW MENTIONED SUBJECTS</h3>
+        <ul>
+          <li><span>Web Designing and Development</span></li>
+          <li><span>Civil Design Softwares</span></li>
+          <li><span>Digital Marketing</span></li>
+          <li><span>Android Development</span></li>
+          <li><span>Graphic Designing</span></li>
+        </ul>
       </div>
     </div>
 
@@ -215,14 +163,11 @@
                 <label class="label" for="trainings"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings" name="trainings">
                   <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Basics of Computers">Basics of Computers</option>
-                  <option value="School Academics">School Academics</option>
+                  <?php
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
+                  ?>
                 </select>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -254,45 +199,46 @@
             <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="index.html">Home </a>
+                  <a class="footer-a" href="index.php">Home </a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Internship.html">Internships</a>
+                  <a class="footer-a" href="Internship.php">Internships</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Contact.html">Contact Us</a>
+                  <a class="footer-a" href="Contact.php">Contact Us</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Web-Designing-and-Development-Training.html">Web development</a>
+                  <a class="footer-a" href="Web-Designing-and-Development-Training.php">Web development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Python-Programming-Training.html">Python Programming</a>
+                  <a class="footer-a" href="Python-Programming-Training.php">Python Programming</a>
                 </li>
               </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" style="text-align: left">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="Cloud-Computing-Training.html">Cloud computing</a>
+                  <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Civil-Design-Softwares-Training.html">Civildesign</a>
+                  <a class="footer-a" href="Civil-Design-Softwares-Training.php">Civildesign</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Digital-Marketing-Training.html">Digital Marketing</a>
+                  <a class="footer-a" href="Digital-Marketing-Training.php">Digital Marketing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Android-Development-Training.html">Android Development</a>
+                  <a class="footer-a" href="Android-Development-Training.php">Android Development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Programming-Languages-Training.html">Programming Language</a>
+                  <a class="footer-a" href="Programming-Languages-Training.php">Programming Language</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+
         <div class="col-md-3">
-          <h6><u>Follow us</u></h6>
+          <h6>Follow us</h6>
           <a class="social-icon fbicon" target="_blank" rel="noopener" href="https://www.facebook.com/DharwadhubballiTutor"><i class="fab fa-facebook fa-2x fbicon"></i></a>
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-2x twittericon"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-2x instaicon"></i></a>
@@ -344,20 +290,18 @@
 
                 <label class="label" for="trainings2"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings2" name="trainings2">
-                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Basics of Computers">Basics of Computers</option>
-                  <option value="School Academics">School Academics</option></select
+                  <option value="">Select your Interest</option>
+                  <?php
+                        foreach ($courselist as $course){
+                          echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                        }
+                  ?>
+                  </select
                 ><br />
 
                 <label class="label" for="internship2"><b>Internships</b></label>
                 <select class="custom-select" id="internship2" name="internship2">
-                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <option value="">Select your Interest</option>
                   <option value="Web Designing and Development">Web Designing and Development</option>
                   <option value="Python Programming">Python Programming</option>
                   <option value="Digital Marketing">Digital Marketing</option>
@@ -374,6 +318,17 @@
         </div>
       </div>
     </div>
+    <!-- <div id="loading" class="container-fluid row">
+      <div class="col-md-12 text-center">
+        <iframe src="https://giphy.com/embed/xFmuT64Jto3mRO4w3G" width="480" height="360" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+        <p><a href="https://giphy.com/gifs/oc-css-hourglass-xFmuT64Jto3mRO4w3G">via GIPHY</a></p>
+      </div>
+    </div>
+    <script>
+      $(window).on("load", function () {
+        $("#loading").hide()
+      })
+    </script> -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -398,7 +353,6 @@
         $("#myModal").modal()
       }, 30000)
     </script>
-
     <script>
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()

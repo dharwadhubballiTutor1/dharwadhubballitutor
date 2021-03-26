@@ -1,12 +1,18 @@
+<?php
+ require_once "DB Operations/dbconnection.php";
+  require_once "Admin/DB Operations/CoursesOps.php";
+  require_once "Admin/Model/Coursesmodel.php";
+  $courselist=DBcourse::selectall();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Best Civil Design Softwares Training in Dharwad.</title>
+    <title>Best Digital Marketing Training in Dharwad.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="We have several civil software courses to help you on your career path or the other path related to Civil Engnieering.Learn concepts from industry experts." />
-    <meta name="keywords" content="Civil design softwares,civil design softwares traning,civil design softwares training in dharwad,civil design softwares training near me,civil design softwares coaching,civil design softwares coaching in dharwad,civil design,civil softwares,civil softwares coaching in dharwad,civil softwares training,civil design training in dharwad,civil engineering softwares coaching,civil engineering softwares coaching in dharwad,civil engineering softwares training,civil engineering softwares training in dharwad,civil engineering softwares,civil designs,civil engineering designs,revit structure,3ds max,autocad,sketchup,autodesk 3ds max,v ray,v-ray training in dharwad,revit training in dharwad,revit coaching in dharwad,sketchup coaching in dharwad,autocad coaching in dharwad,v ray coaching in dharwad " />
+    <meta name="description" content="Best Digital Marketing Training in Dhawrad with various courses for college Students and corporates with affordable fees." />
+    <meta name="keywords" content="Digital Marketing coaching,digital marketing tutorial in dharwad,digiat marketing coaching in dharwad,digital marketing,digital marketing benefits,digital marketing courses,digital marketing courses in dharwad,digital marketing courses near me,digital marketing course fees,digital marketing course fees in dharwad,digital marketing definition,what is digital marketing,dgital  marketing duration." />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -48,14 +54,14 @@
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-lg instaicon instaheader"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="http://www.linkedin.com/in/dharwadhubballitutor"><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader"></i></a>
-          <a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hi there! I have a question :)"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
+          <a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
         </div>
         <div class="col-md-6">
           <div class="semicircle">
-            <a class="blink_me" href="Job-Assistance.html"> Job Assistance</a>
+            <a class="blink_me" href="Job-Assistance.php"> Job Assistance</a>
           </div>
           <div class="container">
-            <a href="Job-Assistance.html" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
+            <a href="Job-Assistance.php" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
           </div>
         </div>
         <div class="col text-right">
@@ -65,41 +71,41 @@
       </div>
     </div>
     <br />
-    <nav class="navbar navbar-expand-sm bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Aboutus.html">About</a>
+            <a class="nav-link" href="Aboutus.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Contact.html">Contact</a>
+            <a class="nav-link" href="Contact.php">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Web-Designing-and-Development-Training.html">Web Designing and Development</a>
-              <a class="dropdown-item" href="Python-Programming-Training.html">Python Programming </a>
-              <a class="dropdown-item" href="Cloud-Computing-Training.html">Cloud Computing</a>
-              <a class="dropdown-item" href="Android-Development-Training.html">Android Development</a>
-              <a class="dropdown-item" href="Civil-Design-Softwares-Training.html">Civil Design Softwares</a>
-              <a class="dropdown-item" href="Programming-Languages-Training.html">Programming Languages</a>
-              <a class="dropdown-item" href="Digital-Marketing-Training.html">Digital Marketing</a>
-              <a class="dropdown-item" href="Basics-of-Computer-Training.html">Basics of Computer</a>
-              <a class="dropdown-item" href="School-Academics-Training.html">School Academics</a>
+              <a class="dropdown-item" href="Web-Designing-and-Development-Training.php">Web Designing and Development</a>
+              <a class="dropdown-item" href="Python-Programming-Training.php">Python Programming </a>
+              <a class="dropdown-item" href="Cloud-Computing-Training.php">Cloud Computing</a>
+              <a class="dropdown-item" href="Android-Development-Training.php">Android Development</a>
+              <a class="dropdown-item" href="Civil-Design-Softwares-Training.php">Civil Design Softwares</a>
+              <a class="dropdown-item" href="Programming-Languages-Training.php">Programming Languages</a>
+              <a class="dropdown-item" href="Digital-Marketing-Training.php">Digital Marketing</a>
+              <a class="dropdown-item" href="Basics-of-Computer-Training.php">Basics of Computer</a>
+              <a class="dropdown-item" href="School-Academics-Training.php">School Academics</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Internship.html">Internships</a>
+            <a class="nav-link" href="Internship.php">Internships</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Services.html">Services</a>
+            <a class="nav-link" href="Services.php">Services</a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -112,50 +118,103 @@
     <br />
     <div style="text-align: center">
       <picture>
-        <source srcset="media/img/civilmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/CivilWELCOME.jpg" alt="Cloud Computing" class="img-fluid" />
+        <source srcset="media/img/digitalmobile.jpg" media="(max-width: 768px)" />
+        <img src="media/img/DigitalWELCOME.jpg" alt="" class="img-fluid" />
       </picture>
     </div>
     <br />
     <div class="container">
       <div class="row row-eq-height">
         <div class="w-100 text-light">
-          <h3 class="h3">WHAT ARE CIVIL DESIGN SOFTWARES?</h3>
+          <h3 class="h3">WHAT IS DIGITAL MARKETING??</h3>
+          <p class="p2">The use of the Internet, mobile devices, social media, search engines, and other platforms to attract customers is digital marketing. Digital marketing is considered by some marketing experts to be a radically new endeavor that needs a new way of approaching consumers and new ways of understanding how customers function compared to conventional marketing.</p>
           <br />
-          <p class="p2">Software for civil engineering provides a variety of resources to support civil engineers in both the design and construction phases. In every step of the project, including drafting & recording, planning, visualizing & evaluating, this program can help.</p>
+          <h3 class="h3">BENEFITS OF DIGITAL MARKETING:</h3>
           <br />
-          <h3 class="h3">THE LIST OF IMPORTANT CIVIL DESIGN SOFTWARES:</h3>
-          <br />
-          <h5 class="h5">AUTOCAD</h5>
-          <p class="p2">AutoCAD is a software framework for industrial computer-aided design and drafting. AutoCAD, produced and sold by Autodesk, was first released as a desktop app running on microcomputers with internal graphics controllers in December 1982.</p>
-          <br />
+          <h5 class="h5">Increase Loyalty of Customer</h5>
+          <p class="p2">As you know, gaining and transforming new customers costs more than keeping current customers. Customer loyalty can be hard to build, but with frequent communications you can gain that loyalty and Digital marketing plays a vital role in the process.</p>
 
-          <h5 class="h5">SKETCH UP</h5>
-          <p class="p2">SketchUp is a 3D modeling computer software for a wide variety of drawing applications, including architectural, interior design, landscape architecture, civil and mechanical engineering, film and video game design.</p>
-          <br />
+          <h5 class="h5">Low Cost</h5>
+          <p class="p2">Digital Platforms are more affordable alternative than the traditional method for Marketing.They produce as much effect, but cost much less..</p>
 
-          <h5 class="h5">MS EXCEL</h5>
-          <p class="p2">Almost all of the business functions of Civil Engineering use MS Excel, whether it be execution, survey, preparation, contracts, budgeting, design, quality control, quantity estimation, you name it. MS Excel is used for all.</p>
-          <br />
+          <h5 class="h5">Marketing Is Measurable</h5>
+          <p class="p2">Once you launch an Ad-campaign through Digital Marketing,you don't need to wait for days,weeks or months to determine a campaign's veracity, you can easily access the result in no time.</p>
 
-          <h5 class="h5">AUTODESK 3DS MAX</h5>
-          <p class="p2">3ds Max is used extensively for 3D modeling simulation by civil engineers and architects. In photo-realistic visualization, 3ds Max allows designers to make drawings created using AutoCAD or any other CAD software.</p>
-          <br />
+          <h5 class="h5">Accurate Targeting</h5>
+          <p class="p2">Digital Marketing helps you to specifically target and reach people who are interested in your business which helps to increase the chance of sales as well as to reduce marketing costs further.</p>
 
-          <h5 class="h5">REVIT STRUCTURE</h5>
-          <p class="p2">Autodesk Revit is Building data displaying programming for draftsmen, underlying designers, architects, and temporary workers. It permits clients to plan a structure and its parts in 3D, comment on the model with 2D drafting components and access building data from the structure models information base.</p>
-          <br />
+          <h5 class="h5">Global Reach</h5>
+          <p class="p2">As they say the World has become a GLOBAL VILLAGE due to digitization.Digital Marketing has provided a rare platform to small-start ups to go global via ad-campaigns,which are visible in any part of the the world.</p>
 
-          <h5 class="h5">ESTIMATOR</h5>
-          <p class="p2">It's applications for architects, designers, contractors, and engineers for estimation and project management. You may prepare different estimates and rate analyses of residential and commercial buildings with EstimatorTM 2.0. Detailed Estimate, Abstract Estimate, Tenders, Calculation Book, Cost Abstract, Job and Contractor's Bill, Purchasing Order, and other documents for project management can also be prepared.</p>
+          <h5 class="h5">Adjustments on the go</h5>
+          <p class="p2">One of the biggest benefit of Digital Marketing is that you can make any adjustments as you go unlike the traditional method,where once the flyers are handed over or banner is put up nothing can be changed further its permanent there.</p>
           <br />
-
-          <h5 class="h5">V-RAY</h5>
-          <p class="p2">V-Ray is designed for architecture. And it links seamlessly to the top 3D modeling and design software, including 3ds Max, Revit, Rhino, SketchUp, and Unreal, used in architectural visualization. The complete suite of tools from V-Ray helps you to render everything you can imagine, from early mass models to photorealistic photography, animation,</p>
         </div>
       </div>
-
-      <h3 class="h3">WITH OUR COURSE GET TRAINED ON ALL THESE SOFTWARES.YOU CAN BEGIN THE COURSE BY AUTOCAD AND REVIT AND THEN GO FOR ADVANCED SOFTWARES</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3 class="h3">TOP CHANNELS IN DIGITAL MARKETING</h3>
+          <ul>
+            <li><span>Website Marketing</span></li>
+            <li><span>Pay-Per-Click(PPC) Advertising</span></li>
+            <li><span>Content Marketing</span></li>
+            <li><span>Email Marketing</span></li>
+            <li><span>Social Media Marketing</span></li>
+            <li><span>Affiliate Marketing</span></li>
+            <li><span>Video Marketing</span></li>
+            <li><span>SMS Marketing</span></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <h3 class="h3">8 BEST DIGITAL MARKETING TOOLS</h3>
+          <ul>
+            <li><span>SEMrush</span></li>
+            <li><span>HubSpot</span></li>
+            <li><span>Moz</span></li>
+            <li><span>Google Analytics</span></li>
+            <li><span>Screaming Frog SEO</span></li>
+            <li><span>Canva</span></li>
+            <li><span>Hpootsuite</span></li>
+            <li><span>BuzzSumo</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3 class="h3">JOB ROLES</h3>
+            <ul>
+              <li><span>Digital Marketing Manager</span></li>
+              <li><span>SEO Manager</span></li>
+              <li><span>SEM/PPC Expert</span></li>
+              <li><span>Web Developer/Designer</span></li>
+              <li><span>Social Media Manager</span></li>
+              <li><span>Content Writer</span></li>
+              <li><span>Digital Marketing Coordinator</span></li>
+              <li><span>Media Director</span></li>
+              <li><span>Web Analytics Specialist</span></li>
+              <li><span>Chief Marketing Officer</span></li>
+              <li><span>MarCom Manager</span></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h3">COURSE SYLLABUS</h3>
+            <ul>
+              <li><span>Introduction to Digital Marketing</span></li>
+              <li><span>SEO Conept</span></li>
+              <li><span>Social Media Marketing</span></li>
+              <li><span>Email Marketing</span></li>
+              <li><span>Content Marketing</span></li>
+              <li><span>Search Engine Marketing</span></li>
+              <li><span>Web Analytics</span></li>
+              <li><span>Mobile Marketing</span></li>
+              <li><span>Digital Marketing Analytics..... </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -169,7 +228,6 @@
           <div class="modal-body">
             <form class="modal-content" action="action-page.php" method="POST">
               <div class="container">
-                <p style="color: #2a0a5e">Please fill in this form.</p>
                 <hr />
                 <label class="label" for="name"><b>Name</b></label>
                 <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
@@ -183,19 +241,15 @@
                 <label class="label" for="trainings"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings" name="trainings">
                   <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Programming Languages">Programming Languages</option>
-                  <option value="Basic Computers">Basic Computers</option>
-                  <option value="School Academics">School Academics</option>
+                  <?php
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
+                  ?>
                 </select>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning">Submit</button>
+                  <button type="button" class="closebtn" data-dismiss="modal">Close</button>
+                  <button type="submit" class="signupbtn">Submit</button>
                 </div>
               </div>
             </form>
@@ -203,6 +257,7 @@
         </div>
       </div>
     </div>
+
     <footer class="container-fluid container-fluid1 justify-content-center">
       <div class="row justify-content-center py-3">
         <div class="col-md-3" style="text-align: left">
@@ -223,38 +278,38 @@
             <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="index.html">Home </a>
+                  <a class="footer-a" href="index.php">Home </a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Internship.html">Internships</a>
+                  <a class="footer-a" href="Internship.php">Internships</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Contact.html">Contact Us</a>
+                  <a class="footer-a" href="Contact.php">Contact Us</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Web-Designing-and-Development-Training.html">Web development</a>
+                  <a class="footer-a" href="Web-Designing-and-Development-Training.php">Web development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Python-Programming-Training.html">Python Programming</a>
+                  <a class="footer-a" href="Python-Programming-Training.php">Python Programming</a>
                 </li>
               </ul>
             </div>
             <div class="col-md-6" style="text-align: left">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="Cloud-Computing-Training.html">Cloud computing</a>
+                  <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Civil-Design-Softwares-Training.html">Civildesign</a>
+                  <a class="footer-a" href="Civil-Design-Softwares-Training.php">Civildesign</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Digital-Marketing-Training.html">Digital Marketing</a>
+                  <a class="footer-a" href="Digital-Marketing-Training.php">Digital Marketing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Android-Development-Training.html">Android Development</a>
+                  <a class="footer-a" href="Android-Development-Training.php">Android Development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Programming-Languages-Training.html">Programming Language</a>
+                  <a class="footer-a" href="Programming-Languages-Training.php">Programming Language</a>
                 </li>
               </ul>
             </div>
@@ -267,7 +322,7 @@
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-2x twittericon"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-2x instaicon"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="http://www.linkedin.com/in/dharwadhubballitutor"><i class="fab fa-linkedin fa-2x linkedinicon"></i></a>
-          <a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hi there! I have a question :)"><i class="fab fa-whatsapp fa-2x whatsappicon"></i></a>
+          <a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion"><i class="fab fa-whatsapp fa-2x whatsappicon"></i></a>
           <br />
           <br />
           <div class="text-center">
@@ -303,8 +358,6 @@
           <div class="modal-body">
             <form class="modal-content" action="footermodal-action.php" method="POST">
               <div class="container">
-                <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
-
                 <label class="label" for="name2"><b>Name</b></label>
                 <input type="text" name="name2" class="form-control" id="name2" placeholder="Name" required />
 
@@ -317,15 +370,12 @@
                 <label class="label" for="trainings2"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings2" name="trainings2">
                   <option value="">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Programming Languages">Programming Languages</option>
-                  <option value="Basic Computers">Basic Computers</option>
-                  <option value="School Academics">School Academics</option></select
+                  <?php
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
+                  ?>
+                  </select
                 ><br />
 
                 <label class="label" for="internship2"><b>Internships</b></label>
@@ -347,6 +397,17 @@
         </div>
       </div>
     </div>
+    <!-- <div id="loading" class="container-fluid row">
+      <div class="col-md-12 text-center">
+        <iframe src="https://giphy.com/embed/xFmuT64Jto3mRO4w3G" width="480" height="360" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+        <p><a href="https://giphy.com/gifs/oc-css-hourglass-xFmuT64Jto3mRO4w3G">via GIPHY</a></p>
+      </div>
+    </div>
+    <script>
+      $(window).on("load", function () {
+        $("#loading").hide()
+      })
+    </script> -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -371,7 +432,6 @@
         $("#myModal").modal()
       }, 30000)
     </script>
-
     <script>
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()
