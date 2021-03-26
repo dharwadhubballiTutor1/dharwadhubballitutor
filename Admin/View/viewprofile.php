@@ -189,6 +189,7 @@ include "../../Admin/DB Operations/CoursesOps.php";
                                                         $option.= "<option value='". $course->get_id()."'";
                                                           if($course->get_id()==$admission->get_courseid()){
                                                            $option.= "selected";
+                                                           echo $course->get_id();
                                                           }
                                                           $option.=  ">".$course->get_cname()."</option>";
                                                     }

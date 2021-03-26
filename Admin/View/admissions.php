@@ -4,7 +4,10 @@ require_once "../DB Operations/enqueryOps.php";
 require_once "../../Admin/DB Operations/AdmissionsOps.php";
 include "../../Admin/DB Operations/CoursesOps.php";
 require_once "../../Admin/Model/Admissionsmodel.php";
- include "../../Admin/navbar.php";
+include "../../Admin/navbar.php";
+
+
+ 
        ?>
 <html>
 
@@ -30,7 +33,10 @@ require_once "../../Admin/Model/Admissionsmodel.php";
          }
         </style>
     </head>
+<?php 
 
+
+?>
     <body>
         <div class="container-fluid">
             <div class="row">
@@ -94,6 +100,8 @@ require_once "../../Admin/Model/Admissionsmodel.php";
                                                 <input type="text" id="name" placeholder="Full Name" name="name"
                                                     class="form-control" pattern="[a-zA-Z\-\ ]+" required>
                                                     <input type="hidden" name="id" id="id" value="">
+                                                    
+                                                    
                                             </div>
                                         </div>
                                         <br />
@@ -187,10 +195,9 @@ require_once "../../Admin/Model/Admissionsmodel.php";
                                                     $option="";
                                                     $courselist=DBcourse::selectall();
                                                     foreach($courselist as $course) {
-                                                        $option.= "<option 
-                                                         >".$course->get_cname()."</option>";
+                                                        $option.= "<option value='". $course->get_id()."'";
+                                                        $option.=  ">".$course->get_cname()."</option>";
                                                     }
-
                                                     echo $option;
                                                    
                                                     ?>
@@ -313,5 +320,26 @@ require_once "../../Admin/Model/Admissionsmodel.php";
             $("select").addClass("form-select").attr("aria-label","Default select example");
         });
         </script>
+        <script>
+        $(document).ready(function(){
+            
+            $("#dateofbirth").focus(function (){
+                                let thisYear = new Date();
+                                thisYear=thisYear.getFullYear();
+                                let allowedYear = thisYear - 5;
+                                allowedYear = allowedYear.toString();
+                                
+                                let year = new Date(allowedYear);
+                                let dd = String(year.getDate()).padStart(2, '0');
+                                let mm = String(year.getMonth() + 1).padStart(2, '0'); //January is 0!
+                                let yyyy = year.getFullYear();
+
+                                year = yyyy + '-' + mm + '-' + dd;
+
+                                $("#dateofbirth").attr("max",year);
+            })
+        });
+        </script>
+
     </body>
 </html> 

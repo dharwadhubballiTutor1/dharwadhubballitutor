@@ -27,6 +27,14 @@
       return $this->id;
     }
 
+      
+    function set_enqueryId($enqueryId) {
+      $this->enqueryId = $enqueryId;
+    }
+    function get_enqueryId() {
+      return $this->enqueryId;
+    }
+    
   function set_name($name) {
     $this->Name = $name;
   }

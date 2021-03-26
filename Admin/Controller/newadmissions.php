@@ -5,16 +5,19 @@ require_once "../Utilities/Sanitization.php";
 require_once "../Utilities/Helper.php";
 //require "../Admin/navbar.php";
 require_once "../DB Operations/AdmissionsOps.php";
+require_once "../DB Operations/CoursesOps.php";
+
 
   if ($_SERVER["REQUEST_METHOD"] == "POST")
-  {
-    $admit=new Admissions();
+   {
+   $admit=new Admissions();
     if(!empty($_POST["id"]))
     {
       $admit->set_enqueryId(Sanitization::test_input($_POST["id"]));
     }else{
       $admit->set_enqueryId(0);
     }
+  
     $admit->set_name(Sanitization::test_input($_POST["name"]));
     $admit->set_phone(Sanitization::test_input($_POST["phone"]));
     $admit->set_email(Sanitization::test_input($_POST["email"]));
@@ -23,7 +26,9 @@ require_once "../DB Operations/AdmissionsOps.php";
     $admit->set_qualification(Sanitization::test_input($_POST["qualification"]));
     $admit->set_guardiansname(Sanitization::test_input($_POST["guardiansname"]));
     $admit->set_guardiansphone(Sanitization::test_input($_POST["guardiansphone"]));
-    $admit->set_coursesopted(Sanitization::test_input($_POST["coursesopted"]));
+    $cname=DBcourse::getcoursename($_POST["coursesopted"]);
+    $admit->set_coursesopted($cname);
+    $admit->set_courseid(Sanitization::test_input($_POST["coursesopted"]));
     $admit->set_address(Sanitization::test_input($_POST["address"]));
     $admit->set_adhaarno(Sanitization::test_input($_POST["adhaarno"]));
     $filetoupload=$_FILES["adhaarfile"];
@@ -46,7 +51,7 @@ require_once "../DB Operations/AdmissionsOps.php";
 
     <body>
         <?php 
-         header("location:../View/admissions.php");
+        //  header("location:../View/admissions.php");
 ?>
 
 

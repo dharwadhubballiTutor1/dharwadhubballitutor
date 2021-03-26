@@ -1,8 +1,15 @@
 <?php
 // require "../Admin/session.php";
-require_once "../../DB Operations/dbconnection.php";
-require_once "../../Admin/Model/Coursesmodel.php";
+$dirPath1="DB Operations/dbconnection.php";
+$dirPath2="Admin/Model/Coursesmodel.php";
 
+if(file_exists($dirPath1)&&file_exists($dirPath2)){
+  require_once "DB Operations/dbconnection.php";
+  require_once "Admin/Model/Coursesmodel.php";
+} else {
+  require_once "../../DB Operations/dbconnection.php";
+  require_once "../../Admin/Model/Coursesmodel.php";
+}
     class DBcourse
     {
       public static function insert($courseObj)
@@ -61,5 +68,19 @@ require_once "../../Admin/Model/Coursesmodel.php";
           echo "0 results";
        }
      return $courselist;
+  }
+
+  public static function getcoursename($courseid)
+  {
+    $db=ConnectDb::getInstance();
+    $connectionObj=$db->getConnection();
+    $result=mysqli_query($db->getConnection(),'SELECT CName FROM courses where id='.$courseid.''); 
+    if (mysqli_num_rows($result) > 0) {
+       
+         $row= mysqli_fetch_assoc($result);
+          return $row['CName'];
+       
+    
+  }
   }
     }

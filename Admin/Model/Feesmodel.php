@@ -3,6 +3,7 @@
   {
     private $StudentName;
     private $CourseOpted;
+    private $Phone;
     private $Admissionid;
     private $Courseid;
     private $TotalFees;
@@ -12,6 +13,8 @@
     private $DueDate;
     private $PaymentMode;
     private $PaymentDescription;
+    private $Modified_Date;
+    private $feesreceipt;
     private $table_name="fees";
     
     function set_admitid($admitid) {
@@ -63,6 +66,13 @@
     return $this->CourseOpted;
    }
 
+   function set_phone($phone) {
+    $this->Phone= $phone;
+   }
+   function get_phone() {
+    return $this->Phone;
+   }
+
    function set_feesplan($feesplan) {
     $this->Feesplan = $feesplan;
    }
@@ -74,7 +84,11 @@
     $this->DueDate = $duedate;
   }
   function get_duedate() {
-    return $this->DueDate;
+    if($this->DueDate==""){
+      return NULL;
+    }else{
+     return $this->DueDate;
+    }
   }
 
   function set_pmode($pmode) {
@@ -91,7 +105,20 @@
   function get_pdescription() {
     return $this->PaymentDescription;
   }
+  function set_modifieddate($modifieddate) {
+    $this->Modified_Date = $modifieddate;
+    
+  }
+  function get_modifieddate() {
+    return $this->Modified_Date;
+  }
 
+  function set_feereceipt($feereceipt) {
+    $this->feesreceipt = $feereceipt;
+  }
+  function get_feereceipt() {
+    return $this->feesreceipt;
+  }
  
  
 

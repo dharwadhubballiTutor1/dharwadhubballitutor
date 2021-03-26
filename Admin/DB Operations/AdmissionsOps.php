@@ -10,7 +10,22 @@ require_once "../../DB Operations/dbconnection.php";
         $db=ConnectDb::getInstance();
         $connectionObj=$db->getConnection();
          $sql = "insert into admissions (`enquiry_id`,`Name`, `Phone`, `Email`, `DateofBirth`,`Gender`,`Qualification`,`Guardians_Name`,`Guardians_Phone`,`CoursesOpted`,`Address`,`AdhaarNo`,`AdhaarFile`,`PhotoFile`,`Resume`,`Courseid`) 
-                values (".$admissionObj->get_enqueryId().",'".$admissionObj->get_name()."','".$admissionObj->get_phone()."','".$admissionObj->get_email()."','".$admissionObj->get_dateofbirth()."','".$admissionObj->get_gender()."', '".$admissionObj->get_qualification()."','".$admissionObj->get_guardiansname()."','".$admissionObj->get_guardiansphone()."','".$admissionObj->get_coursesopted()."','".$admissionObj->get_address()."','".$admissionObj->get_adhaarno()."','".$admissionObj->get_adhaarfile()."','".$admissionObj->get_photofile()."','".$admissionObj->get_resume()."','".$admissionObj->get_courseid()."')";
+                values (".$admissionObj->get_enqueryId().
+                ",'".$admissionObj->get_name().
+                "','".$admissionObj->get_phone().
+                "','".$admissionObj->get_email().
+                "','".$admissionObj->get_dateofbirth().
+                "','".$admissionObj->get_gender().
+                "', '".$admissionObj->get_qualification().
+                "','".$admissionObj->get_guardiansname().
+                "','".$admissionObj->get_guardiansphone().
+                "','".$admissionObj->get_coursesopted().
+                "','".$admissionObj->get_address().
+                "','".$admissionObj->get_adhaarno().
+                "','".$admissionObj->get_adhaarfile().
+                "','".$admissionObj->get_photofile().
+                "','".$admissionObj->get_resume().
+                "','".$admissionObj->get_courseid()."')";
                 
                 if ($connectionObj->query($sql) === TRUE) {
                   if($admissionObj->get_enqueryId()>0){
@@ -28,8 +43,8 @@ require_once "../../DB Operations/dbconnection.php";
         
       }
 
-    public static function viewadmission($viewObj)
-    {
+     public static function viewadmission($viewObj)
+     {
       $db=ConnectDb::getInstance();
       $connectionObj=$db->getConnection();
        $sql = "select * from admissions where id=$viewObj";
@@ -55,14 +70,14 @@ require_once "../../DB Operations/dbconnection.php";
          $view->set_resume($row['Resume']);
         
          
-   } else {
-     $view=NULL;
+      } else {
+        $view=NULL;
 
-   } 
-   return $view;
-    }
-  public static function search()
-  {
+      } 
+       return $view;
+     }
+     public static function search()
+     {
        $db=ConnectDb::getInstance();
        $connectionObj=$db->getConnection();
        $search="";

@@ -199,7 +199,28 @@ include "../../Admin/DB Operations/CoursesOps.php";
                             </div>
                     </form> <!-- /form -->
 
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>                       
+                    <script>
+        $(document).ready(function(){
+            
+            $("#dateofbirth").focus(function (){
+                                let thisYear = new Date();
+                                thisYear=thisYear.getFullYear();
+                                let allowedYear = thisYear - 5;
+                                allowedYear = allowedYear.toString();
+                                
+                                let year = new Date(allowedYear);
+                                let dd = String(year.getDate()).padStart(2, '0');
+                                let mm = String(year.getMonth() + 1).padStart(2, '0'); //January is 0!
+                                let yyyy = year.getFullYear();
 
+                                year = yyyy + '-' + mm + '-' + dd;
+
+                                $("#dateofbirth").attr("max",year);
+            })
+        });
+        </script>
     </body>
+
 
 </html>
