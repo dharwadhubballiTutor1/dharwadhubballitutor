@@ -52,7 +52,7 @@ include "../../Admin/Utilities/Helper.php";
                                 <br />
                                 <div class="form-check text-center">
                                     <input type="radio" class="btn-check" name="options" id="option2">
-                                    <label class="btn btn-danger" for="option2">Edit</label>
+                                    <label class="btn btn-danger" for="option2" id="editFocus">Edit</label>
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -101,7 +101,7 @@ include "../../Admin/Utilities/Helper.php";
                                             <label for="tfees" class="col-md-6 control-label">Total fees</label>
                                             <div class="col-sm-12">
                                                 <input type="text" id="tfees" name="tfees"
-                                                    class="form-control" required value="<?php echo $collectfees->get_tfees() ?>" >
+                                                    class="form-control" required value="<?php echo $collectfees->get_tfees() ?>">
                                             </div>
                                         </div>
                                         <br />
@@ -258,10 +258,13 @@ include "../../Admin/Utilities/Helper.php";
                         
                            
                         });
-                     
-                        
+                     $("#editFocus").ready(function (){
+                        $("#tfees").focus();
+                     });
+                       
                    
                 });
+            
             </script>
                 
 
