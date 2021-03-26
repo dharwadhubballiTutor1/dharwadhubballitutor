@@ -1,12 +1,18 @@
+<?php
+ require_once "DB Operations/dbconnection.php";
+  require_once "Admin/DB Operations/CoursesOps.php";
+  require_once "Admin/Model/Coursesmodel.php";
+  $courselist=DBcourse::selectall();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Great Internships in Dharwad.</title>
+    <title>Best Programming Languages Training In Dharwad.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="Get experience before you complete your graduation,DharwadHubballiTutor offers internships on Live projects which will boost your career." />
-    <meta name="keywords" content="Internships in Dharwad,Internships,Digital Marketing internship,Android internship,Web designing Internship,web development Internship,Python Internship,Civil design software internship,civil design softwares internship in dharwad,python internship in dharwad,web designing internship in dhawrad,web development internship in dharwad,digital marketing internship in dharwad." />
+    <meta name="description" content="With Programming Languages training courses from DharwadHubballiTutor,you will learn basics to advanced coding in Java,C++,C." />
+    <meta name="keywords" content="C coaching in dharwad,C coaching center near me,C coaching center in dharwad,C language,C programming,C programming training in dharwad,C programming training near me,C programming,C training,C programming language,C++ programming,C++ programming training in dharwad,C++ programming coaching in dharwad,C++ programming coaching near me,C++ programming,C++ training,C++ language tarining,C++ language,C++ langauge coaching in Dharwad,C++ coaching in dharwad,C++ coaching near me,java,java coaching near me,java coaching in dharwad,java training,java training in dharwad,java coaching center in dharwad,java coaching center near me,java coaching,java coding tarining,java coding,java course,java course in dharwad,java course near me,programming languages,programming," />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -52,10 +58,10 @@
         </div>
         <div class="col-md-6">
           <div class="semicircle">
-            <a class="blink_me" href="Job-Assistance.html"> Job Assistance</a>
+            <a class="blink_me" href="Job-Assistance.php"> Job Assistance</a>
           </div>
           <div class="container">
-            <a href="Job-Assistance.html" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
+            <a href="Job-Assistance.php" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
           </div>
         </div>
         <div class="col text-right">
@@ -65,41 +71,41 @@
       </div>
     </div>
     <br />
-    <nav class="navbar navbar-expand-sm bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Aboutus.html">About</a>
+            <a class="nav-link" href="Aboutus.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Contact.html">Contact</a>
+            <a class="nav-link" href="Contact.php">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Web-Designing-and-Development-Training.html">Web Designing and Development</a>
-              <a class="dropdown-item" href="Python-Programming-Training.html">Python Programming </a>
-              <a class="dropdown-item" href="Cloud-Computing-Training.html">Cloud Computing</a>
-              <a class="dropdown-item" href="Android-Development-Training.html">Android Development</a>
-              <a class="dropdown-item" href="Civil-Design-Softwares-Training.html">Civil Design Softwares</a>
-              <a class="dropdown-item" href="Programming-Languages-Training.html">Programming Languages</a>
-              <a class="dropdown-item" href="Digital-Marketing-Training.html">Digital Marketing</a>
-              <a class="dropdown-item" href="Basics-of-Computer-Training.html">Basics of Computer</a>
-              <a class="dropdown-item" href="School-Academics-Training.html">School Academics</a>
+              <a class="dropdown-item" href="Web-Designing-and-Development-Training.php">Web Designing and Development</a>
+              <a class="dropdown-item" href="Python-Programming-Training.php">Python Programming </a>
+              <a class="dropdown-item" href="Cloud-Computing-Training.php">Cloud Computing</a>
+              <a class="dropdown-item" href="Android-Development-Training.php">Android Development</a>
+              <a class="dropdown-item" href="Civil-Design-Softwares-Training.php">Civil Design Softwares</a>
+              <a class="dropdown-item" href="Programming-Languages-Training.php">Programming Languages</a>
+              <a class="dropdown-item" href="Digital-Marketing-Training.php">Digital Marketing</a>
+              <a class="dropdown-item" href="Basics-of-Computer-Training.php">Basics of Computer</a>
+              <a class="dropdown-item" href="School-Academics-Training.php">School Academics</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Internship.html">Internships</a>
+            <a class="nav-link" href="Internship.php">Internships</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Services.html">Services</a>
+            <a class="nav-link" href="Services.php">Services</a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -112,71 +118,148 @@
     <br />
     <div style="text-align: center">
       <picture>
-        <source srcset="media/img/internshipmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/InternshipWELCOME.jpg" alt="Internship image" class="img-fluid" />
+        <source srcset="media/img/progmobile.jpg" media="(max-width: 768px)" />
+        <img src="media/img/ProgrammingWELCOME.jpg" alt="" class="img-fluid" />
       </picture>
     </div>
     <br />
     <div class="container">
       <div class="w-100 text-light">
-        <h3 class="h3">WHY IS AN INTERNSHIP IMPORTANT</h3>
-        <p class="p2">In today's age, an internship is a vital part of a student's future. Based on their previous volunteering and internship experience, graduates are provided with jobs, serving a significant advantage in their careers. In addition, as a working professional, it also helps you to obtain first-hand experience while helping you to learn expertise, knowledge & understanding of the workings of a workplace.</p>
+        <h3 class="h3">What are Programming Languages?</h3>
+        <p class="p2">A programming language is a formal computer language or constructed language designed to communicate instructions to a Machine. Programming languages can be used to create programs to control the behaviour of a machine r to express algorithms.</p>
         <br />
-        <h3 class="h3">WE PROVIDE INTERNSHIP ON BELOW MENTIONED SUBJECTS</h3>
-        <ul>
-          <li><span>Web Designing and Development</span></li>
-          <li><span>Civil Design Softwares</span></li>
-          <li><span>Digital Marketing</span></li>
-          <li><span>Android Development</span></li>
-          <li><span>Graphic Designing</span></li>
-        </ul>
+        <h3 class="h3">Programming Languages we provide Training for:</h3>
+        <br />
+        <h5 class="h5">C Language</h5>
+        <p class="p2">C programming, developed in 1972 by Dennis M. Ritchie at the Bell Telephone Laboratories to create the UNIX operating system, is a general purpose, procedural, imperative computer programming language.</p>
+        <br />
+        <h5 class="h5">C++ Language</h5>
+        <p class="p2">C++ is a cross-platform language that can be used to build software for high performance.It can be found in today's Graphical User interface,Operating systems and Embedded system.</p>
+        <br />
+        <h5 class="h5">Java</h5>
+        <p class="p2">Java is a language for programming and a forum. Java is a high-level, robust programming language that is object-oriented and stable. In 1995, Java was developed by Sun Microsystems (which is now Oracle's subsidiary).</p>
       </div>
     </div>
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 style="color: #2a0a5e">Register</h2>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h3 class="h3">CAREER IN "C/C++ PROGRAMMING"</h3>
+          <ul>
+            <li><span>Junior Programmer</span></li>
+            <li><span>Senior Programmer</span></li>
+            <li><span>Software Developer</span></li>
+            <li><span>Quality Analyst</span></li>
+            <li><span>Game Programmer</span></li>
+            <li><span>Programming Architect</span></li>
+            <li><span>Backend Developer</span></li>
+            <li><span>Embedded Engineer</span></li>
+            <li><span>Database Developer</span></li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <h3 class="h3">CAREER IN "JAVA"</h3>
+          <ul>
+            <li><span>Java Programmer</span></li>
+            <li><span>Java Web Developer</span></li>
+            <li><span>Java Web Master</span></li>
+            <li><span>Java Software Engineer</span></li>
+            <li><span>Java Architect</span></li>
+            <li><span>Database Administrator</span></li>
+            <li><span>Senior Developer</span></li>
+            <li><span>Module lead</span></li>
+            <li><span>Application Developer</span></li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="h3">Syllabus for "C"</h3>
+            <ul>
+              <li><span>Introduction to Principles of programming</span></li>
+              <li><span>Introduction to C Programming</span></li>
+              <li><span>Operators and Expressions</span></li>
+              <li><span>Data Types and Input/Output Operators</span></li>
+              <li><span>Control Statements and Decision Making</span></li>
+              <li><span>Arrays and Strings</span></li>
+              <li><span>Structures and Unions</span></li>
+            </ul>
           </div>
-          <div class="modal-body">
-            <form class="modal-content" action="action-page.php" method="POST">
-              <div class="container">
-                <label class="label" for="name"><b>Name</b></label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
-
-                <label class="label" for="email"><b>Email</b></label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
-
-                <label class="label" for="phone"><b>Enter your number:</b></label>
-                <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
-
-                <label class="label" for="trainings"><b>Trainings</b></label>
-                <select class="custom-select" id="trainings" name="trainings">
-                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Programming Languages">Programming Languages</option>
-                  <option value="Basic Computers">Basic Computers</option>
-                  <option value="School Academics">School Academics</option>
-                </select>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning">Submit</button>
-                </div>
+          <div class="col-md-4">
+            <h3 class="h3">Syllabus for "C++"</h3>
+            <ul>
+              <li><span>Introduction to Principles of programming</span></li>
+              <li><span>Introduction to C++ Programming</span></li>
+              <li><span>Introduction to OOP's</span></li>
+              <li><span>Classes and Objects</span></li>
+              <li><span>Control Statements and Decision Making</span></li>
+              <li><span>Function</span></li>
+              <li><span>Inheritance and Composition</span></li>
+              <li><span>Polymorphism</span></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="h3">Syllabus for "JAVA"</h3>
+            <ul>
+              <li><span>Basics of Java</span></li>
+              <li><span>Packages</span></li>
+              <li><span>Introduction to OOP's</span></li>
+              <li><span>The Java Environment</span></li>
+              <li><span>Exception Handling</span></li>
+              <li><span>Classes and Objects</span></li>
+              <li><span>Collection Framework</span></li>
+              <li><span>Multithreading</span></li>
+              <li><span>Array and Strings</span></li>
+              <li><span>Event Handling</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 style="color: #2a0a5e">Register</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-            </form>
+              <div class="modal-body">
+                <form class="modal-content" action="action-page.php" method="POST">
+                  <div class="container">
+                    <hr />
+                    <label class="label" for="name"><b>Name</b></label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
+
+                    <label class="label" for="email"><b>Email</b></label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
+
+                    <label class="label" for="phone"><b>Enter your number:</b></label>
+                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
+
+                    <label class="label" for="trainings"><b>Trainings</b></label>
+                    <select class="custom-select" id="trainings" name="trainings">
+                      <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                      <?php
+                          foreach ($courselist as $course){
+                            echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                          }
+                      ?>
+                    </select>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-warning">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <footer class="container-fluid container-fluid1 justify-content-center">
       <div class="row justify-content-center py-3">
         <div class="col-md-3" style="text-align: left">
@@ -197,38 +280,38 @@
             <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="index.html">Home </a>
+                  <a class="footer-a" href="index.php">Home </a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Internship.html">Internships</a>
+                  <a class="footer-a" href="Internship.php">Internships</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Contact.html">Contact Us</a>
+                  <a class="footer-a" href="Contact.php">Contact Us</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Web-Designing-and-Development-Training.html">Web development</a>
+                  <a class="footer-a" href="Web-Designing-and-Development-Training.php">Web development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Python-Programming-Training.html">Python Programming</a>
+                  <a class="footer-a" href="Python-Programming-Training.php">Python Programming</a>
                 </li>
               </ul>
             </div>
             <div class="col-md-6" style="text-align: left">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="Cloud-Computing-Training.html">Cloud computing</a>
+                  <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Civil-Design-Softwares-Training.html">Civildesign</a>
+                  <a class="footer-a" href="Civil-Design-Softwares-Training.php">Civildesign</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Digital-Marketing-Training.html">Digital Marketing</a>
+                  <a class="footer-a" href="Digital-Marketing-Training.php">Digital Marketing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Android-Development-Training.html">Android Development</a>
+                  <a class="footer-a" href="Android-Development-Training.php">Android Development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Programming-Languages-Training.html">Programming Language</a>
+                  <a class="footer-a" href="Programming-Languages-Training.php">Programming Language</a>
                 </li>
               </ul>
             </div>
@@ -288,21 +371,18 @@
 
                 <label class="label" for="trainings2"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings2" name="trainings2">
-                  <option value="">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Programming Languages">Programming Languages</option>
-                  <option value="Basic Computers">Basic Computers</option>
-                  <option value="School Academics">School Academics</option></select
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <?php
+                        foreach ($courselist as $course){
+                          echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                        }
+                  ?>
+                  </select
                 ><br />
 
                 <label class="label" for="internship2"><b>Internships</b></label>
                 <select class="custom-select" id="internship2" name="internship2">
-                  <option value="">Select your Interest</option>
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
                   <option value="Web Designing and Development">Web Designing and Development</option>
                   <option value="Python Programming">Python Programming</option>
                   <option value="Digital Marketing">Digital Marketing</option>
@@ -319,17 +399,6 @@
         </div>
       </div>
     </div>
-    <!-- <div id="loading" class="container-fluid row">
-      <div class="col-md-12 text-center">
-        <iframe src="https://giphy.com/embed/xFmuT64Jto3mRO4w3G" width="480" height="360" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
-        <p><a href="https://giphy.com/gifs/oc-css-hourglass-xFmuT64Jto3mRO4w3G">via GIPHY</a></p>
-      </div>
-    </div>
-    <script>
-      $(window).on("load", function () {
-        $("#loading").hide()
-      })
-    </script> -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -353,11 +422,6 @@
       setTimeout(function () {
         $("#myModal").modal()
       }, 30000)
-    </script>
-    <script>
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
     </script>
   </body>
 </html>

@@ -1,12 +1,18 @@
+<?php 
+require_once "DB Operations/dbconnection.php";
+require_once "Admin/Model/Coursesmodel.php";
+require_once "Admin/DB Operations/CoursesOps.php";
+$courselist=DBcourse::selectall();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Best Android Development Training in Dharwad.</title>
+    <title>Best Cloud Computing Training in Dharwad.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="utf-8" />
-    <meta name="description" content="DharwadHubballiTutor provides the best quality Android Development training for freshers and corporates,if you inspire to be android app developer then our course is a best way to start with" />
-    <meta name="keywords" content="Andorid development course,android development coaching in Dharwad,android development coaching near me,android development training,android development training in dharwad,android development,mobile app development,mobile development course,mobile app development course near me,mobile app development course in dharwad,mobile app development coaching,mobile app development coaching center,mobile app development coaching in dharwad,mobile app development coaching near me,mobile app,app developemnt,app development coaching,app development course,andorid app development course,android app,android app coaching in dharwad,android app coaching near me." />
+    <meta name="description" content="DharwadHubballiTutor offers best Cloud Computing Training in Hubballi-Dharwad with most experienced Professionals.We are aware of industry needs and we are offering training in more practical way.For both beginner and intermediate levels, we framed our syllabus to meet the real-world criteria." />
+    <meta name="keywords" content="Cloud computing training,cloud computing coaching,cloud computing coaching center near me,cloud computing training near me,cloud computing coaching in dharwad,cloud computing training in dharwad,cloud computing classes in dharwad,cloud computing,private cloud,public cloud,cloud computing meaning,cloud computing basics,cloud computing tutorials,cloud computing services,cloud computing advantages,cloud computing aws,AWS,Azure,cloud computing insititute,cloud computing institute in dharwad,cloud computing institute near me,cloud computing for beginners,top cloud computing institutes,top cloud computing coaching centers,cloud computing definition,what is cloud computing,cloud computing career path," />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -48,14 +54,14 @@
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-lg instaicon instaheader"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="http://www.linkedin.com/in/dharwadhubballitutor"><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader"></i></a>
-          <a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
+          <a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hi there! I have a question :)"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
         </div>
         <div class="col-md-6">
           <div class="semicircle">
-            <a class="blink_me" href="Job-Assistance.html"> Job Assistance</a>
+            <a class="blink_me" href="Job-Assistance.php"> Job Assistance</a>
           </div>
           <div class="container">
-            <a href="Job-Assistance.html" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
+            <a href="Job-Assistance.php" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a>
           </div>
         </div>
         <div class="col text-right">
@@ -65,7 +71,7 @@
       </div>
     </div>
     <br />
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-sm bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="navbar-toggler-icon"></span>
@@ -73,33 +79,33 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Aboutus.html">About</a>
+            <a class="nav-link" href="Aboutus.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Contact.html">Contact</a>
+            <a class="nav-link" href="Contact.php">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Web-Designing-and-Development-Training.html">Web Designing and Development</a>
-              <a class="dropdown-item" href="Python-Programming-Training.html">Python Programming </a>
-              <a class="dropdown-item" href="Cloud-Computing-Training.html">Cloud Computing</a>
-              <a class="dropdown-item" href="Android-Development-Training.html">Android Development</a>
-              <a class="dropdown-item" href="Civil-Design-Softwares-Training.html">Civil Design Softwares</a>
-              <a class="dropdown-item" href="Programming-Languages-Training.html">Programming Languages</a>
-              <a class="dropdown-item" href="Digital-Marketing-Training.html">Digital Marketing</a>
-              <a class="dropdown-item" href="Basics-of-Computer-Training.html">Basics of Computer</a>
-              <a class="dropdown-item" href="School-Academics-Training.html">School Academics</a>
+              <a class="dropdown-item" href="Web-Designing-and-Development-Training.php">Web Designing and Development</a>
+              <a class="dropdown-item" href="Python-Programming-Training.php">Python Programming </a>
+              <a class="dropdown-item" href="Cloud-Computing-Training.php">Cloud Computing</a>
+              <a class="dropdown-item" href="Android-Development-Training.php">Android Development</a>
+              <a class="dropdown-item" href="Civil-Design-Softwares-Training.php">Civil Design Softwares</a>
+              <a class="dropdown-item" href="Programming-Languages-Training.php">Programming Languages</a>
+              <a class="dropdown-item" href="Digital-Marketing-Training.php">Digital Marketing</a>
+              <a class="dropdown-item" href="Basics-of-Computer-Training.php">Basics of Computer</a>
+              <a class="dropdown-item" href="School-Academics-Training.php">School Academics</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Internship.html">Internships</a>
+            <a class="nav-link" href="Internship.php">Internships</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Services.html">Services</a>
+            <a class="nav-link" href="Services.php">Services</a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -112,65 +118,103 @@
     <br />
     <div style="text-align: center">
       <picture>
-        <source srcset="media/img/androidmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/AndroidWELCOME.jpg" alt="" class="img-fluid" />
+        <source srcset="media/img/cloudmobile.jpg" media="(max-width: 768px)" />
+        <img src="media/img/CloudWELCOME.jpg" alt="Cloud Computing" class="img-fluid" />
       </picture>
     </div>
     <br />
     <div class="container">
       <div class="row row-eq-height">
         <div class="w-100 text-light">
-          <h3 class="h3">WHAT IS ANDROID??</h3>
+          <h3 class="h3">WHAT IS CLOUD COMPUTING??</h3>
           <br />
-          <p class="p2">Android is a Google-developed operating system and programming framework for cell phones and other mobile devices such as tablets. It can run from many different manufacturers on many different devices. In order to build applications for Android users, Android provides a software development kit (SDK) that lets you write original code and assemble software modules. Android also offers a marketplace where software can be distributed. Android, all together, represents a mobile app ecosystem.</p>
+          <p class="p2">
+            'The cloud' is a real buzzword, but what is it, how does it affect what you're doing, and is it really anything new?<br />
+            In the simplest words, cloud computing means that instead of your computer's hard drive, data and programs are stored and accessed over the internet.
+          </p>
           <br />
-          <h3 class="h3">WHY DEVELOP APPS FOR ANDROID?</h3>
+          <p class="p2">The "cloud" is ultimately just a metaphor for the internet. It goes back to the days of flowcharts and presentations that would reflect the internet's gigantic server-farm infrastructure as nothing but a puffy cloud, embracing links and doling out data as it floats.</p>
           <br />
-          <p class="p2">For a multitude of purposes, developers build applications. They may need to fix company requirements or develop new services or companies, or they may want to give users games and other types of content. For Android, developers chose to build to meet the majority of mobile device users.</p>
+          <h3 class="h3">BENEFITS OF CLOUD COMPUTING.</h3>
           <br />
-          <h3 class="h3">6 REASONS TO LEARN ANDROID DEVELOPMENT</h3>
-          <p class="p2">When it comes to app growth, why start with Android? Some important reasonss are listed here:</p>
-          <ul>
-            <li><span>Open-source code--Make what you want</span></li>
-            <li><span>Google Play Store--The Huge App Market</span></li>
-            <li><span>Booming Job Prospects</span></li>
-            <li><span>Revenue Model</span></li>
-            <li><span>Penetration on Different Devices</span></li>
-            <li><span>Gradual Learning Curve</span></li>
-          </ul>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <h3 class="h3">JOB ROLES</h3>
-                <ul>
-                  <li><span>Mobile App Developer</span></li>
-                  <li><span>Android Engineer</span></li>
-                  <li><span> Mobile Architect</span></li>
-                  <li><span> Mobile Embedded Software Engineer</span></li>
-                  <li><span> Mobile Lead Software Engineer</span></li>
-                  <li><span> Android Developer</span></li>
-                  <li><span> Android Engineer</span></li>
-                  <li><span> Mobile Developer</span></li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <h3 class="h3">COURSE SYLLABUS</h3>
-                <ul>
-                  <li><span>Android Architecture</span></li>
-                  <li><span>Android Environment Setup</span></li>
-                  <li><span> Android Services</span></li>
-                  <li><span> Android Fragments</span></li>
-                  <li><span> Android Intents and Filters</span></li>
-                  <li><span> Android UI Controls</span></li>
-                  <li><span> Android UI Themes</span></li>
-                  <li><span> Android Notifications</span></li>
-                  <li><span> Android Animations … and many more topics in Android</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <p class="p2">Although there are many benefits that cloud computing has brought to companies, let's take a look at the 7 main advantages that this technology has offered:</p>
+          <br />
+
+          <h5 class="h5">Cost Optimization and Increased Efficiency.</h5>
+          <p class="p2">With cloud computing,corporations do not have to spend a large amount of money on the procurement or repair of equipment.</p>
+          <br />
+          <h5 class="h5">Tight Data Security</h5>
+          <p class="p2">Many of the questions about cyber criminals are eliminated with cloud computing, as the cloud provides a multitude of sophisticated security mechanisms to ensure top-notch data safety and storage.</p>
+          <br />
+          <h5 class="h5">Bolstered Scalability</h5>
+          <p class="p2">Scalability refers to the ability to increase or reduce IT resources when required to meet changing demands.</p>
+          <br />
+          <h5 class="h5">Disaster Recovery</h5>
+          <p class="p2">Data theft or failure is one of the worst things that any organization will ever face. It is the greatest problem for corporations.Cloud storage, however, means that all the information is safely stored in the cloud, which effectively ensures that the information is still available, even if your devices such as PCs are malfunctioning.</p>
+          <br />
+          <h5 class="h5">Mobility</h5>
+          <p class="p2">This is very easy, but it is a great benefit for companies that use cloud computing. From anywhere, wherever, and on any smart screen, they can do so. This guarantees maximum functionality and performance preserved in the organization without space for the workers to be inaccessible to resources.</p>
+          <br />
+          <h5 class="h5">Control and Visibility</h5>
+          <p class="p2">Cloud Computing ensures that organizations have complete control of their data,and visibility about who is accessing it.Organization can decide what data can be accessed by which people.</p>
+          <br />
+          <h5 class="h5">Portability</h5>
+          <p class="p2">With cloud computing, companies can handle their data efficiently and transfer their applications. It is easier for organizations to move to various platforms or applications because the data is stored in the cloud.</p>
         </div>
       </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="h3">SERVICE PROVIDERS</h3>
+          <br />
+          <ul>
+            <li><span>Amazon Web Services(AWS)</span></li>
+            <li><span>Google Cloud</span></li>
+            <li><span>Microsoft Azure</span></li>
+            <li><span>IBM Cloud</span></li>
+            <li><span>Alibaba Cloud</span></li>
+            <li><span>SAP</span></li>
+            <li><span>VMWare</span></li>
+            <li><span>Salesforce</span></li>
+            <li><span>Oracle</span></li>
+            <li><span>Rackspace Cloud</span></li>
+          </ul>
+          <br />
+        </div>
+        <div class="col-md-4">
+          <h3 class="h3">JOB ROLES</h3>
+          <br />
+          <ul>
+            <li><span>Cloud Architect</span></li>
+            <li><span>Cloud Engineer</span></li>
+            <li><span>Full Stack Cloud Developer</span></li>
+            <li><span>Cloud Service Developer</span></li>
+            <li><span>Development Operations Engineer</span></li>
+            <li><span>Cloud System Administrator</span></li>
+            <li><span>Cloud Data Engineers</span></li>
+            <li><span>Information Technology Architect</span></li>
+            <li><span>Cloud Network Engineer</span></li>
+          </ul>
+          <br />
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="h3">COURSE SYLLABUS</h3>
+          <br />
+          <ul>
+            <li><span>Overview of Computing Paradigm</span></li>
+            <li><span>Introduction to Cloud Computing</span></li>
+            <li><span>Cloud Computing Architecture</span></li>
+            <li><span>Infrastructure as a Service</span></li>
+            <li><span>Platform as a Service</span></li>
+            <li><span>Software as a Service</span></li>
+            <li><span>Service Management in Cloud Computing</span></li>
+            <li><span>Cloud Security and many more concepts</span></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -184,30 +228,29 @@
               <form class="modal-content" action="action-page.php" method="POST">
                 <div class="container">
                   <label class="label" for="name"><b>Name</b></label>
-                  <input type="text" name="name" id="name" class="form-control" placeholder="Name" required />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
 
                   <label class="label" for="email"><b>Email</b></label>
-                  <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com" />
+                  <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
 
                   <label class="label" for="phone"><b>Enter your number:</b></label>
-                  <input type="tel" name="phone" id="phone" class="form-control" placeholder="Number" required />
+                  <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
 
                   <label class="label" for="trainings"><b>Trainings</b></label>
                   <select class="custom-select" id="trainings" name="trainings">
-                    <option value="">Select your Interest</option>
-                    <option value="Web Designing and Development">Web Designing and Development</option>
-                    <option value="Python Programming">Python Programming</option>
-                    <option value="Civil Design Softwares">Civil Design Softwares</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Android Development">Android Development</option>
-                    <option value="Cloud Computing">Cloud Computing</option>
-                    <option value="Programming Languages">Programming Languages</option>
-                    <option value="Basic Computers">Basic Computers</option>
-                    <option value="School Academics">School Academics</option>
-                  </select>
+                    <option value="SELECT YOUR INTEREST">Select your Interest</option>
+
+<?php
+
+
+foreach($courselist as $course) {
+    echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+}
+ ?>
+ </select><br />
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-warning">Submit</button>
+                    <button type="button" class="closebtn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="signupbtn">Submit</button>
                   </div>
                 </div>
               </form>
@@ -236,38 +279,38 @@
             <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="index.html">Home </a>
+                  <a class="footer-a" href="index.php">Home </a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Internship.html">Internships</a>
+                  <a class="footer-a" href="Internship.php">Internships</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Contact.html">Contact Us</a>
+                  <a class="footer-a" href="Contact.php">Contact Us</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Web-Designing-and-Development-Training.html">Web development</a>
+                  <a class="footer-a" href="Web-Designing-and-Development-Training.php">Web development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Python-Programming-Training.html">Python Programming</a>
+                  <a class="footer-a" href="Python-Programming-Training.php">Python Programming</a>
                 </li>
               </ul>
             </div>
             <div class="col-md-6" style="text-align: left">
               <ul class="list-unstyled">
                 <li>
-                  <a class="footer-a" href="Cloud-Computing-Training.html">Cloud computing</a>
+                  <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Civil-Design-Softwares-Training.html">Civildesign</a>
+                  <a class="footer-a" href="Civil-Design-Softwares-Training.php">Civildesign</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Digital-Marketing-Training.html">Digital Marketing</a>
+                  <a class="footer-a" href="Digital-Marketing-Training.php">Digital Marketing</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Android-Development-Training.html">Android Development</a>
+                  <a class="footer-a" href="Android-Development-Training.php">Android Development</a>
                 </li>
                 <li>
-                  <a class="footer-a" href="Programming-Languages-Training.html">Programming Language</a>
+                  <a class="footer-a" href="Programming-Languages-Training.php">Programming Language</a>
                 </li>
               </ul>
             </div>
@@ -329,17 +372,16 @@
 
                 <label class="label" for="trainings2"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings2" name="trainings2">
-                  <option value="">Select your Interest</option>
-                  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Android Development">Android Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Programming Languages">Programming Languages</option>
-                  <option value="Basic Computers">Basic Computers</option>
-                  <option value="School Academics">School Academics</option></select
-                ><br />
+                <option value="">Select your Interest</option>
+
+<?php
+
+
+foreach($courselist as $course) {
+    echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+}
+ ?>
+ </select><br />
 
                 <label class="label" for="internship2"><b>Internships</b></label>
                 <select class="custom-select" id="internship2" name="internship2">
@@ -384,6 +426,7 @@
         $("#myModal").modal()
       }, 30000)
     </script>
+
     <script>
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()

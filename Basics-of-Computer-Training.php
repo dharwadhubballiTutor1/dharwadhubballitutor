@@ -1,3 +1,9 @@
+<?php 
+require_once "DB Operations/dbconnection.php";
+require_once "Admin/Model/Coursesmodel.php";
+require_once "Admin/DB Operations/CoursesOps.php";
+$courselist=DBcourse::selectall();
+?>
 <!DOCTYPE html>
 <html lang=en>
 <head>
@@ -51,11 +57,11 @@
 </div>
 <div class=col-md-6 >
 <div class=semicircle>
-<a class="blink_me social-icon" href=Job-Assistance.html> Job Assistance</a><br/>
+<a class="blink_me social-icon" href=Job-Assistance.php> Job Assistance</a><br/>
 
 </div>
 <div class="container">
-  <a href="Job-Assistance.html" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a></div>
+  <a href="Job-Assistance.php" class="mobileshow btn-btn-outline-warning" role="button">Job Assistance</a></div>
 </div><br/>
 <div class="col text-right">
   <a style="color:white" href="tel:+919741237334">+919741237334</a>
@@ -71,33 +77,33 @@
 <div class="collapse navbar-collapse" id=navbarNavDropdown>
 <ul class="navbar-nav mx-auto">
 <li class="nav-item active">
-<a class=nav-link href=index.html>Home <span class=sr-only>(current)</span></a>
+<a class=nav-link href=index.php>Home <span class=sr-only>(current)</span></a>
 </li>
 <li class=nav-item>
-<a class=nav-link href=Aboutus.html>About</a>
+<a class=nav-link href=Aboutus.php>About</a>
 </li>
 <li class=nav-item>
-<a class=nav-link href=Contact.html>Contact</a>
+<a class=nav-link href=Contact.php>Contact</a>
 </li>
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href=# id=navbarDropdownMenuLink role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false> Trainings </a>
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=Web-Designing-and-Development-Training.html>Web Designing and Development</a>
-<a class=dropdown-item href=Python-Programming-Training.html>Python Programming </a>
-<a class=dropdown-item href=Cloud-Computing-Training.html>Cloud Computing</a>
-<a class=dropdown-item href=Android-Development-Training.html>Android Development</a>
-<a class=dropdown-item href=Civil-Design-Softwares-Training.html>Civil Design Softwares</a>
-<a class=dropdown-item href=Programming-Languages-Training.html>Programming Languages</a>
-<a class=dropdown-item href=Digital-Marketing-Training.html>Digital Marketing</a>
-<a class=dropdown-item href=Basics-of-Computer-Training.html>Basics of Computer</a>
-<a class=dropdown-item href=School-Academics-Training.html>School Academics</a>
+<a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
+<a class=dropdown-item href=Python-Programming-Training.php>Python Programming </a>
+<a class=dropdown-item href=Cloud-Computing-Training.php>Cloud Computing</a>
+<a class=dropdown-item href=Android-Development-Training.php>Android Development</a>
+<a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
+<a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
+<a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
+<a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
 </div>
 </li>
 <li class=nav-item>
-<a class=nav-link href=Internship.html>Internships</a>
+<a class=nav-link href=Internship.php>Internships</a>
 </li>
 <li class=nav-item>
-  <a class=nav-link href=Services.html>Services</a>
+  <a class=nav-link href=Services.php>Services</a>
   </li>
 </ul>
 <ul class=navbar-nav>
@@ -161,38 +167,38 @@
     <div class=col-md-6 >
       <ul class=list-unstyled>
   <li>
-  <a class=footer-a href=index.html>Home </a>
+  <a class=footer-a href=index.php>Home </a>
   </li>
   <li>
-  <a class=footer-a href=Internship.html>Internships</a>
+  <a class=footer-a href=Internship.php>Internships</a>
   </li>
   <li>
-  <a class=footer-a href=Contact.html>Contact Us</a>
+  <a class=footer-a href=Contact.php>Contact Us</a>
   </li>
   <li>
-  <a class=footer-a href=Web-Designing-and-Development-Training.html>Web development</a>
+  <a class=footer-a href=Web-Designing-and-Development-Training.php>Web development</a>
   </li>
   <li>
-  <a class=footer-a href=Python-Programming-Training.html>Python Programming</a>
+  <a class=footer-a href=Python-Programming-Training.php>Python Programming</a>
   </li>
   </ul>
   </div>
   <div class=col-md-6 style=text-align:left>
   <ul class=list-unstyled>
   <li>
-  <a class=footer-a href=Cloud-Computing-Training.html>Cloud computing</a>
+  <a class=footer-a href=Cloud-Computing-Training.php>Cloud computing</a>
   </li>
   <li>
-  <a class=footer-a href=Civil-Design-Softwares-Training.html>Civildesign</a>
+  <a class=footer-a href=Civil-Design-Softwares-Training.php>Civildesign</a>
   </li>
   <li>
-  <a class=footer-a href=Digital-Marketing-Training.html>Digital Marketing</a>
+  <a class=footer-a href=Digital-Marketing-Training.php>Digital Marketing</a>
   </li>
   <li>
-  <a class=footer-a href=Android-Development-Training.html>Android Development</a>
+  <a class=footer-a href=Android-Development-Training.php>Android Development</a>
   </li>
   <li>
-  <a class=footer-a href=Programming-Languages-Training.html>Programming Language</a>
+  <a class=footer-a href=Programming-Languages-Training.php>Programming Language</a>
   </li>
   </ul>
   </div>
@@ -245,17 +251,16 @@
     <input type=tel name=phone2 class=form-control id=phone2 placeholder=Number required />
     <label class=label for=trainings2><b>Trainings</b></label>
     <select class=custom-select id=trainings2 name=trainings2>
-      <option value="">Select your Interest</option>
-<option value="Web Designing and Development">Web Designing and Development</option>
-<option value="Python Programming">Python Programming</option>
-<option value="Civil Design Softwares">Civil Design Softwares</option>
-<option value="Digital Marketing">Digital Marketing</option>
-<option value="Android Development">Android Development</option>
-<option value="Cloud Computing">Cloud Computing</option>
-<option value="Programming Languages">Programming Languages</option>
-<option value="Basic Computers">Basic Computers</option>
-<option value="School Academics">School Academics</option>
-  </select><br />
+    <option value="SELECT YOUR INTEREST">Select your Interest</option>
+
+<?php
+
+
+foreach($courselist as $course) {
+    echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+}
+ ?>
+ </select><br />
     <label class=label for=internship2><b>Internships</b></label>
     <select class=custom-select id=internship2 name=internship2>
     <option value="">Select your Interest</option>
@@ -327,17 +332,16 @@
     <input type=tel name=phone class=form-control id=phone placeholder=Number required />
     <label class=label for=trainings><b>Trainings</b></label>
     <select class=custom-select id=trainings name=trainings>
-      <option value="SELECT YOUR INTEREST">Select your Interest</option>
-<option value="Web Designing and Development">Web Designing and Development</option>
-<option value="Python Programming">Python Programming</option>
-<option value="Civil Design Softwares">Civil Design Softwares</option>
-<option value="Digital Marketing">Digital Marketing</option>
-<option value="Android Development">Android Development</option>
-<option value="Cloud Computing">Cloud Computing</option>
-<option value="Programming Languages">Programming Languages</option>
-<option value="Basic Computers">Basic Computers</option>
-<option value="School Academics">School Academics</option>
-    </select><br />
+    <option value="SELECT YOUR INTEREST">Select your Interest</option>
+
+<?php
+
+
+foreach($courselist as $course) {
+    echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+}
+ ?>
+ </select><br />
     <div class=modal-footer>
     <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
     <button type=submit class="btn btn-warning">Submit</button>
