@@ -1,7 +1,15 @@
 <?php
 // require "../Admin/session.php";
-require_once "../../DB Operations/dbconnection.php";
-require_once "../../Admin/Model/Coursesmodel.php";
+$dirPath1="DB Operations/dbconnection.php";
+$dirPath2="Admin/Model/Coursesmodel.php";
+
+if(file_exists($dirPath1)&&file_exists($dirPath2)){
+  require_once "DB Operations/dbconnection.php";
+  require_once "Admin/Model/Coursesmodel.php";
+} else {
+  require_once "../../DB Operations/dbconnection.php";
+  require_once "../../Admin/Model/Coursesmodel.php";
+}
 
     class DBcourse
     {
