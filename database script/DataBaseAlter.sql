@@ -18,3 +18,6 @@ Add Modified_Date datetime;
 
 Alter Table trainers
 Add Modified_Date datetime;
+
+Alter Tabel fees
+Add feesreceipt varchar(100);
