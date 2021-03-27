@@ -2,6 +2,8 @@
 // require "session.php";
 include "../../Admin/navbar.php";
 include "../../Admin/DB Operations/enqueryOps.php";
+require_once "../../Admin/Model/Coursesmodel.php";
+require_once "../../Admin/DB Operations/CoursesOps.php";
 ?>
         <title>Enquiries</title>
        
@@ -199,18 +201,20 @@ include "../../Admin/DB Operations/enqueryOps.php";
                                     <div class="col-md-6">
                                         <label class=label for=trainings2><b>Trainings</b></label>
                                         <div class="col-sm-12">
-                                            <select class=custom-select id=trainings2 name=trainings2>
-                                            <option value=" ">Select your Interest</option>
-                                            <option value="Web Designing and Development">Web Designing and Development</option>
-                                            <option value="Python Programming">Python Programming</option>
-                                            <option value="Civil Design Softwares">Civil Design Softwares</option>
-                                            <option value="Digital Marketing">Digital Marketing</option>
-                                            <option value="Android Development">Android Development</option>
-                                            <option value="Cloud Computing">Cloud Computing</option>
-                                            <option value="Programming Languages">Programming Languages</option>
-                                            <option value="Basic Computers">Basic Computers</option>
-                                            <option value="School Academics">School Academics</option>
-                                            </select>
+                                        <select class="custom-select" id="trainings2" name="trainings2">
+                                            <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                                            <?php 
+                                                    $option="";
+                                                    $courselist=DBcourse::selectall();
+                                                    foreach($courselist as $course) {
+                                                        $option.= "<option 
+                                                         >".$course->get_cname()."</option>";
+                                                    }
+
+                                                    echo $option;
+                                                   
+                                                    ?>
+                                         </select><br />
                                         </div>
                                     </div>
                                     <br/>

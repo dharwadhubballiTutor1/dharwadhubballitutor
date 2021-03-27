@@ -104,7 +104,7 @@ require_once "../../Admin/Model/Admissionsmodel.php";
         
          }    
          } else {
-          echo "0 results";
+            echo "No entries ";
          } 
          return $feesdetails;
        }

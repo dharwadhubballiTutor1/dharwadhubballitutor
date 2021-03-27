@@ -160,9 +160,9 @@ $courselist=DBcourse::selectall();
           <p class="p2">V-Ray is designed for architecture. And it links seamlessly to the top 3D modeling and design software, including 3ds Max, Revit, Rhino, SketchUp, and Unreal, used in architectural visualization. The complete suite of tools from V-Ray helps you to render everything you can imagine, from early mass models to photorealistic photography, animation,</p>
         </div>
       </div>
-
-      <h3 class="h3">WITH OUR COURSE GET TRAINED ON ALL THESE SOFTWARES.YOU CAN BEGIN THE COURSE BY AUTOCAD AND REVIT AND THEN GO FOR ADVANCED SOFTWARES</h3>
-    </div>
+<br/>
+      <h3 class="h3">GET TRAINED ON ALL OF THESE SOFTWARES WITH OUR COURSE. YOU CAN START WITH AUTOCAD,REVIT AND THEN MOVE ON TO MORE ADVANCED SOFTWARE.</h3>
+    </div></br>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -189,15 +189,12 @@ $courselist=DBcourse::selectall();
                 <label class="label" for="trainings"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings" name="trainings">
                 <option value="SELECT YOUR INTEREST">Select your Interest</option>
-
-<?php
-
-
-foreach($courselist as $course) {
-    echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
-}
- ?>
- </select><br />
+                    <?php
+                       foreach($courselist as $course) {
+                          echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                       }
+                    ?>
+                </select><br />
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
                   <button type="submit" class="btn btn-warning">Submit</button>

@@ -36,7 +36,7 @@ require "../../Admin/DB Operations/TrainerOps.php";
 
     <body>
         <?php 
-          header("location:../View/admissions.php");
+          header("location:../View/trainers.php");
         ?>
 
 

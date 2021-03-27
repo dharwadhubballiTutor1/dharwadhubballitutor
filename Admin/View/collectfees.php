@@ -210,6 +210,12 @@ include "../../Admin/Utilities/Helper.php";
                     $("#myForm :input").prop("disabled", true);
                     $('input[type=radio][name=options]').click(function() {
                         $('#myForm :input').prop('disabled', false);
+                       if(!parseInt($('#tfees').val())){
+                        $('#tfees').focus();
+                        $('#pfees').attr('disabled',true);
+                       }else{
+                        $('#tfees').attr('readonly', true);
+                       }
                     });
                     
                         $("#feesplan").change(function () {
@@ -236,10 +242,15 @@ include "../../Admin/Utilities/Helper.php";
                                 $("#duedate").attr('disabled', true);
                             }
                         });
-                       
+
+                        $("#tfees").change(function()  {
+                             if (parseInt ($(this).val())>0){
+                                $('#pfees').attr('disabled',false);
+                            }
+                        });
+                        
                         $("#pfees").change(function()  {
-                          
-                            if (parseInt ($(this).val()) < parseInt($("#tfees").val())){
+                             if (parseInt ($(this).val()) < parseInt($("#tfees").val())){
                                 if( $("#pendingfees").val() == 0){
                                     var pendingfees=$("#tfees").val()- $("#pfees").val();
                                 }else {

@@ -51,7 +51,7 @@ require_once "../DB Operations/CoursesOps.php";
 
     <body>
         <?php 
-        //  header("location:../View/admissions.php");
+        header("location:../View/admissions.php");
 ?>
 
 

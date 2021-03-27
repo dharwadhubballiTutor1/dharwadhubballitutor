@@ -45,7 +45,7 @@ require_once "../DB Operations/FeesOps.php";
 
     <body>
         <?php 
-        //  header("location:../View/admissions.php");
+         header("location:../View/fees.php");
 ?>
 
 

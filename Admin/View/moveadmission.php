@@ -133,6 +133,7 @@ include "../../Admin/DB Operations/CoursesOps.php";
                                             <div class="col-sm-12">
                                             <select class="form-select" id="coursesopted" name="coursesopted"
                                                     required>
+                                                    <option value="" >Select Your Interest</option>
                                                     <?php 
                                                     $option="";
                                                     $courselist=DBcourse::selectall();

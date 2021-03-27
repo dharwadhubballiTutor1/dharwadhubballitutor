@@ -106,7 +106,16 @@ require "../../Admin/fpdf182/fpdf.php";
       $pdf->Cell(30 ,7,"". $collectfees->get_pfees()."",1,1,'R');
       
       
+      $pdf->Line(10,50,200,50);
       $filename="". $collectfees->get_name().date("Y-m-d").".pdf";
+      
+      $pdf->Cell(70 ,119,' Authorised Signatory',0,0,);
+
+     $pdf->Ln(10);
+     $pdf->Cell(140 ,7,'',0,0);
+   
+     $pdf->Cell(70 ,100,'Student Signature',0,0,'C');
+
       
          //output the result
         $pdf->Output('../../Admin/uploads/Fee Receipts/'.$filename,'F');

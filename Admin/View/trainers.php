@@ -125,7 +125,7 @@ include "../../Admin/DB Operations/CoursesOps.php";
                                             name="coursesassigned">Courses Assigned</label>
                                         <div class="col-md-12">
                                             <select class="form-select" multiple aria-label="multiple select example"
-                                                id="coursesassigned" name="coursesassigned[]">
+                                                id="coursesassigned" name="coursesassigned[]" >
                                                 <option value=''>-----SELECT-----</option>
                                                 <?php  
                                                    
