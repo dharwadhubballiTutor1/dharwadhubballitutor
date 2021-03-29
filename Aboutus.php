@@ -7,7 +7,7 @@ $courselist=DBcourse::selectall();
 <!DOCTYPE html>
 <html lang=en>
 <head>
-<title>About Us</title>
+<title>About DharwadhubballiTutor</title>
 <link rel=icon href=media/img/favicon.png type=image/png sizes=96x96 />
 <meta name=title content=DharwadHubballiTutor />
 <meta charset=utf-8 />
