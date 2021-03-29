@@ -224,7 +224,7 @@ $courselist=DBcourse::selectall();
 <h6>Follow us</h6>
 <a class="social-icon fbicon" target=_blank rel="noopener" href=https://www.facebook.com/DharwadhubballiTutor><i class="fab fa-facebook fa-2x fbicon"></i></a>
 <a class="social-icon twittericon" target=_blank rel="noopener" href=https://twitter.com/DharwadTutor><i class="fab fa-twitter fa-2x twittericon"></i></a>
-<a class="social-icon instaicon" target=_blank rel="noopener" href=https://www.instagram.com/dharwadhubballitutor/><i class="fab fa-instagram fa-2x instaicon"></i></a>
+<a class="social-icon instaicon" target=_blank rel="noopener" href=https://www.instagram.com/dharwadhubballitutor><i class="fab fa-instagram fa-2x instaicon"></i></a>
 <a class="social-icon instaicon" target=_blank rel="noopener" href=http://www.linkedin.com/in/dharwadhubballitutor><i class="fab fa-linkedin fa-2x linkedinicon"></i></a>
 <a class="social-icon whatsappicon" target=_blank rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion"><i class="fab fa-whatsapp fa-2x whatsappicon"></i></a>
 <br />
