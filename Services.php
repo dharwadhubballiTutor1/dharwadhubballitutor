@@ -285,7 +285,7 @@
   <a class="footer-a" href="tel:+919741237334" style="padding: 5px">+919741237334</a><br />
   <a class=footer-a href=tel:+918007961759 style=padding:5px>+918007961759</a>
   <br />
-  <a class=footer-a href=dharwadhubballitutor@gmail.com>dharwadhubballitutor@gmail.com</a>
+  <a class=footer-a href="mailto:dharwadhubballitutor@gmail.com">dharwadhubballitutor@gmail.com</a>
   </address>
   </div>
   <div class=col-md-6 style=text-align:left >
