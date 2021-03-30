@@ -225,7 +225,7 @@
                       </select>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-warning">Submit</button>
+                        <button type="submit" class="btn btn-warning" name="regformsubmit">Submit</button>
                       </div>
                     </div>
                   </form>
@@ -335,7 +335,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="footermodal-action.php" method="POST">
+            <form class="modal-content" action="" method="POST">
               <div class="container">
                 <label class="label" for="name2"><b>Name</b></label>
                 <input type="text" name="name2" class="form-control" id="name2" placeholder="Name" required />
@@ -368,7 +368,7 @@
                 <br />
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning">Submit</button>
+                  <button type="submit" class="btn btn-warning" name=footerformsubmit>Submit</button>
                 </div>
               </div>
             </form>
@@ -417,3 +417,42 @@
     </script>
   </body>
 </html>
+
+<?php
+
+require "Model/Registration.php";
+require "Utilities/Sanitization.php";
+require "DB Operations/RegistrationOps.php";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+   if (isset($_POST['footerformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name2"]));
+        $reg->set_email(Sanitization::test_input($_POST["email2"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
+        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
+        DBregistration::insert($reg);
+        echo "<meta http-equiv='refresh' content='0'>";
+    
+       
+    }elseif (isset($_POST['regformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name"]));
+        $reg->set_email(Sanitization::test_input($_POST["email"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
+        DBregistration::insert($reg); 
+        echo "<meta http-equiv='refresh' content='0'>";
+    }else{
+      echo "No results found";
+    }
+    
+  }
+  
+?>

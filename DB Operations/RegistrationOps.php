@@ -1,5 +1,5 @@
 <?php
-require "DB Operations/dbconnection.php";
+// require "DB Operations/dbconnection.php";
     class DBregistration
     {
       public static function insert($registrationObj)

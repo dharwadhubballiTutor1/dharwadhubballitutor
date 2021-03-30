@@ -241,7 +241,7 @@
          </button>
         </div>
         <div class="modal-body">
-           <form class="modal-content" action="Services-action.php" method="POST">
+           <form class="modal-content" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" >
               <div class="container">
                  <label class="label" for="name3"><b>Name</b></label>
                 <input type="text" name="name3" class="form-control" id="name3" placeholder="Name" required />
@@ -265,7 +265,7 @@
                   </select> 
                     <div class="modal-footer">
                       <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-                      <button type=submit class="btn btn-warning">Submit</button>
+                      <button type=submit class="btn btn-warning" name="servicessubmit">Submit</button>
                     </div>
                  </div>
                 </form>
@@ -366,7 +366,7 @@
       </button>
       </div>
     <div class=modal-body>
-    <form class=modal-content action=footermodal-action.php method=POST>
+    <form class=modal-content action="" method=POST >
     <div class=container>
     
     <p style=color:#2a0a5e>Please fill in this form.</p>
@@ -396,7 +396,7 @@
     <br />
     <div class=modal-footer>
     <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-    <button type=submit class="btn btn-warning">Submit</button>
+    <button type=submit class="btn btn-warning" name="footerformsubmit">Submit</button>
     </div>
     </div>
     </form>
@@ -435,7 +435,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="modal-content" action="action-page.php" method="POST">
+        <form class="modal-content" action="" method="POST" >
           <div class="container">
             <p style="color: #2a0a5e">Please fill in this form.</p>
             <hr />
@@ -450,7 +450,7 @@
 
             <label class="label" for="trainings"><b>Trainings</b></label>
             <select class="custom-select" id="trainings" name="trainings">
-              <option value="SELECT YOUR INTEREST">Select your Interest</option>
+              <option value="">Select your Interest</option>
               <?php
                     foreach ($courselist as $course){
                       echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
@@ -459,7 +459,7 @@
             </select>
             <div class="modal-footer">
               <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-warning">Submit</button>
+              <button type="submit" class="btn btn-warning" name="regformsubmit">Submit</button>
             </div>
           </div>
         </form>
@@ -475,5 +475,55 @@
   </script>
 </body>
 </html>
+<?php
+
+require "Model/Registration.php";
+require "Utilities/Sanitization.php";
+require "DB Operations/RegistrationOps.php";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    if (isset($_POST['servicessubmit']))
+    {
+      $reg=new Registration();
+      $reg->set_name(Sanitization::test_input($_POST["name3"]));
+      $reg->set_email(Sanitization::test_input($_POST["email3"]));
+      $reg->set_phone(Sanitization::test_input($_POST["phone3"]));
+      $reg->set_services(Sanitization::test_input($_POST["services"]));
+      DBregistration::insert($reg);
+      echo "<meta http-equiv='refresh' content='0'>";
+    }elseif (isset($_POST['footerformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name2"]));
+        $reg->set_email(Sanitization::test_input($_POST["email2"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
+        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
+        DBregistration::insert($reg);
+        echo "<meta http-equiv='refresh' content='0'>";
+    
+       
+    }elseif (isset($_POST['regformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name"]));
+        $reg->set_email(Sanitization::test_input($_POST["email"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
+        DBregistration::insert($reg); 
+        echo "<meta http-equiv='refresh' content='0'>";
+    }else{
+      echo "No results found";
+    }
+    
+  }
+  
+?>
+
+
+
 
 

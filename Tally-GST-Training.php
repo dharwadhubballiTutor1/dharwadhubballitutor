@@ -7,15 +7,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Best Programming Languages Training In Dharwad.</title>
+    <title>Best Training Institute for Tally and GST in Dharwad.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="With Programming Languages training courses from DharwadHubballiTutor,you will learn basics to advanced coding in Java,C++,C." />
-    <meta name="keywords" content="C coaching in dharwad,C coaching center near me,C coaching center in dharwad,C language,C programming,C programming training in dharwad,C programming training near me,C programming,C training,C programming language,C++ programming,C++ programming training in dharwad,C++ programming coaching in dharwad,C++ programming coaching near me,C++ programming,C++ training,C++ language tarining,C++ language,C++ langauge coaching in Dharwad,C++ coaching in dharwad,C++ coaching near me,java,java coaching near me,java coaching in dharwad,java training,java training in dharwad,java coaching center in dharwad,java coaching center near me,java coaching,java coding tarining,java coding,java course,java course in dharwad,java course near me,programming languages,programming," />
+    <meta name="description" content="Want to build your website but have no idea where to begin with??then od visit us at DharwadHubballiTutor where we help you fulfill your dream with our excellent training in Website Designing and Development" />
+    <meta name="keywords" content="web designing and development course in dharwad,web design course,web development course,web designing training,web designing coaching,web develpoment coaching in dharwad,web development coaching near me,how to design website,web development training in dharwad,	web designing and development services,Website designing and develpoment training institute,web designing coaching in dharwad,web designing coaching near me,website development,website designing,website designer,website developer,build website,website building," />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css\TallyGST-style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel="stylesheet" />
@@ -46,7 +47,6 @@
     <div class="brand-class container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <!-- <img src="media/img/logo.png" class="logoimg" alt="DharwadHubballiTutor logo" /> -->
           <a class="navbar-brand brandName" href="#">DharwadHubballiTutor</a>
           <br />
 
@@ -70,6 +70,7 @@
         </div>
       </div>
     </div>
+
     <br />
     <nav class="navbar navbar-expand-md bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
@@ -89,17 +90,18 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Web-Designing-and-Development-Training.php">Web Designing and Development</a>
-              <a class="dropdown-item" href="Python-Programming-Training.php">Python Programming </a>
-              <a class="dropdown-item" href="Cloud-Computing-Training.php">Cloud Computing</a>
-              <a class="dropdown-item" href="Android-Development-Training.php">Android Development</a>
-              <a class="dropdown-item" href="Civil-Design-Softwares-Training.php">Civil Design Softwares</a>
-              <a class="dropdown-item" href="Programming-Languages-Training.php">Programming Languages</a>
-              <a class="dropdown-item" href="Digital-Marketing-Training.php">Digital Marketing</a>
-              <a class="dropdown-item" href="Basics-of-Computer-Training.php">Basics of Computer</a>
-              <a class="dropdown-item" href="School-Academics-Training.php">School Academics</a>
-            </div>
+            <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
+<a class=dropdown-item href=Python-Programming-Training.php>Python Programming </a>
+<a class=dropdown-item href=Cloud-Computing-Training.php>Cloud Computing</a>
+<a class=dropdown-item href=Android-Development-Training.php>Android Development</a>
+<a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
+<a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
+<a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
+<a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
+<a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
+</div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Internship.php">Internships</a>
@@ -116,150 +118,188 @@
       </div>
     </nav>
     <br />
-    <div style="text-align: center">
-      <picture>
-        <source srcset="media/img/progmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/ProgrammingWELCOME.jpg" alt="" class="img-fluid" />
-      </picture>
+    <div id="banner" class="container" >
+        <img src="media\img\tally.png" alt="Tally & GST logo" class="img-fluid">
+      <h1>Tally & GST Training</h1>
     </div>
     <br />
     <div class="container">
       <div class="w-100 text-light">
-        <h3 class="h3">What are Programming Languages?</h3>
-        <p class="p2">A programming language is a formal computer language or constructed language designed to communicate instructions to a Machine. Programming languages can be used to create programs to control the behaviour of a machine r to express algorithms.</p>
+        <h3 class="h3">What is Tally & GST Course?</h3>
         <br />
-        <h3 class="h3">Programming Languages we provide Training for:</h3>
+        <p>Tally is an accounting program that works great when it comes to doing analyses in small and mid-sized companies. This program allows you to perform all banking, auditing, and accounting tasks. Tally's accounting features allow you to quickly and easily document business transactions. Keep track of the transactions that are required for your company.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="w-100 text-light">
+        <h3 class="h3">Tally & GST Course Details – Eligibility, Fee, Duration, Syllabus, Colleges, Salary</h3>
         <br />
-        <h5 class="h5">C Language</h5>
-        <p class="p2">C programming, developed in 1972 by Dennis M. Ritchie at the Bell Telephone Laboratories to create the UNIX operating system, is a general purpose, procedural, imperative computer programming language.</p>
+        <p>Looking for a job in accounting taxation or payroll? We will suggest a course that makes your career bright in accounting. Tally & GST is one such course in Accounting which can help you climb your career ladder at a faster pace. We tried explaining complete information that can be useful for you related to Tally Course. Find details such as Tally Course Duration, Eligibility & Requirements, Colleges that offer Tally Course, Salary, etc. Have an idea what is Tally all about and why it is important by referring further.</p>
+      </div>
+    </div>
+    <table class="table table-bordered container">
+    <caption id="caption"><h3>Tally Course Details</h3></caption>
+  <thead id="tableHeader">
+    <tr>
+      <th scope="col">Course</th>
+      <th scope="col">Tally & GST</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+    <tr>
+      <td>Full form</td>
+      <td>Transactions Allowed in a Linear Line Yards</td>
+    </tr>
+    <tr>
+      <td>Eligibility & Requirement</td>
+      <td>10+2 or equivalent</td>
+    </tr>
+    <tr>
+      <td>Course Type</td>
+      <td>Regular mode</td>
+    </tr>
+    <tr>
+      <td>Starting salary offered</td>
+      <td>Rs. 12,000 to 15,000 per month</td>
+    </tr>
+    <tr>
+      <td>Advance Courses</td>
+      <td>Diploma in Tally</td>
+    </tr>
+    <tr>
+      <td>Employment opportunities</td>
+      <td>Banking Sector, MNC Companies.</td>
+    </tr>
+  </tbody>
+</table>
+
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3>Eligibility Criteria for Tally & GST</h3>
         <br />
-        <h5 class="h5">C++ Language</h5>
-        <p class="p2">C++ is a cross-platform language that can be used to build software for high performance.It can be found in today's Graphical User interface,Operating systems and Embedded system.</p>
+        <ul>
+            <li><span>Candidate must complete 10+2 equivalent with required aggregate from a recognized college.</span></li>
+            <li><span>Should have basic knowledge of Business Management.</span></li>
+            <li><span>Students who want to undergo Tally Accounting Course after graduation should hail from commerce background.</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3>Tally & GST Course Fees and Duration</h3>
         <br />
-        <h5 class="h5">Java</h5>
-        <p class="p2">Java is a language for programming and a forum. Java is a high-level, robust programming language that is object-oriented and stable. In 1995, Java was developed by Sun Microsystems (which is now Oracle's subsidiary).</p>
+        <ul>
+            <li><span>Tally Course Fee is low for the basic course it is 4,000 around and for the advance course, it is 8,000. Thus, students who wish to join the Tally Computer Course can join easily.</span></li>
+            <li><span>Tally ERP Course can be learned within 2 months. In the first month, you will have a basic understanding and in the second month, you will have a bit advanced concepts like GST, TDS, Service Tax Payroll, etc.</span></li>
+        </ul>
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <h3 class="h3">CAREER IN "C/C++ PROGRAMMING"</h3>
-          <ul>
-            <li><span>Junior Programmer</span></li>
-            <li><span>Senior Programmer</span></li>
-            <li><span>Software Developer</span></li>
-            <li><span>Quality Analyst</span></li>
-            <li><span>Game Programmer</span></li>
-            <li><span>Programming Architect</span></li>
-            <li><span>Backend Developer</span></li>
-            <li><span>Embedded Engineer</span></li>
-            <li><span>Database Developer</span></li>
-          </ul>
-        </div>
-        <div class="col-md-5">
-          <h3 class="h3">CAREER IN "JAVA"</h3>
-          <ul>
-            <li><span>Java Programmer</span></li>
-            <li><span>Java Web Developer</span></li>
-            <li><span>Java Web Master</span></li>
-            <li><span>Java Software Engineer</span></li>
-            <li><span>Java Architect</span></li>
-            <li><span>Database Administrator</span></li>
-            <li><span>Senior Developer</span></li>
-            <li><span>Module lead</span></li>
-            <li><span>Application Developer</span></li>
-          </ul>
-        </div>
+      <div class="w-100 text-light">
+        <br />
+        <h3 class="h3">Syllabus and Features of Tally & GST Course </h3>
+        <br />
+        <h5 class="h5">Accounting</h5>
+        <p class="p2">It is Tally ERP's most important feature. After hearing about Tally, the first thing that comes to mind for most people is accounting.</p>
+        <h5 class="h5">Billing</h5>
+        <p class="p2">Billing is an important aspect of every business. When you synchronously pass an accounting entry, a bill is issued, which you can use to raise or submit an invoice. When it comes to financing, most people believe that billing is synonymous with accounting. This is not the case. Tally's Billing Choice removes the need for separate accounting entries.</p>
+        <h5 class="h5">Payroll</h5>
+        <p class="p2">When you have a large number of workers, this feature comes in handy. Employee classes, employee categories, pay heads, attendance, and course employees are all included in Tally to keep track of payroll.</p>
+        <h5 class="h5">Banking</h5>
+        <p class="p2">No company will thrive in this age of digitalization without banking. Tally ERP can measure TDS GST for both direct and indirect taxes, and returns can be submitted electronically.</p>
+        <h5 class="h5">Taxation</h5>
+        <p class="p2">Any organization that wants to succeed does not function in isolation. Businesses should cooperate with both the state and federal governments by paying the necessary taxes. Taxation based on profits, sales, and dispatch is a time-consuming operation. Tally makes it simple to file every bill or invoice since it can calculate VAT, income tax, excise tax, customs duty, service tax, and other taxes.</p>
+        <h5 class="h5">Inventory</h5>
+        <p class="p2">Stock management is vital to the success of every company. It's important because it gives you more leverage over your company's revenues. As a result, stock movement is an important aspect that can be managed.</p>
+        
+       </div>
+    </div>
+
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3>Concepts or Modules in Tally & GST</h3>
+        <br />
+        <ul>
+            <li><span>Fundamentals of accounting</span></li>
+            <li><span>Introduction of Tally</span></li>
+            <li><span>Meaning of company creation and opening accounting in Tally</span></li>
+            <li><span>Opening a ledger account and how to create a voucher</span></li>
+            <li><span>How to modify a company or industry detail</span></li>
+            <li><span>How to set the features of a company</span></li>
+            <li><span>Selecting the cost category and cost center</span></li>
+            <li><span>How to create a go down and how to maintain an inventory</span></li>
+            <li><span>How to set price list and the budget</span></li>
+            <li><span>A brief introduction of F11 and F12</span></li>
+            <li><span>How to produce profit and loss balance sheet from accounting</span></li>
+            <li><span>Introduction to VAT</span></li>
+            <li><span>Calculation of VAT</span></li>
+            <li><span>Introduction to TDS</span></li>
+            <li><span>Calculation of TDS</span></li>
+            <li><span>How to add excise duty and customs duty</span></li>
+        </ul>
       </div>
-      <br />
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h3 class="h3">Syllabus for "C"</h3>
-            <ul>
-              <li><span>Introduction to Principles of programming</span></li>
-              <li><span>Introduction to C Programming</span></li>
-              <li><span>Operators and Expressions</span></li>
-              <li><span>Data Types and Input/Output Operators</span></li>
-              <li><span>Control Statements and Decision Making</span></li>
-              <li><span>Arrays and Strings</span></li>
-              <li><span>Structures and Unions</span></li>
-            </ul>
+    </div>
+
+ <div class="container">
+      <div class="w-100 text-light">
+          <h3>Job Opportunities and Career Prospects</h3>
+        <br />
+        <ul>
+            <li><span>Accountant</span></li>
+            <li><span>Accounts Executive</span></li>
+            <li><span>Tally Operator</span></li>
+            <li><span>Tally Accounts Manager</span></li>
+            <li><span>Service Coordinate with Tally</span></li>
+            <li><span>Tally Junior Accountant</span></li>
+            <li><span>Tax Accountant</span></li>
+            <li><span>Accounting Assistant</span></li>
+            <li><span>Supervisory Accountant</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 style="color: #2a0a5e">Register</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <div class="col-md-4">
-            <h3 class="h3">Syllabus for "C++"</h3>
-            <ul>
-              <li><span>Introduction to Principles of programming</span></li>
-              <li><span>Introduction to C++ Programming</span></li>
-              <li><span>Introduction to OOP's</span></li>
-              <li><span>Classes and Objects</span></li>
-              <li><span>Control Statements and Decision Making</span></li>
-              <li><span>Function</span></li>
-              <li><span>Inheritance and Composition</span></li>
-              <li><span>Polymorphism</span></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h3 class="h3">Syllabus for "JAVA"</h3>
-            <ul>
-              <li><span>Basics of Java</span></li>
-              <li><span>Packages</span></li>
-              <li><span>Introduction to OOP's</span></li>
-              <li><span>The Java Environment</span></li>
-              <li><span>Exception Handling</span></li>
-              <li><span>Classes and Objects</span></li>
-              <li><span>Collection Framework</span></li>
-              <li><span>Multithreading</span></li>
-              <li><span>Array and Strings</span></li>
-              <li><span>Event Handling</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 style="color: #2a0a5e">Register</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+          <div class="modal-body">
+            <form class="modal-content" action="action-page.php" method="POST">
+              <div class="container">
+                <label class="label" for="name"><b>Name</b></label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
+
+                <label class="label" for="email"><b>Email</b></label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
+
+                <label class="label" for="phone"><b>Enter your number:</b></label>
+                <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
+
+                <label class="label" for="trainings"><b>Trainings</b></label>
+                <select class="custom-select" id="trainings" name="trainings">
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <?php
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
+                  ?>
+                </select>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
+                </div>
               </div>
-              <div class="modal-body">
-                <form class="modal-content" action="" method="POST">
-                  <div class="container">
-                    <hr />
-                    <label class="label" for="name"><b>Name</b></label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
-
-                    <label class="label" for="email"><b>Email</b></label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
-
-                    <label class="label" for="phone"><b>Enter your number:</b></label>
-                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
-
-                    <label class="label" for="trainings"><b>Trainings</b></label>
-                    <select class="custom-select" id="trainings" name="trainings">
-                      <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                      <?php
-                          foreach ($courselist as $course){
-                            echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
-                          }
-                      ?>
-                    </select>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-warning" name="regformsubmit">Submit</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-
     <footer class="container-fluid container-fluid1 justify-content-center">
       <div class="row justify-content-center py-3">
         <div class="col-md-3" style="text-align: left">
@@ -296,7 +336,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-md-6" style="text-align: left">
+            <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
                   <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
@@ -313,13 +353,15 @@
                 <li>
                   <a class="footer-a" href="Programming-Languages-Training.php">Programming Language</a>
                 </li>
+                <li>
+                  <a class="footer-a" href="Tally-GST-Training.php">Tally & GST Training</a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-
         <div class="col-md-3">
-          <h6>Follow us</h6>
+          <h6><u>Follow us</u></h6>
           <a class="social-icon fbicon" target="_blank" rel="noopener" href="https://www.facebook.com/DharwadhubballiTutor"><i class="fab fa-facebook fa-2x fbicon"></i></a>
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-2x twittericon"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-2x instaicon"></i></a>
@@ -358,7 +400,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="" method="POST">
+            <form class="modal-content" action="footermodal-action.php" method="POST">
               <div class="container">
                 <label class="label" for="name2"><b>Name</b></label>
                 <input type="text" name="name2" class="form-control" id="name2" placeholder="Name" required />
@@ -373,9 +415,9 @@
                 <select class="custom-select" id="trainings2" name="trainings2">
                   <option value="SELECT YOUR INTEREST">Select your Interest</option>
                   <?php
-                        foreach ($courselist as $course){
-                          echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
-                        }
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
                   ?>
                   </select
                 ><br />
@@ -391,7 +433,7 @@
                 <br />
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning" name="footerformsubmit">Submit</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -423,41 +465,11 @@
         $("#myModal").modal()
       }, 30000)
     </script>
+
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
   </body>
 </html>
-
-<?php
-require "Model/Registration.php";
-require "Utilities/Sanitization.php";
-require "DB Operations/RegistrationOps.php";
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-    if (isset($_POST['footerformsubmit']))
-    {
-      
-        $reg=new Registration();
-        $reg->set_name(Sanitization::test_input($_POST["name2"]));
-        $reg->set_email(Sanitization::test_input($_POST["email2"]));
-        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
-        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
-        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
-        DBregistration::insert($reg);
-        echo "<meta http-equiv='refresh' content='0'>";
-    }elseif (isset($_POST['regformsubmit']))
-    {
-      
-        $reg=new Registration();
-        $reg->set_name(Sanitization::test_input($_POST["name"]));
-        $reg->set_email(Sanitization::test_input($_POST["email"]));
-        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
-        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
-        DBregistration::insert($reg); 
-        echo "<meta http-equiv='refresh' content='0'>";
-    }else{
-      echo "No results found";
-    }
-    
-  }
-  
-?>

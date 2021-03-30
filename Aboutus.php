@@ -255,7 +255,7 @@ $courselist=DBcourse::selectall();
 </button>
 </div>
 <div class=modal-body>
-<form class=modal-content action=footermodal-action.php method=POST>
+<form class=modal-content action="" method=POST>
 <div class=container>
 <p style=color:#2a0a5e>Please fill in this form to create an account.</p>
 <label class=label for=name2><b>Name</b></label>
@@ -287,7 +287,7 @@ foreach($courselist as $course) {
 <br />
 <div class=modal-footer>
 <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-<button type=submit class="btn btn-warning">Submit</button>
+<button type=submit class="btn btn-warning" name="footerformsubmit">Submit</button>
 </div>
 </div>
 </form>
@@ -305,7 +305,7 @@ foreach($courselist as $course) {
         </button>
       </div>
 <div class=modal-body>
-<form class=modal-content action=action-page.php method=POST>
+<form class=modal-content action="" method=POST>
 <div class=container>
 
 <label class=label for=name><b>Name</b></label>
@@ -328,7 +328,7 @@ foreach($courselist as $course) {
  </select><br />
 <div class=modal-footer>
   <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-  <button type=submit class="btn btn-warning">Submit</button>
+  <button type=submit class="btn btn-warning" name="regformsubmit">Submit</button>
   </div>
 </div>
 </form>
@@ -369,3 +369,40 @@ foreach($courselist as $course) {
 <script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
 </body>
 </html>
+
+
+<?php
+require "Model/Registration.php";
+require "Utilities/Sanitization.php";
+require "DB Operations/RegistrationOps.php";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    if (isset($_POST['footerformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name2"]));
+        $reg->set_email(Sanitization::test_input($_POST["email2"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
+        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
+        DBregistration::insert($reg);
+        echo "<meta http-equiv='refresh' content='0'>";
+    }elseif (isset($_POST['regformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name"]));
+        $reg->set_email(Sanitization::test_input($_POST["email"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
+        DBregistration::insert($reg); 
+        echo "<meta http-equiv='refresh' content='0'>";
+    }else{
+      echo "No results found";
+    }
+    
+  }
+  
+?>
