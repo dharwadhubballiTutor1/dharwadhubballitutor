@@ -96,7 +96,6 @@ $courselist=DBcourse::selectall();
 <a class="nav-link dropdown-toggle" href=# id=navbarDropdownMenuLink role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false> Trainings </a>
 
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-
 <a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
 <a class=dropdown-item href=Python-Programming-Training.php>Python Programming </a>
 <a class=dropdown-item href=Cloud-Computing-Training.php>Cloud Computing</a>
@@ -104,6 +103,7 @@ $courselist=DBcourse::selectall();
 <a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
 <a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
 <a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
 </div>
@@ -466,6 +466,9 @@ foreach($courselist as $course) {
 <li>
   <a class=footer-a href=Services.php>Services</a>
   </li>
+  <li>
+                  <a class="footer-a" href="Tally-GST-Training.php">Tally & GST Training</a>
+                </li>
 </ul>
 </div>
 </div>
