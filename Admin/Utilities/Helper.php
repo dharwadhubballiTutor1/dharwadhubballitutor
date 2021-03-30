@@ -109,7 +109,7 @@ require "../../Admin/fpdf182/fpdf.php";
       $pdf->Line(10,50,200,50);
       $filename="". $collectfees->get_name().date("Y-m-d").".pdf";
       
-      $pdf->Cell(70 ,119,' Authorised Signatory',0,0,);
+      $pdf->Cell(70 ,119,' Authorised Signatory',0,0);
 
      $pdf->Ln(10);
      $pdf->Cell(140 ,7,'',0,0);
