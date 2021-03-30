@@ -81,16 +81,18 @@ src="https://www.facebook.com/tr?id=1433283177021826&ev=PageView&noscript=1"
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Web-Designing-and-Development-Training.html">Web Designing and Development</a>
-              <a class="dropdown-item" href="Python-Programming-Training.html">Python Programming </a>
-              <a class="dropdown-item" href="Cloud-Computing-Training.html">Cloud Computing</a>
-              <a class="dropdown-item" href="Android-Development-Training.html">Android Development</a>
-              <a class="dropdown-item" href="Civil-Design-Softwares-Training.html">Civil Design Softwares</a>
-              <a class="dropdown-item" href="Programming-Languages-Training.html">Programming Languages</a>
-              <a class="dropdown-item" href="Digital-Marketing-Training.html">Digital Marketing</a>
-              <a class="dropdown-item" href="School-Academics-Training.html">School Academics</a>
-            </div>
+            <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
+<a class=dropdown-item href=Python-Programming-Training.php>Python Programming </a>
+<a class=dropdown-item href=Cloud-Computing-Training.php>Cloud Computing</a>
+<a class=dropdown-item href=Android-Development-Training.php>Android Development</a>
+<a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
+<a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
+<a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
+<a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
+<a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
+</div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Internship.html">Internships</a>

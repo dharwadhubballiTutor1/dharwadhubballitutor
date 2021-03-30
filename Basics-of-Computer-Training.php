@@ -95,6 +95,7 @@ $courselist=DBcourse::selectall();
 <a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
 <a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
 <a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
 </div>
@@ -200,6 +201,9 @@ $courselist=DBcourse::selectall();
   <li>
   <a class=footer-a href=Programming-Languages-Training.php>Programming Language</a>
   </li>
+  <li>
+                  <a class="footer-a" href="Tally-GST-Training.php">Tally & GST Training</a>
+                </li>
   </ul>
   </div>
   </div>
