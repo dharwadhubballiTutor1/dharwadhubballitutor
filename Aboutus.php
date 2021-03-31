@@ -15,9 +15,7 @@ $courselist=DBcourse::selectall();
 <meta name="keywords" content="Dharwad tutorials,dharwad tutor,dharwad coaching center,about us,dharwadhubballitutor about us,info about dharwadhubballitutor" /> 
 <meta name=viewport content="width=device-width,initial-scale=1.0" />
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous />
-<script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity=sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj crossorigin=anonymous></script>
-<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
+
 <link rel=preconnect href=https://fonts.gstatic.com />
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel=stylesheet />
 <link rel=stylesheet href=css/dharwadhubballitutor.css />
@@ -95,6 +93,7 @@ $courselist=DBcourse::selectall();
 <a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
 <a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
 <a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
 </div>
@@ -114,12 +113,27 @@ $courselist=DBcourse::selectall();
 </div>
 </nav>
 <br />
-<div style=text-align:center>
-<picture>
-<source srcset=media/img/aboutmobile.png media="(max-width: 768px)" width="768" height="400" />
-<img src=media/img/about.png alt="DharwadHubballiTutor title image" class=img-fluid  />
-</picture>
-</div> <br/>
+<div  class="container-fluid" >
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div id ="banner" class="col-md-10">
+    <div class="row align-items-center" style="width=100%;">
+      <div class="col-md-2">
+      <img src="media\img\tutor-1.png" alt="Tutorlogo" class="img-fluid" id="banner-img">
+      </div>
+      <div class="col-md-8" id="bannerHeading">
+      <h1 id="bannerTitle display-1 text-center">DharwadHubballiTutor</h1>
+      </div>
+      <div class="col-md-2">
+      <img src="media\img\tutor-2.png" alt="Tutorlogo" class="img-fluid" id="banner-img">
+      </div>
+    </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+    
+</div>
+ <br/>
 <div class=container>
 <div class="w-100 text-light">
 <p class=p1> Introducing DHARWADHUBBALLITUTOR as a Brand for jobseekers to avail Trainings, Internships and job Assistance.</p>
@@ -216,6 +230,9 @@ $courselist=DBcourse::selectall();
 <li>
 <a class=footer-a href=Programming-Languages-Training.php>Programming Language</a>
 </li>
+<li>
+                  <a class="footer-a" href="Tally-GST-Training.php">Tally & GST Training</a>
+                </li>
 </ul>
 </div>
 </div>
@@ -255,7 +272,7 @@ $courselist=DBcourse::selectall();
 </button>
 </div>
 <div class=modal-body>
-<form class=modal-content action=footermodal-action.php method=POST>
+<form class=modal-content action="" method=POST>
 <div class=container>
 <p style=color:#2a0a5e>Please fill in this form to create an account.</p>
 <label class=label for=name2><b>Name</b></label>
@@ -287,7 +304,7 @@ foreach($courselist as $course) {
 <br />
 <div class=modal-footer>
 <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-<button type=submit class="btn btn-warning">Submit</button>
+<button type=submit class="btn btn-warning" name="footerformsubmit">Submit</button>
 </div>
 </div>
 </form>
@@ -305,7 +322,7 @@ foreach($courselist as $course) {
         </button>
       </div>
 <div class=modal-body>
-<form class=modal-content action=action-page.php method=POST>
+<form class=modal-content action="" method=POST>
 <div class=container>
 
 <label class=label for=name><b>Name</b></label>
@@ -328,7 +345,7 @@ foreach($courselist as $course) {
  </select><br />
 <div class=modal-footer>
   <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-  <button type=submit class="btn btn-warning">Submit</button>
+  <button type=submit class="btn btn-warning" name="regformsubmit">Submit</button>
   </div>
 </div>
 </form>
@@ -357,7 +374,9 @@ foreach($courselist as $course) {
     </div>
   </div>
 </div>
-
+<script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity=sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj crossorigin=anonymous></script>
+<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
 <script>
   setTimeout(function() {
     $('#myModal').modal();
@@ -369,3 +388,40 @@ foreach($courselist as $course) {
 <script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
 </body>
 </html>
+
+
+<?php
+require "Model/Registration.php";
+require "Utilities/Sanitization.php";
+require "DB Operations/RegistrationOps.php";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    if (isset($_POST['footerformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name2"]));
+        $reg->set_email(Sanitization::test_input($_POST["email2"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
+        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
+        DBregistration::insert($reg);
+        echo "<meta http-equiv='refresh' content='0'>";
+    }elseif (isset($_POST['regformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name"]));
+        $reg->set_email(Sanitization::test_input($_POST["email"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
+        DBregistration::insert($reg); 
+        echo "<meta http-equiv='refresh' content='0'>";
+    }else{
+      echo "No results found";
+    }
+    
+  }
+  
+?>

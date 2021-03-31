@@ -89,17 +89,18 @@ $courselist=DBcourse::selectall();
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Web-Designing-and-Development-Training.php">Web Designing and Development</a>
-              <a class="dropdown-item" href="Python-Programming-Training.php">Python Programming </a>
-              <a class="dropdown-item" href="Cloud-Computing-Training.php">Cloud Computing</a>
-              <a class="dropdown-item" href="Android-Development-Training.php">Android Development</a>
-              <a class="dropdown-item" href="Civil-Design-Softwares-Training.php">Civil Design Softwares</a>
-              <a class="dropdown-item" href="Programming-Languages-Training.php">Programming Languages</a>
-              <a class="dropdown-item" href="Digital-Marketing-Training.php">Digital Marketing</a>
-              <a class="dropdown-item" href="Basics-of-Computer-Training.php">Basics of Computer</a>
-              <a class="dropdown-item" href="School-Academics-Training.php">School Academics</a>
-            </div>
+            <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
+<a class=dropdown-item href=Python-Programming-Training.php>Python Programming </a>
+<a class=dropdown-item href=Cloud-Computing-Training.php>Cloud Computing</a>
+<a class=dropdown-item href=Android-Development-Training.php>Android Development</a>
+<a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
+<a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
+<a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
+<a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
+<a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
+</div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Internship.php">Internships</a>
@@ -173,7 +174,7 @@ $courselist=DBcourse::selectall();
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="action-page.php" method="POST">
+            <form class="modal-content" action="" method="POST">
               <div class="container">
                 <p style="color: #2a0a5e">Please fill in this form.</p>
                 <hr />
@@ -197,7 +198,7 @@ $courselist=DBcourse::selectall();
                 </select><br />
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning">Submit</button>
+                  <button type="submit" class="btn btn-warning" name="regformsubmit">Submit</button>
                 </div>
               </div>
             </form>
@@ -258,6 +259,9 @@ $courselist=DBcourse::selectall();
                 <li>
                   <a class="footer-a" href="Programming-Languages-Training.php">Programming Language</a>
                 </li>
+                <li>
+                  <a class="footer-a" href="Tally-GST-Training.php">Tally & GST Training</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -303,7 +307,7 @@ $courselist=DBcourse::selectall();
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="footermodal-action.php" method="POST">
+            <form class="modal-content" action="" method="POST">
               <div class="container">
                 <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
 
@@ -340,7 +344,7 @@ foreach($courselist as $course) {
                 <br />
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning">Submit</button>
+                  <button type="submit" class="btn btn-warning" name="footerformsubmit">Submit</button>
                 </div>
               </div>
             </form>
@@ -380,3 +384,40 @@ foreach($courselist as $course) {
     </script>
   </body>
 </html>
+
+
+<?php
+require "Model/Registration.php";
+require "Utilities/Sanitization.php";
+require "DB Operations/RegistrationOps.php";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    if (isset($_POST['footerformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name2"]));
+        $reg->set_email(Sanitization::test_input($_POST["email2"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
+        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
+        DBregistration::insert($reg);
+        echo "<meta http-equiv='refresh' content='0'>";
+    }elseif (isset($_POST['regformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name"]));
+        $reg->set_email(Sanitization::test_input($_POST["email"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
+        DBregistration::insert($reg); 
+        echo "<meta http-equiv='refresh' content='0'>";
+    }else{
+      echo "No results found";
+    }
+    
+  }
+  
+?>

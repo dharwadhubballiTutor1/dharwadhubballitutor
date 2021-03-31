@@ -211,9 +211,6 @@ body {
   background-color: #2a0a5e;
   color: white;
 }
-.h1 {
-  color: white;
-}
 .themecolor {
   color: #2a0a5e;
 }
@@ -493,4 +490,64 @@ button:hover {
 }
 .modal-header {
   border-bottom: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#banner {
+  background-color: #f8c000;
+}
+
+#banner-img {
+  padding: 10px;
+ }
+
+#bannerHeading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tallyTableHeader {
+  background-color: rgb(219, 87, 39);
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+}
+
+#tallyTable {
+  background-color: #f8c000 !important;
+  text-align: center !important;
+}
+
+#tallyCaption {
+  caption-side: top;
+  text-align: center;
+}
+
+@media only screen  and (max-width: 767px) {
+  h1 {
+    font-size: 5vw !important;
+    text-align: center;
+    line-height: 30vh;
+  }
+  #banner-img {
+   display: none;
+  }
+  #banner{
+    height: 30vh;
+  }
+}
+
+  @media only screen  and (min-width: 768px) and (max-width: 2560px){
+    h1 {
+      font-size: 3.5vw !important;
+      padding: 30px 0;
+    }
+    #banner-img {
+      min-width: 100%;
+    }
 }
