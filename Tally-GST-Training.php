@@ -7,21 +7,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Best Job Assistance in Dharwad.</title>
+    <title>Best Training Institute for Tally and GST in Dharwad.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="We provide Job Assistance to our students on effectively completion of courses.This assistance gives our student an edge over thousand of students and candidates applying for same job." />
-    <meta name="keywords" content="Job assistance in dharwad,job assistance,web designing scope,python scope,c scope,c++ scope,android scope,cloud computing scope,civil designs software scope." />
+    <meta name="description" content="Want to build your website but have no idea where to begin with??then od visit us at DharwadHubballiTutor where we help you fulfill your dream with our excellent training in Website Designing and Development" />
+    <meta name="keywords" content="web designing and development course in dharwad,web design course,web development course,web designing training,web designing coaching,web develpoment coaching in dharwad,web development coaching near me,how to design website,web development training in dharwad,	web designing and development services,Website designing and develpoment training institute,web designing coaching in dharwad,web designing coaching near me,website development,website designing,website designer,website developer,build website,website building," />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/dharwadhubballitutor.css" />
-    <link href="http://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
+    <link href="https://allfont.net/allfont.css?fonts=league-spartan" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
     <!-- Facebook Pixel Code -->
@@ -46,7 +47,6 @@
     <div class="brand-class container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <!-- <img src="media/img/logo.png" class="logoimg" alt="DharwadHubballiTutor logo" /> -->
           <a class="navbar-brand brandName" href="#">DharwadHubballiTutor</a>
           <br />
 
@@ -54,7 +54,7 @@
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-lg instaicon instaheader"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="http://www.linkedin.com/in/dharwadhubballitutor"><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader"></i></a>
-          <a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion:)"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
+          <a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hi there! I have a question :)"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
         </div>
         <div class="col-md-6">
           <div class="semicircle">
@@ -70,9 +70,10 @@
         </div>
       </div>
     </div>
+
     <br />
-    <nav class="navbar navbar-expand-sm bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -117,127 +118,192 @@
       </div>
     </nav>
     <br />
-    <div style="text-align: center">
-      <picture>
-        <source srcset="media/img/jobassistmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/JobAssist.png" alt="Job Assistance" class="img-fluid" />
-      </picture>
+    <div id="banner" class="container" >
+        <div class="row">
+            <img src="media\img\tally.png" alt="Tally & GST logo" class="img-fluid col-2" id="banner-img">
+         </div>
+      <h1 id="tallyTitle" class=col-10>Tally & GST Training</h1>
+    </div>
+    <br />
+    <div class="container">
+      <div class="w-100 text-light">
+        <h3 class="h3">What is Tally & GST Course?</h3>
+        <br />
+        <p class="p2">Tally is an accounting program that works great when it comes to doing analyses in small and mid-sized companies. This program allows you to perform all banking, auditing, and accounting tasks. Tally's accounting features allow you to quickly and easily document business transactions. Keep track of the transactions that are required for your company.</p>
+      </div>
     </div>
     <div class="container">
-      <div class="row row-eq-height">
-        <div class="w-100 text-light">
-          <div style="text-align: center">
-            <h3 class="h3" style="text-align: center">OUR PROCESS OF PLACEMENT</h3>
-            <video width="100%" height="auto" id="video" controls autoplay muted>
-              <source src="media/video/jobassist.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+      <div class="w-100 text-light">
+        <h3 class="h3">Tally & GST Course Details – Eligibility, Fee, Duration, Syllabus, Colleges, Salary</h3>
+        <br />
+        <p class="p2">Looking for a job in accounting taxation or payroll? We will suggest a course that makes your career bright in accounting. Tally & GST is one such course in Accounting which can help you climb your career ladder at a faster pace. We tried explaining complete information that can be useful for you related to Tally Course. Find details such as Tally Course Duration, Eligibility & Requirements, Colleges that offer Tally Course, Salary, etc. Have an idea what is Tally all about and why it is important by referring further.</p>
+      </div>
+    </div>
+    <div class="container">
+    <table class="table table-bordered " id="tallyTable">
+    <caption id="tallyCaption"><h3 class="h3" >Tally Course Details</h3></caption>
+  <thead id="tallyTableHeader">
+    <tr>
+      <th scope="col">Course</th>
+      <th scope="col">Tally & GST</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr>
+      <td>Full form</td>
+      <td>Transactions Allowed in a Linear Line Yards</td>
+    </tr>
+    <tr>
+      <td>Eligibility & Requirement</td>
+      <td>10+2 or equivalent</td>
+    </tr>
+    <tr>
+      <td>Course Type</td>
+      <td>Regular mode</td>
+    </tr>
+    <tr>
+      <td>Starting salary offered</td>
+      <td>Rs. 12,000 to 15,000 per month</td>
+    </tr>
+    <tr>
+      <td>Advance Courses</td>
+      <td>Diploma in Tally</td>
+    </tr>
+    <tr>
+      <td>Employment opportunities</td>
+      <td>Banking Sector, MNC Companies.</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Eligibility Criteria for Tally & GST</h3>
+        <br />
+        <ul>
+            <li><span>Candidate must complete 10+2 equivalent with required aggregate from a recognized college.</span></li>
+            <li><span>Should have basic knowledge of Business Management.</span></li>
+            <li><span>Students who want to undergo Tally Accounting Course after graduation should hail from commerce background.</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Tally & GST Course Fees and Duration</h3>
+        <br />
+        <ul>
+            <li><span>Tally Course Fee is low for the basic course it is 4,000 around and for the advance course, it is 8,000. Thus, students who wish to join the Tally Computer Course can join easily.</span></li>
+            <li><span>Tally ERP Course can be learned within 2 months. In the first month, you will have a basic understanding and in the second month, you will have a bit advanced concepts like GST, TDS, Service Tax Payroll, etc.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="w-100 text-light">
+        <br />
+        <h3 class="h3">Syllabus and Features of Tally & GST Course </h3>
+        <br />
+        <h5 class="h5">Accounting</h5>
+        <p class="p2">It is Tally ERP's most important feature. After hearing about Tally, the first thing that comes to mind for most people is accounting.</p>
+        <h5 class="h5">Billing</h5>
+        <p class="p2">Billing is an important aspect of every business. When you synchronously pass an accounting entry, a bill is issued, which you can use to raise or submit an invoice. When it comes to financing, most people believe that billing is synonymous with accounting. This is not the case. Tally's Billing Choice removes the need for separate accounting entries.</p>
+        <h5 class="h5">Payroll</h5>
+        <p class="p2">When you have a large number of workers, this feature comes in handy. Employee classes, employee categories, pay heads, attendance, and course employees are all included in Tally to keep track of payroll.</p>
+        <h5 class="h5">Banking</h5>
+        <p class="p2">No company will thrive in this age of digitalization without banking. Tally ERP can measure TDS GST for both direct and indirect taxes, and returns can be submitted electronically.</p>
+        <h5 class="h5">Taxation</h5>
+        <p class="p2">Any organization that wants to succeed does not function in isolation. Businesses should cooperate with both the state and federal governments by paying the necessary taxes. Taxation based on profits, sales, and dispatch is a time-consuming operation. Tally makes it simple to file every bill or invoice since it can calculate VAT, income tax, excise tax, customs duty, service tax, and other taxes.</p>
+        <h5 class="h5">Inventory</h5>
+        <p class="p2">Stock management is vital to the success of every company. It's important because it gives you more leverage over your company's revenues. As a result, stock movement is an important aspect that can be managed.</p>
+        
+       </div>
+    </div>
+
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Concepts or Modules in Tally & GST</h3>
+        <br />
+        <ul>
+            <li><span>Fundamentals of accounting</span></li>
+            <li><span>Introduction of Tally</span></li>
+            <li><span>Meaning of company creation and opening accounting in Tally</span></li>
+            <li><span>Opening a ledger account and how to create a voucher</span></li>
+            <li><span>How to modify a company or industry detail</span></li>
+            <li><span>How to set the features of a company</span></li>
+            <li><span>Selecting the cost category and cost center</span></li>
+            <li><span>How to create a go down and how to maintain an inventory</span></li>
+            <li><span>How to set price list and the budget</span></li>
+            <li><span>A brief introduction of F11 and F12</span></li>
+            <li><span>How to produce profit and loss balance sheet from accounting</span></li>
+            <li><span>Introduction to VAT</span></li>
+            <li><span>Calculation of VAT</span></li>
+            <li><span>Introduction to TDS</span></li>
+            <li><span>Calculation of TDS</span></li>
+            <li><span>How to add excise duty and customs duty</span></li>
+        </ul>
+      </div>
+    </div>
+
+ <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Job Opportunities and Career Prospects</h3>
+        <br />
+        <ul>
+            <li><span>Accountant</span></li>
+            <li><span>Accounts Executive</span></li>
+            <li><span>Tally Operator</span></li>
+            <li><span>Tally Accounts Manager</span></li>
+            <li><span>Service Coordinate with Tally</span></li>
+            <li><span>Tally Junior Accountant</span></li>
+            <li><span>Tax Accountant</span></li>
+            <li><span>Accounting Assistant</span></li>
+            <li><span>Supervisory Accountant</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 style="color: #2a0a5e">Register</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <br />
-          <h3 class="h3">COURSES & THEIR SCOPE</h3>
-          <br />
-          <h5 class="h5">Web Designing and Development</h5>
-          <p class="p2">The employment of web designers and developers is projected to increase by 15%, or 24,400 new jobs, by 2026, according to the BLS.</p>
-          <p class="p2" style="color: #f8c000">Eligibility:</p>
-          <p>Requirements range from a high school diploma to a bachelor's degree. Web developers need knowledge of both programming and graphic design.</p>
-          <p class="p2" style="color: #f8c000">Salary</p>
-          <ul>
-            <li><span> For Entry Level its Rs.1.9 lakhs per annum</span></li>
-            <li><span>for Mid-level its Rs.4 lakhs per annum</span></li>
-            <li><span>for Senior-level its Rs.5.7 lakhs per annum</span></li>
-          </ul>
-          <br />
-          <h5 class="h5">Python Programming</h5>
-          <p class="p2">Python is easy to pick up and a flexible language for programming. Python jobs are also on the rise because of its fast rising popularity and the universal reliance on web or computer-based applications.</p>
-          <p class="p2" style="color: #f8c000">Salary</p>
-          <ul>
-            <li><span> For Entry Level its Rs.4 lakhs per annum</span></li>
-            <li><span>for Mid-level its Rs.9 lakhs per annum</span></li>
-            <li><span>for Senior-level its Rs.1,150,000 per annum</span></li>
-          </ul>
-          <br />
+          <div class="modal-body">
+            <form class="modal-content" action="action-page.php" method="POST">
+              <div class="container">
+                <label class="label" for="name"><b>Name</b></label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
 
-          <h5 class="h5">Android Development</h5>
-          <p class="p2">We know that the worldwide smartphone industry is dominated by two mobile app giants, Android & iOS. However, with 74.43 percent of the overall mobile OS market share and over 52 billion app downloads today, Android tops the list. In order to reach a broader audience, gain more exposure, and raise sales, businesses need more high-quality, engaging apps.Therefore, there is a tremendous demand for developers of Android to create new user-friendly apps and boost the efficiency of existing ones.</p>
-          <p class="p2" style="color: #f8c000">Eligibility:</p>
-          <p>Candidates should have completed and should have obtained bare minimum aggregate in their 10+2 examinations.</p>
-          <p class="p2" style="color: #f8c000">Salary</p>
-          <ul>
-            <li><span> For Entry Level its Rs.2-2.5 lakhs per annum</span></li>
-            <li><span>for Mid-level its Rs.8.20 lakhs per annum</span></li>
-            <li><span>for Senior-level its Rs.1,000,000 per annum</span></li>
-          </ul>
-          <br />
+                <label class="label" for="email"><b>Email</b></label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
 
-          <h5 class="h5">Digital Marketing</h5>
-          <p class="p2">The "Digital Marketing Specialist" position, according to LinkedIn, is among the top 10 most in-demand positions, with 860,000 job openings. In digital marketing, the most requested experience includes social media, content management, SEO, analytics, and more. Since there are so many facets of digital marketing strategy, the number of related jobs is very high.</p>
-          <p class="p2" style="color: #f8c000">Eligibility:</p>
-          <p>Digital Marketing as such requires no minimum qualification.</p>
-          <p class="p2" style="color: #f8c000">Salary</p>
-          <ul>
-            <li><span style="font-size: 18px"> For Entry Level its Rs.2-2.5 lakhs per annum</span></li>
-            <li><span style="font-size: 18px">for Mid-level its Rs.8.20 lakhs per annum</span></li>
-            <li><span style="font-size: 18px">for Senior-level its Rs.1,000,000 per annum</span></li>
-          </ul>
-          <br />
+                <label class="label" for="phone"><b>Enter your number:</b></label>
+                <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
 
-          <h5 class="h5">Cloud Computing</h5>
-          <p class="p2">Today, virtually every company has embraced some sort of cloud strategy, making cloud computing one of the top skills sought after.In recent years, cloud computing has gained considerable popularity, bringing about disruptive improvements and quicker processes across industries, from healthcare to retail.</p>
-          <p class="p2" style="color: #f8c000">Eligibility:</p>
-          <p>Cloud computing as such requires no minimum qualification,</p>
-          <p class="p2" style="color: #f8c000">Salary</p>
-          <ul>
-            <li><span style="font-size: 18px"> For Entry Level its Rs.4-7 lakhs per annum</span></li>
-            <li><span style="font-size: 18px">for Mid-level its Rs.6-15 lakhs per annum</span></li>
-            <li><span style="font-size: 18px">for Senior-level its Rs.3-35 lakhs per annum</span></li>
-          </ul>
-          <br />
-
-          <!-- MODAL -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h2 style="color: #2a0a5e">Register</h2>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form class="modal-content" action="action-page.php" method="POST">
-                    <div class="container">
-                      <label class="label" for="name"><b>Name</b></label>
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
-
-                      <label class="label" for="email"><b>Email</b></label>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" />
-
-                      <label class="label" for="phone"><b>Enter your number:</b></label>
-                      <input type="tel" name="phone" class="form-control" id="phone" placeholder="Number" required />
-
-                      <label class="label" for="trainings"><b>Trainings</b></label>
-                      <select class="custom-select" id="trainings" name="trainings">
-                        <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                        <?php
-                            foreach ($courselist as $course){
-                              echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
-                            }
-                        ?>
-                      </select>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-warning" name="regformsubmit">Submit</button>
-                      </div>
-                    </div>
-                  </form>
+                <label class="label" for="trainings"><b>Trainings</b></label>
+                <select class="custom-select" id="trainings" name="trainings">
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <?php
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
+                  ?>
+                </select>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-
     <footer class="container-fluid container-fluid1 justify-content-center">
       <div class="row justify-content-center py-3">
         <div class="col-md-3" style="text-align: left">
@@ -274,7 +340,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-md-6" style="text-align: left">
+            <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
                   <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
@@ -298,9 +364,8 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-3">
-          <h6>Follow us</h6>
+          <h6><u>Follow us</u></h6>
           <a class="social-icon fbicon" target="_blank" rel="noopener" href="https://www.facebook.com/DharwadhubballiTutor"><i class="fab fa-facebook fa-2x fbicon"></i></a>
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-2x twittericon"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-2x instaicon"></i></a>
@@ -319,7 +384,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <p>
+          <p class="p2">
             &copy; Copyright
             <script>
               document.write(new Date().getUTCFullYear())
@@ -339,7 +404,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="" method="POST">
+            <form class="modal-content" action="footermodal-action.php" method="POST">
               <div class="container">
                 <label class="label" for="name2"><b>Name</b></label>
                 <input type="text" name="name2" class="form-control" id="name2" placeholder="Name" required />
@@ -354,9 +419,9 @@
                 <select class="custom-select" id="trainings2" name="trainings2">
                   <option value="SELECT YOUR INTEREST">Select your Interest</option>
                   <?php
-                        foreach ($courselist as $course){
-                          echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
-                        }
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
                   ?>
                   </select
                 ><br />
@@ -372,7 +437,7 @@
                 <br />
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning" name=footerformsubmit>Submit</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -380,16 +445,6 @@
         </div>
       </div>
     </div>
-    <!-- <div id="loading" class="container-fluid row">
-      <div class="col-md-12 text-center">
-        <iframe src="https://giphy.com/embed/xFmuT64Jto3mRO4w3G" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/oc-css-hourglass-xFmuT64Jto3mRO4w3G">via GIPHY</a></p>
-      </div>
-      </div>
-      <script>
-        $(window).on('load',function() {
-          $('#loading').hide();
-        });
-      </script> -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -414,6 +469,7 @@
         $("#myModal").modal()
       }, 30000)
     </script>
+
     <script>
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()
@@ -421,42 +477,3 @@
     </script>
   </body>
 </html>
-
-<?php
-
-require "Model/Registration.php";
-require "Utilities/Sanitization.php";
-require "DB Operations/RegistrationOps.php";
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-   if (isset($_POST['footerformsubmit']))
-    {
-      
-        $reg=new Registration();
-        $reg->set_name(Sanitization::test_input($_POST["name2"]));
-        $reg->set_email(Sanitization::test_input($_POST["email2"]));
-        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
-        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
-        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
-        DBregistration::insert($reg);
-        echo "<meta http-equiv='refresh' content='0'>";
-    
-       
-    }elseif (isset($_POST['regformsubmit']))
-    {
-      
-        $reg=new Registration();
-        $reg->set_name(Sanitization::test_input($_POST["name"]));
-        $reg->set_email(Sanitization::test_input($_POST["email"]));
-        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
-        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
-        DBregistration::insert($reg); 
-        echo "<meta http-equiv='refresh' content='0'>";
-    }else{
-      echo "No results found";
-    }
-    
-  }
-  
-?>

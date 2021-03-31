@@ -494,3 +494,51 @@ button:hover {
 .modal-header {
   border-bottom: 0px;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h3 {
+  color: #f8c000;
+}
+
+#banner {
+  height: 40vh;
+  background-color: #f8c000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tallyTableHeader {
+  background-color: rgb(219, 87, 39);
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+}
+
+#tallyTable {
+  background-color: #f8c000 !important;
+  text-align: center !important;
+}
+
+#tallyTitle {
+  font-family: "league spartan Bold";
+  font-size: 5vw !important;
+}
+
+#banner-img {
+  min-width: 150px;
+}
+
+#tallyCaption {
+  caption-side: top;
+  text-align: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  #tallyTitle {
+    font-size: 8vw !important;
+  }
+}

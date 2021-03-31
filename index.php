@@ -12,10 +12,9 @@ $courselist=DBcourse::selectall();
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-1KGMDNWLTK');
 </script>
-<title>Dharwadhubballitutor,the Best Computer Training Institute in Dharwad</title>
+<title>Dharwadhubballitutor,the Best Computer Courses Training Institute in Dharwad</title>
 <link rel=icon href=media/img/favicon.png type=image/png sizes=96x96 />
 <meta charset=utf-8 />
 <meta name=title content=DharwadHubballiTutor />
@@ -23,8 +22,6 @@ $courselist=DBcourse::selectall();
 <meta name="keywords" content="best computer courses in dharwad,best computer courses to learn,best computer institute in dharwad,best computer institute name in dharwad,best computer training in dharwad,best computer training institute in dharwad,best computer courses for beginners,Training institute near me,coaching center in dharwad,computer training center,computer trainning basics,	web designing and development course,web design course,web development course,web designing training,web designing coaching,web develpoment coaching in dharwad,web development coaching near me,how to design website,web development training,	web designing and development services,	python programming course,python programming course in dharwad,Software development training institute,Computer basics training institute,Website designing and develpoment training institute,Best training institute in Dharwad,HTML,CSS,Java,Python,Digital Marketing training insitute,Revit,Autocad,Cloud Computing training institute,Android,Graphic designing,C C++ training courses,	digital marketing courses in dharwad,	android development course in dharwad,	android development advanced course,	cloud computing courses in dharwad,	cloud computing courses near me,	civil design software training near me,java training near me,java training institutes in hubli-dharwad" />
 <meta name=viewport content="width=device-width,initial-scale=1.0" />
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous />
-<script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity=sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj crossorigin=anonymous></script>
-<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
 <link rel=preconnect href=https://fonts.gstatic.com />
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel=stylesheet />
 <link rel=stylesheet href=css/dharwadhubballitutor.css />
@@ -96,7 +93,6 @@ $courselist=DBcourse::selectall();
 <a class="nav-link dropdown-toggle" href=# id=navbarDropdownMenuLink role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false> Trainings </a>
 
 <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-
 <a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
 <a class=dropdown-item href=Python-Programming-Training.php>Python Programming </a>
 <a class=dropdown-item href=Cloud-Computing-Training.php>Cloud Computing</a>
@@ -104,6 +100,7 @@ $courselist=DBcourse::selectall();
 <a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
 <a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
 <a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
 </div>
@@ -190,7 +187,7 @@ $courselist=DBcourse::selectall();
 </div>
 <div class=card-body>
 <h4 class=card-title style=color:#2a0a5e>Web Design and Development</h4><br/>
-<p class=card-text>Web designing is an evergreen technology which is here to stay. It's an art to create a full-fledged...</p>
+<p class=card-text>Web design and development course/training is full stack course, where you will learn both front end and back end coding...</p>
 <a href=Web-Designing-and-Development-Training.php class="btn btn-outline-warning" role=button>View More</a>
 </div>
 </div>
@@ -336,7 +333,7 @@ $courselist=DBcourse::selectall();
 </button>
 </div>
 <div class=modal-body>
-<form class=modal-content action=intern-action.php method=POST>
+<form class=modal-content action="" method=POST>
 <div class=container>
 
 <label class=label for=name1><b>Name</b></label>
@@ -358,7 +355,7 @@ $courselist=DBcourse::selectall();
 <br />
 <div class=modal-footer>
 <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-<button type=submit class="btn btn-warning">Submit</button>
+<button type=submit class="btn btn-warning" name="internshipsubmit">Submit</button>
 </div>
 </div>
 </form>
@@ -399,7 +396,7 @@ foreach($courselist as $course) {
  </select><br />
 <div class=modal-footer>
 <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-<button type=submit class="btn btn-warning">Submit</button>
+<button type=submit class="btn btn-warning" name="regformsubmit">Submit</button>
 </div>
 </div>
 </form>
@@ -466,6 +463,9 @@ foreach($courselist as $course) {
 <li>
   <a class=footer-a href=Services.php>Services</a>
   </li>
+  <li>
+                  <a class="footer-a" href="Tally-GST-Training.php">Tally & GST Training</a>
+                </li>
 </ul>
 </div>
 </div>
@@ -505,7 +505,7 @@ foreach($courselist as $course) {
     </button>
   </div>
   <div class=modal-body>
-  <form class=modal-content action=footermodal-action.php method=POST>
+  <form class=modal-content action="" method=POST>
   <div class=container>
   <label class=label for=name2><b>Name</b></label>
   <input type=text name=name2 class=form-control id=name2 placeholder=Name required />
@@ -537,7 +537,7 @@ foreach($courselist as $course) {
   <br />
   <div class=modal-footer>
   <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-  <button type=submit class="btn btn-warning">Submit</button>
+  <button type=submit class="btn btn-warning" name="footerformsubmit">Submit</button>
   </div>
   </div>
   </form>
@@ -545,12 +545,6 @@ foreach($courselist as $course) {
   </div>
   </div>
   </div>
-  <!-- <div id="loading" class="container-fluid row">
-		<div class="col-md-12 text-center">
-			<iframe src="https://giphy.com/embed/xFmuT64Jto3mRO4w3G" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/oc-css-hourglass-xFmuT64Jto3mRO4w3G">via GIPHY</a></p>
-		</div> -->
-    
-
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -564,8 +558,7 @@ foreach($courselist as $course) {
         <img src="media/img/Starrating.gif" class="img-fluid" alt="Stars" width=466 height=130>
       </div>
       <div class="modal-footer">
-        <a href="https://g.page/dharwadhubballitutor/review?gm" class="btn btn-warning">Rate Now</a>
-        
+        <a href="https://g.page/dharwadhubballitutor/review?gm" class="btn btn-warning">Rate Now</a>       
       </div>
     </div>
   </div>
@@ -580,47 +573,26 @@ foreach($courselist as $course) {
          </button>
         </div>
         <div class="modal-body">
-           <form class="modal-content" action="demo-action.php" method="POST">
+           <form class="modal-content" action="" method="POST">
               <div class="container">
-                
                  <label class="label" for="name4"><b>Name</b></label>
                 <input type="text" name="name4" class="form-control" id="name4" placeholder="Name" required />
-
                 <label class="label" for="email4"><b>Email</b></label>
                 <input type="email" name="email4" class="form-control" id="email4" placeholder="name@example.com" />
-
                 <label class="label" for="phone4"><b>Enter your number:</b></label>
                 <input type="tel" name="phone4" class="form-control" id="phone4" placeholder="Number" required />
-
                 <label class="label" for="demo"><b>Demo Class For </b></label>
                 <select class="custom-select" id="demo" name="demo">
                   <option value="">SELECT YOUR INTEREST</option>
-                  
-                 
-
 <?php
-
-
 foreach($courselist as $course) {
     echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
 }
  ?>
  </select><br />
-
-
-                <!--  <option value="Web Designing and Development">Web Designing and Development</option>
-                  <option value="Python Programming">Python Programming</option>
-                  <option value="Andorid Development">Andorid Development</option>
-                  <option value="Cloud Computing">Cloud Computing</option>
-                  <option value="Civil Design Softwares">Civil Design Softwares</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Programming Languages">Programming Languages</option>
-                  <option value="Basic Computers">Basic Computers</option>
-                  <option value="School Academics">School Academics</option> 
-                </select> -->
                     <div class="modal-footer">
                       <button type=button class="btn btn-warning" data-dismiss=modal>Close</button>
-                      <button type=submit class="btn btn-warning">Submit</button>
+                      <button type=submit class="btn btn-warning" name="demosubmit">Submit</button>
                     </div>
                  </div>
                 </form>
@@ -628,17 +600,70 @@ foreach($courselist as $course) {
             </div>
           </div>
         </div>
-   
+        <script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity=sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
 
 <script>
 setTimeout(function() {
   $('#myModal').modal();
 }, 30000);
 </script>
-
-   
 <script>
 $(document).ready(function(){$('[data-toggle="tooltip"]').tooltip()});
 </script>
 </body>
 </html>
+<?php
+require "Model/Registration.php";
+require "Utilities/Sanitization.php";
+require "DB Operations/RegistrationOps.php";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    if (isset($_POST['footerformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name2"]));
+        $reg->set_email(Sanitization::test_input($_POST["email2"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
+        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
+        DBregistration::insert($reg);
+        echo "<meta http-equiv='refresh' content='0'>";
+    }elseif (isset($_POST['regformsubmit']))
+    {
+      
+        $reg=new Registration();
+        $reg->set_name(Sanitization::test_input($_POST["name"]));
+        $reg->set_email(Sanitization::test_input($_POST["email"]));
+        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
+        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
+        DBregistration::insert($reg); 
+        echo "<meta http-equiv='refresh' content='0'>";
+    }elseif(isset($_POST['internshipsubmit']))
+    {
+      $reg=new Registration();
+      $reg->set_name(Sanitization::test_input($_POST["name1"]));
+      $reg->set_email(Sanitization::test_input($_POST["email1"]));
+      $reg->set_phone(Sanitization::test_input($_POST["phone1"]));
+      echo $_POST["qualification1"];
+      $reg->set_qualification(Sanitization::test_input($_POST["qualification1"]));
+      $reg->set_internship(Sanitization::test_input($_POST["internship1"]));
+      DBregistration::insert($reg); 
+      echo "<meta http-equiv='refresh' content='0'>";
+    }elseif(isset($_POST['demosubmit']))
+    {
+      $reg=new Registration();
+      $reg->set_name(Sanitization::test_input($_POST["name4"]));
+      $reg->set_email(Sanitization::test_input($_POST["email4"]));
+      $reg->set_phone(Sanitization::test_input($_POST["phone4"]));
+      $reg->set_demo(Sanitization::test_input($_POST["demo"]));
+      DBregistration::insert($reg); 
+      echo "<meta http-equiv='refresh' content='0'>";
+    }
+    else{
+      echo "no results found";
+    }
+  }
+  
