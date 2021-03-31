@@ -504,9 +504,9 @@ button:hover {
 
 #banner-img {
   padding: 10px;
- }
+}
 
-#bannerHeading{
+#bannerHeading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -528,26 +528,26 @@ button:hover {
   text-align: center;
 }
 
-@media only screen  and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   h1 {
     font-size: 5vw !important;
     text-align: center;
     line-height: 30vh;
   }
   #banner-img {
-   display: none;
+    display: none;
   }
-  #banner{
+  #banner {
     height: 30vh;
   }
 }
 
-  @media only screen  and (min-width: 768px) and (max-width: 2560px){
-    h1 {
-      font-size: 3.5vw !important;
-      padding: 30px 0;
-    }
-    #banner-img {
-      min-width: 100%;
-    }
+@media only screen and (min-width: 768px) and (max-width: 2560px) {
+  h1 {
+    font-size: 3.5vw !important;
+    padding: 30px 0;
+  }
+  #banner-img {
+    min-width: 100%;
+  }
 }

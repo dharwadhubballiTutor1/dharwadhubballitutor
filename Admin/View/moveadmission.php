@@ -138,10 +138,9 @@ include "../../Admin/DB Operations/CoursesOps.php";
                                                     $option="";
                                                     $courselist=DBcourse::selectall();
                                                     foreach($courselist as $course) {
-                                                        $option.= "<option 
-                                                         >".$course->get_cname()."</option>";
+                                                        $option.= "<option value='". $course->get_id()."'";
+                                                        $option.=  ">".$course->get_cname()."</option>";
                                                     }
-
                                                     echo $option;
                                                    
                                                     ?>
