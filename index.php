@@ -201,7 +201,7 @@ $courselist=DBcourse::selectall();
 </div>
 <div class=card-body>
 <h4 class=card-title style=color:#2a0a5e>Python Programming</h4><br/>
-<p class=card-text>Whether you are an experienced programmer or not, this course is intended for everyone who wishes to learn the Python programming.</p>
+<p class=card-text>Python Programming course is an intensive programming training, where participant would learn the basic to adavance level of concepts...</p>
 <a href=Python-Programming-Training.php class="btn btn-outline-warning" role=button>View More</a>
 </div>
 </div>
@@ -258,7 +258,7 @@ $courselist=DBcourse::selectall();
 </div>
 <div class=card-body>
 <h4 class=card-title style=color:#2a0a5e>Programming Languages</h4><br/>
-<p class=card-text>Get familiar with the basics of computational reasoning, an important skill in present data-driven world using the Programming Languages...</p>
+<p class=card-text>Programming Languages course is an intensive training on languages like C and C++, where the participant would learn the basics to advanced concepts...</p>
 <a href=Programming-Languages-Training.php class="btn btn-outline-warning" role=button>View More</a>
 </div>
 </div>
