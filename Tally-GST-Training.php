@@ -11,8 +11,8 @@
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="Want to build your website but have no idea where to begin with??then od visit us at DharwadHubballiTutor where we help you fulfill your dream with our excellent training in Website Designing and Development" />
-    <meta name="keywords" content="web designing and development course in dharwad,web design course,web development course,web designing training,web designing coaching,web develpoment coaching in dharwad,web development coaching near me,how to design website,web development training in dharwad,	web designing and development services,Website designing and develpoment training institute,web designing coaching in dharwad,web designing coaching near me,website development,website designing,website designer,website developer,build website,website building," />
+    <meta name="description" content="Tally is an accounting program that works great when it comes to doing analyses in small and mid-sized companies.It allows you to perform banking, auditing, and accounting tasks." />
+    <meta name="keywords" content="Tally,tally,GST,gst,Tally course,GST course,Tally and GST course,tally course near me,gst course near me,tally and gst course near me,tally training in dharwad,gst training in dharwad,dhardawhubballitutor training" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
@@ -124,13 +124,13 @@
     <div id ="banner" class="col-md-10">
     <div class="row align-items-center" style="width=100%;">
       <div class="col-md-2">
-      <img src="media\img\tally.png" alt="Tally logo" class="img-fluid" id="banner-img">
+      <img src="media\img\tally.jpg" alt="Tally Logo" class="img-fluid" id="banner-img">
       </div>
       <div class="col-md-8" id="bannerHeading">
-      <h1 id="bannerTitle display-1 text-center">Tally & GST Training</h1>
+      <h1 id="bannerTitle display-1 text-center">Tally and GST Training</h1>
       </div>
       <div class="col-md-2">
-      <img src="media\img\Gst.png" alt="GST logo" class="img-fluid" id="banner-img">
+      <img src="media\img\tax.jpg" alt="Tax" class="img-fluid" id="banner-img">
       </div>
     </div>
     </div>
@@ -396,7 +396,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <p class="p2">
+          <p>
             &copy; Copyright
             <script>
               document.write(new Date().getUTCFullYear())

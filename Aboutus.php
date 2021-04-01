@@ -48,11 +48,11 @@ $courselist=DBcourse::selectall();
 <div class=col-md-6>
 <a class="navbar-brand brandName" href=#>DharwadHubballiTutor</a>
 <br/>
-<a class="social-icon fbicon" target=_blank rel="noopener" href=https://www.facebook.com/DharwadhubballiTutor><i class="fab fa-facebook fa-lg fbicon fbheader"></i></a>
-<a class="social-icon twittericon" target=_blank rel="noopener" href=https://twitter.com/DharwadTutor><i class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
-<a class="social-icon instaicon" target=_blank rel="noopener" href=https://www.instagram.com/dharwadhubballitutor><i class="fab fa-instagram fa-lg instaicon instaheader"></i></a>
-<a class="social-icon instaicon" target=_blank rel="noopener" href=http://www.linkedin.com/in/dharwadhubballitutor><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader"></i></a>
-<a class="social-icon whatsappicon" target=_blank rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
+<a class="social-icon fbicon" target=_blank rel="noopener" href=https://www.facebook.com/DharwadhubballiTutor><i class="fab fa-facebook fa-lg fbicon fbheader fa-2x"></i></a>
+<a class="social-icon twittericon" target=_blank rel="noopener" href=https://twitter.com/DharwadTutor><i class="fab fa-twitter fa-lg twittericon twitterheader fa-2x"></i></a>
+<a class="social-icon instaicon" target=_blank rel="noopener" href=https://www.instagram.com/dharwadhubballitutor><i class="fab fa-instagram fa-lg instaicon instaheader fa-2x"></i></a>
+<a class="social-icon instaicon" target=_blank rel="noopener" href=http://www.linkedin.com/in/dharwadhubballitutor><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader fa-2x"></i></a>
+<a class="social-icon whatsappicon" target=_blank rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader fa-2x"></i></a>
 </div><br/>
 <div class=col-md-6>
 <div class=semicircle>
@@ -113,25 +113,12 @@ $courselist=DBcourse::selectall();
 </div>
 </nav>
 <br />
-<div  class="container-fluid" >
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div id ="banner" class="col-md-10">
-    <div class="row align-items-center" style="width=100%;">
-      <div class="col-md-2">
-      <img src="media\img\tutor-1.png" alt="Tutorlogo" class="img-fluid" id="banner-img">
-      </div>
-      <div class="col-md-8" id="bannerHeading">
-      <h1 id="bannerTitle display-1 text-center">DharwadHubballiTutor</h1>
-      </div>
-      <div class="col-md-2">
-      <img src="media\img\tutor-2.png" alt="Tutorlogo" class="img-fluid" id="banner-img">
-      </div>
-    </div>
-    </div>
-    <div class="col-md-1"></div>
-  </div>
-    
+<div style=text-align:center>
+<picture>
+<source srcset=media/img/aboutmobile.png media="(max-width: 768px)" width="768" height="400" />
+<img src=media/img/about.png alt="DharwadHubballiTutor title image" class=img-fluid  />
+</picture>
+</div>
 </div>
  <br/>
 <div class=container>

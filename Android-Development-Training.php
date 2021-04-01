@@ -116,34 +116,13 @@ $courselist=DBcourse::selectall();
         </ul>
       </div>
     </nav>
-    <!-- <br />
+    <br />
     <div style="text-align: center">
       <picture>
         <source srcset="media/img/androidmobile.jpg" media="(max-width: 768px)" />
         <img src="media/img/AndroidWELCOME.jpg" alt="" class="img-fluid" />
       </picture>
-    </div> -->
-<div  class="container-fluid" >
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div id ="banner" class="col-md-10">
-    <div class="row align-items-center" style="width=100%;">
-      <div class="col-md-2">
-      <img src="media\img\tutor-1.png" alt="Tutorlogo" class="img-fluid" id="banner-img">
-      </div>
-      <div class="col-md-2">
-      <img src="media\img\tutor-1.png" alt="Tutorlogo" class="img-fluid" id="banner-img">
-      </div>
-      <div class="col-md-6" id="bannerHeading">
-      <h1 id="bannerTitle display-1 text-center">android DEVELOPMENT</h1>
-      </div>
-      <div class="col-md-2">
-      <img src="media\img\tutor-2.png" alt="Tutorlogo" class="img-fluid" id="banner-img">
-      </div>
     </div>
-    </div>
-    <div class="col-md-1"></div>
-  </div>
     <br />
     <div class="container">
       <div class="row row-eq-height">

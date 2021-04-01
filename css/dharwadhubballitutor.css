@@ -501,7 +501,11 @@ button:hover {
 #banner {
   background-color: #f8c000;
 }
-
+#gstHeading>span{
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 6.5vw;
+  font-weight: 700;
+}
 #banner-img {
   padding: 10px;
 }
@@ -532,7 +536,7 @@ button:hover {
   h1 {
     font-size: 5vw !important;
     text-align: center;
-    line-height: 30vh;
+    line-height: 30vh !important;
   }
   #banner-img {
     display: none;
