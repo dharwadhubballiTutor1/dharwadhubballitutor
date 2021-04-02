@@ -13,9 +13,7 @@ $courselist=DBcourse::selectall();
     <meta charset="utf-8" />
     <meta name="description" content="We have several civil software courses to help you on your career path or the other path related to Civil Engnieering.Learn concepts from industry experts." />
     <meta name="keywords" content="Civil design softwares,civil design softwares traning,civil design softwares training in dharwad,civil design softwares training near me,civil design softwares coaching,civil design softwares coaching in dharwad,civil design,civil softwares,civil softwares coaching in dharwad,civil softwares training,civil design training in dharwad,civil engineering softwares coaching,civil engineering softwares coaching in dharwad,civil engineering softwares training,civil engineering softwares training in dharwad,civil engineering softwares,civil designs,civil engineering designs,revit structure,3ds max,autocad,sketchup,autodesk 3ds max,v ray,v-ray training in dharwad,revit training in dharwad,revit coaching in dharwad,sketchup coaching in dharwad,autocad coaching in dharwad,v ray coaching in dharwad " />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel="stylesheet" />
@@ -374,7 +372,9 @@ foreach($courselist as $course) {
         </div>
       </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
       setTimeout(function () {
         $("#myModal").modal()

@@ -132,7 +132,7 @@
                         </div>
                         <hr>
                         <div class="sidebar-menu">
-
+                        <a href="../dashboard.php"> <i class="fas fa-tachometer-alt"></i><span> Dashboard</span></a>
                             <a href="../View/enquiries.php"> <i class="fas fa-search-plus"></i> <span> Enquiries</span></a>
                             <a href="../View/admissions.php"> <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>
                                     Admissions </span></a>

@@ -15,8 +15,7 @@ $courselist=DBcourse::selectall();
 <meta name="keywords" content="Training institute near me,coaching center in dharwad,computer training center,computer trainning basics,	web designing and development course,web design course,web development course,web designing training,web designing coaching,web develpoment coaching in dharwad,web development coaching near me,how to design website,web development training,	web designing and development services,	python programming coursepython programming course in dharwad,Software development training institute,Computer basics training institute,Website designing and develpoment training institute,Best training institute in Dharwad,HTML,CSS,Java,Python,Digital Marketing training insitute,Revit,Autocad,Cloud Computing training institute,Android,Graphic designing,C C++ training courses,	digital marketing courses in dharwad,	android development course in dharwad,	android development advanced course,	cloud computing courses in dharwad,	cloud computing courses near me,	civil design software training near me,java training near me,java training institutes in hubli-dharwad" />
 <meta name=viewport content="width=device-width,initial-scale=1.0" />
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous />
-<script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity=sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj crossorigin=anonymous></script>
-<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
+
 <link rel=preconnect href=https://fonts.gstatic.com />
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel=stylesheet />
 <link rel=stylesheet href=css/dharwadhubballitutor.css />
@@ -357,12 +356,19 @@ foreach($courselist as $course) {
     </div>
     </form>
     </div>
-  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
       setTimeout(function() {
         $('#myModal').modal();
       }, 30000);
       </script>
+        <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
   </body>
   </html>
 

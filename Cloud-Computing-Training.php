@@ -13,9 +13,7 @@ $courselist=DBcourse::selectall();
     <meta charset="utf-8" />
     <meta name="description" content="DharwadHubballiTutor offers best Cloud Computing Training in Hubballi-Dharwad with most experienced Professionals.We are aware of industry needs and we are offering training in more practical way.For both beginner and intermediate levels, we framed our syllabus to meet the real-world criteria." />
     <meta name="keywords" content="Cloud computing training,cloud computing coaching,cloud computing coaching center near me,cloud computing training near me,cloud computing coaching in dharwad,cloud computing training in dharwad,cloud computing classes in dharwad,cloud computing,private cloud,public cloud,cloud computing meaning,cloud computing basics,cloud computing tutorials,cloud computing services,cloud computing advantages,cloud computing aws,AWS,Azure,cloud computing insititute,cloud computing institute in dharwad,cloud computing institute near me,cloud computing for beginners,top cloud computing institutes,top cloud computing coaching centers,cloud computing definition,what is cloud computing,cloud computing career path," />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel="stylesheet" />
@@ -428,7 +426,9 @@ foreach($courselist as $course) {
         </div>
       </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
       setTimeout(function () {
         $("#myModal").modal()
