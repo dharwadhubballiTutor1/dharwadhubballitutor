@@ -7,15 +7,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Best Python Programming Training in Dharwad.</title>
+    <title>Best Training Institute for SQL in Dharwad.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="Python is powrful general-purpose object-oriented programming language.Thanks to its versatility, it continues to be the instrument of choice for data processing and visualization firms.With DharwadHubballiTutor's Python programming language training we enable you to speak the language of data. " />
-    <meta name="keywords" content="Python Programming,python,python programming training,python programming training in dharwad,python language,python coaching in dharwad,python coaching,python language,python language training, python language coaching in dharwad,python tutorial in dharwad,python tutorial,python basics,python programming for beginners,python for beginners in dharwad, " />
+    <meta name="description" content="SQL is the standard programming language used to design, build and maintain relational databases. Relational structures are made up of a series of tables containing rows and columns of data." />
+    <meta name="keywords" content="SQL,SQL Training,sql,Data Base,SQL course,,SQL Database training near me,sql training in dharwad,database training in dharwad,dhardawhubballitutor training" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap" rel="stylesheet" />
@@ -46,7 +47,6 @@
     <div class="brand-class container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <!-- <img src="media/img/logo.png" class="logoimg" alt="DharwadHubballiTutor logo" /> -->
           <a class="navbar-brand brandName" href="#">DharwadHubballiTutor</a>
           <br />
 
@@ -70,9 +70,10 @@
         </div>
       </div>
     </div>
+
     <br />
-    <nav class="navbar navbar-expand-sm bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -90,7 +91,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
             <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-            <a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
+<a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
 <a class=dropdown-item href=Python-Programming-Training.php>Python Programming </a>
 <a class=dropdown-item href=Cloud-Computing-Training.php>Cloud Computing</a>
 <a class=dropdown-item href=Android-Development-Training.php>Android Development</a>
@@ -100,7 +101,7 @@
 <a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
-<a class=dropdown-item href=MS-SQL-Training.php>SQL Training</a>
+<a class=dropdown-item href=MS-SQL-Training.php>School Academics</a>
 </div>
           </li>
           <li class="nav-item">
@@ -118,86 +119,149 @@
       </div>
     </nav>
     <br />
-    <div style="text-align: center">
-      <picture>
-        <source srcset="media/img/pythonmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/PythonWELCOME.jpg" alt="Python Programming" class="img-fluid" />
-      </picture>
-    </div>
-    <br />
-    <div class="container">
-      <div class="row row-eq-height">
-        <div class="w-100 text-light">
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="h4">WHAT IS PYTHON PROGRAMMING??</h4>
-              <br />
-              <p style="font-size: 18px">Python is an interpreted,high-level and general purpose programming language.It is being used for:</p>
-              <ul>
-                <li><span>Development of Website (server-side).</span></li>
-                <li><span>Software Development.</span></li>
-                <li><span>In mathematics.</span></li>
-                <li><span>System Scripting.</span></li>
-              </ul>
-              <br />
-            </div>
-            <div class="col-md-6">
-              <h4 class="h4">WHY LEARN PYTHON PROGRAMMING?</h4>
-              <br />
-              <ul>
-                <li><span>Python’s popularity & high salary</span></li>
-                <li><span>Python is simple & easy to learn</span></li>
-                <li><span>Python is portable & extensible</span></li>
-                <li><span>Python is used in Data Science</span></li>
-                <li><span>Python is used in scripting & automation</span></li>
-                <li><span>Python used with Big Data</span></li>
-                <li><span>Python supports Testing</span></li>
-                <li><span>Computer Graphics in Python</span></li>
-                <li><span>Python used in Artificial Intelligence</span></li>
-                <li><span>Python in Web Development</span></li>
-              </ul>
-              <br />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <h4 class="h4">CAREER AND JOBS</h4>
-              <br />
-              <p style="font-size: 18px">In contrast to other programming languages such as R, Scala, Java, Python certifications will easily help one land job.Here's a list of opportunities for python careers that a python programmer may choose for.</p>
-              <ul>
-                <li><span>Python Developer</span></li>
-                <li><span>Data Scientist/Sr.Data Scientist</span></li>
-                <li><span>DevOps Engineeer</span></li>
-                <li><span>Data Analyst</span></li>
-                <li><span>Software Engineer</span></li>
-                <li><span>Machine Learning Engineer </span></li>
-                <li><span>Quality Assurance Engineer</span></li>
-                <li><span>GIS Analyst</span></li>
-              </ul>
-              <br />
-            </div>
-            <div class="col-md-6">
-              <h4 class="h4">COURSE SYLLABUS</h4>
-              <br />
-              <ul>
-                <li><span>Introduction to Python</span></li>
-                <li><span>Environment Setup</span></li>
-                <li><span>Control Statements</span></li>
-                <li><span>List,Ranges & Tuples in Python</span></li>
-                <li><span>Python Dictionaries & Sets</span></li>
-                <li><span>Input/Output in Python</span></li>
-                <li><span>Python Built-in Functions</span></li>
-                <li><span>Python Object-Oriented</span></li>
-                <li><span>Exceptions</span></li>
-                <li><span>Python Regular Expressions</span></li>
-                <li><span>Python Multithreaded Programming</span></li>
-                <li><span>Using Database in Python</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <div  class="container-fluid" >
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div id ="banner" class="col-md-10">
+    <div class="row align-items-center" style="width=100%;">
+      <div class="col-md-2">
+      <img src="media\img\sql.jpg" alt="Tally Logo" class="img-fluid" id="banner-img">
+      </div>
+      <div class="col-md-8" id="bannerHeading">
+      <h1 id="bannerTitle display-1 text-center">SQL Training</h1>
+      </div>
+      <div class="col-md-2">
+      <img src="media\img\sqlimg.jpg" alt="Tax" class="img-fluid" id="banner-img">
       </div>
     </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+    <br />
+    <div class="container">
+      <div class="w-100 text-light">
+        <h3 class="h3">What is SQL Course?</h3>
+        <br />
+        <p class="p2">SQL is the standard programming language used to design, build and maintain relational databases. Relational structures are made up of a series of tables containing rows and columns of data. Each row in a table contains a data value for the intersecting column, and each column represents a type of data, such as a customer name or address.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">SQL has the following features:</h3>
+        <br />
+        <ul>
+            <li><span>Changing the table and index structures in a database</span></li>
+            <li><span>Table development and other database projects</span></li>
+            <li><span>Retrieving data from a database for transaction processing and analytics by adding, modifying, and removing rows of data</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="w-100 text-light">
+        <h3 class="h3">SQL Course Details – Eligibility, Fee, Duration, Syllabus, Colleges, Salary</h3>
+        <br />
+        <p class="p2">Want to become a data analyst, data developer, or data scientist? We will suggest a course that makes your career bright in the IT industry. SQL is a powerful method for searching through vast volumes of data and retrieving relevant data for analysis. We tried explaining complete information that can be useful for you related to SQL Course. Find details such as SQL Course Duration, Eligibility & Requirements, Salary, etc. Have an idea of what is SQL all about and why it is important by referring further.</p>
+      </div>
+    </div>
+    <div class="container">
+    <table class="table table-bordered " id="tallyTable">
+    <caption id="tallyCaption"><h3 class="h3" >SQL Course Details</h3></caption>
+  <thead id="tallyTableHeader">
+    <tr>
+      <th scope="col">Course</th>
+      <th scope="col">SQL</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr>
+      <td>Full form</td>
+      <td>Structured Query Language</td>
+    </tr>
+    <tr>
+      <td>Eligibility</td>
+      <td>Graduation</td>
+    </tr>
+    <tr>
+      <td>Course Type</td>
+      <td>Regular mode</td>
+    </tr>
+    <tr>
+      <td>Starting salary offered</td>
+      <td>Rs. 9,000 to 12,000 per month</td>
+    </tr>
+    <tr>
+      <td>Jobs that demand SQL</td>
+      <td>Data Analyst, Database Developer, Data Scientist, SQL Server Developer, .Net Developer,  Big Data engineer </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Eligibility Criteria for SQL</h3>
+        <br />
+        <ul>
+            <li><span>Candidate must be Graduated</span></li>
+            <li><span>Students with basic or no knowledge of programming language can also learn SQL</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">SQL Course Fees and Duration</h3>
+        <br />
+        <ul>
+            <li><span>SQL Course Fee is low for the basic course it is 4,000 around and for the advance course, it is 8,000. Thus, students who wish to join the sql Computer Course can join easily.</span></li>
+            <li><span>SQL Course can be learned within 1 to 2 months. In the first month, you will have a basic understanding and in the second month, you will learn advanced concept.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Concepts or Modules in SQL</h3>
+        <br />
+        <ul>
+        <li><span> SQL Server  Installation</span></li>
+        <li><span> BASIC DDL, DML – ARCHITECTURE</span></li>
+        <li><span> SQL SERVER DATABASE DESIGN</span></li>
+        <li><span>TABLE DESIGN & SIMPLE QUERIES</span></li>
+        <li><span>CONSTRAINTS and KEYS</span></li>
+        <li><span>JOINS & TUNING OPTIONS</span></li>
+        <li><span> VIEWS and SUB QUERIES</span></li>
+        <li><span>FUNCTIONS & SUB QUERIES</span></li>
+        <li><span> STORED PROCEDURES – BASICS</span></li>
+        <li><span>STORED PROCs @ CURSORS, CTE</span></li>
+        <li><span>TRIGGERS & TRANSACTIONS</span></li>
+        <li><span>TRIGGERS & TRANSACTIONS</span></li>
+        <li><span> INDEXES & QUERY TUNING</span></li>
+        <li><span>BACKUPS – DB, FILEGROUP, FILE</span></li>
+        <li><span>RESTORES & DATABASE RECOVERY</span></li>
+        <li><span> JOBS, SQL SERVER AGENT, DB MAIL</span></li>
+        </ul>
+      </div>
+    </div>
+
+ <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Job Opportunities and Career Prospects</h3>
+        <br />
+        <ul>
+            <li><span>Business Analyst</span></li>
+            <li><span>Senior Software Engineer</span></li>
+            <li><span>Senior SQL Server Database Administrator</span></li>
+            <li><span>Quality Assurance Tester</span></li>
+            <li><span>.Net Developer</span></li>
+            <li><span>Systems Administrator</span></li>
+            <li><span>Software Engineer</span></li>
+            <li><span>SQL Server Developer</span></li>
+            <li><span>Quality Assurance Analyst</span></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -208,7 +272,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="" method="POST">
+            <form class="modal-content" action="action-page.php" method="POST">
               <div class="container">
                 <label class="label" for="name"><b>Name</b></label>
                 <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
@@ -230,7 +294,7 @@
                 </select>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning" name="regformsubmit">Submit</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -277,7 +341,7 @@
 </li>
               </ul>
             </div>
-            <div class="col-md-6" style="text-align: left">
+            <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
                   <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
@@ -301,9 +365,8 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-3">
-          <h6>Follow us</h6>
+          <h6><u>Follow us</u></h6>
           <a class="social-icon fbicon" target="_blank" rel="noopener" href="https://www.facebook.com/DharwadhubballiTutor"><i class="fab fa-facebook fa-2x fbicon"></i></a>
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-2x twittericon"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-2x instaicon"></i></a>
@@ -342,7 +405,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="" method="POST">
+            <form class="modal-content" action="footermodal-action.php" method="POST">
               <div class="container">
                 <label class="label" for="name2"><b>Name</b></label>
                 <input type="text" name="name2" class="form-control" id="name2" placeholder="Name" required />
@@ -375,7 +438,7 @@
                 <br />
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning" name="footerformsubmit">Submit</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -407,6 +470,7 @@
         $("#myModal").modal()
       }, 30000)
     </script>
+
     <script>
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()
@@ -414,39 +478,3 @@
     </script>
   </body>
 </html>
-
-<?php
-require "Model/Registration.php";
-require "Utilities/Sanitization.php";
-require "DB Operations/RegistrationOps.php";
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-    if (isset($_POST['footerformsubmit']))
-    {
-      
-        $reg=new Registration();
-        $reg->set_name(Sanitization::test_input($_POST["name2"]));
-        $reg->set_email(Sanitization::test_input($_POST["email2"]));
-        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
-        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
-        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
-        DBregistration::insert($reg);
-        echo "<meta http-equiv='refresh' content='0'>";
-    }elseif (isset($_POST['regformsubmit']))
-    {
-      
-        $reg=new Registration();
-        $reg->set_name(Sanitization::test_input($_POST["name"]));
-        $reg->set_email(Sanitization::test_input($_POST["email"]));
-        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
-        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
-        DBregistration::insert($reg); 
-        echo "<meta http-equiv='refresh' content='0'>";
-    }else{
-      echo "No results found";
-    }
-    
-  }
-  
-?>

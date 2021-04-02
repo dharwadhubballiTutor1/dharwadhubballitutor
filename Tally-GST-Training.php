@@ -91,7 +91,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trainings </a>
             <div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
-<a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
+            <a class=dropdown-item href=Web-Designing-and-Development-Training.php>Web Designing and Development</a>
 <a class=dropdown-item href=Python-Programming-Training.php>Python Programming </a>
 <a class=dropdown-item href=Cloud-Computing-Training.php>Cloud Computing</a>
 <a class=dropdown-item href=Android-Development-Training.php>Android Development</a>
@@ -101,6 +101,7 @@
 <a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
+<a class=dropdown-item href=MS-SQL-Training.php>SQL Training</a>
 </div>
           </li>
           <li class="nav-item">
@@ -148,7 +149,7 @@
       <div class="w-100 text-light">
         <h3 class="h3">Tally & GST Course Details – Eligibility, Fee, Duration, Syllabus, Colleges, Salary</h3>
         <br />
-        <p class="p2">Looking for a job in accounting taxation or payroll? We will suggest a course that makes your career bright in accounting. Tally & GST is one such course in Accounting which can help you climb your career ladder at a faster pace. We tried explaining complete information that can be useful for you related to Tally Course. Find details such as Tally Course Duration, Eligibility & Requirements, Colleges that offer Tally Course, Salary, etc. Have an idea what is Tally all about and why it is important by referring further.</p>
+        <p class="p2">Looking for a job in accounting taxation or payroll? We will suggest a course that makes your career bright in accounting. Tally & GST is one such course in Accounting which can help you climb your career ladder at a faster pace. We tried explaining complete information that can be useful for you related to Tally Course. Find details such as Tally Course Duration, Eligibility & Requirements, Salary, etc. Have an idea what is Tally all about and why it is important by referring further.</p>
       </div>
     </div>
     <div class="container">
@@ -196,7 +197,7 @@
         <ul>
             <li><span>Candidate must complete 10+2 equivalent with required aggregate from a recognized college.</span></li>
             <li><span>Should have basic knowledge of Business Management.</span></li>
-            <li><span>Students who want to undergo Tally Accounting Course after graduation should hail from commerce background.</span></li>
+            <li><span>Students who want to undergo Tally Accounting Course after graduation should be from commerce background.</span></li>
         </ul>
       </div>
     </div>
@@ -350,6 +351,9 @@
                 <li>
                   <a class="footer-a" href="Python-Programming-Training.php">Python Programming</a>
                 </li>
+                <li>
+<a class=footer-a href=MS-SQL-Training.php>SQL Training</a>
+</li>
               </ul>
             </div>
             <div class="col-md-6">
