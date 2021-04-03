@@ -1,5 +1,5 @@
 <?php  
-// require "session.php";
+require "../session.php";
 require_once "../DB Operations/enqueryOps.php";
 require_once "../../Admin/DB Operations/AdmissionsOps.php";
 include "../../Admin/DB Operations/CoursesOps.php";

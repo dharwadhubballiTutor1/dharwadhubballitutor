@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <?php
+    require "../session.php";
         require "../../Admin/navbar.php";
         include "../../DB Operations/dbconnection.php";
         $db=ConnectDb::getInstance();
