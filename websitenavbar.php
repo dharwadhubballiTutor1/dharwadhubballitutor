@@ -32,8 +32,10 @@
 <a class=dropdown-item href=Civil-Design-Softwares-Training.php>Civil Design Softwares</a>
 <a class=dropdown-item href=Programming-Languages-Training.php>Programming Languages</a>
 <a class=dropdown-item href=Digital-Marketing-Training.php>Digital Marketing</a>
+<a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
+<a class=dropdown-item href=MS-SQL-Training.php>SQL Training</a>
 </div>
 </li>
 <li class=nav-item>

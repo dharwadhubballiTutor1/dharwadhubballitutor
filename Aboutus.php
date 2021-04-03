@@ -48,11 +48,11 @@ $courselist=DBcourse::selectall();
 <div class=col-md-6>
 <a class="navbar-brand brandName" href=#>DharwadHubballiTutor</a>
 <br/>
-<a class="social-icon fbicon" target=_blank rel="noopener" href=https://www.facebook.com/DharwadhubballiTutor><i class="fab fa-facebook fa-lg fbicon fbheader fa-2x"></i></a>
-<a class="social-icon twittericon" target=_blank rel="noopener" href=https://twitter.com/DharwadTutor><i class="fab fa-twitter fa-lg twittericon twitterheader fa-2x"></i></a>
-<a class="social-icon instaicon" target=_blank rel="noopener" href=https://www.instagram.com/dharwadhubballitutor><i class="fab fa-instagram fa-lg instaicon instaheader fa-2x"></i></a>
-<a class="social-icon instaicon" target=_blank rel="noopener" href=http://www.linkedin.com/in/dharwadhubballitutor><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader fa-2x"></i></a>
-<a class="social-icon whatsappicon" target=_blank rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader fa-2x"></i></a>
+<a class="social-icon fbicon" target=_blank rel="noopener" href=https://www.facebook.com/DharwadhubballiTutor><i class="fab fa-facebook fa-lg fbicon fbheader"></i></a>
+<a class="social-icon twittericon" target=_blank rel="noopener" href=https://twitter.com/DharwadTutor><i class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
+<a class="social-icon instaicon" target=_blank rel="noopener" href=https://www.instagram.com/dharwadhubballitutor><i class="fab fa-instagram fa-lg instaicon instaheader"></i></a>
+<a class="social-icon instaicon" target=_blank rel="noopener" href=http://www.linkedin.com/in/dharwadhubballitutor><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader"></i></a>
+<a class="social-icon whatsappicon" target=_blank rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hithere!Ihaveaquestion"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
 </div><br/>
 <div class=col-md-6>
 <div class=semicircle>
@@ -96,6 +96,7 @@ $courselist=DBcourse::selectall();
 <a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
+<a class=dropdown-item href=MS-SQL-Training.php>SQL Training</a>
 </div>
 </li>
 <li class=nav-item>
@@ -197,6 +198,9 @@ $courselist=DBcourse::selectall();
 </li>
 <li>
 <a class=footer-a href=Python-Programming-Training.php>Python Programming</a>
+</li>
+<li>
+<a class=footer-a href=MS-SQL-Training.php>SQL Training</a>
 </li>
 </ul>
 </div>

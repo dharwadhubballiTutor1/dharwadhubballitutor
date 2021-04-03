@@ -103,6 +103,7 @@ $courselist=DBcourse::selectall();
 <a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
+<a class=dropdown-item href=MS-SQL-Training.php>SQL Training</a>
 </div>
 </li>
 <li class=nav-item>
@@ -441,6 +442,9 @@ foreach($courselist as $course) {
 <li>
   <a class=footer-a href=Basics-of-Computer-Training.php>Basics of Computer</a>
   </li>
+  <li>
+<a class=footer-a href=MS-SQL-Training.php>SQL Training</a>
+</li>
 </ul>
 </div>
 <div class=col-md-6 style=text-align:left>
