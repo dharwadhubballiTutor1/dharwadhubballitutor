@@ -16,13 +16,13 @@
         $result=mysqli_query($db->getConnection(),"SELECT count(*) as total from admissions");
         $totalstudents=mysqli_fetch_assoc($result);
 
-        $query=mysqli_query($db->getConnection(),"SELECT Sum(PaidFees) as total FROM feescollectionlastM");
-        $paidfees=mysqli_fetch_assoc( $query);
+        $query=mysqli_query($db->getConnection(),"SELECT Sum(PaidFees) as total FROM feescollectionlastm");
+        $paidfees=mysqli_fetch_assoc($query);
 
-        $query=mysqli_query($db->getConnection(),"SELECT Sum(TotalFees) as total FROM feescollectionlastM");
+        $query=mysqli_query($db->getConnection(),"SELECT Sum(TotalFees) as total FROM feescollectionlastm");
         $totalfees=mysqli_fetch_assoc( $query);
 
-        $sql = 'SELECT * FROM feescollectionlastM';
+        $sql = 'SELECT * FROM feescollectionlastm';
       $result = mysqli_query($db->getConnection(), $sql);
 
       $feescalculate= $paidfees['total'] / $totalfees['total'] * 100;
@@ -173,6 +173,7 @@
             // Set chart options
             var options = {
                 'title': 'Enqueries Based on Courses',
+                'pieHole': 0.4,
                 'width': 500,
                 'height': 300
             };
@@ -195,7 +196,7 @@
 
             var options = {
                 'title': 'Enqueries and Admission',
-                'width': 550,
+                'width': 500,
                 'height': 300
             };
             var chart = new google.visualization.ColumnChart(document.getElementById('admissions_div'));
@@ -261,7 +262,7 @@
                                                     <span class="progress-bar outerring"></span>
                                                 </span>
                                                 <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                                    <div class="font-weight-bold" style=font-size:45px;color:white><?php echo intval($feescalculate)."%" ?></div>
+                                                    <div class="font-weight-bold" style=font-size:35px;color:white><?php echo intval($feescalculate)."%" ?></div>
                                                 </div>
 						                    </div></br/>
                                         
@@ -272,16 +273,8 @@
                  
                         </div>
                             <br/> <br/>
-                        <table class="table">
-                            <!-- <tr class="row">
-                                    <td>
-                                         <div id="piechart_div" style="border: 1px solid #ccc"></div>
-                                     </td>
-                                     <td>
-                                          <div id="barchart_div" style="border: 1px solid #ccc"></div>
-                                     </td>
-                            </tr> -->
-                            <tr >
+                        <table class="table cont">
+                             <tr >
                                  <td>
                                      <div id="enquiries_div" style="border: 1px solid #ccc"></div>
                                 </td>
