@@ -263,7 +263,7 @@ include "../../Admin/Utilities/Helper.php";
                            
                         });
 
-                     if(parseInt($("#pendingfees").val()) == 0){
+                     if(parseInt($("#pfees").val()) == parseInt($("#tfees").val()) ){
                         $("#myForm :input").prop("disabled", true);
                         $("#option2").prop("disabled", true);
                      }
