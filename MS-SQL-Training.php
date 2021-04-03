@@ -1,18 +1,21 @@
-<?php 
-require_once "DB Operations/dbconnection.php";
-require_once "Admin/Model/Coursesmodel.php";
-require_once "Admin/DB Operations/CoursesOps.php";
-$courselist=DBcourse::selectall();
+<?php
+ require_once "DB Operations/dbconnection.php";
+  require_once "Admin/DB Operations/CoursesOps.php";
+  require_once "Admin/Model/Coursesmodel.php";
+  $courselist=DBcourse::selectall();
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Best Civil Design Softwares Training in Dharwad.</title>
+    <title>Best Training Institute for SQL in Dharwad.</title>
     <link rel="icon" href="media/img/favicon.png" type="image/png" sizes="96x96" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta name="description" content="We have several civil software courses to help you on your career path or the other path related to Civil Engnieering.Learn concepts from industry experts." />
-    <meta name="keywords" content="Civil design softwares,civil design softwares traning,civil design softwares training in dharwad,civil design softwares training near me,civil design softwares coaching,civil design softwares coaching in dharwad,civil design,civil softwares,civil softwares coaching in dharwad,civil softwares training,civil design training in dharwad,civil engineering softwares coaching,civil engineering softwares coaching in dharwad,civil engineering softwares training,civil engineering softwares training in dharwad,civil engineering softwares,civil designs,civil engineering designs,revit structure,3ds max,autocad,sketchup,autodesk 3ds max,v ray,v-ray training in dharwad,revit training in dharwad,revit coaching in dharwad,sketchup coaching in dharwad,autocad coaching in dharwad,v ray coaching in dharwad " />
+    <meta name="description" content="SQL is the standard programming language used to design, build and maintain relational databases. Relational structures are made up of a series of tables containing rows and columns of data." />
+    <meta name="keywords" content="SQL,SQL Training,sql,Data Base,SQL course,,SQL Database training near me,sql training in dharwad,database training in dharwad,dhardawhubballitutor training" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -44,7 +47,6 @@ $courselist=DBcourse::selectall();
     <div class="brand-class container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <!-- <img src="media/img/logo.png" class="logoimg" alt="DharwadHubballiTutor logo" /> -->
           <a class="navbar-brand brandName" href="#">DharwadHubballiTutor</a>
           <br />
 
@@ -68,9 +70,10 @@ $courselist=DBcourse::selectall();
         </div>
       </div>
     </div>
+
     <br />
-    <nav class="navbar navbar-expand-sm bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -98,6 +101,7 @@ $courselist=DBcourse::selectall();
 <a class=dropdown-item href=Tally-GST-Training.php>Tally & GST Training</a>
 <a class=dropdown-item href=Basics-of-Computer-Training.php>Basics of Computer</a>
 <a class=dropdown-item href=School-Academics-Training.php>School Academics</a>
+<a class=dropdown-item href=MS-SQL-Training.php>School Academics</a>
 </div>
           </li>
           <li class="nav-item">
@@ -115,53 +119,149 @@ $courselist=DBcourse::selectall();
       </div>
     </nav>
     <br />
-    <div style="text-align: center">
-      <picture>
-        <source srcset="media/img/civilmobile.jpg" media="(max-width: 768px)" />
-        <img src="media/img/CivilWELCOME.jpg" alt="Cloud Computing" class="img-fluid" />
-      </picture>
+    <div  class="container-fluid" >
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div id ="banner" class="col-md-10">
+    <div class="row align-items-center" style="width=100%;">
+      <div class="col-md-2">
+      <img src="media\img\sql.jpg" alt="Tally Logo" class="img-fluid" id="banner-img">
+      </div>
+      <div class="col-md-8" id="bannerHeading">
+      <h1 id="bannerTitle display-1 text-center">SQL Training</h1>
+      </div>
+      <div class="col-md-2">
+      <img src="media\img\sqlimg.jpg" alt="Tax" class="img-fluid" id="banner-img">
+      </div>
     </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
     <br />
     <div class="container">
-      <div class="row row-eq-height">
-        <div class="w-100 text-light">
-          <h3 class="h3">WHAT ARE CIVIL DESIGN SOFTWARES?</h3>
-          <br />
-          <p class="p2">Software for civil engineering provides a variety of resources to support civil engineers in both the design and construction phases. In every step of the project, including drafting & recording, planning, visualizing & evaluating, this program can help.</p>
-          <br />
-          <h3 class="h3">THE LIST OF IMPORTANT CIVIL DESIGN SOFTWARES:</h3>
-          <br />
-          <h5 class="h5">AUTOCAD</h5>
-          <p class="p2">AutoCAD is a software framework for industrial computer-aided design and drafting. AutoCAD, produced and sold by Autodesk, was first released as a desktop app running on microcomputers with internal graphics controllers in December 1982.</p>
-          <br />
-
-          <h5 class="h5">SKETCH UP</h5>
-          <p class="p2">SketchUp is a 3D modeling computer software for a wide variety of drawing applications, including architectural, interior design, landscape architecture, civil and mechanical engineering, film and video game design.</p>
-          <br />
-
-          <h5 class="h5">MS EXCEL</h5>
-          <p class="p2">Almost all of the business functions of Civil Engineering use MS Excel, whether it be execution, survey, preparation, contracts, budgeting, design, quality control, quantity estimation, you name it. MS Excel is used for all.</p>
-          <br />
-
-          <h5 class="h5">AUTODESK 3DS MAX</h5>
-          <p class="p2">3ds Max is used extensively for 3D modeling simulation by civil engineers and architects. In photo-realistic visualization, 3ds Max allows designers to make drawings created using AutoCAD or any other CAD software.</p>
-          <br />
-
-          <h5 class="h5">REVIT STRUCTURE</h5>
-          <p class="p2">Autodesk Revit is Building data displaying programming for draftsmen, underlying designers, architects, and temporary workers. It permits clients to plan a structure and its parts in 3D, comment on the model with 2D drafting components and access building data from the structure models information base.</p>
-          <br />
-
-          <h5 class="h5">ESTIMATOR</h5>
-          <p class="p2">It's applications for architects, designers, contractors, and engineers for estimation and project management. You may prepare different estimates and rate analyses of residential and commercial buildings with EstimatorTM 2.0. Detailed Estimate, Abstract Estimate, Tenders, Calculation Book, Cost Abstract, Job and Contractor's Bill, Purchasing Order, and other documents for project management can also be prepared.</p>
-          <br />
-
-          <h5 class="h5">V-RAY</h5>
-          <p class="p2">V-Ray is designed for architecture. And it links seamlessly to the top 3D modeling and design software, including 3ds Max, Revit, Rhino, SketchUp, and Unreal, used in architectural visualization. The complete suite of tools from V-Ray helps you to render everything you can imagine, from early mass models to photorealistic photography, animation,</p>
-        </div>
+      <div class="w-100 text-light">
+        <h3 class="h3">What is SQL Course?</h3>
+        <br />
+        <p class="p2">SQL is the standard programming language used to design, build and maintain relational databases. Relational structures are made up of a series of tables containing rows and columns of data. Each row in a table contains a data value for the intersecting column, and each column represents a type of data, such as a customer name or address.</p>
       </div>
-<br/>
-      <h3 class="h3">GET TRAINED ON ALL OF THESE SOFTWARES WITH OUR COURSE. YOU CAN START WITH AUTOCAD,REVIT AND THEN MOVE ON TO MORE ADVANCED SOFTWARE.</h3>
-    </div></br>
+    </div>
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">SQL has the following features:</h3>
+        <br />
+        <ul>
+            <li><span>Changing the table and index structures in a database</span></li>
+            <li><span>Table development and other database projects</span></li>
+            <li><span>Retrieving data from a database for transaction processing and analytics by adding, modifying, and removing rows of data</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="w-100 text-light">
+        <h3 class="h3">SQL Course Details – Eligibility, Fee, Duration, Syllabus, Colleges, Salary</h3>
+        <br />
+        <p class="p2">Want to become a data analyst, data developer, or data scientist? We will suggest a course that makes your career bright in the IT industry. SQL is a powerful method for searching through vast volumes of data and retrieving relevant data for analysis. We tried explaining complete information that can be useful for you related to SQL Course. Find details such as SQL Course Duration, Eligibility & Requirements, Salary, etc. Have an idea of what is SQL all about and why it is important by referring further.</p>
+      </div>
+    </div>
+    <div class="container">
+    <table class="table table-bordered " id="tallyTable">
+    <caption id="tallyCaption"><h3 class="h3" >SQL Course Details</h3></caption>
+  <thead id="tallyTableHeader">
+    <tr>
+      <th scope="col">Course</th>
+      <th scope="col">SQL</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr>
+      <td>Full form</td>
+      <td>Structured Query Language</td>
+    </tr>
+    <tr>
+      <td>Eligibility</td>
+      <td>Graduation</td>
+    </tr>
+    <tr>
+      <td>Course Type</td>
+      <td>Regular mode</td>
+    </tr>
+    <tr>
+      <td>Starting salary offered</td>
+      <td>Rs. 9,000 to 12,000 per month</td>
+    </tr>
+    <tr>
+      <td>Jobs that demand SQL</td>
+      <td>Data Analyst, Database Developer, Data Scientist, SQL Server Developer, .Net Developer,  Big Data engineer </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Eligibility Criteria for SQL</h3>
+        <br />
+        <ul>
+            <li><span>Candidate must be Graduated</span></li>
+            <li><span>Students with basic or no knowledge of programming language can also learn SQL</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">SQL Course Fees and Duration</h3>
+        <br />
+        <ul>
+            <li><span>SQL Course Fee is low for the basic course it is 4,000 around and for the advance course, it is 8,000. Thus, students who wish to join the sql Computer Course can join easily.</span></li>
+            <li><span>SQL Course can be learned within 1 to 2 months. In the first month, you will have a basic understanding and in the second month, you will learn advanced concept.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Concepts or Modules in SQL</h3>
+        <br />
+        <ul>
+        <li><span> SQL Server  Installation</span></li>
+        <li><span> BASIC DDL, DML – ARCHITECTURE</span></li>
+        <li><span> SQL SERVER DATABASE DESIGN</span></li>
+        <li><span>TABLE DESIGN & SIMPLE QUERIES</span></li>
+        <li><span>CONSTRAINTS and KEYS</span></li>
+        <li><span>JOINS & TUNING OPTIONS</span></li>
+        <li><span> VIEWS and SUB QUERIES</span></li>
+        <li><span>FUNCTIONS & SUB QUERIES</span></li>
+        <li><span> STORED PROCEDURES – BASICS</span></li>
+        <li><span>STORED PROCs @ CURSORS, CTE</span></li>
+        <li><span>TRIGGERS & TRANSACTIONS</span></li>
+        <li><span>TRIGGERS & TRANSACTIONS</span></li>
+        <li><span> INDEXES & QUERY TUNING</span></li>
+        <li><span>BACKUPS – DB, FILEGROUP, FILE</span></li>
+        <li><span>RESTORES & DATABASE RECOVERY</span></li>
+        <li><span> JOBS, SQL SERVER AGENT, DB MAIL</span></li>
+        </ul>
+      </div>
+    </div>
+
+ <div class="container">
+      <div class="w-100 text-light">
+          <h3 class="h3">Job Opportunities and Career Prospects</h3>
+        <br />
+        <ul>
+            <li><span>Business Analyst</span></li>
+            <li><span>Senior Software Engineer</span></li>
+            <li><span>Senior SQL Server Database Administrator</span></li>
+            <li><span>Quality Assurance Tester</span></li>
+            <li><span>.Net Developer</span></li>
+            <li><span>Systems Administrator</span></li>
+            <li><span>Software Engineer</span></li>
+            <li><span>SQL Server Developer</span></li>
+            <li><span>Quality Assurance Analyst</span></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -172,10 +272,8 @@ $courselist=DBcourse::selectall();
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="" method="POST">
+            <form class="modal-content" action="action-page.php" method="POST">
               <div class="container">
-                <p style="color: #2a0a5e">Please fill in this form.</p>
-                <hr />
                 <label class="label" for="name"><b>Name</b></label>
                 <input type="text" name="name" class="form-control" id="name" placeholder="Name" required />
 
@@ -187,16 +285,16 @@ $courselist=DBcourse::selectall();
 
                 <label class="label" for="trainings"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings" name="trainings">
-                <option value="SELECT YOUR INTEREST">Select your Interest</option>
-                    <?php
-                       foreach($courselist as $course) {
-                          echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
-                       }
-                    ?>
-                </select><br />
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <?php
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
+                  ?>
+                </select>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning" name="regformsubmit">Submit</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -238,9 +336,12 @@ $courselist=DBcourse::selectall();
                 <li>
                   <a class="footer-a" href="Python-Programming-Training.php">Python Programming</a>
                 </li>
+                <li>
+<a class=footer-a href=MS-SQL-Training.php>SQL Training</a>
+</li>
               </ul>
             </div>
-            <div class="col-md-6" style="text-align: left">
+            <div class="col-md-6">
               <ul class="list-unstyled">
                 <li>
                   <a class="footer-a" href="Cloud-Computing-Training.php">Cloud computing</a>
@@ -264,9 +365,8 @@ $courselist=DBcourse::selectall();
             </div>
           </div>
         </div>
-
         <div class="col-md-3">
-          <h6>Follow us</h6>
+          <h6><u>Follow us</u></h6>
           <a class="social-icon fbicon" target="_blank" rel="noopener" href="https://www.facebook.com/DharwadhubballiTutor"><i class="fab fa-facebook fa-2x fbicon"></i></a>
           <a class="social-icon twittericon" target="_blank" rel="noopener" href="https://twitter.com/DharwadTutor"><i class="fab fa-twitter fa-2x twittericon"></i></a>
           <a class="social-icon instaicon" target="_blank" rel="noopener" href="https://www.instagram.com/dharwadhubballitutor/"><i class="fab fa-instagram fa-2x instaicon"></i></a>
@@ -305,10 +405,8 @@ $courselist=DBcourse::selectall();
             </button>
           </div>
           <div class="modal-body">
-            <form class="modal-content" action="" method="POST">
+            <form class="modal-content" action="footermodal-action.php" method="POST">
               <div class="container">
-                <p style="color: #2a0a5e">Please fill in this form to create an account.</p>
-
                 <label class="label" for="name2"><b>Name</b></label>
                 <input type="text" name="name2" class="form-control" id="name2" placeholder="Name" required />
 
@@ -320,20 +418,18 @@ $courselist=DBcourse::selectall();
 
                 <label class="label" for="trainings2"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings2" name="trainings2">
-                <option value="">Select your Interest</option>
-
-<?php
-
-
-foreach($courselist as $course) {
-    echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
-}
- ?>
- </select><br />
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
+                  <?php
+                      foreach ($courselist as $course){
+                        echo "<option value='".$course->get_cname()."'>".$course->get_cname()."</option>";
+                      }
+                  ?>
+                  </select
+                ><br />
 
                 <label class="label" for="internship2"><b>Internships</b></label>
                 <select class="custom-select" id="internship2" name="internship2">
-                  <option value="">Select your Interest</option>
+                  <option value="SELECT YOUR INTEREST">Select your Interest</option>
                   <option value="Web Designing and Development">Web Designing and Development</option>
                   <option value="Python Programming">Python Programming</option>
                   <option value="Digital Marketing">Digital Marketing</option>
@@ -342,7 +438,7 @@ foreach($courselist as $course) {
                 <br />
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-warning" name="footerformsubmit">Submit</button>
+                  <button type="submit" class="btn btn-warning">Submit</button>
                 </div>
               </div>
             </form>
@@ -368,9 +464,7 @@ foreach($courselist as $course) {
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
     <script>
       setTimeout(function () {
         $("#myModal").modal()
@@ -384,40 +478,3 @@ foreach($courselist as $course) {
     </script>
   </body>
 </html>
-
-
-<?php
-require "Model/Registration.php";
-require "Utilities/Sanitization.php";
-require "DB Operations/RegistrationOps.php";
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    
-    if (isset($_POST['footerformsubmit']))
-    {
-      
-        $reg=new Registration();
-        $reg->set_name(Sanitization::test_input($_POST["name2"]));
-        $reg->set_email(Sanitization::test_input($_POST["email2"]));
-        $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
-        $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
-        $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
-        DBregistration::insert($reg);
-        echo "<meta http-equiv='refresh' content='0'>";
-    }elseif (isset($_POST['regformsubmit']))
-    {
-      
-        $reg=new Registration();
-        $reg->set_name(Sanitization::test_input($_POST["name"]));
-        $reg->set_email(Sanitization::test_input($_POST["email"]));
-        $reg->set_phone(Sanitization::test_input($_POST["phone"]));  
-        $reg->set_trainings(Sanitization::test_input($_POST["trainings"]));
-        DBregistration::insert($reg); 
-        echo "<meta http-equiv='refresh' content='0'>";
-    }else{
-      echo "No results found";
-    }
-    
-  }
-  
-?>

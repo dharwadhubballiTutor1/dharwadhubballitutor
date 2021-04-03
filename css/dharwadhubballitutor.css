@@ -501,8 +501,8 @@ button:hover {
 #banner {
   background-color: #f8c000;
 }
-#gstHeading>span{
-  font-family: 'Averia Serif Libre', cursive;
+#gstHeading > span {
+  font-family: "Averia Serif Libre", cursive;
   font-size: 6.5vw;
   font-weight: 700;
 }

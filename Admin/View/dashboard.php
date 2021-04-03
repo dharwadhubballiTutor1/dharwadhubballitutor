@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
     <?php
-    require "../Admin/navbar.php";
-        include "../DB Operations/dbconnection.php";
+        require "../../Admin/navbar.php";
+        include "../../DB Operations/dbconnection.php";
         $db=ConnectDb::getInstance();
         $query = "SELECT * FROM `coursebasedenq`";
         $courseBasedEnq = mysqli_query($db->getConnection(), $query);
@@ -24,10 +24,11 @@
         $sql = 'SELECT * FROM feescollectionlastM';
       $result = mysqli_query($db->getConnection(), $sql);
 
-        ?>
+      $feescalculate= $paidfees['total'] / $totalfees['total'] * 100;
+    ?>
 
     <head>
-        <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css " />
+        <link rel=stylesheet href="../Admin/css/dharwadhubballitutoradmin.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
             integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
             crossorigin="anonymous" />
@@ -45,24 +46,100 @@
         } */
         .widget-stat ,.media {
 
-    align-items: center;
-    background-color:#2a0a5e;
-}
+        align-items: center;
+        background-color:#2a0a5e;
+        height:100%
+       
+        }
         .usericon{
             color:#f8c000;
+            display: table;
+            margin:0 auto;
         }
         .mb-1{
             font-size:16px;
         }
         .enquiries {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 50%;
-    text-align: center;
-    background-color: #f8c000;
-    margin-left: 5px !important;
-    margin-right: auto !important;
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+        text-align: center;
+        background-color: #f8c000;
+        margin-left: 5px !important;
+        margin-right: auto !important;
         }
+        .progress {
+        width: 120px;
+        height: 120px;
+        background: none;
+        position: relative;
+        border-radius: 2px;
+      }
+
+      .progress::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 10px solid #eee;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .progress > span {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+
+      .progress .progress-left {
+        left: 0;
+      }
+
+      .progress .progress-bar {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border-width: 10px;
+        border-style: solid;
+        position: absolute;
+        top: 0;
+      }
+
+      .progress .progress-left .progress-bar {
+        left: 100%;
+        border-top-right-radius: 80px;
+        border-bottom-right-radius: 80px;
+        border-left: 0;
+        -webkit-transform-origin: center left;
+        transform-origin: center left;
+      }
+
+      .progress .progress-right {
+        right: 0;
+      }
+
+      .progress .progress-right .progress-bar {
+        left: -100%;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+        border-right: 0;
+        -webkit-transform-origin: center right;
+        transform-origin: center right;
+      }
+
+      .progress .progress-value {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .outerring {
+        color: #f8c000;
+      }
 
         </style>
         <!--Load the AJAX API-->
@@ -135,44 +212,20 @@
                       <br/>
                         <div class=row>
                           
-                            <div class="col-md-3">
+                            <div class="col-md-4">
 						        <div class="widget-stat card">
 							        <div class="card-body">
-								        <div class="media">
-									        <span class="mr-3">
-                                                <i class="fas fa-users fa-3x usericon"></i>
-									        </span>
-									        <div class="media-body text-white">
-									 	        <p class="mb-1">Total Enquiries</p>
-										            <h2 class="text-white">
+									        <div class=" text-white">
+                                              <i class="fas fa-users fa-4x usericon"></i><br/>
+									 	        <h4>Total Enquiries</h4>
+										            <h2 class="text-white text-center font-weight-bold" style=font-size:50px>
                                                         <?php
                                                           echo $totalenquiries['total'];
                                                          ?>
                                                     </h2>
 										        
 									        </div>
-								        </div>
-							        </div>
-						        </div>
-                            </div>
-
-                            <div class="col-md-3">
-						        <div class="widget-stat card">
-							        <div class="card-body">
-								        <div class="media">
-									        <span class="mr-3">
-                                            <i class="fas fa-graduation-cap usericon fa-3x"></i>
-									        </span>
-									        <div class="media-body text-white">
-									 	        <p class="mb-1">Total Admissions</p>
-										            <h2 class="text-white">
-                                                        <?php
-                                                            echo $totalstudents['total'];
-                                                        ?>
-                                                    </h2>
-										       
-									     </div>
-								        </div>
+								        
 							        </div>
 						        </div>
                             </div>
@@ -180,24 +233,42 @@
                             <div class="col-md-4">
 						        <div class="widget-stat card">
 							        <div class="card-body">
-								        <div class="media">
-									        <span class="mr-3">
-                                            <i class="fas fa-rupee-sign usericon fa-3x"></i>
-									        </span>
-									        <div class="media-body text-white">
-									 	        <p class="mb-1">FeesCollection</p>
-										            <h2 class="text-white">
+                                        <div class=" text-white">
+                                            <i class="fas fa-graduation-cap usericon fa-4x"></i><br/>
+                                            <h4>Total Admissions</h4>
+                                            <h2 class="text-white text-center font-weight-bold" style=font-size:50px>
                                                         <?php
-                                                            echo $paidfees['total'] ."/" .$totalfees['total'];
+                                                            echo $totalstudents['total'];
                                                         ?>
                                                     </h2>
 										       
 									     </div>
-								        </div>
+								        
 							        </div>
 						        </div>
                             </div>
-                            <div class="col-md-1"></div>
+
+                            <div class="col-md-4">
+                                <div class="widget-stat card">
+                                    <div class="card-body">
+								       
+                                            <div class="progress mx-auto" data-value=<?php echo intval($feescalculate) ?>>
+                                                <span class="progress-left">
+                                                    <span class="progress-bar outerring"></span>
+                                                </span>
+                                                <span class="progress-right">
+                                                    <span class="progress-bar outerring"></span>
+                                                </span>
+                                                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                                    <div class="font-weight-bold" style=font-size:45px;color:white><?php echo intval($feescalculate)."%" ?></div>
+                                                </div>
+						                    </div></br/>
+                                        
+                                        <h2 class="h4 font-weight-bold text-center mb-4" style=color:white>Fees Collection</h4>
+                                    </div>
+                                </div>
+                            </div>  
+                 
                         </div>
                             <br/> <br/>
                         <table class="table">
@@ -245,13 +316,34 @@
                     </div>
             </div>
         </div>
-        
-       
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>
+            
+      $(function () {
+        $(".progress").each(function () {
+          var value = $(this).attr("data-value")
+          var left = $(this).find(".progress-left .progress-bar")
+          var right = $(this).find(".progress-right .progress-bar")
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-        </script>
+          if (value > 0) {
+            if (value <= 50) {
+              right.css("transform", "rotate(" + percentageToDegrees(value) + "deg)")
+            } else {
+              right.css("transform", "rotate(180deg)")
+              left.css("transform", "rotate(" + percentageToDegrees(value - 50) + "deg)")
+            }
+          }
+        })
 
+        function percentageToDegrees(percentage) {
+          return (percentage / 100) * 360
+        }
+      })
+    </script>
+
+     
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>   
     </body>
 
 </html>

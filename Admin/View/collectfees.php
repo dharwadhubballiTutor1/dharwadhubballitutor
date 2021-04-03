@@ -262,7 +262,11 @@ include "../../Admin/Utilities/Helper.php";
                         
                            
                         });
-                     
+
+                     if(parseInt($("#pendingfees").val()) == 0){
+                        $("#myForm :input").prop("disabled", true);
+                        $("#option2").prop("disabled", true);
+                     }
                         
                    
                 });
