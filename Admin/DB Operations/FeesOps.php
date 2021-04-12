@@ -58,7 +58,7 @@ require_once "../../Admin/Model/Admissionsmodel.php";
       $db=ConnectDb::getInstance();
       $connectionObj=$db->getConnection();
       
-         $sql="Select A.id, A.Courseid,A.Phone,Name, CoursesOpted , TotalFees, SUM(PaidFees) as PaidFees, SUM(PendingFees) as PendingFees from admissions as A 
+         $sql="Select A.id, A.Courseid,A.Phone,Name, CoursesOpted , TotalFees, SUM(PaidFees) as PaidFees from admissions as A 
          LEFT JOIN fees as F on A.id=F.Admissionid
           where A.id=(".$viewObj.")
           GROUP BY Name,CoursesOpted,TotalFees";
@@ -84,6 +84,7 @@ require_once "../../Admin/Model/Admissionsmodel.php";
           return $view;
   
         }
+        
         public static function viewfeesdetails($viewObj)
        {
           $db=ConnectDb::getInstance();
