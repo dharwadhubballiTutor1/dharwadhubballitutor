@@ -11,6 +11,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
     $reg->set_phone(Sanitization::test_input($_POST["phone2"]));
     $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
     $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
+    $reg->set_services(Sanitization::test_input($_POST["services"]));
     DBenquery::insert($reg); 
   }
   
@@ -22,7 +23,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
 
 <body>
     <?php 
-header("location:../View/enquiries.php");
+ header("location:../View/enquiries.php");
 ?>
 
 

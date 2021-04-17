@@ -1,4 +1,4 @@
-<div class="sidenav ">
+s<div class="sidenav ">
     <h3 class="navbar-brand  brandName">DharwadHubballiTutor</h3> <br>
     
     <div class="sidebar-header">
@@ -22,4 +22,9 @@
     <a href="fees.php"> <i class="fas fa-rupee-sign"></i> <span> Fees</span></a>
     <a href="services.php"> <i class="fas fa-briefcase"></i> <span> Services</span></a>
     <a type="button" href="../logout.php"><i class="fa fa-power-off"></i> Log Out</a>
+
+    <!-- <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div> -->
+
 </div>

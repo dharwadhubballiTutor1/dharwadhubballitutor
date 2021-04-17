@@ -178,7 +178,7 @@
         var options = {
             'title': 'Enqueries Based on Courses',
             'pieHole': 0.4,
-            'width': 500,
+            'width': 475,
             'height': 300
         };
 
@@ -200,7 +200,7 @@
 
         var options = {
             'title': 'Enqueries and Admission',
-            'width': 500,
+            'width': 475,
             'height': 300
         };
         var chart = new google.visualization.ColumnChart(document.getElementById('admissions_div'));
@@ -279,10 +279,10 @@
                 <br/><br/>
                 <div class="row">
                     <div class="col-lg-6">
-                        <div id="enquiries_div" style="border: 1px solid #ccc"></div>
+                        <div id="enquiries_div" ></div>
                     </div>
                     <div class="col-lg-6">
-                        <div id="admissions_div" style="border: 1px solid #ccc"></div>
+                        <div id="admissions_div" ></div>
                     </div>
                 </div>
                 <br/><br/>

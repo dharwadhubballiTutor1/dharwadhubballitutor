@@ -31,14 +31,14 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
             <div class="col-md-9">
                 <div class="container">
                     <h2 class="display-2">Service Details </h2>
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-fees-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-fees" type="button" role="tab" aria-controls="pills-fees"
                             aria-selected="true">Service Details</button>
-                    </li>
+                    </li> -->
 
-                </ul>
+             </br>
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-fees" role="tabpanel"
                         aria-labelledby="pills-fees-tab">

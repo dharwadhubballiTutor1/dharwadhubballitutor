@@ -203,6 +203,7 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                                     </div>
                                 </div>
                                 <br />
+                                
                                 <div class="col-md-6">
                                     <label class=label for=email2><b>Email</b></label>
                                     <div class="col-sm-12">
@@ -252,6 +253,24 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                                         </select>
                                     </div>
                                 </div>
+
+                                <div class="col-md-6">
+                                    <label class=label for=services><b>Services</b></label>
+                                    <div class="col-sm-12">
+                                        <select class=custom-select id=services name=services>
+                                            <option value="">Select your Interest</option>
+                                            <option value="Web Designing and Development">Web Designing and Development
+                                            </option>
+                                            <option value="Python Programming">Business Process Setup</option>
+                                            <option value="Digital Marketing">Digital Marketing</option>
+                                            <option value="Mobile Development">Mobile Development</option>
+                                            <option value="Graphic Designing">Graphic Designing</option>
+                                            <option value="Branding">Branding</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
                                 <br />
                                 <div class="form-group">
                                     <div class="col-sm-12 " style=text-align:center>
