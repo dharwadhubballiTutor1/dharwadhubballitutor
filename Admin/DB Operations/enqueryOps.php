@@ -8,7 +8,7 @@ class DBenquery{
   public static function getAllEnquery(){
     $db=ConnectDb::getInstance();
     $connectionObj=$db->getConnection();
-    $sql = "SELECT * FROM candidates where status=1" ;
+    $sql = "SELECT * FROM candidates where status=1 order by id DESC" ;
     $result = mysqli_query($connectionObj, $sql);
     $enquirylist=[];
         if (mysqli_num_rows($result) > 0) {
@@ -31,7 +31,7 @@ class DBenquery{
     public static function getAllEnqueryBySection($enqueryFor){
             $db=ConnectDb::getInstance();
             $connectionObj=$db->getConnection();
-            $sql = "SELECT * FROM candidates WHERE status=1 and ".$enqueryFor."!=''";
+            $sql = "SELECT * FROM candidates WHERE status=1 and ".$enqueryFor."!='' ";
             $result = mysqli_query($connectionObj, $sql);
             $enquirylist=[];
                 if (mysqli_num_rows($result) > 0) {
@@ -39,7 +39,7 @@ class DBenquery{
                     $enqueryModel=new enquery();
                     $enqueryModel->set_Id($row["id"]);
                     $enqueryModel->set_name($row["Name"]);
-                    $enqueryModel->set_phone($row["Email"]);
+                    $enqueryModel->set_email($row["Email"]);
                     $enqueryModel->set_phone($row["Phone"]);
                     $enqueryModel->set_qualification($row["Qualification"]);
                     $enqueryModel->set_enqueryFor($row["$enqueryFor"]);

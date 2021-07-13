@@ -1,4 +1,4 @@
-<?php  
+<?php
 require "../session.php";
 require_once "../DB Operations/enqueryOps.php";
 require_once "../../Admin/DB Operations/AdmissionsOps.php";
@@ -13,11 +13,16 @@ include "../../Admin/navbar.php";
 
     <head>
         <title>Admissions </title>
-        <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css " />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-            crossorigin="anonymous" />
-        <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.7/css/all.css />
+        
+        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.0.7/css/all.css />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel=stylesheet href="../../Admin/css/dharwadhubballitutoradmin.css" />
         <style>
              #enquery_length{
              float: left;
@@ -33,15 +38,19 @@ include "../../Admin/navbar.php";
          }
         </style>
     </head>
-<?php 
+<?php
 
 
 ?>
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-10">
+            <div class="col-md-3">
+            <?php
+            include "../../Admin/navbar.php";
+            ?>
+            </div>
+                <div class="col-md-9">
                 <h2 class="display-2">Admission</h2>
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -74,11 +83,10 @@ include "../../Admin/navbar.php";
                                     <th> Move to Admission </th>
                                 </tr>
                                 </thead>
-                                <?php 
+                                <?php
                                 echo  "<tbody>";
-                                $enquirylist= DBenquery::getAllEnquery();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                                foreach($enquirylist as $enquiry) 
-                                {
+                                $enquirylist= DBenquery::getAllEnquery();
+                                foreach ($enquirylist as $enquiry) {
                                     echo "<tr><td> " . $enquiry->get_name(). "</td><td>". $enquiry->get_email(). "</td><td>" .$enquiry->get_phone(). "</td><td>". $enquiry->get_qualification(). "</td><td>"  .'<a class="btn btn-danger" href="moveadmission.php?id='.$enquiry->get_id().'&name='.$enquiry->get_name().'&phone='.$enquiry->get_phone().'&email='.$enquiry->get_email().'&qualification='.$enquiry->get_qualification().'" role="button" type="submit" >Move </a>'.'</td></tr>' ;
                                 }
                                 echo  "</tbody>";
@@ -192,10 +200,10 @@ include "../../Admin/navbar.php";
                                             <select class="form-select" id="coursesopted" name="coursesopted"
                                                     required>
                                                     <option value="" >Select Your Interest</option>
-                                                    <?php 
+                                                    <?php
                                                     $option="";
                                                     $courselist=DBcourse::selectall();
-                                                    foreach($courselist as $course) {
+                                                    foreach ($courselist as $course) {
                                                         $option.= "<option value='". $course->get_id()."'";
                                                         $option.=  ">".$course->get_cname()."</option>";
                                                     }
@@ -287,9 +295,8 @@ include "../../Admin/navbar.php";
                             <?php
                     
                     echo  "<tbody>";
-                   $admissionlist= DBadmission::searchadmission();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                   foreach($admissionlist as $admission) 
-                   {
+                   $admissionlist= DBadmission::searchadmission();
+                   foreach ($admissionlist as $admission) {
                        echo "<tr><td> "  . $admission->get_id(). "</td><td>"  . $admission->get_name(). "</td><td>". $admission->get_phone(). "</td><td>" .$admission->get_email(). "</td><td>". $admission->get_qualification(). "</td><td>". $admission->get_guardiansphone(). "</td><td>" . $admission->get_coursesopted()."</td><td>". $admission->get_adhaarno(). "</td><td>" .'<a class="btn btn-danger" href="../View/viewprofile.php?id='.$admission->get_id().'&photofile='.$admission->get_photofile().'" role="button">View </a>'.'</td></tr>' ;
                    }
                    echo  "</tbody>";
