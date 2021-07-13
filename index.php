@@ -65,29 +65,44 @@ $courselist=DBcourse::selectall();
 </head>
 
 <body>
-    <div class="brand-class container-fluid">
-        <div class=row>
-            <div class=col-md-6>
-                <a class="navbar-brand brandName" href=#>DharwadHubballiTutor</a>
-                <br />
-                <a class="social-icon fbicon" target=_blank rel="noopener"
-                    href=https://www.facebook.com/DharwadhubballiTutor><i
-                        class="fab fa-facebook fa-lg fbicon fbheader"></i></a>
-                <a class="social-icon twittericon" target=_blank rel="noopener" href=https://twitter.com/DharwadTutor><i
-                        class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
-                <a class="social-icon instaicon" target=_blank rel="noopener"
-                    href=https://www.instagram.com/dharwadhubballitutor><i
-                        class="fab fa-instagram fa-lg instaicon instaheader"></i></a>
-                <a class="social-icon instaicon" target=_blank rel="noopener"
-                    href=http://www.linkedin.com/in/dharwadhubballitutor><i
-                        class="fab fa-linkedin fa-lg linkedinicon linkedinheader"></i></a>
-                <a class="social-icon whatsappicon" target="_blank" rel="noopener"
-                    href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hi there! I have a question :)"><i
-                        class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
-            </div>
-            <div class=col-md-6>
-                <div class=semicircle>
-                    <a class="blink_me social-icon" href=Job-Assistance.php> Job Assistance</a><br />
+<!-- Messenger Chat Plugin Code -->
+<div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution="biz_inbox"
+        page_id="100316711879103">
+      </div>
+<div class="brand-class container-fluid">
+<div class=row>
+<div class=col-md-6>
+<a class="navbar-brand brandName" href=#>DharwadHubballiTutor</a>
+<br/>
+<a class="social-icon fbicon" target=_blank  rel="noopener" href=https://www.facebook.com/DharwadhubballiTutor><i class="fab fa-facebook fa-lg fbicon fbheader"></i></a>
+<a class="social-icon twittericon" target=_blank rel="noopener" href=https://twitter.com/DharwadTutor><i class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
+<a class="social-icon instaicon" target=_blank rel="noopener" href=https://www.instagram.com/dharwadhubballitutor><i class="fab fa-instagram fa-lg instaicon instaheader"></i></a>
+<a class="social-icon instaicon" target=_blank rel="noopener" href=http://www.linkedin.com/in/dharwadhubballitutor><i class="fab fa-linkedin fa-lg linkedinicon linkedinheader"></i></a>
+<a class="social-icon whatsappicon" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?phone=919741237334&amp;text=Hi there! I have a question :)"><i class="fab fa-whatsapp fa-lg whatsappicon whatsappheader"></i></a>
+</div>
+<div class=col-md-6 >
+<div class=semicircle>
+<a class="blink_me social-icon" href=Job-Assistance.php> Job Assistance</a><br/>
 
                 </div>
                 <div class="container">

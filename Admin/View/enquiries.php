@@ -234,7 +234,6 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                                     </div>
                                 </div>
                                 <br />
-
                                 <div class="col-md-6">
                                     <label class=label for=email2><b>Email</b></label>
                                     <div class="col-sm-12">

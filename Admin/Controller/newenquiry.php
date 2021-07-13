@@ -23,7 +23,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
 
 <body>
     <?php 
-// header("location:../View/enquiries.php");
+ header("location:../View/enquiries.php");
 ?>
 
 
