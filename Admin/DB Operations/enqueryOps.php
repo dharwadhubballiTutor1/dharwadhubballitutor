@@ -50,7 +50,8 @@ class DBenquery
             echo "0 results";
         }
         return $enquirylist;
-    }
+}
+    
     public static function insert($registrationObj)
     {
         $db=ConnectDb::getInstance();
