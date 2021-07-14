@@ -2,6 +2,7 @@
 <?php 
    class Registration 
   {
+    private $id;
     private $Name;
     private $Email;
     private $Phone;
@@ -11,6 +12,14 @@
     private $Demo;
     private $Qualification;
     private $table_name="candidates";
+
+    function set_id($id) {
+      $this->id = $id;
+    }
+    function get_id() {
+      return $this->id;
+    }
+
   function set_name($name) {
     $this->Name = $name;
   }
