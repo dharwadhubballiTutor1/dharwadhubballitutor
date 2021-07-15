@@ -171,8 +171,8 @@ require_once "../../DB Operations/dbconnection.php";
       $db=ConnectDb::getInstance();
       $connectionObj=$db->getConnection();
       $status=true;
-      $sql = "UPDATE admissions SET Name='".$admission->get_name().
-      "', Phone='".$admission->get_phone().
+      $sql = "UPDATE admissions SET Name='".$admission->get_name()."', 
+      Phone='".$admission->get_phone().
       "', Email='".$admission->get_email().
       "', DateofBirth='".$admission->get_dateofbirth().
       "',Qualification='".$admission->get_qualification().
