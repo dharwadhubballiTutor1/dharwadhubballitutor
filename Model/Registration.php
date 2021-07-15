@@ -2,6 +2,7 @@
 <?php 
    class Registration 
   {
+    private $id;
     private $Name;
     private $Email;
     private $Phone;
@@ -10,7 +11,16 @@
     private $Services;
     private $Demo;
     private $Qualification;
+    private $enq_createdon;
     private $table_name="candidates";
+
+    function set_id($id) {
+      $this->id = $id;
+    }
+    function get_id() {
+      return $this->id;
+    }
+
   function set_name($name) {
     $this->Name = $name;
   }
@@ -63,5 +73,15 @@
   function get_qualification() {
     return $this->Qualification;
   }
+
+  function set_enqcreatedon($enqcreatedonValue)
+{
+    $this->enq_createdon=$enqcreatedon;
+}
+function get_enqcreatedon()
+{
+    return $this->enq_createdon;
+}
+
  }
 ?>

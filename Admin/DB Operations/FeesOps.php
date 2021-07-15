@@ -35,16 +35,21 @@ require_once "../../Admin/Model/Admissionsmodel.php";
          if (isset($_POST['submit']))
          $searchadmission=$_POST["search"];
          echo $searchadmission;
-         $sql = "SELECT id,Name,CoursesOpted,PhotoFile From admissions where Name like '%$searchadmission%' and feesstatus=1 ";
+         $sql = "Select A.id, A.Courseid,A.Phone,Name, CoursesOpted , TotalFees, SUM(PaidFees) as PaidFees from admissions as A 
+         LEFT JOIN fees as F on A.id=F.Admissionid 
+          GROUP BY Name,CoursesOpted,TotalFees";
+          error_log($sql);
          $result = mysqli_query($db->getConnection(), $sql);
          $admissionlist=[];
          if (mysqli_num_rows($result) > 0) {
          while($row = mysqli_fetch_assoc($result)) {
-          $view=new Admissions();
-          $view->set_id($row['id']);
+          $view=new Fees();
+          $view->set_admitid($row['id']);
           $view->set_name($row['Name']);
            $view->set_coursesopted($row['CoursesOpted']);
-        
+           $view->set_tfees($row['TotalFees']);
+           $view->set_pfees($row['PaidFees']);
+           $view->set_pendingfees($row['TotalFees']-$row["PaidFees"]);
           array_push($admissionlist,$view);
      } 
      } else {
@@ -58,7 +63,7 @@ require_once "../../Admin/Model/Admissionsmodel.php";
       $db=ConnectDb::getInstance();
       $connectionObj=$db->getConnection();
       
-         $sql="Select A.id, A.Courseid,A.Phone,Name, CoursesOpted , TotalFees, SUM(PaidFees) as PaidFees, SUM(PendingFees) as PendingFees from admissions as A 
+         $sql="Select A.id, A.Courseid,A.Phone,Name, CoursesOpted , TotalFees, SUM(PaidFees) as PaidFees from admissions as A 
          LEFT JOIN fees as F on A.id=F.Admissionid
           where A.id=(".$viewObj.")
           GROUP BY Name,CoursesOpted,TotalFees";
@@ -84,6 +89,7 @@ require_once "../../Admin/Model/Admissionsmodel.php";
           return $view;
   
         }
+        
         public static function viewfeesdetails($viewObj)
        {
           $db=ConnectDb::getInstance();

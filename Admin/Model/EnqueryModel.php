@@ -6,6 +6,8 @@ public $id;
  public $phone;
  public $qualification;
  public $enqueryFor;
+ public $Modified_Date;
+ public $enq_createdon;
  public function set_Id($IdValue){
     $this->id=$IdValue;
 }
@@ -49,5 +51,22 @@ public function get_Id(){
      return $this->enqueryFor;
  }
  
+ public function set_modifieddate($modifieddateValue){
+    $this->Modified_Date=$modifieddateValue;
+}
+public function get_modifieddate(){
+    return $this->Modified_Date;
+}
+
+function set_enqcreatedon($enqcreatedonValue)
+{
+    $this->enq_createdon=$enqcreatedonValue;
+}
+function get_enqcreatedon()
+{
+    return $this->enq_createdon;
+}
+
+
 }
 ?>
