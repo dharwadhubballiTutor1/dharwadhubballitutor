@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 03, 2021 at 01:19 PM
+-- Generation Time: Aug 10, 2021 at 12:36 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `admissions` (
   `Modified_Date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_enquiry_id` (`enquiry_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `admissions`
@@ -80,7 +80,7 @@ INSERT INTO `admissions` (`enquiry_id`, `id`, `Name`, `Phone`, `Email`, `DateofB
 (NULL, 1, 'prashant myageri', '9986254524', 'prashant007@gmail.com', '1996-06-07', 'Male', 'MBA', 'Sangappa', '8884093745', 'Civil Design Softwares', 'bangalore', '631854645846', '', 'Dummy-Icon-Female.jpg', '', 1, 1, '2021-01-11 00:00:00'),
 (NULL, 2, 'prashantsm', '77007700', 'prashant007@gmail.com', '1996-06-07', '', 'puc', 'Sangappa', '8884093745', 'Civil Design Softwares', 'bangalore', '631854645846', 'IMG_8996.JPG', 'RESUME.docx', '', 1, 1, '2021-01-18 00:00:00'),
 (NULL, 3, 'prashant', '2345234523', 'prashant@gmail.com', '1996-06-07', '', 'MbA', 'bheemappa', '5566987444', 'School Academics', 'gajendragada', '254666254545', 'IMG_20190414_170031.jpg', 'IMG_8985.JPG', 'varsh. abhi.pptx', 1, 1, '2021-03-31 00:00:00'),
-(NULL, 4, 'hifza shaikh', '7400845696', 'hifza@gmail.com', '1980-10-12', '', 'be', 'shareef', '8884093745', 'Cloud Computing', 'dharwad', '254666254545', 'IMG_8996.JPG', 'IMG_9049.JPG', 'abhi. rasume.docx', 1, 1, '2021-02-01 00:00:00'),
+(NULL, 4, 'hifza shaikh', '7400845696', 'hifza@gmail.com', '1980-10-12', '', 'be', 'shareef', '8884093745', '1', 'dharwad', '254666254545', '__ BillDesk Payment Gateway __.pdf', 'IMG_9049.JPG', 'Web designing and development Syllabus.docx', 1, 1, '2021-02-01 00:00:00'),
 (NULL, 5, 'tazeen', '1233232223', 'tazeen123@gmail.com', '2000-06-04', '', 'ba', 'Sangappa', '8884093745', 'Programming Languages', 'hubballi', '254666254545', 'scanner_20171125_190628 (1).jpeg', 'New Doc 2018-05-25.jpg', 'Web designing and development Syllabus.docx', 1, 1, '2021-02-08 00:00:00'),
 (NULL, 6, 'tazeen', '1233232223', 'tazeen123@gmail.com', '2000-06-04', '', 'ba', 'Sangappa', '8884093745', 'Programming Languages', 'hubballi', '254666254545', 'scanner_20171125_190628 (1).jpeg', 'New Doc 2018-05-25.jpg', 'Web designing and development Syllabus.docx', 1, 1, '2021-03-31 00:00:00'),
 (NULL, 7, 'tazeen', '1233232223', 'tazeen123@gmail.com', '2000-06-04', '', 'ba', 'Sangappa', '8884093745', 'Programming Languages', 'hubballi', '254666254545', 'scanner_20171125_190628 (1).jpeg', 'New Doc 2018-05-25.jpg', '2.docx', 1, 1, '2021-03-31 00:00:00'),
@@ -106,7 +106,8 @@ INSERT INTO `admissions` (`enquiry_id`, `id`, `Name`, `Phone`, `Email`, `DateofB
 (23, 35, 'akash', '346777589000', '', '2021-03-18', 'Female', 'be', 'asdasdsadas', '1234567890', 'Civil Design Softwares', 'asdfsfdsfd', '123456789012', 'Dummy-Aadhaar-Screenshot.png', 'Dummy-Icon-Female.jpg', 'MSSQL-Tutorial.docx', 1, 1, '2021-03-31 00:00:00'),
 (0, 37, 'Junaid', '9880137833', 'atharshaikh1@gmail.com', '2021-03-01', 'Male', 'BE', 'Savitri Gatade', '1234567890', 'Python Programming', 'asdfsfdsfd', '123456789012', 'Dummy-Aadhaar-Screenshot.png', 'dummy-icon-male.jpg', 'Gauri Resume.docx', 1, 1, '2021-03-31 00:00:00'),
 (0, 38, 'Azhar', '9845067824', 'atharshaikh1@gmail.com', '2021-03-23', 'Male', 'BE', 'asdasdsadas', '9480296486', 'Android Development', 'asdfsfdsfd', '123456789012', 'Dummy-Aadhaar-Screenshot.png', 'dummy-icon-male.jpg', 'MSSQL-Tutorial.docx', 1, 1, '2021-03-31 00:00:00'),
-(0, 39, 'Humza', '8007961759', 'gomzyr3@gmail.com', '2021-03-17', 'Male', 'BE', 'asdasdsadas', '1234567890', 'Basic Computers', 'Gandhi Nagar Dharwad', '123456789012', 'Dummy-Aadhaar-Screenshot.png', 'dummy-icon-male.jpg', 'HifzaResume.docx', 1, 1, '2021-03-31 00:00:00');
+(0, 39, 'Humza', '8007961759', 'gomzyr3@gmail.com', '2021-03-17', 'Male', 'BE', 'asdasdsadas', '1234567890', 'Basic Computers', 'Gandhi Nagar Dharwad', '123456789012', 'Dummy-Aadhaar-Screenshot.png', 'dummy-icon-male.jpg', 'HifzaResume.docx', 1, 1, '2021-03-31 00:00:00'),
+(0, 40, 'www', '23456', 'bjcg@gmail.com', '1997-01-07', 'Male', 'be', 'ewere', '1234', 'Etabs', 'dqw3d', '234567856445', 'Pluck_Spencer_Rise_HP-1600x1067.jpg', '5c74ee3432fe3.jpg', '__ BillDesk Payment Gateway __.pdf', 1, 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -138,65 +139,23 @@ CREATE TABLE IF NOT EXISTS `candidates` (
   `Demo` varchar(100) NOT NULL,
   `Services` varchar(100) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
+  `enq_createdon` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Modified_Date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `candidates`
 --
 
-INSERT INTO `candidates` (`id`, `Name`, `Email`, `Phone`, `Qualification`, `Trainings`, `Internship`, `Demo`, `Services`, `status`, `Modified_Date`) VALUES
-(1, 'swat', 'swat@gmail.com', '2336785595', '', 'WEB DESIGNING AND DEVELOPMENT', '', '', '', 1, '2021-03-30 00:00:00'),
-(2, 'swat', 'swat@gmail.com', '2336785595', '', 'WEB DESIGNING AND DEVELOPMENT', '', '', '', 1, '2021-03-30 00:00:00'),
-(3, 'swat', 'swat@gmail.com', '2336785595', '', 'WEB DESIGNING AND DEVELOPMENT', '', '', '', 1, '2021-03-30 00:00:00'),
-(4, 'swathi bk', 'swathibk95@gmail.com', '70199626333', '', 'WEB DESIGNING AND DEVELOPMENT', '', '', '', 1, '2021-03-30 00:00:00'),
-(5, 'swathi bk', 'swathibk95@gmail.com', '70199626333', '', 'WEB DESIGNING AND DEVELOPMENT', '', '', '', 1, '2021-03-30 00:00:00'),
-(6, 'swat', 'swat@gmail.com', '3456543678', '', 'Web Designing and Development', '', '', '', 1, '2021-03-30 00:00:00'),
-(7, 'swat', 'swat@gmail.com', '3456543678', '', 'Web Designing and Development', '', '', '', 1, '2021-03-30 00:00:00'),
-(8, 'swat', 'swat@gmail.com', '3456543678', '', 'Web Designing and Development', '', '', '', 1, '2021-03-30 00:00:00'),
-(10, 'swathi bk', 'dnsguydas@hshaj.com', '234365464', '', '', 'Python Programming', '', '', 1, '2021-03-30 00:00:00'),
-(11, 'swathi bk', 'swathibk95@gmail.com', '56788899', '', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(12, 'swathi bk', 'swathibk95@gmail.com', '56788899', '', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(14, 'swarah', 'swarah@gmail.com', '2345678912', '', '', 'Python Programming', '', '', 1, '2021-03-30 00:00:00'),
-(15, 'swarah', 'swarah@gmail.com', '34565454543', '', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(16, 'swarah', 'swarah@gmail.com', '34565454543', '', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(17, 'swa', 'swa@gmail.com', '2345678901', '', '', 'Android Development', '', '', 1, '2021-03-30 00:00:00'),
-(18, 'swa', 'swa@gmail.com', '2345678901', '', '', 'Web Designing and Development', '', '', 1, '2021-03-30 00:00:00'),
-(19, 'swa', 'swa@gmail.com', '2345678901', '', '', 'Web Designing and Development', '', '', 1, '2021-03-30 00:00:00'),
-(20, 'swa', 'swa@gmail.com', '2345678901', '', '', 'Web Designing and Development', '', '', 1, '2021-03-30 00:00:00'),
-(21, 'swa', 'swa@gmail.com', '2345678901', '', '', 'Web Designing and Development', '', '', 1, '2021-03-30 00:00:00'),
-(22, 'akash', 'akash@gmail.com', '35489348280', '', '', 'SELECT YOUR INTEREST', '', '', 1, '2021-03-30 00:00:00'),
-(23, 'akash', 'akash9@gmail.com', '346777589000', '', '', 'SELECT YOUR INTEREST', '', '', 1, '2021-03-30 00:00:00'),
-(24, 'prashant', 'prashant@gmail.com', '2345234523', '', '', 'SELECT YOUR INTEREST', '', '', 1, '2021-03-30 00:00:00'),
-(25, 'prashant', 'prashant10@gmail.com', '23123123123', '', '', 'SELECT YOUR INTEREST', '', '', 1, '2021-03-30 00:00:00'),
-(26, 'prashant', 'prashanth20@gmail.com', '2345677889', '', '', 'Android Development', '', '', 1, '2021-03-30 00:00:00'),
-(27, 'akash', 'akash06@gmail.com', '1234567890', '', 'Cloud Computing', '', '', '', 1, '2021-03-30 00:00:00'),
-(28, 'akash29', 'dnsguydas@hshaj.com', '2409090909', '', 'Web Designing and Development', '', '', '', 1, '2021-03-30 00:00:00'),
-(29, 'akash29', 'dnsguydas@hshaj.com', '99009900', '', 'Cloud Computing', '', '', '', 1, '2021-03-30 00:00:00'),
-(30, 'prashant', 'prashanth201@gmail.com', '8884093745', '', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(31, 'prashant', 'prashant100@gmail.com', '8884093745', '', '', 'SELECT YOUR INTEREST', '', '', 1, '2021-03-30 00:00:00'),
-(32, 'prashantsm', 'prashant007@gmail.com', '77007700', '', '', 'SELECT YOUR INTEREST', '', '', 1, '2021-03-30 00:00:00'),
-(33, 'prashantsm', 'prashant00007@gmail.com', '7700077000', '', 'Web Designing and Development', 'SELECT YOUR INTEREST', '', '', 1, '2021-03-30 00:00:00'),
-(35, 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', '', '', '', '', 'CIVIL DESIGN SOFTWARES', 1, '2021-03-30 00:00:00'),
-(36, 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', '', '', '', '', 'CIVIL DESIGN SOFTWARES', 1, '2021-03-30 00:00:00'),
-(37, 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', '', '', '', '', 'CIVIL DESIGN SOFTWARES', 1, '2021-03-30 00:00:00'),
-(38, 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', '', '', '', '', 'CIVIL DESIGN SOFTWARES', 1, '2021-03-30 00:00:00'),
-(39, 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', '', '', '', '', 'MOBILE APP DEVELOPMENT', 1, '2021-03-30 00:00:00'),
-(40, 'tazeen', 'tazeen123@gmail.com', '1233232223', '', '', '', '', 'DIGITAL MARKETING', 1, '2021-03-30 00:00:00'),
-(41, 'rahul', 'rahulrap@gmail.com', '9035804741', '', '', '', 'ANDROID DEVELOPMENT', '', 1, '2021-03-30 00:00:00'),
-(42, 'swarah', 'dnsguydas@hshaj.com', '3456789999', '', 'Python Programming', '', '', '', 1, '2021-03-30 00:00:00'),
-(43, 'akash29', 'dnsguydas@hshaj.com', '0', '', 'Cloud Computing', '', '', '', 1, '2021-03-30 00:00:00'),
-(44, 'qwerty', 'qwerty@gmail.com', '2233223322', '', '', 'Python Programming', '', '', 1, '2021-03-30 00:00:00'),
-(45, 'qwerty', 'qwerty@gmail.com', '2233223322', '', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(46, 'qwerty1', 'qwerty21@gmail.com', '4545454545', 'bsc(cs)', '', 'web desiging and development', '', '', 1, '2021-03-30 00:00:00'),
-(47, 'qwerty1', 'qwerty34@gmail.com', '1112223333', '', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(48, 'prashant11', 'prashanth20@gmail.com', '2345677889', 'B.E', '', 'Web Designing and Development', '', '', 1, '2021-03-30 00:00:00'),
-(49, 'qwerty', 'qwerty@gmail.com', '8884093745', 'B.E(cs)', '', 'Android Development', '', '', 1, '2021-03-30 00:00:00'),
-(50, 'qwerty1', 'qwerty@gmail.com', '2233223322', 'B.E', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(51, 'qwerty1', 'qwerty@gmail.com', '2233223322', 'B.E', '', 'Digital Marketing', '', '', 1, '2021-03-30 00:00:00'),
-(52, 'athar', 'athar@gmail.com', '88899900000', 'B.e(CS)', '', 'Web Designing and Development', '', '', 1, '2021-03-30 00:00:00'),
-(53, 'Gauri Gatade', 'gomzyr3@gmail.com', '7019353194', '', 'Python Programming', 'Web Designing and Development', '', '', 1, '2021-03-30 00:00:00');
+INSERT INTO `candidates` (`id`, `Name`, `Email`, `Phone`, `Qualification`, `Trainings`, `Internship`, `Demo`, `Services`, `status`, `enq_createdon`, `Modified_Date`) VALUES
+(1, 'swathibk', 'fueyfr@gmail.com', '4354667868', '', 'Etabs', '', '', '', 1, '2021-07-15 16:36:14', '2021-07-14 17:07:05'),
+(2, 'akashbheemappa', 'abk@gmail.com', '9987676555', '', '', 'Digital Marketing', '', '', 1, '2021-07-15 16:36:14', '2021-07-14 17:07:54'),
+(3, 'prashant', 'prashanth@gmail.com', '7864566543', '', '', 'Digital Marketing', '', '', 1, '2021-07-15 16:36:14', '2021-07-14 16:22:42'),
+(4, 'tasleem', 'tasleem@gmail.com', '6767676767', '', '', 'Android Development', '', '', 1, '2021-07-15 16:36:14', '2021-07-14 16:22:58'),
+(5, 'tazeen', 'tazeen@gmail.com', '7867877878', '', '', '', '', 'Python Programming', 1, '2021-07-15 16:36:14', '2021-07-14 16:23:15'),
+(6, 'sushila', 'sushila@gmail.com', '8989898989', '', '', '', '', 'Branding', 1, '2021-07-15 16:36:14', '2021-07-14 16:23:29'),
+(8, 'gopal', 'gopal@gmail.com', '78676767676', '', 'Web Design and Development', '', '', '', 1, '2021-07-15 16:39:37', '2021-07-15 16:40:15');
 
 -- --------------------------------------------------------
 
@@ -224,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `Cduration` varchar(100) NOT NULL,
   `Modified_Date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `courses`
@@ -234,7 +193,8 @@ INSERT INTO `courses` (`id`, `CName`, `Ctype`, `Cduration`, `Modified_Date`) VAL
 (1, 'Web Design and Development', 'Classroom Training', '60 Day', NULL),
 (2, 'Civil Revit', 'Classroom Training', '30 Day', NULL),
 (3, 'Python Programming', 'Classroom Training', '3 months', NULL),
-(4, 'Cloud Computing', 'Classroom Training', '3 months', NULL);
+(4, 'Cloud Computing', 'Classroom Training', '3 months', NULL),
+(5, 'Etabs', 'Online', '1 month', NULL);
 
 -- --------------------------------------------------------
 
@@ -247,6 +207,33 @@ CREATE TABLE IF NOT EXISTS `enqueriesforlastq` (
 `Enqueries` bigint(21)
 ,`MONTH` varchar(9)
 );
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiry_followup`
+--
+
+DROP TABLE IF EXISTS `enquiry_followup`;
+CREATE TABLE IF NOT EXISTS `enquiry_followup` (
+  `followup_id` int(11) NOT NULL AUTO_INCREMENT,
+  `followup_enq_id` int(11) DEFAULT NULL,
+  `followup_comments` varchar(200) NOT NULL,
+  `followup_createdon` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `followup_by` varchar(100) NOT NULL,
+  PRIMARY KEY (`followup_id`),
+  KEY `followup_enq_id` (`followup_enq_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `enquiry_followup`
+--
+
+INSERT INTO `enquiry_followup` (`followup_id`, `followup_enq_id`, `followup_comments`, `followup_createdon`, `followup_by`) VALUES
+(8, 27, 'testtt', '2021-07-13 17:03:52', 'admin1'),
+(9, 27, 'test222', '2021-07-13 17:06:25', 'admin1'),
+(10, 52, 'intern test', '2021-07-14 12:51:05', 'admin1'),
+(11, 1, 'bekfeyg;l', '2021-08-10 17:00:46', 'admin1');
 
 -- --------------------------------------------------------
 
@@ -272,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `fees` (
   PRIMARY KEY (`feesid`),
   KEY `Courseid` (`Courseid`),
   KEY `Admissionid` (`Admissionid`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `fees`
@@ -281,7 +268,12 @@ CREATE TABLE IF NOT EXISTS `fees` (
 INSERT INTO `fees` (`feesid`, `Admissionid`, `Courseid`, `TotalFees`, `PaidFees`, `PendingFees`, `Feesplan`, `DueDate`, `PaymentMode`, `PaymentDescription`, `lastpaiddate`, `Modified_Date`, `feesreceipt`) VALUES
 (14, 1, 1, 2500, 2500, 0, 'Full Payment', NULL, 'UPI transaction', 'GooglePay', NULL, '2021-03-25 18:04:32', ''),
 (15, 4, 1, 25000, 2500, 22500, 'Part Payment', '2021-04-30', 'Cash', 'Cash', NULL, '2021-03-27 20:03:05', 'hifza shaikh2021-03-27.pdf'),
-(16, 4, 1, 25000, 20000, 2500, 'Part Payment', '2021-04-14', 'Debit/Credit Card', 'pending in installments', NULL, '2021-04-02 16:07:54', 'hifza shaikh2021-04-02.pdf');
+(16, 4, 1, 25000, 20000, 2500, 'Part Payment', '2021-04-14', 'Debit/Credit Card', 'pending in installments', NULL, '2021-04-02 16:07:54', 'hifza shaikh2021-04-02.pdf'),
+(17, 37, 1, 40000, 12000, 28000, 'Part Payment', '2021-04-28', 'Net Banking', 'dfgtfry', NULL, '2021-04-12 17:45:56', 'Junaid2021-04-12.pdf'),
+(18, 37, 1, 40000, 20000, 8000, 'Part Payment', '2021-04-29', 'UPI transaction', 'dfgtfry', NULL, '2021-04-12 17:46:35', 'Junaid2021-04-12.pdf'),
+(19, 2, 1, 40000, 20000, 20000, 'Part Payment', '2021-05-05', 'Net Banking', 'dfgtfry', NULL, '2021-04-12 18:12:08', 'prashantsm2021-04-12.pdf'),
+(20, 2, 1, 40000, 10000, 10000, 'Part Payment', '2021-05-04', 'Debit/Credit Card', 'dfgtfry', NULL, '2021-04-12 18:12:24', 'prashantsm2021-04-12.pdf'),
+(21, 2, 1, 40000, 5000, 5000, 'Part Payment', '2021-08-10', 'Cash', 'afeetsf', NULL, '2021-08-07 17:26:36', 'prashantsm2021-08-07.pdf');
 
 -- --------------------------------------------------------
 
@@ -295,6 +287,43 @@ CREATE TABLE IF NOT EXISTS `feescollectionlastm` (
 ,`TotalFees` int(50)
 ,`PaidFees` decimal(65,0)
 );
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+DROP TABLE IF EXISTS `services`;
+CREATE TABLE IF NOT EXISTS `services` (
+  `Candidateid` varchar(100) DEFAULT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Phone` varchar(15) NOT NULL,
+  `Services` varchar(100) NOT NULL,
+  `TotalAmount` varchar(100) NOT NULL,
+  `PaidAmount` varchar(100) NOT NULL,
+  `PendingAmount` varchar(100) NOT NULL,
+  `PaymentMode` varchar(100) NOT NULL,
+  `Modified_Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `paymentreceipt` varchar(100) NOT NULL,
+  KEY `Candidateid` (`Candidateid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`Candidateid`, `Name`, `Email`, `Phone`, `Services`, `TotalAmount`, `PaidAmount`, `PendingAmount`, `PaymentMode`, `Modified_Date`, `paymentreceipt`) VALUES
+('40', 'tazeen', 'tazeen123@gmail.com', '1233232223', 'DIGITAL MARKETING', '30000', '10000', '20000', 'Net Banking', '2021-04-12 18:10:05', ''),
+('40', 'tazeen', 'tazeen123@gmail.com', '1233232223', 'DIGITAL MARKETING', '30000', '15000', '5000', 'Net Banking', '2021-04-12 18:10:41', ''),
+('40', 'tazeen', 'tazeen123@gmail.com', '1233232223', 'DIGITAL MARKETING', '30000', '2500', '2500', 'Net Banking', '2021-04-12 18:23:54', ''),
+('40', 'tazeen', 'tazeen123@gmail.com', '1233232223', 'DIGITAL MARKETING', '30000', '2000', '500', 'Debit/Credit Card', '2021-04-12 18:24:12', ''),
+('40', 'tazeen', 'tazeen123@gmail.com', '1233232223', 'DIGITAL MARKETING', '30000', '500', '0', 'Net Banking', '2021-04-12 18:34:22', ''),
+('38', 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', 'CIVIL DESIGN SOFTWARES', '30000', '10000', '20000', 'Net Banking', '2021-04-12 18:34:40', ''),
+('38', 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', 'CIVIL DESIGN SOFTWARES', '30000', '10000', '20000', 'Net Banking', '2021-04-12 18:36:21', ''),
+('38', 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', 'CIVIL DESIGN SOFTWARES', '30000', '10000', '20000', 'Net Banking', '2021-04-12 18:37:17', ''),
+('38', 'tasleem', 'tasleemnadaf@gmail.com', '23456789000', 'CIVIL DESIGN SOFTWARES', '30000', '10000', '20000', 'Net Banking', '2021-04-12 18:38:04', 'tasleem2021-04-12.pdf');
 
 -- --------------------------------------------------------
 

@@ -154,6 +154,7 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                         <table class="display enquiries" id="Internship">
                             <thead>
                                 <tr>
+                                <th>Created Date</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
@@ -169,7 +170,8 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                                     echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                                 foreach($enquirylist as $enquiry) 
                                 {
-                                    echo "<tr><td> " . $enquiry->get_name(). "</td>
+                                    echo "<tr><td> " . $enquiry->get_enqcreatedon(). "</td>
+                                    <td> " . $enquiry->get_name(). "</td>
                                     <td>". $enquiry->get_email(). "</td>
                                     <td>" .$enquiry->get_phone(). "</td>
                                     <td>". $enquiry->get_qualification(). "</td>
@@ -201,6 +203,7 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                         <table class="enquiries" id="democlasstable">
                             <thead>
                                 <tr>
+                                <th>Created Date</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
@@ -215,7 +218,8 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                                      echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                                 foreach($enquirylist as $enquiry) 
                                 {
-                                     echo "<tr><td> " . $enquiry->get_name(). "</td>
+                                     echo "<tr><td> " . $enquiry->get_enqcreatedon(). "</td>
+                                     <td> " . $enquiry->get_name(). "</td>
                                      <td>". $enquiry->get_email(). "</td>
                                      <td>" .$enquiry->get_phone(). "</td>
                                      <td>". $enquiry->get_qualification(). "</td>
@@ -247,6 +251,7 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                         <table class="enquiries display" id="Services">
                             <thead>
                                 <tr>
+                                <th>Created Date</th>
                                     <th>Modified Date</th>
                                     <th>Name</th>
                                     <th>Email</th>
@@ -262,7 +267,8 @@ require_once "../../Admin/DB Operations/CoursesOps.php";
                                    echo "<tbody>";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
                                    foreach($enquirylist as $enquiry) 
                                    {
-                                      echo "<tr><td> " . $enquiry->get_modifieddate(). "</td>
+                                      echo "<tr><td> " . $enquiry->get_enqcreatedon(). "</td>
+                                      <td> " . $enquiry->get_modifieddate(). "</td>
                                       <td> " . $enquiry->get_name(). "</td>
                                       <td>". $enquiry->get_email(). "</td>
                                       <td>" .$enquiry->get_phone(). "</td>
