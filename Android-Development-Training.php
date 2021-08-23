@@ -220,7 +220,7 @@ $courselist=DBcourse::selectall();
                   <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com" />
 
                   <label class="label" for="phone"><b>Enter your number:</b></label>
-                  <input type="tel" name="phone" id="phone" class="form-control" placeholder="Number" required />
+                  <input type="tel" name="phone" id="phone" class="form-control" placeholder="Number" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required />
 
                   <label class="label" for="trainings"><b>Trainings</b></label>
                   <select class="custom-select" id="trainings" name="trainings">
@@ -361,7 +361,7 @@ $courselist=DBcourse::selectall();
                 <input type="email" name="email2" class="form-control" id="email2" placeholder="name@example.com" />
 
                 <label class="label" for="phone2"><b>Enter your number:</b></label>
-                <input type="tel" name="phone2" class="form-control" id="phone2" placeholder="Number" required />
+                <input type="tel" name="phone2" class="form-control" id="phone2" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="Number" required />
 
                 <label class="label" for="trainings2"><b>Trainings</b></label>
                 <select class="custom-select" id="trainings2" name="trainings2">

@@ -295,7 +295,7 @@ $courselist=DBcourse::selectall();
 <label class=label for=email2><b>Email</b></label>
 <input type=email name=email2 class=form-control id=email2 placeholder=name@example.com />
 <label class=label for=phone2><b>Enter your number:</b></label>
-<input type=tel name=phone2 class=form-control id=phone2 placeholder=Number required />
+<input type=tel name=phone2 class=form-control id=phone2 placeholder=Number pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required />
 <label class=label for=trainings2><b>Trainings</b></label>
 <select class=custom-select id=trainings2 name=trainings2>
 <option value="SELECT YOUR INTEREST">Select your Interest</option>
@@ -345,7 +345,7 @@ foreach($courselist as $course) {
 <label class=label for=email><b>Email</b></label>
 <input type=email name=email class=form-control id=email placeholder=name@example.com />
 <label class=label for=phone><b>Enter your number:</b></label>
-<input type=tel name=phone class=form-control id=phone placeholder=Number required />
+<input type=tel name=phone class=form-control pattern="[0-9]{3} [0-9]{3} [0-9]{4}" id=phone placeholder=Number required />
 <label class=label for=trainings><b>Trainings</b></label>
 <select class=custom-select id=trainings name=trainings>
 <option value="SELECT YOUR INTEREST">Select your Interest</option>
