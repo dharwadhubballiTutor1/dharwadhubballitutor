@@ -1,4 +1,4 @@
-<?php 
+<?php
 // Singleton to connect db.
 class ConnectDb {
   // Hold the class instance.
@@ -7,7 +7,6 @@ class ConnectDb {
   {
     if (!self::$instance)
     {
-      
       self::$instance = new ConnectDb();
     }
     return self::$instance;
@@ -19,11 +18,10 @@ class ConnectDb {
 
   private function __construct()
   {
-    $this->connection = new mysqli('localhost','root','','dharwadhubballitutor');
+    $this->connection = new mysqli('localhost','root','Tutor@123','dharwadhubballitutor');
     if ($this->connection->connect_error) {
       die("Connection failed: " . $this->connection->connect_error);
     }
-    
   }
   public function getConnection()
   {

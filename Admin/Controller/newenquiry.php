@@ -3,6 +3,7 @@
 require "../../Model/Registration.php";
 require "../Utilities/Sanitization.php";
 include "../../Admin/DB Operations/enqueryOps.php";
+require_once "../Model/smsModel.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (isset($_POST['id'])) {
@@ -23,7 +24,17 @@ include "../../Admin/DB Operations/enqueryOps.php";
           $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
           $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
           $reg->set_services(Sanitization::test_input($_POST["services"]));
+          $message=new sms();
+          $message->setNumbers($reg->get_phone());
+          $message->setMessage('Thank you %%|name^{"inputtype" : "text",
+            "maxlength" : "30"}%%,
+            for enquiring with DharwadHubballiTutor.
+            For any further assistance please feel free to reach us on below contact information
+            +91-9741237334 +91-8007961759
+            www.dharwadhubballitutor.com');
           DBenquery::insert($reg);
+          $message->sendSMS();
+          
       }
   }
   
@@ -35,7 +46,7 @@ include "../../Admin/DB Operations/enqueryOps.php";
 
 <body>
     <?php 
-// header("location:../View/enquiries.php");
+header("location:../View/enquiries.php");
 ?>
 
 

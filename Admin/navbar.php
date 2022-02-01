@@ -1,13 +1,11 @@
-<div class="sidenav ">
-    <h3 class="navbar-brand  brandName">DharwadHubballiTutor</h3> <br>
+<div class="sidenav">
+    <h3 class="brandName text-center">DharwadHubballiTutor</h3> <br>
     
     <div class="sidebar-header">
         <div class="user-pic">
             <img class="img-responsive rounded-circle mx-auto d-block"
-                style="text-align:center; width:100px; height:100px" src="../../Admin/admin.png" alt="User picture">
-        </div>
-        <div class="user-info">
-            <span class="user-role">Administrator</span>
+                style="text-align:center; width:100px; height:100px" 
+                src="../../Admin/admin.png" alt="User picture">
         </div>
     </div>
     <hr>
@@ -22,9 +20,5 @@
     <a href="fees.php"> <i class="fas fa-rupee-sign"></i> <span> Fees</span></a>
     <a href="services.php"> <i class="fas fa-briefcase"></i> <span> Services</span></a>
     <a type="button" href="../logout.php"><i class="fa fa-power-off"></i> Log Out</a>
-
-    <!-- <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div> -->
 
 </div>

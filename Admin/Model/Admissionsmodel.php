@@ -19,6 +19,7 @@
     private $Courseid;
     private $table_name="admissions";
     private $enqueryId;
+    private $modifiedDate;
     
     function set_id($id) {
       $this->id = $id;
@@ -48,8 +49,6 @@
   function get_phone() {
     return $this->Phone;
   }
-
-
   function set_email($email) {
     $this->Email = $email;
   }
@@ -145,10 +144,22 @@
   function get_courseid() {
     return $this->Courseid;
   }
-  
 
+    /**
+     * Get the value of modifiedDate
+     */
+    public function getModifiedDate()
+    {
+        return $this->modifiedDate;
+    }
 
-  
+    /**
+     * Set the value of modifiedDate
+     */
+    public function setModifiedDate($modifiedDate): self
+    {
+        $this->modifiedDate = $modifiedDate;
 
+        return $this;
+    }
 }
-?>
