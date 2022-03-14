@@ -56,7 +56,7 @@ class DBenquery
         $connectionObj = $db->getConnection();
         $sql = "insert into candidates (`Name`, `Email`, `Phone`, `Trainings`,`Internship`,`Services`,`Demo`,`Qualification`) 
                 values ('" . $registrationObj->get_name() . "','" . $registrationObj->get_email() . "','" . $registrationObj->get_phone() . "','" . $registrationObj->get_trainings() . "', '" . $registrationObj->get_internship() . "','" . $registrationObj->get_services() . "','" . $registrationObj->get_demo() . "','" . $registrationObj->get_qualification() . "')";
-
+error_log($sql);
         if ($connectionObj->query($sql) === true) {
         } else {
             echo "Error: " . $sql . "<br>" . $connectionObj->error;

@@ -74,9 +74,9 @@
     return $this->Qualification;
   }
 
-  function set_enqcreatedon($enqcreatedonValue)
+  function set_enqcreatedon($enq_createdon)
 {
-    $this->enq_createdon=$enqcreatedon;
+    $this->enq_createdon = $enq_createdon;
 }
 function get_enqcreatedon()
 {

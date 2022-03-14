@@ -14,8 +14,7 @@ require_once("../model/categoryModel.php");
             </div>
             <div class="col" align="right">
                 <span data-toggle=modal data-target=#itemcatModal>
-                    <button type="button" + class="btn btn-success btn-circle btn-sm"><i
-                            class="fas fa-plus"></i></button>
+                    <button type="button" + class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                 </span>
             </div>
         </div>
@@ -26,7 +25,8 @@ require_once("../model/categoryModel.php");
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Description.</th>
+                        <th>Description</th>
+                        <th>Has Subcategory</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -36,6 +36,7 @@ require_once("../model/categoryModel.php");
                     foreach ($itemcatlist as $itemcat) {
                         echo "<tr><td>" . $itemcat->getCategoryName() . "</td>
                         <td>" . $itemcat->getCategoryDescription() . "</td>
+                        <td>" . $itemcat->getHasSubcategory() . "</td>
                         <td>
                         <div class='dropdown'>
                         <button class='btn btn-secondary dropdown-toggle' 
@@ -51,7 +52,7 @@ require_once("../model/categoryModel.php");
                             data-toggle='modal' 
                             data-target='#editItemcatModal' 
                             role='button' 
-                            data-id='".$itemcat->getCategoryId()."'>
+                            data-id='" . $itemcat->getCategoryId() . "'>
                             <i class='fas fa-user-edit'></i> 
                                 Edit Category
                            </button>
@@ -77,8 +78,7 @@ require_once("../model/categoryModel.php");
 <?php include('footer.php'); ?>
 <div class="modal fade" id=itemcatModal tabindex=-1 role=dialog aria-hidden=true>
     <div class="modal-dialog">
-        <form method="post" id="user_form"
-            action="../controller/categoryController.php">
+        <form method="post" id="user_form" action="../controller/categoryController.php">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Category</h4>
@@ -90,32 +90,37 @@ require_once("../model/categoryModel.php");
                         <div class="row">
                             <label class="col-md-4 text-right">Name <span class="text-danger">*</span></label>
                             <div class="col-md-8">
-                                <input type="text" name="itemcatname" id="itemcatname" class="form-control" required
-                                    data-parsley-pattern="/^[a-zA-Z\s]+$/" data-parsley-maxlength="150"
-                                    data-parsley-trigger="keyup" />
+                                <input type="text" name="itemcatname" id="itemcatname" class="form-control" required data-parsley-pattern="/^[a-zA-Z\s]+$/" data-parsley-maxlength="150" data-parsley-trigger="keyup" />
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
-                            <label class="col-md-4 text-right">Description <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-md-4 text-right">Description <span class="text-danger">*</span></label>
                             <div class="col-md-8">
-                                <textarea type="text" name="itemcatdescription" 
-                                id="itemcatdescription"
-                                class="form-control" 
-                                required ></textarea>
+                                <textarea type="text" name="itemcatdescription" id="itemcatdescription" class="form-control" required></textarea>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="row">
+                            <div class="form-check form-check-inline">
+                                <div class="col-md-4 text-right">
+                                    <label class="form-check-label text-right" >Has sub<br> category</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="form-check-input" type="checkbox" id="itemcatHasSubcategory" name="HasSubcategory">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
 
                             <div class="col-md-8">
-                                <input type="hidden" name="itemcatcreatedby" id="itemcatcreatedby" class="form-control"
-                                    required 
-                                    value="<?php echo $_SESSION['login_user']; ?>" />
+                                <input type="hidden" name="itemcatcreatedby" id="itemcatcreatedby" class="form-control" required value="<?php echo $_SESSION['login_user']; ?>" />
                             </div>
                         </div>
                     </div>
@@ -123,9 +128,7 @@ require_once("../model/categoryModel.php");
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-8">
-                                <input type="hidden" name="itemcatmodifiedby" id="itemcatmodifiedby"
-                                    class="form-control" required 
-                                    value="<?php echo $_SESSION['login_user']; ?>" />
+                                <input type="hidden" name="itemcatmodifiedby" id="itemcatmodifiedby" class="form-control" required value="<?php echo $_SESSION['login_user']; ?>" />
                             </div>
                         </div>
                     </div>
@@ -143,7 +146,7 @@ require_once("../model/categoryModel.php");
 </div>
 <div class="modal fade" id=editItemcatModal tabindex=-1 role=dialog aria-hidden=true>
     <div class="modal-dialog">
-        <form method="post" id="itemcat_form" >
+        <form method="post" id="itemcat_form">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Category</h4>
@@ -155,19 +158,29 @@ require_once("../model/categoryModel.php");
                         <div class="row">
                             <label class="col-md-4 text-right">Name <span class="text-danger">*</span></label>
                             <div class="col-md-8">
-                                <input type="text" name="itemcatname" id="editedItemcatname" class="form-control"
-                                    required  />
+                                <input type="text" name="itemcatname" id="editedItemcatname" class="form-control" required />
                                 <input type="hidden" name="itemcatid" id="itemcatid" value="">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
-                            <label class="col-md-4 text-right">Description <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-md-4 text-right">Description <span class="text-danger">*</span></label>
                             <div class="col-md-8">
-                                <textarea type="text" name="itemcatdescription" id="editedItemcatdescription"
-                                    class="form-control" required ></textarea>
+                                <textarea type="text" name="itemcatdescription" id="editedItemcatdescription" class="form-control" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="form-check form-check-inline">
+                                <div class="col-md-4 text-right">
+                                    <label class="form-check-label text-right">Has sub<br> category</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input class="form-check-input" type="checkbox" id="editedHasSubcategory" name="HasSubcategory">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -176,10 +189,7 @@ require_once("../model/categoryModel.php");
                         <div class="row">
 
                             <div class="col-md-8">
-                                <input type="hidden" name="itemcatcreatedby" id="editedItemcatcreatedby"
-                                    class="form-control" required data-parsley-type="integer"
-                                    data-parsley-minlength="10" data-parsley-maxlength="12" data-parsley-trigger="keyup"
-                                    value="<?php echo $_SESSION['login_user']; ?>" />
+                                <input type="hidden" name="itemcatcreatedby" id="editedItemcatcreatedby" class="form-control" required data-parsley-type="integer" data-parsley-minlength="10" data-parsley-maxlength="12" data-parsley-trigger="keyup" value="<?php echo $_SESSION['login_user']; ?>" />
                             </div>
                         </div>
                     </div>
@@ -188,10 +198,7 @@ require_once("../model/categoryModel.php");
                         <div class="row">
 
                             <div class="col-md-8">
-                                <input type="hidden" name="itemcatmodifiedby" id="editedItemcatmodifiedby"
-                                    class="form-control" required data-parsley-type="integer"
-                                    data-parsley-minlength="10" data-parsley-maxlength="12" data-parsley-trigger="keyup"
-                                    value="<?php echo $_SESSION['login_user']; ?>" />
+                                <input type="hidden" name="itemcatmodifiedby" id="editedItemcatmodifiedby" class="form-control" required data-parsley-type="integer" data-parsley-minlength="10" data-parsley-maxlength="12" data-parsley-trigger="keyup" value="<?php echo $_SESSION['login_user']; ?>" />
                             </div>
                         </div>
                     </div>
@@ -230,67 +237,87 @@ require_once("../model/categoryModel.php");
     </div>
 </div>
 <script>
-$(document).ready(function() {
-
-    $('#editItemcatModal').on('show.bs.modal', function(e) {
-        var rowid = $(e.relatedTarget).data('id');
-        $('#itemcatid').val(rowid);
-
-    });
-    var dataTable = $('#itemcat_table').DataTable({
-
-    });
-
-    var nEditing = null;
-
-    $('#itemcat_table tbody').on('click', 'tr', function() {
-        /* Get the row as a parent of the link that was clicked on */
-        $('#editedItemcatname').val(this.cells[0].innerHTML);
-        $('#editedItemcatdescription').val(this.cells[1].innerHTML);
-
-    });
-    $('#editbutton').click(function(event) {
-        var formData = {
-            itemcatid: $('#itemcatid').val(),
-            itemcatname: $('#editedItemcatname').val(),
-            itemcatdescription: $('#editedItemcatdescription').val(),
-            itemcatcreatedby: $('#editedItemcatcreatedby').val(),
-            itemcatmodifiedby: $('#editedItemcatmodifiedby').val(),
-        };
-
-        $.ajax({
-            type: "POST",
-            url: config.developmentPath+
-                "/admin/controller/categoryController.php",
-            data: formData,
-            dataType: "json",
-            encode: true,
-        }).done(function(data) {
-            console.log(data);
-        });
-        $('#editbutton').dispose();
-        event.preventDefault();
-    });
-    $('#deleteCategoryModal').on('show.bs.modal', function(e) {
-        var rowid = $(e.relatedTarget).data('id');
-        $('#itemcatid').val(rowid);
-    });
-    $('#deletebutton').click(function() {
-        $.ajax({
-            url:  config.developmentPath+"/admin/controller/categoryController.php/",
-            method: "POST",
-            data: {
-                id: $('#itemcatid').val(),
-                action: 'delete'
-            },
-            success: function(data) {
-                $('#message').html(data);
-                dataTable.ajax.reload();
-                setTimeout(function() {
-                    $('#message').html('');
-                }, 5000);
+    $(document).ready(function() {
+        $('#editedHasSubcategory').on('change',function(){
+        
+            if($('#editedHasSubcategory').attr("checked")=='checked'){
+                $('#editedHasSubcategory').attr("value","off");
+            }else{
+                $('#editedHasSubcategory').attr("value","on");
             }
-        });
-    });
-});
+        })
+                $('#editItemcatModal').on('show.bs.modal', function(e) {
+                    var rowid = $(e.relatedTarget).data('id');
+                    $('#itemcatid').val(rowid);
+
+                });
+                var dataTable = $('#itemcat_table').DataTable({
+
+                });
+
+                var nEditing = null;
+
+                $('#itemcat_table tbody').on('click', 'tr', function() {
+                    debugger;
+                    /* Get the row as a parent of the link that was clicked on */
+                    $('#editedItemcatname').val(this.cells[0].innerHTML);
+                    $('#editedItemcatdescription').val(this.cells[1].innerHTML);
+                    
+                    if (this.cells[2].innerHTML=="true"){
+                            $('#editedHasSubcategory').attr("checked" ,"checked");
+                            $('#editedHasSubcategory').val("on");
+                    }
+                      else{
+                            $('#editedHasSubcategory').removeAttr("checked" ,"checked");
+                            $('#editedHasSubcategory').val("off");
+                        }                                    
+
+                });
+                   
+
+                    $('#editbutton').click(function(event) {
+                        var formData = {
+                            itemcatid: $('#itemcatid').val(),
+                            itemcatname: $('#editedItemcatname').val(),
+                            itemcatdescription: $('#editedItemcatdescription').val(),
+                            HasSubcategory: $('#editedHasSubcategory').val(),
+                            itemcatcreatedby: $('#editedItemcatcreatedby').val(),
+                            itemcatmodifiedby: $('#editedItemcatmodifiedby').val(),
+                        };
+
+                        $.ajax({
+                            type: "POST",
+                            url: config.developmentPath +
+                                "/blogadmin/controller/categoryController.php",
+                            data: formData,
+                            dataType: "json",
+                            encode: true,
+                        }).done(function(data) {
+                            console.log(data);
+                        });
+                        $('#editbutton').dispose();
+                        event.preventDefault();
+                    });
+                    $('#deleteCategoryModal').on('show.bs.modal', function(e) {
+                        var rowid = $(e.relatedTarget).data('id');
+                        $('#itemcatid').val(rowid);
+                    });
+                    $('#deletebutton').click(function() {
+                        $.ajax({
+                            url: config.developmentPath + "/blogadmin/controller/categoryController.php/",
+                            method: "POST",
+                            data: {
+                                id: $('#itemcatid').val(),
+                                action: 'delete'
+                            },
+                            success: function(data) {
+                                $('#message').html(data);
+                                dataTable.ajax.reload();
+                                setTimeout(function() {
+                                    $('#message').html('');
+                                }, 5000);
+                            }
+                        });
+                    });
+            });
 </script>

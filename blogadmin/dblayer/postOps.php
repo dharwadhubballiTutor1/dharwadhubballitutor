@@ -12,15 +12,17 @@ class DBpost
          `postTitle`,
          `postUrl`,
          `appearOnHome`, 
-         `postDescription`, 
+         `postDescription`,
+         `LinkUnder`, 
          `postCreatedBy`, 
          `titleTag`, 
-         `keywords`, 
+         `keywords`,
          `modifiedBy`) 
          values ('" . $post->getPostTitle() .
       "','" . $post->getPostUrl() .
-      "','" .$post->getOnHome().
+      "','" . $post->getOnHome() .
       "','" . $post->getPostDescription() .
+      "','" . $post->getLinkUnder ().
       "','" . $post->getPostCreatedBy() .
       "','" . $post->getTitleTag() .
       "','" . $post->getKeywords() .
@@ -40,29 +42,80 @@ class DBpost
         "'," . $lastInsertedId .
         ")";
       if ($connectionObj->query($sql) === true) {
+      } else {
+        echo "Error: " . $sql . "<br>" . $connectionObj->error;
       }
-      if (is_array($post->getMappedSubCategory())) {
-        $count = count($post->getMappedSubCategory());
-        $mapped = $post->getMappedSubCategory();
-        for ($i = 0; $i < $count; $i++) {
-          $sql = "INSERT INTO `postsubcatmapping`(`postId`, `subCatId`) VALUES (" .
-            $lastInsertedId .
-            "," . $mapped[$i] . ")";
-          if ($connectionObj->query($sql) === true) {
+      error_log($sql);
+      if ($post->getLinkUnder() == "1") {
+        if (is_array($post->getMappedSubCategory())) {
+          $count = count($post->getMappedSubCategory());
+          $mapped = $post->getMappedSubCategory();
+          for ($i = 0; $i < $count; $i++) {
+            $sql = "INSERT INTO `postcatmapping`(`postId`, `CatId`) VALUES (" .
+              $lastInsertedId .
+              "," . $mapped[$i] . ")";
+            if ($connectionObj->query($sql) === true) {
+            }
           }
         }
       } else {
-        $sql = "INSERT INTO `postsubcatmapping`(`postId`, `subCatId`) VALUES (" .
-          $lastInsertedId .
-          "," . $post->getMappedSubCategory() . ")";
-        if ($connectionObj->query($sql) === true) {
+        if (is_array($post->getMappedSubCategory())) {
+          $count = count($post->getMappedSubCategory());
+          $mapped = $post->getMappedSubCategory();
+          for ($i = 0; $i < $count; $i++) {
+            $sql = "INSERT INTO `postsubcatmapping`(`postId`, `subCatId`) VALUES (" .
+              $lastInsertedId .
+              "," . $mapped[$i] . ")";
+            if ($connectionObj->query($sql) === true) {
+            }
+          }
+        } else {
+          $sql = "INSERT INTO `postsubcatmapping`(`postId`, `subCatId`) VALUES (" .
+            $lastInsertedId .
+            "," . $post->getMappedSubCategory() . ")";
+          if ($connectionObj->query($sql) === true) {
+          }
         }
       }
-    } else {
-      echo "Error: " . $sql . "<br>" . $connectionObj->error;
     }
   }
-  public static function getPostBySubCategoryFornt($subId){
+
+  public static function getPostByCategoryFornt($CatId)
+  {
+    $db = ConnectDb::getInstance();
+    $connectionObj = $db->getConnection();
+    $sql = "SELECT * FROM postcatmapping
+    JOIN category ON 
+    postcatmapping.CatId=category.CategoryId
+    JOIN  post ON postcatmapping.postId=post.postId
+    JOIN postimages AS pI ON post.postId=pI.postId
+    WHERE category.CategoryId=" . $CatId;
+    error_log($sql);
+    $result = $connectionObj->query($sql);
+    $count = mysqli_num_rows($result);
+    $postList = [];
+    if ($count > 0) {
+      while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        $post = new Post();
+        $post->setPostId($row["postId"]);
+        $post->setPostTitle($row["postTitle"]);
+        $post->setPostDescription($row["postDescription"]);
+        $post->setPostCreatedBy($row["postCreatedOn"]);
+        $post->setKeywords($row["keywords"]);
+        $post->setTitleTag($row["titleTag"]);
+        $post->setImage($row["postImage"]);
+        $post->setPostUrl($row["postUrl"]);
+        $post->setOnHome($row["appearOnHome"]);
+        $post->setAltTextImage($row["imageAlternateText"]);
+        $post->setPostCreatedBy(date_format(date_create($row["postCreatedOn"]), "d-m-Y"));
+        $post->setMappedSubCategory(DBpost::getMappedSubCategories($row["postId"]));
+        array_push($postList, $post);
+      }
+    }
+    return $postList;
+  }
+  public static function getPostBySubCategoryFornt($subId)
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "SELECT * FROM postsubcatmapping
@@ -94,7 +147,8 @@ class DBpost
     }
     return $postList;
   }
-  public static function getPostBySubCategoryId($postId){
+  public static function getPostBySubCategoryId($postId)
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "SELECT * FROM postsubcatmapping
@@ -127,11 +181,12 @@ class DBpost
     }
     return $postList;
   }
-  public static function getPostByUrl($postUrl){
+  public static function getPostByUrl($postUrl)
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "SELECT *  FROM post AS p 
-    JOIN postimages AS pI ON p.postId=pI.postId 
+    JOIN postimages AS pI ON p.postId= pI.postId 
     WHERE p.postUrl='" . $postUrl . "'";
     error_log($sql);
     $result = $connectionObj->query($sql);
@@ -153,7 +208,8 @@ class DBpost
     }
     return $post;
   }
-  public static function getPostById($Id){
+  public static function getPostById($Id)
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "SELECT *  FROM post AS p JOIN postimages AS pI ON p.postId=pI.postId WHERE p.postId=" . $Id;
@@ -177,7 +233,8 @@ class DBpost
     }
     return $post;
   }
-  public static function getPostList(){
+  public static function getPostList()
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "SELECT *  FROM post AS p JOIN postimages AS pI ON p.postId=pI.postId";
@@ -201,7 +258,8 @@ class DBpost
     }
     return $postList;
   }
-  public static function getMappedSubCategories($postId){
+  public static function getMappedSubCategories($postId)
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "SELECT subCategoryName, 
@@ -223,12 +281,16 @@ class DBpost
     }
     return $mappedCategoriesList;
   }
-  public static function getPostOnHome(){
+
+
+
+  public static function getPostOnHome()
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "SELECT * FROM   post
     JOIN postimages AS pI ON post.postId=pI.postId
-    WHERE post.appearOnHome=". 1 ;
+    WHERE post.appearOnHome=" . 1;
     $result = $connectionObj->query($sql);
     $count = mysqli_num_rows($result);
     $postList = [];
@@ -252,20 +314,51 @@ class DBpost
     }
     return $postList;
   }
-  public static function update($post){
+  public static function getpopularPost()
+  {
+    $db = ConnectDb::getInstance();
+    $connectionObj = $db->getConnection();
+    $sql = "SELECT * FROM post AS p JOIN postimages AS pI ON p.postId=pI.postId ORDER BY RAND() LIMIT 4
+    ";
+    $result = $connectionObj->query($sql);
+    $count = mysqli_num_rows($result);
+    $postList = [];
+   
+    if ($count > 0) {
+      while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        $post = new Post();
+        $post->setPostId($row["postId"]);
+        $post->setPostTitle($row["postTitle"]);
+        $post->setPostDescription($row["postDescription"]);
+        $post->setPostCreatedBy($row["postCreatedOn"]);
+        $post->setKeywords($row["keywords"]);
+        $post->setTitleTag($row["titleTag"]);
+        $post->setPostUrl($row["postUrl"]);
+        $post->setOnHome($row["appearOnHome"]);
+        $post->setImage($row["postImage"]);
+        $post->setAltTextImage($row["imageAlternateText"]);       
+        $post->setMappedSubCategory(DBpost::getMappedSubCategories($row["postId"]));
+         array_push($postList, $post);
+        error_log($sql);
+      }
+    }
+    return $postList;
+  }
+  public static function update($post)
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "UPDATE `post` SET 
     `postTitle`='" . $post->getPostTitle() .
       "' , `postUrl`='" . $post->getPostUrl() .
-      "' , `appearOnHome`='".$post->getOnHome().
+      "' , `appearOnHome`='" . $post->getOnHome() .
       "' , `postDescription`='" . $post->getPostDescription() .
-      "' , `postModifiedOn`='" . $post->getModifiedBy() .
+      "', `LinkUnder`='".$post->getLinkUnder ().
       "' , `titleTag`='" . $post->getPostTitle() .
       "' , `keywords`='" . $post->getKeywords() .
       "' , `modifiedBy`='" . $post->getModifiedBy() .
       "'  WHERE `postId`=" . $post->getPostId();
-      error_log($sql);
+    error_log($sql);
     if ($connectionObj->query($sql) === true) {
       if (!empty($post->getImage())) {
         $sql = "UPDATE `postimages` SET `postImage`='" . $post->getImage() .
@@ -276,41 +369,63 @@ class DBpost
         }
       }
 
-
-      $sql = "DELETE FROM postsubcatmapping WHERE postId=" . $post->getPostId();
-      error_log($sql);
-      if ($connectionObj->query($sql) === true) {
+      error_log($post->getLinkUnder());
+      if ($post->getLinkUnder() == "1") {
+        $sql = "DELETE FROM postcatmapping WHERE postId=". $post->getPostId();
+        if ($connectionObj->query($sql) === true) {
+        }
+        if (is_array($post->getMappedSubCategory())) {
+          $count = count($post->getMappedSubCategory());
+          $mapped = $post->getMappedSubCategory();
+         
+          for ($i = 0; $i < $count; $i++) {
+            $sql = "INSERT INTO `postcatmapping`(`postId`, `CatId`) VALUES (" .
+              $post->getPostId() .
+              "," . $mapped[$i] . ")";
+            if ($connectionObj->query($sql) === true) {
+            }
+          }
+        }else {
+          $sql = "INSERT INTO `postcatmapping`(`postId`, `CatId`) VALUES (" .
+          $post->getPostId() .
+            "," . $post->getMappedSubCategory() . ")";
+          if ($connectionObj->query($sql) === true) {
+          }
+        }
+      } else {
+        $sql = "DELETE FROM postsubcatmapping WHERE postId=". $post->getPostId();
+        if ($connectionObj->query($sql) === true) {
+        }
         if (is_array($post->getMappedSubCategory())) {
           $count = count($post->getMappedSubCategory());
           $mapped = $post->getMappedSubCategory();
           for ($i = 0; $i < $count; $i++) {
             $sql = "INSERT INTO `postsubcatmapping`(`postId`, `subCatId`) VALUES (" .
-              $post->getPostId() .
+            $post->getPostId() .
               "," . $mapped[$i] . ")";
             if ($connectionObj->query($sql) === true) {
             }
-         
           }
         } else {
           $sql = "INSERT INTO `postsubcatmapping`(`postId`, `subCatId`) VALUES (" .
-            $post->getPostId() .
+          $post->getPostId() .
             "," . $post->getMappedSubCategory() . ")";
-        
           if ($connectionObj->query($sql) === true) {
           }
         }
       }
     }
   }
-  public static function delete($postId){
+  public static function delete($postId)
+  {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
-    $sql = "DELETE FROM postsubcatmapping WHERE postId=".$postId;
+    $sql = "DELETE FROM postsubcatmapping WHERE postId=" . $postId;
     if ($connectionObj->query($sql) === true) {
-      $sql ="DELETE FROM postimages WHERE postId=".$postId;
+      $sql = "DELETE FROM postimages WHERE postId=" . $postId;
       if ($connectionObj->query($sql) === true) {
       }
-      $sql ="DELETE FROM post WHERE postId=".$postId;
+      $sql = "DELETE FROM post WHERE postId=" . $postId;
       if ($connectionObj->query($sql) === true) {
       }
     }

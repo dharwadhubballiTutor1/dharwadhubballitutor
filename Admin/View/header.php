@@ -93,18 +93,7 @@
                     <span> Services</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="PrivacyPolicy.php">
-                <i class="fas fa-shield-alt"></i>
-                    <span>Privacy Policy</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="termsandconditions.php">
-                <i class="fas fa-asterisk"></i>
-                    <span>Terms and Conditions</span>
-                </a>
-            </li>
+           
             <li class="nav-item">
                 <a class="nav-link" href="../../blogadmin/views/dashboard.php"> 
                 <i class="fas fa-rss"></i>

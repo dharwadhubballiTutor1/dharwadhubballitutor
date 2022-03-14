@@ -149,7 +149,10 @@
     <div class="container">
       <div class="w-100 text-light">
         <h3 class="h3">WHY IS AN INTERNSHIP IMPORTANT</h3>
-        <p class="p2">In today's age, an internship is a vital part of a student's future. Based on their previous volunteering and internship experience, graduates are provided with jobs, serving a significant advantage in their careers. In addition, as a working professional, it also helps you to obtain first-hand experience while helping you to learn expertise, knowledge & understanding of the workings of a workplace.</p>
+        <p class="p2">In today's age, an internship is a vital part of a student's future. Based on their previous 
+          volunteering and internship experience, graduates are provided with jobs, serving a significant advantage 
+          in their careers. In addition, as a working professional, it also helps you to obtain first-hand experience 
+          while helping you to learn expertise, knowledge & understanding of the workings of a workplace.</p>
         <br />
         <h3 class="h3">WE PROVIDE INTERNSHIP ON BELOW MENTIONED SUBJECTS</h3>
         <ul>

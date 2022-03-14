@@ -11,17 +11,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $post->setPostId(Sanitization::test_input($_POST["postId"]));
     $post->setPostTitle(Sanitization::test_input($_POST["title"]));
     $post->setTitleTag(Sanitization::test_input($_POST["titleTag"]));
+    $post->setLinkUnder(Sanitization::test_input($_POST["LinkUnder"]));
     error_log($_POST["onHome"]);
     $post->setOnHome(Sanitization::test_input($_POST["onHome"]));
-    $post->setPostUrl(Sanitization::test_input($configs['app_info']['appName'].'/'.$_POST["postURL"]));
+    $post->setPostUrl(Sanitization::test_input($_POST["postURL"]));
     $quill_json = str_replace("'", "''", $_POST['hidden_element']);
-
+    //error_log($quill_json);
     try {
       $quill = new DBlackborough\Quill\Render($quill_json, 'HTML');
       $result = $quill->render();
     } catch (Exception $e) {
       echo $e->getMessage();
     }
+    error_log($result);
     $post->setPostDescription($result);
     $post->setKeywords(Sanitization::test_input($_POST["Keywords"]));
     $post->setMappedSubCategory($_POST["category"]);
@@ -34,14 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $post->setImage($_FILES["image"]['name']);
     }
     DBpost::update($post);
-  }else if($_POST['action']=="delete"){
+  } else if ($_POST['action'] == "delete") {
     error_log($_POST["id"]);
     DBpost::delete($_POST["id"]);
   } else {
     $post = new Post();
     $post->setPostTitle(Sanitization::test_input($_POST["title"]));
     $post->setTitleTag(Sanitization::test_input($_POST["titleTag"]));
-    $post->setPostUrl(Sanitization::test_input($configs['app_info']['appName'].'/'.$_POST["postURL"]));
+    $post->setPostUrl(Sanitization::test_input($_POST["postURL"]));
+
     error_log($_POST["onHome"]);
     $post->setOnHome(Sanitization::test_input($_POST["onHome"]));
     $quill_json = str_replace("'", "''", $_POST['hidden_element']);
@@ -54,6 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $post->setPostDescription($result);
     $post->setKeywords(Sanitization::test_input($_POST["Keywords"]));
     $post->setMappedSubCategory($_POST["category"]);
+    $post->setLinkUnder(Sanitization::test_input($_POST["LinkUnder"]));
+
     $post->setPostCreatedBy(Sanitization::test_input($_POST["postcreatedby"]));
     $post->setModifiedBy(Sanitization::test_input($_POST["postmodifiedby"]));
     $post->setAltTextImage(Sanitization::test_input($_POST["alttext"]));

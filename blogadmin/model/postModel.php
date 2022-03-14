@@ -11,6 +11,7 @@ class Post implements JsonSerializable{
     private $image;
     private $altTextImage;
     private $postUrl;
+    private $LinkUnder;
     private $onHome;
     public function jsonSerialize(){
         return [
@@ -238,6 +239,26 @@ class Post implements JsonSerializable{
 
         return $this;
     }
+
+
+    /**
+     * Get the value of LinkUnder
+     */
+    public function getLinkUnder()
+    {
+        return $this->LinkUnder;
+    }
+
+    /**
+     * Set the value of LinkUnder
+     */
+    public function setLinkUnder($LinkUnder): self
+    {
+        $this->LinkUnder = $LinkUnder;
+
+        return $this;
+    }
+
 }
 
 ?>

@@ -69,6 +69,20 @@ $post = DBpost::getPostById($postId);
                     </div>
                 </div>
             </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-2 text-right"> Link Under <span class="text-danger">*</span>
+                </label>
+                    <div class="col-md-10">
+                        <select id="LinkUnder" class="form-select" required name="LinkUnder">
+                            <!-- <option value="1" >Category</option> -->
+                            <option value="2">Sub Category</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="row">
                     <div class="form-check form-check-inline">
@@ -76,7 +90,7 @@ $post = DBpost::getPostById($postId);
                             <label class="form-check-label" for="onHome">Display On Home Page</label>
                         </div>
                         <div class="col-md-10">
-                            <input class="form-check-input" type="checkbox" id="onHome" name="onHome" <?php echo $post->getOnHome()==0 ? "" :  "checked";?> value='<?php echo $post->getOnHome()==0 ? 0:  1;?>'>
+                            <input class="form-check-input" type="checkbox" id="onHome" name="onHome" <?php echo $post->getOnHome() == 0 ? "" :  "checked"; ?> value='<?php echo $post->getOnHome() == 0 ? 0 :  1; ?>'>
                         </div>
                     </div>
                 </div>
@@ -92,7 +106,20 @@ $post = DBpost::getPostById($postId);
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+
+            <!-- <div class="form-group" id="category">
+                <div class="row">
+                    <label class="col-md-4" >Map to Categories</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" id="categoryCheckBox">
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div> -->
+
+            <div class="form-group" id="subcategory">
                 <div class="row">
                     <label class="col-md-4">Map to Sub Categories</label>
                 </div>
@@ -103,6 +130,7 @@ $post = DBpost::getPostById($postId);
                     <div class="col-md-1"></div>
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-10">
@@ -125,18 +153,30 @@ $post = DBpost::getPostById($postId);
     </div>
 
 </div>
+
 <?php include('footer.php'); ?>
+
 <script>
     $(document).ready(function() {
-        $('#onHome').change(function(){
-            if(this.checked){
+    
+        //  $('#subcategory').hide();
+        
+         $('#categoryCheckBox').click(function(){            
+             $('#categoryCheckBox').attr("checked", "checked");
+         });
+        
+        $('#onHome').change(function() {
+            if (this.checked) {
                 $('#onHome').val(1)
-            }else{
+            } else {
                 $('#onHome').val(0)
             }
         })
+        
+
+       
         var toolbarOptions = [
-            ['bold', 'italic', 'underline', 'strike'], // toggled buttons
+            ['bold', 'italic', 'underline', 'strike','image'], // toggled buttons
             ['blockquote', 'code-block'],
 
             [{
@@ -186,43 +226,101 @@ $post = DBpost::getPostById($postId);
         ];
         var quill = new Quill('#editor-container', {
             modules: {
-                toolbar: toolbarOptions
+                toolbar: toolbarOptions,
+                
             },
             placeholder: 'Compose an epic...',
             theme: 'snow'
         });
         $('form').submit(function() {
+            debugger;
+            console.log(JSON.stringify(quill.getContents()));
             $('#hidden_element').val(JSON.stringify(quill.getContents()));
             return true;
         });
-        isCategorySet = false;
 
-        if (isCategorySet == false) {
-            $.getJSON(config.developmentPath + "/blogadmin/Controller/subcategoryController.php?subCatId=" + $('#postId').val(), function(data) {
-                $.each(data, function(index, value) {
-                    if (value.mappedPost == 0) {
-                        checked = false;
-                    } else {
-                        checked = true;
-                    }
-                    $('#subcategoryCheckBox').append($(document.createElement('div')).prop({
-                        class: "form-check form-switch form-check-inline"
-                    }));
-                    $('#subcategoryCheckBox div:last').append($(document.createElement('input')).prop({
-                        class: "form-check-input",
-                        type: "checkbox",
-                        name: "category[]",
-                        checked: checked,
-                        value: value.itemsubcatid
-                    }));
-                    $('#subcategoryCheckBox div:last').append($(document.createElement('label')).prop({
-                        class: "form-check-label",
-                        for: "flexSwitchCheckDefault",
-                        innerHTML: value.itemsubcatname
-                    }));
+       
+        //$('#postModal').on('show.bs.modal', function(e) {
+            //  isSubCategorySet = false;
+            // if (isSubCategorySet == false) {
+            //     debugger;
+            //     console.log(config.developmentPath + "/blogadmin/controller/categoryController.php?postId="+$('#postId').val());
+            //     $.getJSON(config.developmentPath + "/blogadmin/controller/categoryController.php?postId="+$('#postId').val(), function(data) {
+            //         console.log(data);
+            //         $.each(data, function(index, value) {
+            //             if (value.mappedPost == 0) {
+            //                 checked = false;
+            //             } else {
+            //                 checked = true;
+            //             }
+            //             $('#categoryCheckBox').append($(document.createElement('div')).prop({
+            //                 class: "form-check form-switch form-check-inline"
+            //             }));
+            //             $('#categoryCheckBox div:last').append($(document.createElement('input')).prop({
+            //                 class: "form-check-input",
+            //                 type: "checkbox",
+            //                 name: "category[]",
+            //                 value: value.itemcatid,
+            //                 checked: checked
+            //             }));
+            //             $('#categoryCheckBox div:last').append($(document.createElement('label')).prop({
+            //                 class: "form-check-label",
+            //                 for: "flexSwitchCheckDefault",
+            //                 innerHTML: value.itemcatname
+                           
+            //             }));
+            //         });
+            //     });
+            //     isSubCategorySet = true;
+            // }
+
+
+            isCategorySet = false;
+            if (isCategorySet == false) {
+                $.getJSON(config.developmentPath + "/blogadmin/controller/subcategoryController.php?subCatId=" + $('#postId').val(), function(data) {
+                    $.each(data, function(index, value) {
+                        if (value.mappedPost == 0) {
+                            checked = false;
+                        } else {
+                            checked = true;
+                        }
+                        $('#subcategoryCheckBox').append($(document.createElement('div')).prop({
+                            class: "form-check form-switch form-check-inline"
+                        }));
+                        $('#subcategoryCheckBox div:last').append($(document.createElement('input')).prop({
+                            class: "form-check-input",
+                            type: "checkbox",
+                            name: "category[]",
+                            checked: checked,
+                            value: value.itemsubcatid
+                        }));
+                        $('#subcategoryCheckBox div:last').append($(document.createElement('label')).prop({
+                            class: "form-check-label",
+                            for: "flexSwitchCheckDefault",
+                            innerHTML: value.itemsubcatname
+                        }));
+                    });
                 });
-            });
-            isCategorySet = true;
-        }
+                isCategorySet = true;
+            }
+
+       
+           
+        $('#LinkUnder').change(function() {
+            debugger;
+            if ($('#LinkUnder').val() == 'Category') {
+
+                $('#subcategory').hide();
+                $('#category').show();
+
+            } else {
+                $('#category').hide();
+                $('#subcategory').show();
+            }
+
+        })
     })
+
+    
+
 </script>

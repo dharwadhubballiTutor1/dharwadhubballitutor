@@ -14,6 +14,7 @@ require_once("../dblayer/postOps.php")
 
     }
 </style>
+</style>
 <h1 class="h3 mb-4 text-gray-800"></h1>
 <!-- DataTales Example -->
 <span id="message"></span>
@@ -35,24 +36,43 @@ require_once("../dblayer/postOps.php")
 echo '<div class="row row-cols-1 row-cols-md-3 g-4">';
 $postList = DBpost::getPostList();
 foreach ($postList as $post) {
-    $card = '<div class="col"><div class="card shadow" style="width: 18rem;">
+    $card = '<div class="col">
+    <div class="card shadow" style="width: 18rem;height:240px;">
+    <div id="main">
   <img src="../img/post/' . $post->getImage() . '" class="card-img-top" alt="' . $post->getAltTextImage() . '">
+  </div>
   <div class="card-body">';
     foreach ($post->getMappedSubCategory() as $subcategory) {
         $card .= '<span class="badge bg-primary">' . $subcategory->getSubCategoryName() . '</span>';
     }
 
-    $card .= '<h5 class="card-title">' . $post->getPostTitle() . '</h5>
-    ' . $post->getPostDescription() . '
+    $string = strip_tags($post->getPostDescription());
+    if (strlen($string) > 50) {
+
+          // truncate string
+          $stringCut = substr($string, 0, 50);
+          $endPoint = strrpos($stringCut, ' ');
+
+          //if the string doesn't contain any space then it will cut without word basis.
+          $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+          $string .= '...';
+    }
    
-  </div>
+
+    $card .= '<h5 class="card-title">' . $post->getPostTitle() . '</h5>' . $string .  '
+    </div>
+
+   
+
+
   <div class="card-footer" align="right">
   <a class="text-center" href="postDetails.php?id=' . $post->getPostId() . '" class="btn btn-primary"><i class="fas fa-info-circle"></i></a>
   <a class="text-center" href="editPost.php?id=' . $post->getPostId() . '" class="btn btn-Warning"><i class="fas fa-edit"></i></a>
   <a data-toggle=modal data-target=#deletePostModal data-id="' . $post->getPostId() . '"class="text-center" class="btn btn-Warning"><i class="fas fa-eraser"></i></a>
   
   </div>
-</div></div>';
+</div>
+</div>';
     echo $card;
 }
 echo '</div>';
@@ -117,6 +137,19 @@ echo '</div>';
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-md-2 text-right"> Link Under <span class="text-danger">*</span></label>
+                            <div class="col-md-10">
+                                <select id="LinkUnder" class="form-select" required name="LinkUnder">
+                                    <!-- <option value="1">Category</option> -->
+                                    <option value="2">Sub Category</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <div class="row">
                             <div class="form-check form-check-inline">
@@ -138,8 +171,19 @@ echo '</div>';
                             </div>
                         </div>
                     </div>
-                   
-                    <div class="form-group">
+                    <!-- <div class="form-group" id="category">
+                        <div class="row">
+                            <label class="col-md-4">Map to Categories</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10" id="categoryCheckBox">
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div> -->
+
+                    <div class="form-group" id="subcategory">
                         <div class="row">
                             <label class="col-md-4">Map to Sub Categories</label>
                         </div>
@@ -198,17 +242,25 @@ echo '</div>';
         </form>
     </div>
 </div>
+
 <script>
     $(document).ready(function() {
-        $('#onHome').change(function(){
-            if(this.checked){
+        debugger;
+        // $('#subcategory').hide();
+        $('#categoryCheckBox').click(function() {
+            $('#categoryCheckBox').attr("checked", "checked");
+        });
+
+        $('#onHome').change(function() {
+            debugger;
+            if (this.checked) {
                 $('#onHome').val(1)
-            }else{
+            } else {
                 $('#onHome').val(0)
             }
         })
         var toolbarOptions = [
-            ['bold', 'italic', 'underline', 'strike'], // toggled buttons
+            ['bold', 'italic', 'underline', 'strike', 'image'], // toggled buttons
             ['blockquote', 'code-block'],
 
             [{
@@ -253,24 +305,65 @@ echo '</div>';
             [{
                 'align': []
             }],
+            ['link', 'image'],
 
             ['clean'] // remove formatting button
         ];
         var quill = new Quill('#editor-container', {
             modules: {
-                toolbar: toolbarOptions
+                toolbar: toolbarOptions,
+                
             },
             placeholder: 'Compose an epic...',
             theme: 'snow',
+
         });
         $('form').submit(function() {
+            console.log(JSON.stringify(quill.getContents()));
             $('#hidden_element').val(JSON.stringify(quill.getContents()));
             return true;
         });
-        isCategorySet = false;
+
+
+
+        // $('#postModal').on('show.bs.modal', function(e) {
+        //     isSubCategorySet = false;
+        //     if (isSubCategorySet == false) {
+        //         debugger;
+        //         $.getJSON(config.developmentPath + "/blogadmin/controller/categoryController.php?HasSubcategory=0", function(data) {
+        //             $.each(data, function(index, value) {
+        //                 if (value.mappedPost == 0) {
+        //                     checked = false;
+        //                 } else {
+        //                     checked = true;
+        //                 }
+
+        //                 $('#categoryCheckBox').append($(document.createElement('div')).prop({
+        //                     class: "form-check form-switch form-check-inline"
+        //                 }));
+        //                 $('#categoryCheckBox div:last').append($(document.createElement('input')).prop({
+        //                     class: "form-check-input",
+        //                     type: "checkbox",
+        //                     name: "category[]",
+        //                     value: value.itemcatid
+        //                 }));
+        //                 $('#categoryCheckBox div:last').append($(document.createElement('label')).prop({
+        //                     class: "form-check-label",
+        //                     for: "flexSwitchCheckDefault",
+        //                     innerHTML: value.itemcatname
+        //                 }));
+        //             });
+        //         });
+        //         isSubCategorySet = true;
+        //     }
+        // });
+
+
+
         $('#postModal').on('show.bs.modal', function(e) {
+            isCategorySet = false;
             if (isCategorySet == false) {
-                $.getJSON(config.developmentPath + "/blogadmin/Controller/subcategoryController.php", function(data) {
+                $.getJSON(config.developmentPath + "/blogadmin/controller/subcategoryController.php?", function(data) {
                     $.each(data, function(index, value) {
                         $('#subcategoryCheckBox').append($(document.createElement('div')).prop({
                             class: "form-check form-switch form-check-inline"
@@ -291,13 +384,14 @@ echo '</div>';
                 isCategorySet = true;
             }
         });
+
         $('#deletePostModal').on('show.bs.modal', function(e) {
             var rowid = $(e.relatedTarget).data('id');
             $('#deletepostId').val(rowid);
         });
         $('#deletebutton').click(function() {
             $.ajax({
-                url: config.developmentPath + "/admin/controller/postController.php",
+                url: config.developmentPath + "/blogadmin/controller/postController.php",
                 method: "POST",
                 data: {
                     id: $('#deletepostId').val(),
@@ -312,5 +406,19 @@ echo '</div>';
                 }
             });
         });
+    })
+
+    $('#LinkUnder').change(function() {
+        debugger;
+        if ($('#LinkUnder').val() == 'Category') {
+
+            $('#subcategory').hide();
+            $('#category').show();
+
+        } else {
+            $('#category').hide();
+            $('#subcategory').show();
+        }
+
     })
 </script>

@@ -6,6 +6,7 @@ $courselist = DBcourse::selectall();
 ?>
 <!DOCTYPE html>
 <html lang=en>
+
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KGMDNWLTK"></script>
     <script>
@@ -63,7 +64,7 @@ $courselist = DBcourse::selectall();
     <div class="brand-class container-fluid">
         <div class=row>
             <div class=col-md-6>
-                <a class="navbar-brand brandName" href=#>DharwadHubballiTutor</a>
+                <a class=" brandName" href=#>DharwadHubballiTutor</a>
                 <br />
                 <a class="social-icon fbicon" target=_blank rel="noopener" href=https://www.facebook.com/DharwadhubballiTutor><i class="fab fa-facebook fa-lg fbicon fbheader"></i></a>
                 <a class="social-icon twittericon" target=_blank rel="noopener" href=https://twitter.com/DharwadTutor><i class="fab fa-twitter fa-lg twittericon twitterheader"></i></a>
@@ -82,8 +83,8 @@ $courselist = DBcourse::selectall();
                 </div>
             </div><br />
             <div class="col text-right">
-                <a style="color:white" href="tel:+919741237334">+919741237334</a>
-                <a style="color:white" href=tel:+918007961759>+918007961759</a>
+                <a  href="tel:+919741237334">+919741237334</a>
+                <a  href=tel:+918007961759>+918007961759</a>
             </div>
         </div>
     </div>

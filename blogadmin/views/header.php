@@ -75,6 +75,18 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="termsandconditions.php">
+                    <i class="fas fa-blog"></i>
+                    <span>Terms and Conditions</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="PrivacyPolicy.php">
+                    <i class="fas fa-blog"></i>
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="../../Admin/View/dashboard.php">
                 <i class="fas fa-arrow-circle-left"></i>
                     <span>Back</span>

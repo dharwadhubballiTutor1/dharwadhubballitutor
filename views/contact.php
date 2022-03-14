@@ -2,6 +2,7 @@
 include('navigation.php');
 ?>
 <style type="text/css">
+    
     .card {
         background: #fff;
         transition: .5s;
@@ -84,6 +85,7 @@ include('navigation.php');
         margin: 0;
         line-height: 35px
     }
+
 
     .single_post .footer .stats li {
         border-left: solid 1px rgba(160, 160, 160, 0.3);
@@ -262,9 +264,40 @@ include('navigation.php');
             padding: 30px
         }
     }
+
+
+    @media screen and (min-width:992px) {
+        .contacthero-wrap {
+            height: 100vh;
+            min-height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+        .widget{
+    font-size: 18px;
+}
+    }
+   
+    @media (min-width: 1024px) and (max-width: 1439px)
+{
+    .widget{
+    font-size: 16px;
+} 
+}
+
 </style>
-<br />
-<div id="main-content" class="blog-page">
+
+
+<div class="contacthero-wrap" style="background-size:cover;width:100%;">
+    <p class="title-contact"style="width:45%;text-align:center;"> Contact Us </p>
+</div>
+<div id="main-content" class="contactblog-page">
     <div class="container">
         <div class="row clearfix">
             <div class="col-lg-8 col-md-12 left-box">
@@ -272,21 +305,26 @@ include('navigation.php');
                     <div class="card-image">
                         <img class="d-block img-fluid" src="../img/contact-us.jpg" alt="First slide">
                     </div>
+
+
                     <div class="body">
                         <h3 class="card-title">Contact Us</h3>
-                        <form class="form" action="../admin/controller/enquiryController.php" method="POST" autocomplete="off">
+                        <form class="form" action="../Admin/Controller/newenquiry.php" method="POST" autocomplete="off">
                             <label class="form-label" for="name">Name</label>
-                            <input type="text" name="name" id="name" class="form-control" placeholder="Name" required />
+                            <input type="text" name="name2" id="name2" class="form-control" placeholder="Name" required />
 
                             <label class="form-label" for="email">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com" />
+                            <input type="email" name="email2" id="email2" class="form-control" placeholder="name@example.com" />
 
                             <label class="form-label" for="phone">Mobile Number:</label>
-                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="Number" required />
+                            <input type="tel" name="phone2" id="phone2" class="form-control" placeholder="Number" required />
                             <label class="form-label" for="trainings5">Trainings</label>
-                            <select class="form-select" id="trainings5" name="trainings5">
-                                <?php foreach ($courselist as $course) {
-                                    echo '<option value="' . $course->get_cname() . '">'. $course->get_cname() .'</option>';
+                            <select class="form-select" id="trainings2" name="trainings2">
+                                <option value="">SELECT YOUR INTEREST</option>
+                                <?php
+                                $courselist = DBcourse::selectall();
+                                foreach ($courselist as $course) {
+                                    echo "<option value='" . $course->get_cname() . "'>" . $course->get_cname() . "</option>";
                                 }
                                 ?>
                             </select>
@@ -296,6 +334,7 @@ include('navigation.php');
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-12 right-box">
                 <div class="card">
                     <div class="header">
@@ -320,7 +359,7 @@ include('navigation.php');
                                         </svg>
                                         <?php echo $business->getBusinessAddress(); ?></p>
                                 </li>
-                                <li class="list-group-item" align="center">
+                                <li class="list-group-item" >
                                     <?php
                                     foreach ($socialMediaHandles as $handle) {
                                         echo '<a class="social-icon" href="' . $handle->getHandle() . '">' . $handle->getIcon() . '</a>';
@@ -331,19 +370,24 @@ include('navigation.php');
                         </address>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="header">
-                        <h2>Newsletter </h2>
-                    </div>
-                    <div class="body widget newsletter">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter Email">
-                            <a class="btn btn-primary">Subscribe</a>
+                <!-- <div class="card">
+                        <div class="header">
+                            <h2>Newsletter </h2>
                         </div>
-                    </div>
-                </div>
+                        <div class="body widget newsletter">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Email">
+                                <a class="btn btn-primary">Subscribe</a>
+                            </div>
+                        </div>
+                    </div> -->
             </div>
         </div>
-
     </div>
-    <?php include('footer.php'); ?>
+</div>
+
+
+
+
+
+<?php include('footer.php'); ?>

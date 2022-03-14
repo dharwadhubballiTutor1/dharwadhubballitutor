@@ -41,9 +41,7 @@ class DBcourse
 
         array_push($courseslist, $view);
       }
-    } else {
-      echo "0 results";
-    }
+    } 
 
     return $courseslist;
   }

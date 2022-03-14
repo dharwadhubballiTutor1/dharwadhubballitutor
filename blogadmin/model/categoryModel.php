@@ -4,11 +4,13 @@ class Category implements JsonSerializable
     private $categoryId ;
     private $categoryName;
     private	$categoryDescription;
+    private $hasSubcategory;
     private	$categoryModifiedOn;
     private	$categoryCreatedBy;
     private $categoryCreatedOn;
     private $categoryModifiedBy;
     private $mappedSubCategory;
+    private $mappedPost;
     private $table_name="category";
     public function jsonSerialize()
     {
@@ -18,7 +20,7 @@ class Category implements JsonSerializable
                 'itemcatname' => $this->categoryName,
                 'itemcatdescription' => $this->categoryDescription,
                 'mappedSubCategory' => $this->mappedSubCategory,
-                
+                'mappedPost' =>$this->mappedPost,
             ];
         
     }
@@ -163,6 +165,42 @@ class Category implements JsonSerializable
     public function setMappedSubCategory($mappedSubCategory)
     {
         $this->mappedSubCategory = $mappedSubCategory;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of HasSubcategory
+     */
+    public function getHasSubcategory()
+    {
+        return $this->hasSubcategory;
+    }
+
+    /**
+     * Set the value of HasSubcategory
+     */
+    public function setHasSubcategory($HasSubcategory)
+    {
+        $this->hasSubcategory = $HasSubcategory;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of mappedPost
+     */
+    public function getMappedPost()
+    {
+        return $this->mappedPost;
+    }
+
+    /**
+     * Set the value of mappedPost
+     */
+    public function setMappedPost($mappedPost)
+    {
+        $this->mappedPost = $mappedPost;
 
         return $this;
     }

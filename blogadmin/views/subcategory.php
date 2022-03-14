@@ -297,7 +297,7 @@ require_once("../model/subcategorymodel.php");
         });
        
 
-        var url = config.developmentPath + "/admin/controller/item_categorycontroller.php";
+        var url = config.developmentPath + "/blogadmin/controller/item_categorycontroller.php";
 
         $('#deleteSubCategoryModal').on('show.bs.modal', function(e) {
 
@@ -307,7 +307,7 @@ require_once("../model/subcategorymodel.php");
         $('#deletebutton').click(function() {
 
             $.ajax({
-                url: config.developmentPath + "/admin/controller/subcategoryController.php",
+                url: config.developmentPath + "/blogadmin/controller/subcategoryController.php",
                 method: "POST",
                 data: {
                     id: $('#itemsubcatid').val(),

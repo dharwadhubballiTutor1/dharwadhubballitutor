@@ -24,7 +24,7 @@ require_once "blogadmin/model/sliderImageModel.php";
         if (count($designList) > 0) {
             foreach ($designList as $design) {
                 echo '<div class="carousel-item ' . $isActive . ' " data-bs-interval="">
-        <img src="admin/img/Slider/' . $design->getImage() . '" class="d-block w-100 img-fluid" alt="..." style="height:600px">
+        <img src="blogadmin/img/Slider/' . $design->getImage() . '" class="d-block w-100 img-fluid" alt="..." style="height:600px">
         <div class="carousel-caption d-none d-md-block">
             <p>' . $design->getImageFileCaption() . '</p>
         </div>

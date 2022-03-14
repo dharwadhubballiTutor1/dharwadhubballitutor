@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     DBsliderImageFile::insert($designFile);
   }
-  header("location:../views/sliderImage.php");
+  header("location:../blogadmin/views/sliderImage.php");
 }
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
   if (isset($_GET['id'])) {

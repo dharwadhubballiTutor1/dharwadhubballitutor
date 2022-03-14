@@ -198,77 +198,81 @@ require_once "../dblayer/socialMediaHandleOps.php";
         </div>
     </div>
     <div class="modal fade" id=addModal tabindex=-1 role=dialog aria-hidden=true>
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="modal_title">Business Info</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <form method="POST" action="../controller/businessInfoController.php" enctype="multipart/form-data">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" name="companyname" id="companyname" class="form-control" required />
-                                </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Address</label>
-                                <textarea name="companyaddress" id="companyaddress" class="form-control"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Contact No.</label>
-                                <input type="text" name="companycontact" id="companycontact" class="form-control" required />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Business Tag Line</label>
-                                <input type="text" name="companytag" id="companytag" class="form-control" required />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" name="companyemail" id="companyemail" class="form-control" required />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>GSTIN</label>
-                                <input type="text" name="companyGSTIN" id="companyGSTIN" class="form-control" pattern="^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Business Logo</label>
-                                <input type="file" name="logoImage" id="logoImage" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>About Business</label>
-                                <div id="editor-container"></div>
-                                <input type="text" name="hidden_element" id="hidden_element" hidden />
-                            </div>
-                        </div>
-
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modal_title">Business Info</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form method="POST" action="../controller/businessInfoController.php" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" name="companyname" id="companyname" class="form-control" required />
+                                    </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <textarea name="companyaddress" id="companyaddress" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Contact No.</label>
+                                    <input type="text" name="companycontact" id="companycontact" class="form-control" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Business Tag Line</label>
+                                    <input type="text" name="companytag" id="companytag" class="form-control" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" name="companyemail" id="companyemail" class="form-control" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>GSTIN</label>
+                                    <input type="text" name="companyGSTIN" id="companyGSTIN" class="form-control" pattern="^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Business Logo</label>
+                                    <input type="file" name="logoImage" id="logoImage" class="form-control" />
+                                </div>
+                            </div>
+
+                            
+
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>About Business</label>
+                                    <div id="editor-container"></div>
+                                    <input type="text" name="hidden_element" id="hidden_element" hidden />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="hidden_id" id="hidden_id" />
+                        <input type="hidden" name="action" id="action" value="Add" />
+                        <button type="submit" name="register_button" id="register_button" class="btn btn-primary btn-user">Set Up</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <input type="hidden" name="hidden_id" id="hidden_id" />
-                    <input type="hidden" name="action" id="action" value="Add" />
-                    <button type="submit" name="register_button" id="register_button" class="btn btn-primary btn-user">Set Up</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-                </form>
             </div>
         </div>
-    </div>
     <div class="modal fade" id=addSocialMediaModal tabindex=-1 role=dialog aria-hidden=true>
         <div class="modal-dialog">
             <div class="modal-content">
@@ -565,7 +569,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
             });
             $('#deletebutton').click(function() {
                 $.ajax({
-                    url: config.developmentPath + "/admin/controller/socialMediaHandleController.php/",
+                    url: config.developmentPath + "/blogadmin/controller/socialMediaHandleController.php/",
                     method: "POST",
                     data: {
                         id: $('#socialMediaId').val(),

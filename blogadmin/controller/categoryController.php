@@ -9,6 +9,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $category = new Category();
     $category->setCategoryName(Sanitization::test_input($_POST["itemcatname"]));
     $category->setCategoryDescription(Sanitization::test_input($_POST["itemcatdescription"]));
+    error_log($_POST["HasSubcategory"]);
+    if($_POST["HasSubcategory"] == "on") {
+      $category->setHasSubcategory (1);
+    }else {
+      $category->setHasSubcategory (0);      } 
+      
+
     $category->setCategoryCreatedBy(Sanitization::test_input($_POST["itemcatcreatedby"]));
     $category->setCategoryModifiedBy(Sanitization::test_input($_POST["itemcatmodifiedby"]));
     $category->setCategoryId(Sanitization::test_input($_POST["itemcatid"]));
@@ -19,6 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $category = new Category();
     $category->setCategoryName(Sanitization::test_input($_POST["itemcatname"]));
     $category->setCategoryDescription(Sanitization::test_input($_POST["itemcatdescription"]));
+    error_log($_POST["HasSubcategory"]);
+    if($_POST["HasSubcategory"] == "on") {
+      $category->setHasSubcategory (1);
+    }else {
+      $category->setHasSubcategory (0);
+       } 
+   
     $category->setCategoryCreatedBy(Sanitization::test_input($_POST["itemcatcreatedby"]));
     $category->setCategoryModifiedBy(Sanitization::test_input($_POST["itemcatmodifiedby"]));
     DBCategory::insert($category);
@@ -28,7 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
   if (isset($_GET["subCatId"])) {
     DBCategory::getMappedCategories($_GET["subCatId"]);
-  }else{
+  }else if(isset($_GET["postId"])){
+    DBCategory::getPostMappedCategories($_GET["postId"]);
+  }else if(isset($_GET["HasSubcategory"])){
+    DBcategory::getAjaxCategorydoesnthavesubcategory();
+  }
+  else{
   DBCategory::selectcategory();
   }
 }

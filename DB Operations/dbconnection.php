@@ -18,7 +18,7 @@ class ConnectDb {
 
   private function __construct()
   {
-    $this->connection = new mysqli('localhost','root','Tutor@123','dharwadhubballitutor');
+    $this->connection = new mysqli('localhost','root','','dharwadhubballitutor');
     if ($this->connection->connect_error) {
       die("Connection failed: " . $this->connection->connect_error);
     }

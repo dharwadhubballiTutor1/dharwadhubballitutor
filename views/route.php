@@ -19,6 +19,9 @@ class route
     width: 100%;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
 }
+body{
+    overflow-x: hidden;
+}
 .card .body {
     color: #444;
     padding: 20px;
@@ -32,7 +35,8 @@ class route
 }
 .single_post {
     -webkit-transition: all .4s ease;
-    transition: all .4s ease
+    transition: all .4s ease;
+    margin-right:40px;
 }
 
 .single_post .body {
@@ -264,77 +268,133 @@ class route
         padding: 30px
     }
 }
+
+@media screen and (min-width:992px) {
+    .routehero-wrap {
+        height: 100vh;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+    .col-md-4{
+        display:flex;
+        width:auto;
+    }
+    .single_post .body {
+        padding: 130px;
+    }
+    .single_post p {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 300;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .routehero-wrap {
+        height: 100vh;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+    .col-md-4{
+        display:flex;
+        width:auto;
+    }
+    .single_post .body {
+        padding: 100px;
+    }
+}
+
+@media screen and (min-width:600px){
+    .col-md-4{
+        width:auto;
+    } 
+}
+
 </style>
-<br/>
-<div id="main-content" class="blog-page">
+
+
+<div class="routehero-wrap" style=" background-image:url(blogadmin/img/bg_2.jpg);background-size:cover;width:100%;">
+<p class="title-route" style="width:45%;text-align:center;">' . $post->getPostTitle() . '</p>
+</div>
+   
+
+
+
+<div id="main-content" class="routeblog-page" >
         <div class="container">
             <div class="row clearfix">
-                <div class="col-lg-8 col-md-12 left-box">
+                <div class="col-lg-12 col-md-12 left-box">
                     <div class="card single_post">
-                        <div class="body">
+                        <div class="body" >
+                        
                             <div class="img-post">
-                                <img class="d-block img-fluid" src="blogadmin/img/post/' . $post->getImage() . '" alt="First slide">
-                            </div>
-                            <h1 class="card-title"><b>' . $post->getPostTitle() . '</b></h1>' .
-            $post->getPostDescription() .
-            '</div>                        
+                                <img class="d-block img-fluid" src="blogadmin/img/post/' . $post->getImage() . '" alt="First slide" style="width:100%;">
+                            </div> <div style="font-size:18px;">' 
+                            . $post->getPostDescription() .
+            '</div></div>                        
                     </div>
-                    
                 </div>
-                <div class="col-lg-4 col-md-12 right-box">
+               </div>
+               <div class="col-lg-12 col-md-12 left-box">
                     <div class="card">
-                        <div class="header">
-                            <h6 class="display-6">Categories</h6>
-                        </div>
-                        <div class="body widget">
-                            <ul class="list-unstyled categories-clouds m-b-0">';
-        if (!empty($post->getMappedSubCategory())) {
-            foreach ($post->getMappedSubCategory() as $subcategory) {
-                $outputString .= '<li><a href="javascript:void(0);">' . $subcategory->getSubCategoryName() . '</a></li>';
-            }
-        }
-
-        $outputString .= '</ul>
-                        </div>
+                    <div class="header">
+                    <h2>Popular Posts</h2>                        
                     </div>
-                    <div class="card">
-                        <div class="header">
-                            <h2>Popular Posts</h2>                        
-                        </div>
-                        <div class="body widget popular-post">
-                            <div class="row">
-                                <div class="col-lg-12">';
-        $postList = DBpost::getPostBySubCategoryId($post->getPostId());
-        foreach ($postList as $post) {
-            $outputString .= '<div class="single_post">
-                                        <p class="m-b-0"><a href="' . $post->getPostUrl() . '">' . $post->getPostTitle() . '</a></p>
-                                        <span>' . $post->getPostCreatedBy() . '</span>
-                                        <div class="img-post">
-                                            <img src="blogadmin/img/post/' . $post->getImage() . '" alt="' . $post->getAltTextImage() . '">                                        
-                                        </div>                                            
-                                    </div>';
+                <div class="body widget popular-post">
+                <div class="row">';
+        // $postList = DBpost::getPostBySubCategoryId($post->getPostId());
+        // foreach ($postList as $post) {
+            $postOnHomeList = DBpost::getpopularPost();
+            foreach ($postOnHomeList as $post) {
+            $outputString .=  '<div class="single_post" style="width:250px;margin-top: auto;">
+                                <p class="m-b-0"><a href="' . $post->getPostUrl() . '">' . ucfirst(strtolower($post->getPostTitle())) . '</a></p>
+                                <span>' . $post->getPostCreatedBy() . '</span>
+                                <div class="img-post">
+                                    <img src="blogadmin/img/post/' . $post->getImage() . '" alt="' . $post->getAltTextImage() . '" >                                        
+                                </div>                                            
+                            </div>';
         }
-        $outputString .= '</div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="card">
-                        <div class="header">
-                            <h2>Newsletter</h2>
-                        </div>
-                        <div class="body widget newsletter">                        
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Enter Email">
-                               
-                                    <a class="btn btn-primary">Subscribe</a>
-            
-                            </div>
-                        </div>
+        $outputString .= '
                     </div>
                 </div>
             </div>
-        </div>';
+            </div>
+        
+           
+
+        <div class="col-lg-12 col-md-12 right-box">
+        <div class="card">
+            <div class="header">
+                <h6 class="display-6">Categories</h6>
+            </div>
+            <div class="body widget">
+                    <ul class="list-unstyled categories-clouds m-b-0">';
+        if (!empty($post->getMappedSubCategory())) {
+            foreach ($post->getMappedSubCategory() as $subcategory) {
+                $outputString .= '<li><a href="javascript:void(0);" style="color:blue;">' . $subcategory->getSubCategoryName() . '</a></li>';
+            }
+        }
+        $outputString .=  '</ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>';
         echo $outputString;
         require_once("views/footer.php");
     }

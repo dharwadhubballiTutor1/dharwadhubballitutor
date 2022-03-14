@@ -11,6 +11,17 @@
         box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
     }
 
+    .hero-wrap {
+        height: 100vh;
+        min-height: 100%;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: fixed;
+        z-index: 1;
+    }
+
     .card .body {
         color: #444;
         padding: 20px;
@@ -260,85 +271,117 @@
             padding: 30px
         }
     }
-</style>
-<br />
-<div id="main-content" class="blog-page">
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-lg-8 col-md-12 left-box">
-                <div class="card single_post">
-                    <div class="card-image">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.8847855951285!2d75.01758341432938!3d15.436768560177267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d370eace81bb%3A0xf20b739d863002a2!2sDharwadHubballiTutor!5e0!3m2!1sen!2sin!4v1608529670560!5m2!1sen!2sin"  
-                                style="border: 0" 
-                                allowfullscreen="" 
-                                width="100%"
-                                aria-hidden="false" 
-                                tabindex="0"></iframe>
-                        </div>
-                    </div>
-                    <div class="body clearfix">
-                        <h2> About Us</h2>
-                        <img class="float-left" src="../blogadmin/img/<?php echo $business->getBusinessLogoImage()  ?>" width="150px" height="150px"/>
-                      
-                        
-                            <?php
-                            $string = strip_tags($business->getBusinessAboutBusiness());
-                            echo $string;
-                            ?>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 right-box">
-                <div class="card">
-                    <div class="header">
-                        <h2>Contact Details</h2>
-                    </div>
-                    <div class="body widget">
-                        <address>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
-                                    </svg><i class="bi bi-telephone-outbound-fill"></i>
-                                    <?php echo $business->getBusinessContact(); ?>
-                                </li>
-                                <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                                    </svg> <?php echo $business->getBusinessEmail(); ?>
-                                </li>
-                                <li class="list-group-item">
-                                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
-                                        </svg>
-                                        <?php echo $business->getBusinessAddress(); ?></p>
-                                </li>
-                                <li class="list-group-item" align="center">
-                                    <?php
-                                    foreach ($socialMediaHandles as $handle) {
-                                        echo '<a class="social-icon" href="' . $handle->getHandle() . '">' . $handle->getIcon() . '</a>';
-                                    }
-                                    ?>
-                                </li>
-                            </ul>
-                        </address>
-                    </div>
-                </div>
+@media screen and (min-width:992px) {
+    .abouthero-wrap {
+        height: 100vh;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+    .aboutdesc{
+        font-size: 18px;
+    text-align:justify;
+}
+.widget{
+    font-size: 18px;
+}
+}
 
-                <div class="card">
-                    <div class="header">
-                        <h2>Newsletter </h2>
-                    </div>
-                    <div class="body widget newsletter">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Enter Email">
-                            <a class="btn btn-primary">Subscribe</a>
+@media (min-width: 1024px) and (max-width: 1439px)
+{
+    .widget{
+    font-size: 16px;
+} 
+}
+@media only screen and (min-width: 768px){
+    .aboutdesc{
+        font-size: 16px;
+    text-align:justify;
+} 
+}
+
+@media (min-width: 1440px){
+    .aboutdesc{
+        font-size: 18px;
+    text-align:justify;
+} 
+}
+    
+</style>
+<div class="abouthero-wrap" style="background-size:cover;width:100%;"> 
+<p class="title-about"style="width:45%;text-align:center;"> About Us </p>
+</div>
+
+    <div id="main-content" class="aboutblog-page">
+        <div class="containers">
+            <div class="row clearfix">
+                <div class="col-lg-8 col-md-12 left-box">
+                    <div class="card single_post">
+                        <div class="card-image">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.8847855951285!2d75.01758341432938!3d15.436768560177267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d370eace81bb%3A0xf20b739d863002a2!2sDharwadHubballiTutor!5e0!3m2!1sen!2sin!4v1608529670560!5m2!1sen!2sin" style="border: 0" allowfullscreen="" width="100%" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="body clearfix">
+                            <div class="aboutdesc">
+                                <h2> About Us</h2>
+                                <!-- <img class="float-left" src="../blogadmin/img/<?php echo $business->getBusinessLogoImage()  ?>" width="150px" height="150px" /> -->
+                                <?php
+                                $string = strip_tags($business->getBusinessAboutBusiness());
+                                echo $string;
+                                ?>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-4 col-md-12 right-box">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Contact Details</h2>
+                        </div>
+                        <div class="body widget">
+                            <address>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
+                                        </svg><i class="bi bi-telephone-outbound-fill"></i>
+                                        <?php echo $business->getBusinessContact(); ?>
+                                    </li>
+                                    <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                        </svg> <?php echo $business->getBusinessEmail(); ?>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
+                                            </svg>
+                                            <?php echo $business->getBusinessAddress(); ?></p>
+                                    </li>
+                                    <li class="list-group-item" >
+                                        <?php
+                                        foreach ($socialMediaHandles as $handle) {
+                                            echo '<a class="social-icon" href="' . $handle->getHandle() . '">' . $handle->getIcon() . '</a>';
+                                        }
+                                        ?>
+                                    </li>
+                                </ul>
+                            </address>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
-
+      
     </div>
+                                   
     <?php require_once("footer.php"); ?>
+   

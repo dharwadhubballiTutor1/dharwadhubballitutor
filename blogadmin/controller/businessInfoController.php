@@ -33,31 +33,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
     DBbusiness::update($business);
   }else{
-  $business = new Business();
-  $business->setBusinessName(Sanitization::test_input($_POST["companyname"]));
-  $business->setBusinessContact(Sanitization::test_input($_POST["companycontact"]));
-  $business->setBusinessEmail(Sanitization::test_input($_POST["companyemail"]));
-  $business->setBusinessTag(Sanitization::test_input($_POST["companytag"]));
-  $business->setBusinessAddress(Sanitization::test_input($_POST["companyaddress"]));
-  $business->setBusinessGSTIN(Sanitization::test_input($_POST["companyGSTIN"]));
-
-  $quill_json = trim($_POST['hidden_element']);
-  try {
-    $quill = new DBlackborough\Quill\Render($quill_json, 'HTML');
-    $result = $quill->render();
-  } catch (Exception $e) {
-    echo $e->getMessage();
+    $business = new Business();
+    $business->setBusinessName(Sanitization::test_input($_POST["companyname"]));
+    $business->setBusinessContact(Sanitization::test_input($_POST["companycontact"]));
+    $business->setBusinessEmail(Sanitization::test_input($_POST["companyemail"]));
+    $business->setBusinessTag(Sanitization::test_input($_POST["companytag"]));
+    $business->setBusinessAddress(Sanitization::test_input($_POST["companyaddress"]));
+    $business->setBusinessGSTIN(Sanitization::test_input($_POST["companyGSTIN"]));
+  
+    $quill_json = trim($_POST['hidden_element']);
+    try {
+      $quill = new DBlackborough\Quill\Render($quill_json, 'HTML');
+      $result = $quill->render();
+    } catch (Exception $e) {
+      echo $e->getMessage();
+    }
+    $result=Sanitization::test_input($result);
+  
+    $business->setBusinessAboutBusiness($result);
+    if (isset($_FILES["logoImage"])) {
+      $filetoupload = $_FILES["logoImage"];
+      Helper::fileupload($filetoupload, "../img/");
+      $business->setBusinessLogoImage($_FILES["logoImage"]['name']);
+    }
+    DBbusiness::insert($business);
   }
-  $result=Sanitization::test_input($result);
-
-  $business->setBusinessAboutBusiness($result);
-  if (isset($_FILES["logoImage"])) {
-    $filetoupload = $_FILES["logoImage"];
-    Helper::fileupload($filetoupload, "../img/");
-    $business->setBusinessLogoImage($_FILES["logoImage"]['name']);
+  } else if ($_SERVER["REQUEST_METHOD"] == "GET") {
   }
-  DBbusiness::insert($business);
-}
-} else if ($_SERVER["REQUEST_METHOD"] == "GET") {
-}
 header("location:../views/dashboard.php");
