@@ -75,6 +75,24 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="Testimonials.php">
+                    <i class="fas fa-blog"></i>
+                    <span>Testimonials</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="smsDetails.php">
+                    <i class="fas fa-blog"></i>
+                    <span>SMS Details</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="facebookchat.php">
+                    <i class="fas fa-blog"></i>
+                    <span>Facebook Chat</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="termsandconditions.php">
                     <i class="fas fa-blog"></i>
                     <span>Terms and Conditions</span>
@@ -86,6 +104,7 @@
                     <span>Privacy Policy</span>
                 </a>
             </li>
+           
             <li class="nav-item">
                 <a class="nav-link" href="../../Admin/View/dashboard.php">
                 <i class="fas fa-arrow-circle-left"></i>

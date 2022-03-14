@@ -1,5 +1,12 @@
+<?php
+require_once "../DB Operations/notificationOps.php";
+
+?>
+
 <html>
+
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,6 +42,11 @@
         }
     </style>
 </head>
+
+<?php
+$notification = DBnotification::getAllnotifications();
+$notification = DBnotification::getnotifications();
+?>
 
 <body id="page-top">
     <!-- Page Wrapper -->
@@ -88,15 +100,15 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="services.php"> 
-                    <i class="fas fa-briefcase"></i> 
+                <a class="nav-link" href="services.php">
+                    <i class="fas fa-briefcase"></i>
                     <span> Services</span>
                 </a>
             </li>
-           
+                        
             <li class="nav-item">
-                <a class="nav-link" href="../../blogadmin/views/dashboard.php"> 
-                <i class="fas fa-rss"></i>
+                <a class="nav-link" href="../../blogadmin/views/dashboard.php">
+                    <i class="fas fa-rss"></i>
                     <span>Blog</span>
                 </a>
             </li>
@@ -107,6 +119,7 @@
 
         </ul>
         <!-- End of Sidebar -->
+
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -121,15 +134,51 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <div class="sidebar-brand-text mx-3"><i class="fas fa-user"></i>
-                        <?php echo $_SESSION['login_user']; ?></div>
+                        <?php echo $_SESSION['login_user']; ?>
+                    </div>
+
+
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+
+                    <ul class="navbar-nav ml-auto my-sm-0">
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
 
+                        <!-- Notification -->
+
+                        <button class="navbar-toggler" id="notification" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5" aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent-5">
+                            <ul class="navbar-nav ml-auto nav-flex-icons">
+                                <li class="nav-item avatar dropdown">
+                                    <a onclick="removeNumber()" class="nav-link dropdown-toggle  waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        <span class="badge badge-danger ml-2"><?php echo $notification->getId() ?>
+                                        </span>
+                                        <i class=" fas fa-bell"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
+                                        <span class="">
+                                            <?php
+                                            $result = "";
+                                            $notificationlist = DBnotification::getAllnotifications();
+                                            foreach ($notificationlist as $notification) {
+                                                $result .= '<a class="dropdown-item my-2"  href="enquiries.php?id=' . $notification->getCategory() . '">
+                                                 ' . $notification->getId() .  '  ' . $notification->getMessage() .  '</a>';
+                                            }
+                                            echo $result;
+                                            ?>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
 
                         <!-- Nav Item - User Information -->
+
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="user_profile_name"></span>
@@ -153,11 +202,16 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+
+                    <script>
+                        function removeNumber() {
+                            document.getElementsByClassName('badge')[0].innerHTML = '';
+                        }
+
+                    </script>

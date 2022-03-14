@@ -24,8 +24,7 @@ class terms
     /**
      * Get the value of description
      */
-    public function 
-    getdescription()
+    public function getdescription()
     {
         return $this->description;
     }

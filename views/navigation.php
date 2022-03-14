@@ -3,6 +3,7 @@ $configs = require_once("config.php");
 require_once("blogadmin/dblayer/businessOps.php");
 require_once("blogadmin/dblayer/categoryOps.php");
 require_once("blogadmin/dblayer/postOps.php");
+require_once "blogadmin/dblayer/testimonialsOps.php";
 require_once "blogadmin/dblayer/socialMediaHandleOps.php";
 require_once "Admin/DB Operations/CoursesOps.php";
 require_once "blogadmin/dblayer/termsandconditionsOps.php";
@@ -75,7 +76,6 @@ require_once ("blogadmin/dblayer/PrivacyPolicyOps.php");
 
   <nav class="navbar navbar-expand-md navbar-light container-fluid">
     <div class="container-fluid">
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

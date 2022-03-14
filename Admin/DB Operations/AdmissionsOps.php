@@ -107,6 +107,7 @@ class DBadmission
     echo $searchadmission;
     $sql = "SELECT id,
        Name,
+       createddate,
        Email,
        Phone,
        Qualification,
@@ -124,6 +125,7 @@ class DBadmission
       while ($row = mysqli_fetch_assoc($result)) {
         $view = new Admissions();
         $view->set_id($row['id']);
+        $view->setCreateddate(date('d-m-y', strtotime($row["createddate"])));
         $view->set_name($row['Name']);
         $view->set_phone($row['Phone']);
         $view->set_email($row['Email']);
@@ -132,7 +134,7 @@ class DBadmission
         $view->set_coursesopted($row['CoursesOpted']);
         $view->set_adhaarno($row['AdhaarNo']);
         $view->set_photofile($row['PhotoFile']);
-        $view->setModifiedDate(date('d.m.y',strtotime($row['Modified_Date'])) );
+        $view->setModifiedDate(date('d.m.y', strtotime($row['Modified_Date'])));
         array_push($admissionlist, $view);
       }
     } else {
@@ -176,8 +178,8 @@ class DBadmission
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $status = true;
-    $sql = "UPDATE admissions SET Name='" . $admission->get_name() . "', 
-      Phone='" . $admission->get_phone() .
+    $sql = "UPDATE admissions SET Name='" . $admission->get_name() .
+      "', Phone='" . $admission->get_phone() .
       "', Email='" . $admission->get_email() .
       "', DateofBirth='" . $admission->get_dateofbirth() .
       "',Qualification='" . $admission->get_qualification() .

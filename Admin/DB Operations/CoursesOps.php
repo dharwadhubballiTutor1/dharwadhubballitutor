@@ -17,7 +17,10 @@ class DBcourse
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "insert into courses (`CName`, `Ctype`, `Cduration`) 
-                values ('" . $courseObj->get_cname() . "','" . $courseObj->get_ctype() . "','" . $courseObj->get_cduration() . "')";
+                values ('" . $courseObj->get_cname() . "',
+                '" . $courseObj->get_ctype() . "',
+                '" . $courseObj->get_cduration() .
+      "')";
 
     if ($connectionObj->query($sql) === TRUE) {
     } else {
@@ -39,6 +42,7 @@ class DBcourse
         $view->set_ctype($row['Ctype']);
         $view->set_cduration($row['Cduration']);
 
+
         array_push($courseslist, $view);
       }
     } 
@@ -57,12 +61,31 @@ class DBcourse
         $view = new Courses();
         $view->set_id($row['id']);
         $view->set_cname($row['CName']);
+
         array_push($courselist, $view);
       }
     } else {
       echo "0 results";
     }
     return $courselist;
+  }
+  public static function viewcourses($viewObj)
+  {
+
+    $db = ConnectDb::getInstance();
+    $connectionObj = $db->getConnection();
+    $sql = "select * from courses where id= $viewObj";
+    $result = mysqli_query($db->getConnection(), $sql);
+    $view = new Courses();
+    if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        $view->set_id($row['id']);
+        $view->set_cname($row['CName']);
+      }
+    } else {
+      $view = NULL;
+    }
+    return $view;
   }
 
   public static function getcoursename($courseid)

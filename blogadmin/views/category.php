@@ -114,11 +114,10 @@ require_once("../model/categoryModel.php");
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                   
 
                     <div class="form-group">
                         <div class="row">
-
                             <div class="col-md-8">
                                 <input type="hidden" name="itemcatcreatedby" id="itemcatcreatedby" class="form-control" required value="<?php echo $_SESSION['login_user']; ?>" />
                             </div>
@@ -183,8 +182,7 @@ require_once("../model/categoryModel.php");
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    </div>                   
                     <div class="form-group">
                         <div class="row">
 
@@ -196,7 +194,6 @@ require_once("../model/categoryModel.php");
 
                     <div class="form-group">
                         <div class="row">
-
                             <div class="col-md-8">
                                 <input type="hidden" name="itemcatmodifiedby" id="editedItemcatmodifiedby" class="form-control" required data-parsley-type="integer" data-parsley-minlength="10" data-parsley-maxlength="12" data-parsley-trigger="keyup" value="<?php echo $_SESSION['login_user']; ?>" />
                             </div>

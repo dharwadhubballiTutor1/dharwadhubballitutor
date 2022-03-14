@@ -9,7 +9,7 @@ require_once("../dblayer/postOps.php")
     }
 
     .card-body {
-        height: 300px;
+        height: 200;
         overflow-y: hidden;
 
     }
@@ -28,6 +28,7 @@ require_once("../dblayer/postOps.php")
                 <span data-toggle=modal data-target=#postModal>
                     <button type="button" + class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                 </span>
+
             </div>
         </div>
     </div>
@@ -45,6 +46,11 @@ foreach ($postList as $post) {
     foreach ($post->getMappedSubCategory() as $subcategory) {
         $card .= '<span class="badge bg-primary">' . $subcategory->getSubCategoryName() . '</span>';
     }
+    $string = strip_tags($post->getPostDescription());
+    if (strlen($string) > 100) {
+        // truncate string
+        $stringCut = substr($string, 0, 100);
+        $endPoint = strrpos($stringCut, ' ');
 
     $string = strip_tags($post->getPostDescription());
     if (strlen($string) > 50) {
@@ -152,6 +158,17 @@ echo '</div>';
 
                     <div class="form-group">
                         <div class="row">
+                            <label class="col-md-2 text-right">Link Under<span class="text-danger">*</span></label>
+                            <div class="col-md-10">
+                                <select id="LinkUnder" class="form-select" required name="LinkUnder">
+                                    <option value="1">Category</option>
+                                    <option value="2">Sub Category</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
                             <div class="form-check form-check-inline">
                                 <div class="col-md-2">
                                     <label class="form-check-label" for="onHome">Display On Home Page</label>
@@ -162,6 +179,7 @@ echo '</div>';
                             </div>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <div class="row">
                             <label class="col-md-2 text-right">Post Content <span class="text-danger">*</span></label>
@@ -325,7 +343,6 @@ echo '</div>';
         });
 
 
-
         // $('#postModal').on('show.bs.modal', function(e) {
         //     isSubCategorySet = false;
         //     if (isSubCategorySet == false) {
@@ -406,9 +423,22 @@ echo '</div>';
                 }
             });
         });
-    })
 
-    $('#LinkUnder').change(function() {
+
+        $('#LinkUnder').change(function() {
+            debugger;
+            if ($('#LinkUnder').val() == 'Category') {
+                $('#subcategory').hide();
+                $('#category').show();
+
+            } else {
+                $('#category').hide();
+                $('#subcategory').show();
+            }
+
+        })
+
+        $('#LinkUnder').change(function() {
         debugger;
         if ($('#LinkUnder').val() == 'Category') {
 
@@ -420,5 +450,6 @@ echo '</div>';
             $('#subcategory').show();
         }
 
-    })
+         });
+    });
 </script>

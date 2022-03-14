@@ -95,6 +95,7 @@ $post = DBpost::getPostById($postId);
                     </div>
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="row">
                     <label class="col-md-2 text-right">Post Content <span class="text-danger">*</span></label>
@@ -148,7 +149,9 @@ $post = DBpost::getPostById($postId);
     </div>
 
     <div class="card-footer" align="right">
+
         <input type="submit" name="submit" id="submit_button" class="btn btn-success" value="Save" />
+        <a href="../views/post.php" class="btn btn-secondary" role="button">Back</a>
         </form>
     </div>
 

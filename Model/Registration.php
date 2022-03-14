@@ -1,76 +1,96 @@
 
-<?php 
-   class Registration 
+<?php
+class Registration
+{
+  private $id;
+  private $Name;
+  private $Email;
+  private $Phone;
+  private $Trainings;
+  private $source;
+
+  private $Internship;
+  private $Services;
+  private $Demo;
+  private $Qualification;
+  private $enq_createdon;
+  private $table_name = "candidates";
+
+  function set_id($id)
   {
-    private $id;
-    private $Name;
-    private $Email;
-    private $Phone;
-    private $Trainings;
-    private $Internship;
-    private $Services;
-    private $Demo;
-    private $Qualification;
-    private $enq_createdon;
-    private $table_name="candidates";
+    $this->id = $id;
+  }
+  function get_id()
+  {
+    return $this->id;
+  }
 
-    function set_id($id) {
-      $this->id = $id;
-    }
-    function get_id() {
-      return $this->id;
-    }
-
-  function set_name($name) {
+  function set_name($name)
+  {
     $this->Name = $name;
   }
-  function get_name() {
+  function get_name()
+  {
     return $this->Name;
   }
 
-  function set_email($email) {
+  function set_email($email)
+  {
     $this->Email = $email;
   }
-  function get_email() {
+  function get_email()
+  {
     return $this->Email;
   }
 
-  function set_phone($phone) {
+  function set_phone($phone)
+  {
     $this->Phone = $phone;
   }
-  function get_phone() {
+  function get_phone()
+  {
     return $this->Phone;
   }
 
-  function set_trainings($trainings) {
+  function set_trainings($trainings)
+  {
     $this->Trainings = $trainings;
   }
-  function get_trainings() {
+  function get_trainings()
+  {
     return $this->Trainings;
   }
-  function set_internship($internship) {
+  function set_internship($internship)
+  {
     $this->Internship = $internship;
   }
-  function get_internship() {
+  function get_internship()
+  {
     return $this->Internship;
   }
-  function set_services($services) {
+  function set_services($services)
+  {
     $this->Services = $services;
   }
-  function get_services() {
+  function get_services()
+  {
     return $this->Services;
   }
-  function set_demo($demo) {
+  function set_demo($demo)
+  {
     $this->Demo = $demo;
   }
-  function get_demo() {
+  function get_demo()
+  {
     return $this->Demo;
   }
-  function set_qualification($qualification) {
+  function set_qualification($qualification)
+  {
     $this->Qualification = $qualification;
     echo $this->Qualification;
   }
-  function get_qualification() {
+  function get_qualification()
+  {
     return $this->Qualification;
   }
 
@@ -81,7 +101,24 @@
 function get_enqcreatedon()
 {
     return $this->enq_createdon;
-}
+  }
 
- }
+  /**
+   * Get the value of source
+   */
+  public function get_Source()
+  {
+    return $this->source;
+  }
+
+  /**
+   * Set the value of source
+   */
+  public function set_Source($source): self
+  {
+    $this->source = $source;
+
+    return $this;
+  }
+}
 ?>

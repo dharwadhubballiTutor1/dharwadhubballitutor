@@ -9,6 +9,7 @@ $id = $_GET["id"];
 $name1 = $_GET['name'];
 $email1 = $_GET['email'];
 $phone1 = $_GET['phone'];
+
 ?>
 <div class="card">
     <div class="card-header">

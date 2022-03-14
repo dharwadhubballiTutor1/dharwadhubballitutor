@@ -152,7 +152,7 @@ require_once "header.php"
                         <div class="col-md-6">
                             <label for="adhaarno" class="col-md-6 control-label">Adhaar Number</label>
                             <div class="col-sm-12">
-                                <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control" pattern="[0-9]{4}[0-9]{4}[0-9]{4}" required>
+                                <input type="text" id="adhaarno" name="adhaarno" placeholder="Your Adhaar Number" class="form-control" pattern="[0-9]{4}[0-9]{4}[0-9]{4}" >
                             </div>
                         </div>
                         <br />
@@ -160,7 +160,7 @@ require_once "header.php"
                             <label for="adhaarfile" class=" col-md-12 form-label">Upload Your
                                 Adhaar</label>
                             <div class="col-sm-12">
-                                <input type="file" name="adhaarfile" id="adhaarfile" class="form-control">
+                                <input type="file" name="adhaarfile" id="adhaarfile" class="form-control" >
                             </div>
                         </div>
                         <br />
@@ -168,14 +168,14 @@ require_once "header.php"
                             <label for="photofile" class=" col-md-6 form-label">Upload Your
                                 Photo</label>
                             <div class="col-sm-12">
-                                <input class="form-control" type="file" name="photofile" id="photofile" required>
+                                <input class="form-control" type="file" name="photofile" id="photofile" >
                             </div>
                         </div>
                         <br />
                         <div class="col-md-6">
                             <label for="resume" class=" col-md-12 form-label">Upload Your Resume</label>
                             <div class="col-sm-12">
-                                <input class="form-control" type="file" name="resume" id="resume" required>
+                                <input class="form-control" type="file" name="resume" id="resume" >
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -193,6 +193,7 @@ require_once "header.php"
                     <thead>
                         <tr>
                             <th style='display:none'> Id</th>
+                            <th>Creted Date</th>
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Email</th>
@@ -209,6 +210,7 @@ require_once "header.php"
                     $admissionlist = DBadmission::searchadmission();
                     foreach ($admissionlist as $admission) {
                         echo "<tr><td style='display:none'> "  . $admission->get_id() .
+                        "</td><td>"  . $admission->getCreateddate() .
                             "</td><td>"  . $admission->get_name() .
                             "</td><td>" . $admission->get_phone() .
                             "</td><td >" . $admission->get_email() .
@@ -219,7 +221,7 @@ require_once "header.php"
                             "</td><td style='display:none'>" . $admission->get_adhaarno() .
                             "</td><td><a class='btn btn-warning' href='../View/viewprofile.php?id=" . $admission->get_id() .
                             "&photofile=" . $admission->get_photofile() .
-                            "' role='button'>View </a></td></tr>";
+                            "'role='button'>View </a></td></tr>";
                     }
                     echo  "</tbody>";
                     ?>

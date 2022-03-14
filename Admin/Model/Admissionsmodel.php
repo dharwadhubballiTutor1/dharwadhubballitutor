@@ -1,7 +1,9 @@
 <?php 
-   class Admissions
+
+class Admissions
   {
     private $id;
+    private $createddate;
     private $Name;
     private $Phone;
     private $Email;
@@ -159,6 +161,24 @@
     public function setModifiedDate($modifiedDate): self
     {
         $this->modifiedDate = $modifiedDate;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of createddate
+     */
+    public function getCreateddate()
+    {
+        return $this->createddate;
+    }
+
+    /**
+     * Set the value of createddate
+     */
+    public function setCreateddate($createddate): self
+    {
+        $this->createddate = $createddate;
 
         return $this;
     }

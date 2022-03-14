@@ -25,12 +25,19 @@ require_once "header.php";
                             <th>Name</th>
                             <th>Type</th>
                             <th>Duration</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <?php
                     $courseslist = DBcourse::selectall();
                     foreach ($courseslist as $course) {
-                        echo "<tr><td style='display:none'> "  . $course->get_id() . "</td><td>"  . $course->get_cname() . "</td><td>" . $course->get_ctype() . "</td><td>" . $course->get_cduration() . '</td></tr>';
+                        echo "<tr><td style='display:none'> "
+                            . $course->get_id() . "</td><td>"
+                            . $course->get_cname() . "</td><td>"
+                            . $course->get_ctype() . "</td><td>"
+                            . $course->get_cduration() . "</td>                           
+                            <td><a class='btn btn-warning' href='../View/viewcourse.php?id=" . $course->get_id() .
+                            "'role='button'>View </a></td></tr>";
                     }
                     ?>
                 </table>
@@ -53,9 +60,8 @@ require_once "header.php";
                             </div>
                             <div class="col-md-12">
                                 <input class="form-check-input" checked type="radio" name="ctype" id="ctype" value="Classroom Training">
-                                <label class="form-check-label" for="ctype"> Classroom Training</label>
+                                <label class="form-check-label" for="ctype">Classroom Training</label>
                             </div>
-
                         </div>
                         <br />
                         <div class="col-md-6">
@@ -65,16 +71,19 @@ require_once "header.php";
                             </div>
                         </div>
                         <br />
-                        <div class="col-sm-12 ">
-                            <button type="submit" class="btn btn-warning">Register</button>
+                        <div class="">
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-warning">Register</button>
+                            </div>
                         </div>
                     </div>
-                </form>
             </div>
+            </form>
         </div>
     </div>
 </div>
-</br>
+
+
 <?php include_once("footer.php"); ?>
 <script>
     $(document).ready(function() {

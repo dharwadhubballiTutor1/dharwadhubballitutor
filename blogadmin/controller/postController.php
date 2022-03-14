@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     error_log($_POST["onHome"]);
     $post->setOnHome(Sanitization::test_input($_POST["onHome"]));
+
     $quill_json = str_replace("'", "''", $_POST['hidden_element']);
     try {
       $quill = new DBlackborough\Quill\Render($quill_json, 'HTML');

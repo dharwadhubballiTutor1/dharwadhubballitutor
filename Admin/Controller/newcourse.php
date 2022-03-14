@@ -13,6 +13,7 @@ require "../DB Operations/CoursesOps.php";
     $admit->set_cname(Sanitization::test_input($_POST["cname"]));
     $admit->set_ctype(Sanitization::test_input($_POST["ctype"]));
     $admit->set_cduration(Sanitization::test_input($_POST["cduration"]));
+  
     DBcourse::insert($admit);
   }
 ?>

@@ -302,7 +302,7 @@ body{
                         <div class="body widget popular-post">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <?php $postList=DBpost::getPostBySubCategoryId($postId);
+                                    <?php $postList=DBpost::getPostList($postId);
                                     foreach ($postList as $post){
                                     echo '<div class="single_post">
                                         <p class="m-b-0"><a href="postDetails.php?id='.$post->getPostId().'">'.$post->getPostTitle().'</a></p>
@@ -336,3 +336,4 @@ body{
 
         </div>
         <?php include('footer.php'); ?>
+       

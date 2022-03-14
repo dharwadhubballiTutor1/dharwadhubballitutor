@@ -5,10 +5,13 @@ class enquiry
     private $name;
     private $email;
     private $phone;
+    private $source;
     private $qualification;
+    private $Status;
     private $enqueryFor;
     private $Modified_Date;
     private $enq_createdon;
+
 
     public function set_Id($IdValue)
     {
@@ -81,5 +84,43 @@ class enquiry
     function get_enqcreatedon()
     {
         return $this->enq_createdon;
+    }
+
+
+
+    /**
+     * Get the value of Status
+     */
+    public function getStatus()
+    {
+        return $this->Status;
+    }
+
+    /**
+     * Set the value of Status
+     */
+    public function setStatus($Status): self
+    {
+        $this->Status = $Status;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of source
+     */
+    public function get_Source()
+    {
+        return $this->source;
+    }
+
+    /**
+     * Set the value of source
+     */
+    public function set_Source($source): self
+    {
+        $this->source = $source;
+
+        return $this;
     }
 }

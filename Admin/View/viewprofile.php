@@ -38,9 +38,7 @@ $admission = DBadmission::viewadmission($id);
                         <div class="col-md-6">
                             <label for="name" class="col-md-6 control-label">Full Name</label>
                             <div class="col-sm-12">
-                                <input type="text" id="name" placeholder="Full Name" name="name" class="form-control" pattern="[a-zA-Z\-\ ]+" value="<?php
-                                                                                                                                                        echo $admission->get_name();
-                                                                                                                                                        ?>">
+                                <input type="text" id="name" placeholder="Full Name" name="name" class="form-control" pattern="[a-zA-Z\-\ ]+" value="<?php echo $admission->get_name();?>">                                                                                                                                             
                                 <input type="hidden" id="id" name="id" value="<?php echo $admission->get_id(); ?>">
                             </div>
                         </div>
@@ -207,7 +205,7 @@ $admission = DBadmission::viewadmission($id);
                 </div>
                 <br />
                 <div class="col-md-6">
-                    <label for="adhaarfile" class=" col-md-6 form-label">Adhaar File</label>
+                    <label for="adhaarfile" class="col-md-6 form-label">Adhaar File</label>
                     <div class="col-md-12">
                         <a href="<?php echo "../uploads/" . $admission->get_adhaarfile(); ?>" class="form-control" download> Click to download Adhaar
                             file</a>

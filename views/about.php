@@ -1,4 +1,6 @@
 <?php require_once("navigation.php"); ?>
+
+
 <style type="text/css">
     .card {
         background: #fff;
@@ -246,6 +248,8 @@
         font-size: 13px
     }
 
+
+
     @media (max-width: 640px) {
         .blog-page .left-box .single-comment-box>ul>li {
             padding: 25px 0
@@ -271,54 +275,37 @@
             padding: 30px
         }
     }
-@media screen and (min-width:992px) {
-    .abouthero-wrap {
-        height: 100vh;
-        min-height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-attachment: fixed;
-        z-index: -1;
+
+    @media screen and (min-width:992px) {
+        .abouthero-wrap {
+            background-image: url(../blogadmin/img/xbg_2.jpg.pagespeed.ic.1gHej6V-Vt.webp);
+            height: 100vh;
+            min-height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
     }
-    .aboutdesc{
-        font-size: 18px;
-    text-align:justify;
-}
-.widget{
-    font-size: 18px;
-}
-}
-
-@media (min-width: 1024px) and (max-width: 1439px)
-{
-    .widget{
-    font-size: 16px;
-} 
-}
-@media only screen and (min-width: 768px){
-    .aboutdesc{
-        font-size: 16px;
-    text-align:justify;
-} 
-}
-
-@media (min-width: 1440px){
-    .aboutdesc{
-        font-size: 18px;
-    text-align:justify;
-} 
-}
-    
 </style>
-<div class="abouthero-wrap" style="background-size:cover;width:100%;"> 
-<p class="title-about"style="width:45%;text-align:center;"> About Us </p>
+<div class="abouthero-wrap" style="background-size:cover;width:100%;">
 </div>
+    <div class="container">
+        <div class="row row no-gutters align-items-center justify-content-center">
+            <div class="col-md-9 pt-5 mt-5">
+                <div class="">
+                    <h1 class="title-about mb-1">AboutUs</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div id="main-content" class="aboutblog-page">
+<div id="main-content" class="aboutblog-page">
         <div class="containers">
             <div class="row clearfix">
                 <div class="col-lg-8 col-md-12 left-box">
@@ -364,7 +351,7 @@
                                             </svg>
                                             <?php echo $business->getBusinessAddress(); ?></p>
                                     </li>
-                                    <li class="list-group-item" >
+                                    <li class="list-group-item" align="center">
                                         <?php
                                         foreach ($socialMediaHandles as $handle) {
                                             echo '<a class="social-icon" href="' . $handle->getHandle() . '">' . $handle->getIcon() . '</a>';

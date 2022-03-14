@@ -42,7 +42,7 @@ class DBsocialMediaHandle
         $sql = "SELECT * FROM socialmediahandle";
         $result = $connectionObj->query($sql);
         $socialMediaHandleList = [];
-        if (mysqli_num_rows($result) > 0) {
+        if (mysqli_num_rows($result)>0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $socialMedia = new socialMediaHandle();
                 $socialMedia->setId($row["Id"]);

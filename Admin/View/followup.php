@@ -8,7 +8,7 @@ $id = $_GET["id"];
 ?>
 <div class="card">
     <div class="card-header">
-        <h6 >Follow Up's</h6>
+        <h6>Follow Up's</h6>
     </div>
     <div class=card-body>
         <form method="post" id="followup_form" action="../Controller/newfollowup.php">
@@ -16,17 +16,44 @@ $id = $_GET["id"];
                 <thead>
                     <tr>
                         <th>Follwed By</th>
+                        <th>FollowUp Date</th>
                         <th>Comments</th>
+                        <th>Status</th>
                         <th>Date</th>
                     </tr>
                 </thead>
                 <?php
                 $followUpList = DBfollow::getFollowUpByEnqId($id);
                 foreach ($followUpList as $follow) {
-                    echo "<tr><td> "  . $follow->get_followupBy() . "</td><td>" . $follow->get_followcomment() . "</td><td>" . $follow->get_followupOn() . '</td></tr>';
+                    echo "<tr><td> "  . $follow->get_followupBy() . "</td><td>" . $follow->get_followupDate() . "</td><td>" . $follow->get_followcomment() . "</td><td>" . $follow->get_status() . "</td><td>" . $follow->get_followupOn() . '</td></tr>';
                 }
                 ?>
             </table>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="followupDate" class="col-md-6 control-label">FollowUp Date</label>
+                        <div class="col-sm-12">
+                            <input type="date" id="followupDate" name="followupDate" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="status" class="col-md-6 control-label">Status</label>
+                        <div class="col-sm-12">
+                            <select class="custom-select" id="status" name="status">
+                                <option value="">Select</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Converted">Converted</option>
+                                <option value="Bad">Bad</option>
+                                <option value="Demo Class">Demo Class</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-12">
@@ -60,5 +87,23 @@ $id = $_GET["id"];
 </div>
 </div>
 </body>
+<script>
+    
+    ($document).ready(function() {
+        $("#followupDate").focus(function() {
+            let thisYear = new Date();
+            thisYear = thisYear.getFullYear();
+            let allowedYear = thisYear - 5;
+            allowedYear = allowedYear.toString();
+            let year = new Date(allowedYear);
+            let dd = String(year.getDate()).padStart(2, '0');
+            let mm = String(year.getMonth() + 1).padStart(2, '0'); //January is 0!
+            let yyyy = year.getFullYear();
+            year = yyyy + '-' + mm + '-' + dd;
+            $("#followupDate").attr("max", year);
+        })
+
+    });
+</script>
 
 </html>

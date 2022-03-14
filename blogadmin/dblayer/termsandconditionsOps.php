@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']."/DB Operations/dbconnection.php";
-require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']."/blogadmin/model/termsandconditionsModel.php";
+require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName'] . "/DB Operations/dbconnection.php";
+require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName'] . "/blogadmin/model/termsandconditionsModel.php";
 class DBterms
 {
   public static function insert($termsandconditionsObj)
@@ -30,13 +30,11 @@ class DBterms
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $sql = "SELECT * FROM termsandconditions";
-    error_log($sql);
     $result = $connectionObj->query($sql);
     $count = mysqli_num_rows($result);
     $terms = new Terms();
     if ($count > 0) {
-      while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-      
+      while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {      
         $terms->setid($row["id"]);
         $terms->setdescription($row["description"]);
       }

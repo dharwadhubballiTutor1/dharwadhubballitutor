@@ -98,7 +98,6 @@ require_once "../dblayer/PrivacyPolicyOps.php";
                         $Privacy = DBPrivacy::getPrivacyPolicy();
                         echo $Privacy->getdescription();
                         ?>
-
                     </div>
                 </div>
             </div>

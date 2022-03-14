@@ -17,7 +17,6 @@ require_once "header.php";
         </ul>
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-fees" role="tabpanel" aria-labelledby="pills-fees-tab">
-
                 <table class="table table-bordered" id="enquery">
                     <thead>
                         <tr cellspacing="0">

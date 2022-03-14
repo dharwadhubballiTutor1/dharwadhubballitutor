@@ -1,7 +1,7 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']. "/blogadmin/model/postModel.php");
-require_once($_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']. "/blogadmin/model/subcategorymodel.php");
-require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']."/DB Operations/dbconnection.php";
+require_once($_SERVER['DOCUMENT_ROOT'] . $configs['app_info']['appName'] . "/blogadmin/model/postModel.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . $configs['app_info']['appName'] . "/blogadmin/model/subcategorymodel.php");
+require_once $_SERVER['DOCUMENT_ROOT'] . $configs['app_info']['appName'] . "/DB Operations/dbconnection.php";
 class DBpost
 {
   public static function insert($post)
@@ -233,6 +233,37 @@ class DBpost
     }
     return $post;
   }
+  public static function getpopularPost()
+  {
+    $db = ConnectDb::getInstance();
+    $connectionObj = $db->getConnection();
+    $sql = "SELECT * FROM post AS p JOIN postimages AS pI ON p.postId=pI.postId ORDER BY RAND() LIMIT 3
+    ";
+    $result = $connectionObj->query($sql);
+    $count = mysqli_num_rows($result);
+    $postList = [];
+   
+    if ($count > 0) {
+      while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        $post = new Post();
+        $post->setPostId($row["postId"]);
+        $post->setPostTitle($row["postTitle"]);
+        $post->setPostDescription($row["postDescription"]);
+        $post->setPostCreatedBy($row["postCreatedOn"]);
+        $post->setKeywords($row["keywords"]);
+        $post->setTitleTag($row["titleTag"]);
+        $post->setPostUrl($row["postUrl"]);
+        $post->setOnHome($row["appearOnHome"]);
+        $post->setImage($row["postImage"]);
+        $post->setAltTextImage($row["imageAlternateText"]);       
+        $post->setMappedSubCategory(DBpost::getMappedSubCategories($row["postId"]));
+         array_push($postList, $post);
+        error_log($sql);
+      }
+    }
+    return $postList;
+  }
+
   public static function getPostList()
   {
     $db = ConnectDb::getInstance();
@@ -251,6 +282,7 @@ class DBpost
         $post->setKeywords($row["keywords"]);
         $post->setTitleTag($row["titleTag"]);
         $post->setImage($row["postImage"]);
+        $post->setOnHome($row["appearOnHome"]);
         $post->setAltTextImage($row["imageAlternateText"]);
         $post->setMappedSubCategory(DBpost::getMappedSubCategories($row["postId"]));
         array_push($postList, $post);
@@ -281,9 +313,6 @@ class DBpost
     }
     return $mappedCategoriesList;
   }
-
-
-
   public static function getPostOnHome()
   {
     $db = ConnectDb::getInstance();
@@ -310,36 +339,6 @@ class DBpost
         $post->setPostCreatedBy(date_format(date_create($row["postCreatedOn"]), "d-m-Y"));
         $post->setMappedSubCategory(DBpost::getMappedSubCategories($row["postId"]));
         array_push($postList, $post);
-      }
-    }
-    return $postList;
-  }
-  public static function getpopularPost()
-  {
-    $db = ConnectDb::getInstance();
-    $connectionObj = $db->getConnection();
-    $sql = "SELECT * FROM post AS p JOIN postimages AS pI ON p.postId=pI.postId ORDER BY RAND() LIMIT 4
-    ";
-    $result = $connectionObj->query($sql);
-    $count = mysqli_num_rows($result);
-    $postList = [];
-   
-    if ($count > 0) {
-      while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        $post = new Post();
-        $post->setPostId($row["postId"]);
-        $post->setPostTitle($row["postTitle"]);
-        $post->setPostDescription($row["postDescription"]);
-        $post->setPostCreatedBy($row["postCreatedOn"]);
-        $post->setKeywords($row["keywords"]);
-        $post->setTitleTag($row["titleTag"]);
-        $post->setPostUrl($row["postUrl"]);
-        $post->setOnHome($row["appearOnHome"]);
-        $post->setImage($row["postImage"]);
-        $post->setAltTextImage($row["imageAlternateText"]);       
-        $post->setMappedSubCategory(DBpost::getMappedSubCategories($row["postId"]));
-         array_push($postList, $post);
-        error_log($sql);
       }
     }
     return $postList;

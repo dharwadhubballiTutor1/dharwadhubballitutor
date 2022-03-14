@@ -79,13 +79,12 @@ class sms
     public function sendSMS()
     {
         $Textlocal = new Textlocal('atharshaikh1@gmail.com', '650d05aea27f2bad20a99358b460a1980388a591d2cebaa63d04e1f03ca83605', false);
-     
+
         $numbers = array(8007961759);
         $sender = 'DHTENQ';
         $message = $this->message;
-     
+        error_log($message);
         $response = $Textlocal->sendSms($numbers, 'Hello this is a test message', $sender);
         error_log($response);
- 
     }
 }

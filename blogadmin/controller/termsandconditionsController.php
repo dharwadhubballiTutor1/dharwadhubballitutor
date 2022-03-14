@@ -1,14 +1,16 @@
 <?php
-$configs= require_once("../../views/config.php");
-require "../model/termsandconditionsModel.php";
+$configs = require_once("../../views/config.php");
+require_once "../model/termsandconditionsModel.php";
 require "../Utilities/Sanitization.php";
 require "../dblayer/termsandconditionsOps.php";
 require "../Utilities/Helper.php";
 require_once("../../vendor/autoload.php");
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['id'])) {
-    $terms = new terms();
+    $terms = new Terms();
     $quill_json = trim($_POST['hidden_element']);
+
     try {
       $quill = new DBlackborough\Quill\Render($quill_json, 'HTML');
       $result = $quill->render();
@@ -19,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
     DBterms::update($terms);
   }else{
-    $terms = new terms();
-    
+    $terms = new Terms(); 
     $quill_json = trim($_POST['hidden_element']);
+   
     try {
       $quill = new DBlackborough\Quill\Render($quill_json, 'HTML');
       $result = $quill->render();
@@ -29,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo $e->getMessage();
     }
     $terms->setdescription($result);
-  
     DBterms::insert($terms);
 }
 } else if ($_SERVER["REQUEST_METHOD"] == "GET") {

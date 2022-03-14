@@ -1,5 +1,6 @@
-      <?php require_once("navigation.php"); ?>
-
+      <?php
+      require_once("navigation.php");
+      ?>
 
       <style>
             /* .margintop-small {
@@ -54,6 +55,20 @@
                   height: 40px;
             }
 
+            .hero-wrap {
+                  height: 100vh;
+                  min-height: 100%;
+                  position: absolute;
+                  left: 0;
+                  top: 0px;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: top center;
+                  background-attachment: fixed;
+                  z-index: -1;
+                  width: 100%;
+                  height: 100%;
+            }
 
 
             @keyframes slideUp {
@@ -368,19 +383,27 @@
                         margin-top: 110px;
                   }
             }
+
+            .align-items-center {
+                  -webkit-box-align: center !important;
+                  align-items: center !important;
+            }
+
+            .d-flex {
+
+                  display: flex !important;
+            }
       </style>
 
-
-      <div class="hero-wrap" style="background-image:url(blogadmin/img/bg_1.jpg);background-size:cover;width:100%;"> </div>
+      <div class="hero-wrap" style="background-image:url(blogadmin/img/xbg_1.jpg.pagespeed.ic.Qvddt6BzWR.webp);background-size:cover;width:100%;"></div>
       <div class="row">
             <div class="slideUp">
-
                   <span class="slidespan"> Welcome to DharwadHubballiTutor</span>
                   <h1 class="slideh1">Learning Helps Earning</h1>
                   <p class="slidep">Determination is a key to SUCCESS</p>
-
             </div>
       </div>
+
 
       <div class="slideUpbtn">
             <button type=button class="btn btn-primary" data-toggle="modal" data-target="#demomodal">Demo Classes</button>
@@ -473,8 +496,8 @@
                               <div class="card-body">
                         <div class="text-center">
                               <p class="card-text">
-                              <h2>'.$postOnHome->getPostTitle().'</h2>';
-                             
+                              <h2>' . $postOnHome->getPostTitle() . '</h2>';
+
                         $string = strip_tags($postOnHome->getPostDescription());
                         if (strlen($string) > 500) {
 
@@ -504,7 +527,60 @@
       </br>
 
 
+      <?php require_once("footer.php"); ?>
 
+      <section class="ftco-section testimony-section">
+            <div class="container-xl">
+                  <div class="row justify-content-center pb-4">
+                        <div class="col-md-7 text-center heading-section aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                              <h2 class="heading">Testimonials</h2>
+                        </div>
+                  </div>
+            </div>
+            </div>
+      </section>
+
+      <section class="container-fluid">
+            <div class="container">
+                  <div class="row">
+                        <?php
+                        echo '<div class="row row-cols-1 row-cols-md-3 g-4">';
+                        $testimonialsList = DBtestimonials::getTestimonialsList();
+                        foreach ($testimonialsList as $testimonials) {
+                              $card = '<div class="card card-shadow col"><div class="d-flex align-items-center">
+                              <div class="row">
+                              <h4>' . $testimonials->getName() . '</h4> <br />                          
+                                          <img src="/dharwadhubballitutor/blogadmin/img/Post/' . $testimonials->getImage() . '" style="width:100%;">
+                              </div>                              
+                                          <div class="card-body"> <br />   ';
+                              $string = strip_tags($testimonials->getDescription());
+                              if (strlen($string) > 200) {
+                                    // truncate string
+                                    $stringCut = substr($string, 0, 200);
+                                    $endPoint = strrpos($stringCut, ' ');
+
+                                    //if the string doesn't contain any space then it will cut without word basis.
+                                    $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                    $string .= '...';
+                              }
+                              $card .= '<p></p>' . $string . '<br>' . '<br>';
+
+                              for ($i = 1; $i <= 5; $i++) {
+                                    if ($testimonials->getRateNow() >= $i) {
+                                          $card .= '<i class="fa fa-star" aria-hidden="true" id="st' . $i . '" style="color:yellow"></i>';
+                                    } else {
+                                          $card .= '<i class="fa fa-star" aria-hidden="true" id="st' . $i . '"></i>';
+                                    }
+                              }
+                              $card .= '</div>                             
+                              </div></div>';
+                              echo $card;
+                        }
+                        echo '</div>';
+                        ?>
+                  </div>
+            </div>
+      </section>
 
       <div class="modal fade" id="demomodal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -595,5 +671,5 @@
                   </div>
             </div>
       </div>
+
       <?php require_once("footer.php"); ?>
-    

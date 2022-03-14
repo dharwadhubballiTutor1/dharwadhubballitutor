@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']."/DB Operations/dbconnection.php";
-require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']."/blogadmin/model/PrivacyPolicyModel.php";
+require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']. "/DB Operations/dbconnection.php";
+require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']. "/blogadmin/model/PrivacyPolicyModel.php";
 class DBPrivacy
 {
     public static function insert($PrivacyPolicyObj)

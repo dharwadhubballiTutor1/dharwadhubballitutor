@@ -5,6 +5,8 @@ class Enqfollowup
     private $followup_enq_id ;
     private $followup_comments;
     private $followup_by;
+    private $followupDate;
+    private $status;
     private $followup_on;
     private $enqStatus;
     private $table_name="enquiry_followup";
@@ -52,4 +54,27 @@ class Enqfollowup
         return $this->followup_by;
     }
 
+    function get_followupDate()
+    {
+        return $this->followupDate;
+    }
+
+    function set_followupDate($followupDate): self
+    {
+        $this->followupDate = $followupDate;
+
+        return $this;
+    }
+
+     function get_Status()
+    {
+        return $this->status;
+    }
+
+    function set_Status($status): self
+    {
+        $this->status = $status;
+
+        return $this;
+    }
 }
