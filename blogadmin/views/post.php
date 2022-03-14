@@ -169,6 +169,17 @@ echo '</div>';
                     </div>
                     <div class="form-group">
                         <div class="row">
+                            <label class="col-md-2 text-right">Link Under<span class="text-danger">*</span></label>
+                            <div class="col-md-10">
+                                <select id="LinkUnder" class="form-select" required name="LinkUnder">
+                                    <option value="1">Category</option>
+                                    <option value="2">Sub Category</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
                             <div class="form-check form-check-inline">
                                 <div class="col-md-2">
                                     <label class="form-check-label" for="onHome">Display On Home Page</label>

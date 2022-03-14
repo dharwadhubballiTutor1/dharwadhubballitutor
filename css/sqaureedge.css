@@ -25,6 +25,22 @@ body {
     background-repeat: no-repeat;
 }
 
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.has-background {
+    overflow: hidden;
+    position: relative;
+}
+
+.background-image {
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+}
+
 .dropdown-menu.show {
     display: inline-flex;
 }

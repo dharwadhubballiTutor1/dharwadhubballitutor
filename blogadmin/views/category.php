@@ -101,7 +101,7 @@ require_once("../model/categoryModel.php");
                                 <textarea type="text" name="itemcatdescription" id="itemcatdescription" class="form-control" required></textarea>
                             </div>
                         </div>
-                    </div>
+                    </div>                   
 
                     <div class="form-group">
                         <div class="row">
@@ -169,8 +169,7 @@ require_once("../model/categoryModel.php");
                                 <textarea type="text" name="itemcatdescription" id="editedItemcatdescription" class="form-control" required></textarea>
                             </div>
                         </div>
-                    </div>
-
+                    </div>                   
                     <div class="form-group">
                         <div class="row">
                             <div class="form-check form-check-inline">

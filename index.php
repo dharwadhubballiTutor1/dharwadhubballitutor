@@ -17,7 +17,6 @@ switch ($request) {
     case $appName . '/termsandconditions/':
         require __DIR__ . '/views/termsandconditions.php';
         break;
-
     case $appName . '/PrivacyPolicy/':
         require __DIR__ . '/views/PrivacyPolicy.php';
         break;
