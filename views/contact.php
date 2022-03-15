@@ -268,7 +268,6 @@ include('navigation.php');
 
     @media screen and (min-width:992px) {
         .contacthero-wrap {
-            background-image: url(../blogadmin/img/xbg_2.jpg.pagespeed.ic.1gHej6V-Vt.webp);
             height: 100vh;
             min-height: 100%;
             position: absolute;
@@ -280,23 +279,24 @@ include('navigation.php');
             background-attachment: fixed;
             z-index: -1;
         }
-
+        .widget{
+    font-size: 18px;
+}
     }
+   
+    @media (min-width: 1024px) and (max-width: 1439px)
+{
+    .widget{
+    font-size: 16px;
+} 
+}
+
 </style>
 
 
-<div class="contacthero-wrap" style="background-size:cover;width:100%;"></div>
-
-<div class="container">
-    <div class="row row no-gutters align-items-center justify-content-center">
-        <div class="col-md-9 pt-5 mt-5  text-left">
-            <div class="">
-                <h1 class="title-contact mb-1"> Contact Us </h1>
-            </div>
-        </div>
-    </div>
+<div class="contacthero-wrap" style="background-size:cover;width:100%;">
+    <p class="title-contact"style="width:45%;text-align:center;"> Contact Us </p>
 </div>
-
 <div id="main-content" class="contactblog-page">
     <div class="container">
         <div class="row clearfix">
@@ -310,18 +310,17 @@ include('navigation.php');
                     <div class="body">
                         <h3 class="card-title">Contact Us</h3>
                         <form class="form" action="../Admin/Controller/newenquiry.php" method="POST" autocomplete="off">
-                            <label class="form-label" for="name2">Name</label>
+                            <label class="form-label" for="name">Name</label>
                             <input type="text" name="name2" id="name2" class="form-control" placeholder="Name" required />
 
-                            <label class="form-label" for="email2">Email</label>
-                            <input type="email2" name="email2" id="email2" class="form-control" placeholder="name@example.com" />
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" name="email2" id="email2" class="form-control" placeholder="name@example.com" />
 
-                            <label class="form-label" for="phone2">Mobile Number:</label>
+                            <label class="form-label" for="phone">Mobile Number:</label>
                             <input type="tel" name="phone2" id="phone2" class="form-control" placeholder="Number" required />
-                            <label class="form-label" for="trainings2">Trainings</label>
+                            <label class="form-label" for="trainings5">Trainings</label>
                             <select class="form-select" id="trainings2" name="trainings2">
                                 <option value="">SELECT YOUR INTEREST</option>
-                                <option value="Web Designing and Development">Web Designing and Development</option>
                                 <?php
                                 $courselist = DBcourse::selectall();
                                 foreach ($courselist as $course) {
@@ -387,6 +386,8 @@ include('navigation.php');
     </div>
 </div>
 
-<!-- <div style="margin-top:1200px;"></div> -->
-<?php include('footer.php'); ?>
 
+
+
+
+<?php include('footer.php'); ?>

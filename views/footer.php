@@ -13,6 +13,11 @@
             width:25%;
       }  
       .foot{
+    font-size: 18px;
+}
+      }
+      @media (min-width: 1024px) and (max-width: 1439px){
+            .foot{
     font-size: 15px;
 }
       }
@@ -57,9 +62,9 @@
                         <a class="list-group-item list-group-item-action" aria-current="page" href="/dharwadhubballitutor/PrivacyPolicy/">Privacy Policy</a>
                   </ul>
             </div>
-            <div class="col-lg-3" >
-                  <div class="title-text" style="color:white;text-align:center;"> Our Contact</div>
-                  <hr />
+            <div class="col-lg-3" style="color:white;">
+                  <div class="title-text" style="text-align:center;"> Our Contact</div>
+                  <hr/>
                   <address>
                         <ul class="list-group list-group-flush">
                               <li class="list-group-item">
@@ -81,7 +86,7 @@
                                           </svg>
                                           <?php echo $business->getBusinessAddress(); ?></p>
                               </li>
-                              <li class="list-group-item" align="center" style="margin-top:10px;">
+                              <li class="list-group-item"  style="margin-top:10px;">
                                     <?php
                                     foreach ($socialMediaHandles as $handle) {
                                           echo '<a class="social-icon" style="margin-right: 20px;color:white;" href="' . $handle->getHandle() . '">' . $handle->getIcon() . '</a>';

@@ -379,13 +379,6 @@
                   <h1 class="slideh1">Learning Helps Earning</h1>
                   <p class="slidep">Determination is a key to SUCCESS</p>
 
-      <section class="ftco-section testimony-section">
-            <div class="container-xl">
-                  <div class="row justify-content-center pb-4">
-                        <div class="col-md-7 text-center heading-section aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                              <h2 class="heading">Testimonials</h2>
-                        </div>
-                  </div>
             </div>
       </div>
 
@@ -604,50 +597,3 @@
       </div>
       <?php require_once("footer.php"); ?>
     
-      </section>
-
-      <section class="container-fluid">
-            <div class="container">
-                  <div class="row">
-                        <?php
-                        echo '<div class="row row-cols-1 row-cols-md-3 g-4">';
-                        $testimonialsList = DBtestimonials::getTestimonialsList();
-                        foreach ($testimonialsList as $testimonials) {
-                              $card = '<div class="card card-shadow col"><div class="d-flex align-items-center">
-                              <div class="row">
-                              <h4>' . $testimonials->getName() . '</h4> <br />                          
-                                          <img src="/dharwadhubballitutor/blogadmin/img/Post/' . $testimonials->getImage() . '" style="width:100%;">
-                              </div>                              
-                                          <div class="card-body"> <br />   ';
-                              $string = strip_tags($testimonials->getDescription());
-                              if (strlen($string) > 200) {
-                                    // truncate string
-                                    $stringCut = substr($string, 0, 200);
-                                    $endPoint = strrpos($stringCut, ' ');
-
-                                    //if the string doesn't contain any space then it will cut without word basis.
-                                    $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                                    $string .= '...';
-                              }
-                              $card .= '<p></p>' . $string . '<br>' . '<br>';
-
-                              for ($i = 1; $i <= 5; $i++) {
-                                    if ($testimonials->getRateNow() >= $i) {
-                                          $card .= '<i class="fa fa-star" aria-hidden="true" id="st' . $i . '" style="color:yellow"></i>';
-                                    } else {
-                                          $card .= '<i class="fa fa-star" aria-hidden="true" id="st' . $i . '"></i>';
-                                    }
-                              }
-                              $card .= '</div>                             
-                              </div></div>';
-                              echo $card;
-                        }
-                        echo '</div>';
-                        ?>
-                  </div>
-            </div>
-      </section>
-      <?php require_once("footer.php"); ?>
-
-    
-     

@@ -300,4 +300,5 @@ require_once("navigation.php");
         </div>
     </div>
 </div>
+
 <?php require_once("footer.php"); ?>
