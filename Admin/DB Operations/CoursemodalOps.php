@@ -1,7 +1,7 @@
 <?php
 // require "../Admin/session.php";
 require_once "../../DB Operations/dbconnection.php";
-require_once "../../Admin/Model/modalCourseModel.php";
+require_once "../../Admin/model/modalCoursemodel.php";
 
 class DBCourseModal
 {
@@ -16,17 +16,18 @@ class DBCourseModal
         }
     }
 
-    
     public static function getcourseModalById($Id)
     {
         $db = ConnectDb::getInstance();
         $connectionObj = $db->getConnection();
-        $sql = "SELECT * FROM coursemodal WHERE coursemodalId = $Id";
+        $sql = "SELECT * FROM coursemodal WHERE coursemodalId =$Id";
+        error_log($sql);
         $result = $connectionObj->query($sql);
         $CourseModalList = [];
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $coursemodal = new CourseModal();
+                //$coursemodal->setid($row['id']);
                 $coursemodal->setcoursemodalId($row['coursemodalId']);
                 $coursemodal->setName($row['Name']);
                 $coursemodal->setDescription($row['Description']);

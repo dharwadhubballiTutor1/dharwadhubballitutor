@@ -7,7 +7,7 @@ require_once "../Utilities/Helper.php";
 //require "../Admin/navbar.php";
 require_once "../DB Operations/AdmissionsOps.php";
 require_once "../DB Operations/CoursesOps.php";
-require_once "../../Admin/Model/smsModel.php";
+// require_once "../../Admin/model/smsModel.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $admit = new Admissions();

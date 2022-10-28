@@ -4,8 +4,11 @@ include "../../Admin/DB Operations/enqueryOps.php";
 require_once "../../Admin/model/Coursesmodel.php";
 require_once "../../Admin/DB Operations/CoursesOps.php";
 include "../../Admin/DB Operations/followupOps.php";
+
 require_once "header.php";
 ?>
+
+
 <div class="card">
     <div class="card-header">
         <h6 class="">Enquiries</h6>
@@ -37,13 +40,14 @@ require_once "header.php";
                         <tr>
                             <th style="display:none">Id</th>
                             <th>DOE</th>
-                            <th>Followup Date</th>
+                            <th>FupD</th>
                             <th>Name<i class="bi bi-arrow-down-up"></i></th>
-                            <th>Email</th>
+                            <th style="display:none">Email</th>
                             <th>Phone</th>
                             <th style="display:none">Qualification</th>
                             <th>Status</th>
-                            <th>Source</th>
+                            <th>Branch</th>
+                            <th style="display:none">Source</th>
                             <th>Trainings</th>
                             <th>Action</th>
                         </tr>
@@ -66,11 +70,12 @@ require_once "header.php";
                         <td> " . $enquiry->get_enqcreatedon() . "</td>
                         <td> " . $enquiry->get_followupDate() . "</td>
                         <td> " . $enquiry->get_name() . "</td>
-                        <td>" . $enquiry->get_email() . "</td>
+                        <td style=display:none>" . $enquiry->get_email() . "</td>
                         <td>" . $enquiry->get_phone() . "</td>
                         <td style=display:none>" . $enquiry->get_qualification() . "</td>
-                        <td>" . $enquiry->get_Status() . "</td>  
-                        <td>" . $enquiry->get_Source() . "  </td>
+                        <td>" . $enquiry->get_Status() . "</td>
+                        <td>" . $enquiry->getBranch() . "</td>    
+                        <td style=display:none>" . $enquiry->get_Source() . "  </td>
                         <td>" . $enquiry->get_enqueryFor() . "</td>          
                                 <td>
                                     <div class='dropdown'>
@@ -83,7 +88,7 @@ require_once "header.php";
                                             <i class='fas fa-comment-dots'></i>
                                             Follow Up
                                         </a>
-                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=".$enquiry->get_id()."  &name=  " . $enquiry->get_name() . "  &email= " . $enquiry->get_email() . " &phone=  " . $enquiry->get_phone() . "''> 
+                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=".$enquiry->get_id()."'> 
                                             <i class='fas fa-info'></i>
                                             Edit Enquiry
                                         </a>
@@ -96,13 +101,13 @@ require_once "header.php";
                 </table>
             </div>
             <div class="tab-pane fade table-responsive" id="Internship-tab-content" role="tabpanel" aria-labelledby="internship-tab">
-                <table id="Internship" class="table table-bordered ">
+                <table id="Internship" class="table table-bordered w-100">
                     <thead>
                         <tr>
                             <th style="display:none">Id</th>
                             <th>DOE</th>
                             <th>Followup Date</th>
-                            <th>Name<i class="bi bi-arrow-down-up"></i></th>
+                            <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
                             <th style="display:none">Qualification</th>
@@ -124,7 +129,8 @@ require_once "header.php";
                         } else {
                             $rowClass = "";
                         }
-                        echo "<tr class=" . $rowClass . "><td style=display:none> " . $enquiry->get_id() . "</td>
+                        echo "<tr class=" . $rowClass . ">
+                        <td style=display:none> " . $enquiry->get_id() . "</td>
                         <td> " . $enquiry->get_enqcreatedon() . "</td>
                         <td> " . $enquiry->get_followupDate() . "</td>
                         <td> " . $enquiry->get_name() . "</td>
@@ -132,7 +138,7 @@ require_once "header.php";
                         <td>" . $enquiry->get_phone() . "</td>
                         <td style=display:none>" . $enquiry->get_qualification() . "</td>
                         <td>" . $enquiry->get_enqueryFor() . "</td>          
-                                <td>
+                        <td>
                                     <div class='dropdown'>
                                         <button class='btn btn-secondary btn-sm dropdown-toggle' type='button' id='dropdownMenu2' data-bs-toggle='dropdown' aria-expanded='false'>
                                         <i class='fas fa-info-circle'></i>
@@ -158,7 +164,7 @@ require_once "header.php";
             <div class="tab-pane fade" id="democlass-tab-content" role="tabpanel" aria-labelledby="democlass-tab">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-striped" id="democlasstable">
+                        <table class="table table-bordered" id="Tabledemoclass">
                             <thead>
                                 <tr>
                                     <th style="display:none">Id</th>
@@ -167,7 +173,7 @@ require_once "header.php";
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
-                                    <th>Qualification</th>
+                                    <th>Enquired For</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -185,15 +191,16 @@ require_once "header.php";
                                 } else {
                                     $rowClass = " ";
                                 }
-                                echo "<tr class=" . $rowClass . "><td style=display:none> " . $enquiry->get_id() . "</td>
+                                echo "<tr class=" . $rowClass . ">
+                                <td style=display:none> " . $enquiry->get_id() . "</td>
                         <td> " . $enquiry->get_enqcreatedon() . "</td>
                         <td> " . $enquiry->get_followupDate() . "</td>
                         <td> " . $enquiry->get_name() . "</td>
                         <td>" . $enquiry->get_email() . "</td>
                         <td>" . $enquiry->get_phone() . "</td>
-                        <td style=display:none>" . $enquiry->get_qualification() . "</td>
+                    
                         <td>" . $enquiry->get_enqueryFor() . "</td>          
-                                <td>
+                        <td>
                                     <div class='dropdown'>
                                         <button class='btn btn-secondary btn-sm dropdown-toggle' type='button' id='dropdownMenu2' data-bs-toggle='dropdown' aria-expanded='false'>
                                         <i class='fas fa-info-circle'></i>
@@ -246,13 +253,14 @@ require_once "header.php";
                         } else {
                             $rowClass = " ";
                         }
-                        echo "<tr class=" . $rowClass . "><td style=display:none> " . $enquiry->get_id() . "</td>
+                        echo "<tr class=" . $rowClass . ">
+                        <td style=display:none> " . $enquiry->get_id() . "</td>
                         <td> " . $enquiry->get_enqcreatedon() . "</td>
                         <td> " . $enquiry->get_followupDate() . "</td>
                         <td> " . $enquiry->get_name() . "</td>
                         <td>" . $enquiry->get_email() . "</td>
                         <td>" . $enquiry->get_phone() . "</td>
-                        <td style=display:none>" . $enquiry->get_qualification() . "</td>
+                       
                         <td>" . $enquiry->get_enqueryFor() . "</td>          
                                 <td>
                                     <div class='dropdown'>
@@ -288,28 +296,42 @@ require_once "header.php";
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             Select one among Trainings/Internships/Demo/Services
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label class=label for=name2>Name</label>
                             <div class="col-sm-12">
                                 <input type=text name=name2 class=form-control id=name2 placeholder=Name required />
                             </div>
                         </div>
                         <br />
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label class=label for=email2>Email</label>
                             <div class="col-sm-12">
                                 <input type=email name=email2 class=form-control id=email2 placeholder=name@example.com />
                             </div>
                         </div>
+                        
                         <br />
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label class=label for=phone2>Phone </label>
                             <div class="col-sm-12">
-                                <input type=tel name=phone2 class=form-control id=phone2 placeholder=Number required />
+                                <input type=tel name=phone2 class=form-control id=phone2 placeholder=Number required maxlength="10"/>
                             </div>
                         </div>
                         <br />
-                        <div class="col-md-6">
+                        <div class="col-md-3">
+                            <label class=label for=source>Source </label>
+                            <div class="col-sm-12">
+                                <select class="custom-select" id="source" name="source">
+                                    <option value="">Select </option>
+                                    <option value="Referral">Referral</option>
+                                    <option value="Website">Website</option>
+                                    <option value="Google">Google </option>
+                                    <option value="Walk-in">Walk-in </option>
+                                    <option value="Facebook">Facebook </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
                             <label class=label for=trainings2>Trainings</label>
                             <div class="col-sm-12">
                                 <select class="custom-select" id="trainings2" name="trainings2">
@@ -329,7 +351,7 @@ require_once "header.php";
                             </div>
                         </div>
                         <br />
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label class=label for=democlass>Demo Class</label>
                             <div class="col-sm-12">
                                 <select class=custom-select id=democlass name=democlass>
@@ -342,7 +364,7 @@ require_once "header.php";
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label class=label for=internship2>Internships</label>
                             <div class="col-sm-12">
                                 <select class=custom-select id=internship2 name=internship2>
@@ -355,7 +377,7 @@ require_once "header.php";
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <label class=label for=services>Services</label>
                             <div class="col-sm-12">
                                 <select class=custom-select id=services name=services>
@@ -371,22 +393,19 @@ require_once "header.php";
                             </div>
                         </div>
                         <br />
-                        <div class="col-md-6">
-                            <label class=label for=source>Source </label>
+                        <br />
+                        <div class="col-md-3">
+                            <label class=label for=branch>Branch</label>
                             <div class="col-sm-12">
-                                <select class="custom-select" id="source" name="source">
-                                    <option value="">Select </option>
-                                    <option value="Referral">Referral</option>
-                                    <option value="Website">Website</option>
-                                    <option value="Google">Google </option>
-                                    <option value="Walk-in">Walk-in </option>
-                                    <option value="Facebook">Facebook </option>
+                                <select class=custom-select id=branch name=branch>
+                                    <option value="Dharwad">Dharwad</option>
+                                    <option value="Hubballi">Hubballi</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-12 ">
-                                <button type="submit" class="btn btn-warning" name="post" id="post">Register</button>
+                                <button type="submit" class="btn btn-primary float-right" name="post" id="post">Register</button>
                             </div>
                         </div>
                     </div>
@@ -413,6 +432,7 @@ function FormValidation() {
 
 }
 $(document).ready(function() {
+    debugger;
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -429,7 +449,7 @@ $(document).ready(function() {
         "order": [0, 'desc']
     });
     var internship = $('#Internship').DataTable();
-    var DemoClass = $('#democlasstable').DataTable();
+    var DemoClass = $('#Tabledemoclass').DataTable();
     var Services = $('#Services').DataTable();
     $('#column3_search').on('keyup', function() {
         table.columns(0).search(this.value).draw();

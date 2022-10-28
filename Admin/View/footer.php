@@ -57,9 +57,8 @@
 <!-- Page level plugins -->
 <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
-<script type="text/javascript" src="../vendor/parsley/dist/parsley.min.js"></script>
-<script type="text/javascript" src="../vendor/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../vendor/jqueryserializeJSON/jquery.serializejson.min.js"></script>
 <script src="//cdn.quilljs.com/1.3.6/quill.core.js"></script>
 <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
@@ -73,32 +72,32 @@
 </script>
 
 <script>
-    $(document).ready(function() {
+    // $(document).ready(function() {
 
-        const params = new URLSearchParams(window.location.search)
-        debugger;
-        var array=[];
-        for(param of params){
-            array=param;
-        }
-        console.log(array);  
+    //     const params = new URLSearchParams(window.location.search)
+    //     debugger;
+    //     var array=[];
+    //     for(param of params){
+    //         array=param;
+    //     }
+    //     console.log(array);  
        
-        console.log('#myTab button[data-bs-target="#'+array[1]+'"]');
-        var triggerEl = document.querySelector('#myTab button[data-bs-target="#'+array[1]+'"]');
-        console.log(triggerEl);
-        var tabTrigger = new bootstrap.Tab(triggerEl);
-        tabTrigger.show();
+    //     console.log('#myTab button[data-bs-target="#'+array[1]+'"]');
+    //     var triggerEl = document.querySelector('#myTab button[data-bs-target="#'+array[1]+'"]');
+    //     console.log(triggerEl);
+    //     var tabTrigger = new bootstrap.Tab(triggerEl);
+    //     tabTrigger.show();
 
-        var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'));
-        triggerTabList.forEach(function(triggerEl) {
-            var tabTrigger = new bootstrap.Tab(triggerEl);
+    //     var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'));
+    //     triggerTabList.forEach(function(triggerEl) {
+    //         var tabTrigger = new bootstrap.Tab(triggerEl);
 
-            triggerEl.addEventListener('click', function(event) {
-                event.preventDefault()
-                tabTrigger.show();
-            })
-        });
-    });
+    //         triggerEl.addEventListener('click', function(event) {
+    //             event.preventDefault()
+    //             tabTrigger.show();
+    //         })
+    //     });
+    // });
 </script>
 </body>
 

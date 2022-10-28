@@ -1,16 +1,16 @@
 <?php
 class enquery
 {
-    public $id;
-    public $name;
-    public $email;
-    public $phone;
-    public $source;
-
-    public $qualification;
-    public $enqueryFor;
-    public $Modified_Date;
-    public $enq_createdon;
+    private $id;
+    private $name;
+    private $email;
+    private $phone;
+    private $source;
+    private $qualification;
+    private $enqType;
+    private $enqueryFor;
+    private $Modified_Date;
+    private $enq_createdon;
     private $status;
     private $followup_enq_id;
     private $followup_comments;
@@ -18,6 +18,7 @@ class enquery
     private $followupDate;
     private $Status;
     private $followup_createdon;
+    private $branch;
     public function set_Id($IdValue)
     {
         $this->id = $IdValue;
@@ -104,7 +105,7 @@ class enquery
     /**
      * Set the value of followup_enq_id
      */
-    public function setFollowupEnqId($followup_enq_id): self
+    public function setFollowupEnqId($followup_enq_id)
     {
         $this->followup_enq_id = $followup_enq_id;
 
@@ -160,7 +161,7 @@ class enquery
         return $this->followupDate;
     }
 
-    function set_followupDate($followupDate): self
+    function set_followupDate($followupDate)
     {
         $this->followupDate = $followupDate;
 
@@ -180,7 +181,7 @@ class enquery
     /**
      * Set the value of followup_createdon
      */
-    public function setFollowupCreatedon($followup_createdon): self
+    public function setFollowupCreatedon($followup_createdon)
     {
         $this->followup_createdon = $followup_createdon;
 
@@ -198,7 +199,7 @@ class enquery
     /**
      * Set the value of status
      */
-    public function setStatus($status): self
+    public function setStatus($status)
     {
         $this->status = $status;
 
@@ -216,7 +217,7 @@ class enquery
     /**
      * Set the value of Status
      */
-    public function set_Status($Status): self
+    public function set_Status($Status)
     {
         $this->Status = $Status;
 
@@ -235,9 +236,45 @@ class enquery
     /**
      * Set the value of source
      */
-    public function set_Source($source): self
+    public function set_Source($source)
     {
         $this->source = $source;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of branch
+     */
+    public function getBranch()
+    {
+        return $this->branch;
+    }
+
+    /**
+     * Set the value of branch
+     */
+    public function setBranch($branch)
+    {
+        $this->branch = $branch;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of enqType
+     */
+    public function getEnqType()
+    {
+        return $this->enqType;
+    }
+
+    /**
+     * Set the value of enqType
+     */
+    public function setEnqType($enqType)
+    {
+        $this->enqType = $enqType;
 
         return $this;
     }
