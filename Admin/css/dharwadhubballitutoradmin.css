@@ -203,9 +203,9 @@ body {
 }
 
 .btn-danger {
-    background-color: #2a0a5e !important;
-    color: black !important;
-    border-color: #2a0a5e !important;
+    /*background-color: #2a0a5e !important;*/
+    /*color: black !important;*/
+    /*border-color: #2a0a5e !important;*/
 }
 
 .sidenav {
@@ -269,8 +269,8 @@ body {
         font-size: 25px;
     }
     .brandName {
-        color: #f8c000;
-        font-size: 28px;
+        color: white;
+        font-size: 18px;
     }
     .col-md-3 {
         flex: 0 0 auto;
@@ -334,7 +334,7 @@ body {
         font-size: 20px;
     }
     .brandName {
-        color: #f8c000;
+        color: white;
         font-size: 16px;
     }
 }

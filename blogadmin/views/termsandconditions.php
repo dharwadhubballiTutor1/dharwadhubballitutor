@@ -82,10 +82,10 @@ require_once"../model/termsandconditionsModel.php";
                     <h6 class="m-0 font-weight-bold text-primary">Terms and Conditions</h6>
                 </div>
                 <div class="col" align="right">
-                    <span data-toggle=modal data-target=#addmodal>
+                    <span data-bs-toggle=modal data-bs-target=#addModal>
                         <button type="button" + class="btn btn-warning btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                     </span>
-                    <span data-toggle=modal data-target=#editmodal>
+                    <span data-bs-toggle=modal data-bs-target=#editModal>
                         <button type="button" + class="btn btn-success btn-circle btn-sm"><i class="fas fa-pencil-alt"></i></button>
                     </span>
                 </div>
@@ -113,7 +113,7 @@ require_once"../model/termsandconditionsModel.php";
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="modal_title">Terms And Conditions</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -131,7 +131,7 @@ require_once"../model/termsandconditionsModel.php";
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <button type="submit" name="register_button" id="register_button" class="btn btn-primary btn-user">Save</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </form>
@@ -147,7 +147,7 @@ require_once"../model/termsandconditionsModel.php";
 
                     <div class="modal-header">
                         <h4 class="modal-title" id="modal_title">Terms And Conditions</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -169,7 +169,7 @@ require_once"../model/termsandconditionsModel.php";
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <button type="submit" name="register_button" id="register_button" class="btn btn-primary btn-user">Save</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </form>
             </div>

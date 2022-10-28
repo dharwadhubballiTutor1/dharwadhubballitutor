@@ -1,5 +1,5 @@
 <?php
-include "session.php";
+session_start();
 include('header.php');
 require_once("../dblayer/postOps.php");
 $postId = $_GET['id'];
@@ -48,7 +48,7 @@ $post = DBpost::getPostById($postId);
                     <label class="col-md-2 text-right">Image <span class="text-danger">*</span></label>
                     <div class="col-md-10">
                         <?php
-                        echo '<img src="../img/post/' . $post->getImage() . '" class="thumbnail img-fluid" alt="' . $post->getAltTextImage() . '">'
+                        echo '<img src="../img/Post/' . $post->getImage() . '" class="thumbnail img-fluid" alt="' . $post->getAltTextImage() . '">'
                         ?>
                     </div>
                 </div>

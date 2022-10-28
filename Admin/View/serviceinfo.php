@@ -2,8 +2,8 @@
 require "../../Admin/session.php";
 
 include "../../Admin/DB Operations/ServicesOps.php";
-require_once "../../Admin/Model/Coursesmodel.php";
-require_once "../../Admin/Model/Servicemodel.php";
+require_once "../../Admin/model/Coursesmodel.php";
+require_once "../../Admin/model/Servicemodel.php";
 require_once "../../Admin/DB Operations/CoursesOps.php";
 include "../../Admin/Utilities/Helper.php";
 ?>

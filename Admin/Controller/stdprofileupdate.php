@@ -1,9 +1,10 @@
 <?php
 // require "session.php";
-require "../../Admin/Model/Admissionsmodel.php";
+require "../../Admin/model/Admissionsmodel.php";
 require "../../Utilities/Sanitization.php";
 require "../../Admin/Utilities/Helper.php";
 //require "../Admin/navbar.php";
+require_once "../DB Operations/CoursesOps.php";
 require "../../Admin/DB Operations/AdmissionsOps.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -18,7 +19,9 @@ require "../../Admin/DB Operations/AdmissionsOps.php";
     $admit->set_qualification(Sanitization::test_input($_POST["qualification"]));
     $admit->set_guardiansname(Sanitization::test_input($_POST["guardiansname"]));
     $admit->set_guardiansphone(Sanitization::test_input($_POST["guardiansphone"]));
-    $admit->set_coursesopted(Sanitization::test_input($_POST["coursesopted"]));
+    $cname = DBcourse::getcoursename($_POST["coursesopted"]);
+    $admit->set_coursesopted($cname);
+     $admit->set_courseid($_POST["coursesopted"]);
     $admit->set_address(Sanitization::test_input($_POST["address"]));
     $admit->set_adhaarno(Sanitization::test_input($_POST["adhaarno"]));
     if ($_FILES['adhaarfile']['size'] != 0 && $_FILES['adhaarfile']['error'] == 0)

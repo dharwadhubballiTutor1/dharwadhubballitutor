@@ -39,7 +39,7 @@ require_once "../model/sliderImageModel.php";
                 <h6 class="m-0 font-weight-bold text-primary">Slider Images</h6>
             </div>
             <div class="col" align="right">
-                <span data-toggle=modal data-target=#addDesignModal data-id=''>
+                <span data-bs-toggle=modal data-bs-target=#addDesignModal data-id=''>
                     <button type="button" + class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                 </span>
             </div>
@@ -75,7 +75,7 @@ require_once "../model/sliderImageModel.php";
         <div class="carousel-caption d-none d-md-block">
             <p>' . $design->getImageFileCaption() . '</p>
         </div>
-        <span class="delete-btn" data-toggle=modal data-target=#deleteDesignModal data-id=' . $design->getImageFileId() . ' > <button type="button" + class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></button></i></span>
+        <span class="delete-btn" data-bs-toggle=modal data-bs-target=#deleteDesignModal data-id=' . $design->getImageFileId() . ' > <button type="button" + class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></button></i></span>
         </div>';
                 $isActive = "";
             }
@@ -107,7 +107,7 @@ require_once "../model/sliderImageModel.php";
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="modal_title">Slider Image</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <span id="form_message"></span>
@@ -157,7 +157,7 @@ require_once "../model/sliderImageModel.php";
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <input type="submit" name="submit" id="submit_button" class="btn btn-success" value="Add" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </form>
@@ -169,7 +169,7 @@ require_once "../model/sliderImageModel.php";
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="modal_title">Delete Design File</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <p class="lead">
@@ -180,7 +180,7 @@ require_once "../model/sliderImageModel.php";
                     <div class="modal-footer">
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="submit" name="submit" id="deletebutton" class="btn btn-danger" value="Confirmed" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </form>

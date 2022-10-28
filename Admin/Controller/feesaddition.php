@@ -1,6 +1,6 @@
 <?php
 require_once "../session.php";
-require_once "../Model/Feesmodel.php";
+require_once "../model/Feesmodel.php";
 require_once "../Utilities/Sanitization.php";
 require_once "../Utilities/Helper.php";
 //require "../Admin/navbar.php";
@@ -26,29 +26,19 @@ require_once "../DB Operations/FeesOps.php";
     $filename="". $admit->get_name().date("Y-m-d").".pdf";
     $admit->set_feereceipt($filename);
     DBfees::insert($admit);
-    $receipt=DBfees::collectionoffees( $admit->get_admitid());
-    Helper::feereceipt($receipt);
-    
-
+    // $receipt=DBfees::collectionoffees($admit->get_admitid());
+    // Helper::feereceipt($receipt);
+    header("location:../View/fees.php");
   }
 
-  // function Pendingfees($tfees,$pfees){
-  //   $pendingfees=$pendingfees-$pfees;
-  //   return $pendingfees;
-  //  }
-?>
-<html>
+  if ($_SERVER["REQUEST_METHOD"]=="GET") {
+    
+    DBfees::Transactiondetails($_GET['admitID']);
+    error_log("hiii");
+    }
 
-    <head>
-        <title> New Admission </title>
-    </head>
-
-    <body>
-        <?php 
-         header("location:../View/fees.php");
 ?>
 
 
-    </body>
 
-</html>
+   

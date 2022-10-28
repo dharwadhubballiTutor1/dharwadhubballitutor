@@ -2,7 +2,8 @@
 $config= require_once("../../views/config.php");
 require "../model/businessModel.php";
 require "../Utilities/Sanitization.php";
-require "../DBlayer/businessOps.php";
+require "../dblayer/businessOps.php";
+
 require "../Utilities/Helper.php";
 require_once("../../vendor/autoload.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

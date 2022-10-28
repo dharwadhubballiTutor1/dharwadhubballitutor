@@ -36,7 +36,7 @@ require_once("../model/facebookchatModel.php");
                         <div class="col-sm-2 p-4">
                             <h6 class="mb-0">Plugin Code</h6>
                         </div>
-                        <div class="col-sm-9 text-secondary">
+                        <div class="col-sm-8 text-secondary">
                             <textarea type="text" name="PluginCode" id="PluginCode" class="form-control" required></textarea>
                         </div>
                     </div>

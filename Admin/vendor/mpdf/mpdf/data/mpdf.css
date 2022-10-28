@@ -86,6 +86,9 @@ div.mpdf_toc_level_2 { /* Whole line level 2 */
 	text-indent: -2em;
 	padding-right: 0em; /* should match the outdent specified for ToC; 0 is default; suggested value 2em */
 }
+div #header{
+    width:50%;
+}
 
 span.mpdf_toc_t_level_2 { /* Title level 2 */
 }

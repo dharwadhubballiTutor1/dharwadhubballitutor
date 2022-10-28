@@ -1,7 +1,7 @@
 <?php
 include "../../Admin/session.php";
 include "../../Admin/DB Operations/TrainerOps.php";
-include "../../Admin/Model/Trainermodel.php";
+include "../../Admin/model/Trainermodel.php";
 $id = $_GET['id'];
 $trainer = DBtrainer::viewtrainer($id);
 include_once "header.php";

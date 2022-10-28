@@ -1,6 +1,6 @@
 <?php
 
-require "../Model/followupmodel.php";
+require "../model/followupmodel.php";
 require "../Utilities/Sanitization.php";
 include "../DB Operations/followupOps.php";
 

@@ -7,7 +7,7 @@ class route
         require("views/navigation.php");
         require_once("blogadmin/dblayer/postOps.php");
         $post = DBpost::getPostByUrl($routePath);
-
+       
         $outputString = '<style type="text/css">
 .card {
     background: #fff;

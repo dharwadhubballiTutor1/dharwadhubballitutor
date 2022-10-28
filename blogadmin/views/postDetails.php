@@ -273,7 +273,7 @@ body{
                     <div class="card single_post">
                         <div class="body">
                             <div class="img-post">
-                                <img class="d-block img-fluid" src="../img/post/<?php echo $post->getImage(); ?>" alt="First slide">
+                                <img class="d-block img-fluid" src="../img/Post/<?php echo $post->getImage(); ?>" alt="First slide">
                             </div>
                             <h3 class="card-title"><?php echo $post->getPostTitle(); ?></h3>
                             <?php echo $post->getPostDescription(); ?>

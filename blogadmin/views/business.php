@@ -81,10 +81,10 @@ require_once "../dblayer/socialMediaHandleOps.php";
                 <h6 class="m-0 font-weight-bold text-primary">Business Info</h6>
             </div>
             <div class="col" align="right">
-                <span data-toggle=modal data-target=#addModal>
+                <span data-bs-toggle=modal data-bs-target=#addModal>
                     <button type="button" + class="btn btn-warning btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                 </span>
-                <span data-toggle=modal data-target=#editModal>
+                <span data-bs-toggle=modal data-bs-target=#editModal>
                     <button type="button" + class="btn btn-success btn-circle btn-sm"><i class="fas fa-pencil-alt"></i></button>
                 </span>
             </div>
@@ -110,7 +110,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                 <h6 class="mb-0">Social Handles</h6>
-                                <span data-toggle=modal data-target=#addSocialMediaModal>
+                                <span data-bs-toggle=modal data-bs-target=#addSocialMediaModal>
                                     <button type="button" + class="btn btn-success btn-circle btn-sm">
                                         <i class="fas fa-plus"></i></button>
                                 </span>
@@ -121,7 +121,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                                 echo '<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                 <h6 class="mb-0"><a href="' . $handle->getHandle() . '">' . $handle->getIcon() . ' ' . $handle->getname() . '</a></h6>
                                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                <button type="button" + class="btn btn-danger btn-circle btn-sm" data-toggle=modal data-target=#deleteSocialMediaModal data-id="' . $handle->getId() . '">
+                                <button type="button" + class="btn btn-danger btn-circle btn-sm" data-bs-toggle=modal data-bs-target=#deleteSocialMediaModal data-id="' . $handle->getId() . '">
                                         <i class="fas fa-trash-alt"></i></button>
                                         </div>
                                 </li>';
@@ -202,7 +202,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="modal_title">Business Info</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -267,7 +267,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <button type="submit" name="register_button" id="register_button" class="btn btn-primary btn-user">Set Up</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                     </form>
                 </div>
@@ -278,7 +278,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Social Media Handles</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -321,7 +321,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="hidden" name="action" id="action" value="Add" />
                     <button type="submit" name="register_button" id="register_button" class="btn btn-primary btn-user">Set Up</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
                 </form>
             </div>
@@ -332,7 +332,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Social Media Handles</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -377,7 +377,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="hidden" name="action" id="action" value="Add" />
                     <button type="submit" name="register_button" id="register_button" class="btn btn-primary btn-user">Set Up</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
                 </form>
             </div>
@@ -389,7 +389,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                 <form method="POST" action="../controller/businessInfoController.php" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h4 class="modal-title" id="modal_title">Business Info</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -455,7 +455,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <button type="submit" name="register_button" id="register_button" class="btn btn-primary btn-user">Set Up</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </form>
             </div>
@@ -467,7 +467,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="modal_title">Delete</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <p class="lead">
@@ -478,7 +478,7 @@ require_once "../dblayer/socialMediaHandleOps.php";
                     <div class="modal-footer">
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="submit" name="submit" id="deletebutton" class="btn btn-danger" value="Confirmed" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </form>

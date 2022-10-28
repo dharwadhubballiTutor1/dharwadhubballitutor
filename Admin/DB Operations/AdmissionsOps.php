@@ -166,6 +166,8 @@ class DBadmission
         $view->set_adhaarfile($row['AdhaarFile']);
         $view->set_photofile($row['PhotoFile']);
         $view->set_resume($row['Resume']);
+        $view->setCreateddate(date('d-m-y', strtotime($row["createddate"])));
+         $view->setModifiedDate(date('d.m.y', strtotime($row['Modified_Date'])));
         array_push($admissionlist, $view);
       }
     } else {
@@ -187,7 +189,8 @@ class DBadmission
       "', Guardians_Phone='" . $admission->get_guardiansphone() .
       "',CoursesOpted='" . $admission->get_coursesopted() .
       "',Address='" . $admission->get_address() .
-      "',AdhaarNo='" . $admission->get_adhaarno();
+      "',AdhaarNo='" . $admission->get_adhaarno().
+      "',Courseid='". $admission->get_courseid();
     if (!empty($admission->get_adhaarfile())) {
       $sql .= "',AdhaarFile='" . $admission->get_adhaarfile();
     }

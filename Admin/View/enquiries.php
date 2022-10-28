@@ -1,14 +1,11 @@
 <?php
 require "../session.php";
 include "../../Admin/DB Operations/enqueryOps.php";
-require_once "../../Admin/Model/Coursesmodel.php";
+require_once "../../Admin/model/Coursesmodel.php";
 require_once "../../Admin/DB Operations/CoursesOps.php";
 include "../../Admin/DB Operations/followupOps.php";
-
 require_once "header.php";
 ?>
-
-
 <div class="card">
     <div class="card-header">
         <h6 class="">Enquiries</h6>
@@ -16,17 +13,17 @@ require_once "header.php";
     <div class="card-body">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="trainings-tab" data-bs-toggle="tab" data-bs-target="#trainings" type="button" role="tab" aria-controls="trainings" aria-selected="true"><b>Trainings</b></button>
+                <button class="nav-link active" id="trainings-tab" data-bs-toggle="tab" data-bs-target="#trainings-tab-content" type="button" role="tab" aria-controls="trainings" aria-selected="true"><b>Trainings</b></button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="internship-tab" data-bs-toggle="tab" data-bs-target="#internship" type="button" role="tab" aria-controls="internship" aria-selected="false"><b>Internship</b></button>
+                <button class="nav-link" id="internship-tab" data-bs-toggle="tab" data-bs-target="#Internship-tab-content" type="button" role="tab" aria-controls="internship" aria-selected="false"><b>Internship</b></button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="democlass-tab" data-bs-toggle="tab" data-bs-target="#democlass" type="button" role="tab" aria-controls="democlass" aria-selected="false"><b>Demo
+                <button class="nav-link" id="democlass-tab" data-bs-toggle="tab" data-bs-target="#democlass-tab-content" type="button" role="tab" aria-controls="democlass" aria-selected="false"><b>Demo
                         Class</b></button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab" aria-controls="services" aria-selected="false"><b>Services</b></button>
+                <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services-tab-content" type="button" role="tab" aria-controls="services" aria-selected="false"><b>Services</b></button>
             </li>
             <li class="nav-item " role="presentation">
                 <button class="nav-link " id="enquiry-tab" data-bs-toggle="tab" data-bs-target="#enquiry" type="button" role="tab" aria-controls="enquiry" aria-selected="false"><b>Add
@@ -34,8 +31,8 @@ require_once "header.php";
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="trainings" role="tabpanel" aria-labelledby="trainings-tab">
-                <table id="training" class="table table-bordered table-responsive">
+            <div class="tab-pane fade show active table-responsive" id="trainings-tab-content" role="tabpanel" aria-labelledby="trainings-tab">
+                <table id="training" class="table table-bordered ">
                     <thead>
                         <tr>
                             <th style="display:none">Id</th>
@@ -55,7 +52,7 @@ require_once "header.php";
                     echo  "<tbody>";
                     $enquirylist = DBenquery::getAllEnqueryBySection("Trainings");
                     foreach ($enquirylist as $enquiry) {
-                        if (!empty($enquiry->get_followupDate())) {
+                        if ($enquiry->get_followupDate() && $enquiry->get_followupDate()!='0000-00-00 00:00:00') {
 
                             if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
                                 $rowClass = "table-danger";
@@ -86,7 +83,7 @@ require_once "header.php";
                                             <i class='fas fa-comment-dots'></i>
                                             Follow Up
                                         </a>
-                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=" . $enquiry->get_name() . " " . $enquiry->get_email() . " " . $enquiry->get_phone() . "''> 
+                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=".$enquiry->get_id()."  &name=  " . $enquiry->get_name() . "  &email= " . $enquiry->get_email() . " &phone=  " . $enquiry->get_phone() . "''> 
                                             <i class='fas fa-info'></i>
                                             Edit Enquiry
                                         </a>
@@ -98,8 +95,8 @@ require_once "header.php";
                     ?>
                 </table>
             </div>
-            <div class="tab-pane fade" id="internship" role="tabpanel" aria-labelledby="internship-tab">
-                <table id="internship" class="table table-bordered table-responsive">
+            <div class="tab-pane fade table-responsive" id="Internship-tab-content" role="tabpanel" aria-labelledby="internship-tab">
+                <table id="Internship" class="table table-bordered ">
                     <thead>
                         <tr>
                             <th style="display:none">Id</th>
@@ -117,7 +114,7 @@ require_once "header.php";
                     echo  "<tbody>";
                     $enquirylist = DBenquery::getAllEnqueryBySection("Internship");
                     foreach ($enquirylist as $enquiry) {
-                        if (!empty($enquiry->get_followupDate())) {
+                        if ($enquiry->get_followupDate() && $enquiry->get_followupDate()!='0000-00-00 00:00:00') {
 
                             if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
                                 $rowClass = "table-danger";
@@ -146,7 +143,7 @@ require_once "header.php";
                                             <i class='fas fa-comment-dots'></i>
                                             Follow Up
                                         </a>
-                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=" . $enquiry->get_name() . " " . $enquiry->get_email() . " " . $enquiry->get_phone() . "''> 
+                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=".$enquiry->get_id()."  &name=  " . $enquiry->get_name() . "  &email= " . $enquiry->get_email() . " &phone=  " . $enquiry->get_phone() . "''> 
                                             <i class='fas fa-info'></i>
                                             Edit Enquiry
                                         </a>
@@ -158,7 +155,7 @@ require_once "header.php";
                     ?>
                 </table>
             </div>
-            <div class="tab-pane fade" id="democlass" role="tabpanel" aria-labelledby="democlass-tab">
+            <div class="tab-pane fade" id="democlass-tab-content" role="tabpanel" aria-labelledby="democlass-tab">
                 <div class="card">
                     <div class="card-body">
                         <table class="table table-striped" id="democlasstable">
@@ -178,7 +175,7 @@ require_once "header.php";
                             echo  "<tbody>";
                             $enquirylist = DBenquery::getAllEnqueryBySection("Demo");
                             foreach ($enquirylist as $enquiry) {
-                                if (!empty($enquiry->get_followupDate())) {
+                                if ($enquiry->get_followupDate() && $enquiry->get_followupDate()!='0000-00-00 00:00:00') {
 
                                     if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
                                         $rowClass = "table-danger";
@@ -207,7 +204,7 @@ require_once "header.php";
                                             <i class='fas fa-comment-dots'></i>
                                             Follow Up
                                         </a>
-                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=" . $enquiry->get_name() . " " . $enquiry->get_email() . " " . $enquiry->get_phone() . "''> 
+                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=".$enquiry->get_id()."  &name=  " . $enquiry->get_name() . "  &email= " . $enquiry->get_email() . " &phone=  " . $enquiry->get_phone() . "''> 
                                             <i class='fas fa-info'></i>
                                             Edit Enquiry
                                         </a>
@@ -221,7 +218,7 @@ require_once "header.php";
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
+            <div class="tab-pane fade" id="services-tab-content" role="tabpanel" aria-labelledby="services-tab">
                 <table class="table table-bordered " id="Services">
                     <thead>
                         <tr>
@@ -239,7 +236,7 @@ require_once "header.php";
                     echo  "<tbody>";
                     $enquirylist = DBenquery::getAllEnqueryBySection("Services");
                     foreach ($enquirylist as $enquiry) {
-                        if (!empty($enquiry->get_followupDate())) {
+                        if ($enquiry->get_followupDate() && $enquiry->get_followupDate()!='0000-00-00 00:00:00') {
 
                             if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
                                 $rowClass = "table-danger";
@@ -268,7 +265,7 @@ require_once "header.php";
                                             <i class='fas fa-comment-dots'></i>
                                             Follow Up
                                         </a>
-                                        <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=" . $enquiry->get_name() . " " . $enquiry->get_email() . " " . $enquiry->get_phone() . "''> 
+                                       <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=".$enquiry->get_id()."  &name=  " . $enquiry->get_name() . "  &email= " . $enquiry->get_email() . " &phone=  " . $enquiry->get_phone() . "''> 
                                             <i class='fas fa-info'></i>
                                             Edit Enquiry
                                         </a>
@@ -283,8 +280,14 @@ require_once "header.php";
             </div>
             <div class="tab-pane fade" id="enquiry" role="tabpanel" aria-labelledby="enquiry-tab">
 
-                <form class="form-horizontal" action="../Controller/newenquiry.php" method="POST" role="form" autocomplete="off">
+                 <form class="form-horizontal" id="addenquiry_form" action="../Controller/newenquiry.php" method="POST"
+                    role="form" autocomplete="off" enctype="multipart/form-data" name="enquiryform"
+                    onsubmit="return FormValidation()">
                     <div class="row g-3">
+                        <div class="alert alert-danger alert-dismissable" style="display: none">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            Select one among Trainings/Internships/Demo/Services
+                        </div>
                         <div class="col-md-6">
                             <label class=label for=name2>Name</label>
                             <div class="col-sm-12">
@@ -373,6 +376,7 @@ require_once "header.php";
                             <div class="col-sm-12">
                                 <select class="custom-select" id="source" name="source">
                                     <option value="">Select </option>
+                                    <option value="Referral">Referral</option>
                                     <option value="Website">Website</option>
                                     <option value="Google">Google </option>
                                     <option value="Walk-in">Walk-in </option>
@@ -396,6 +400,19 @@ require_once "header.php";
 <br />
 
 <script>
+function FormValidation() {
+    debugger;
+    if (document.enquiryform.trainings2.value == '' && document.enquiryform.democlass.value == '' &&
+        document.enquiryform.internship2.value == '' && document.enquiryform.services.value == '') {
+        $('.alert').show();
+        return false;
+
+    } else {
+        return true;
+    }
+
+}
+$(document).ready(function() {
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -403,24 +420,22 @@ require_once "header.php";
 
     today = dd + '-' + mm + '-' + yyyy;
     $('#today').text(today);
-    $(document).ready(function() {
-        $('.toast').toast('show');
-    })
+
+
+    $('.toast').toast('show');
+
 
     var table = $('#training').DataTable({
         "order": [0, 'desc']
     });
     var internship = $('#Internship').DataTable();
-    var DemoClass = $("#democlasstable").DataTable();
-    var Services = $("#Services").DataTable();
+    var DemoClass = $('#democlasstable').DataTable();
+    var Services = $('#Services').DataTable();
     $('#column3_search').on('keyup', function() {
         table.columns(0).search(this.value).draw();
         internship.columns(0).search(this.value).draw();
         DemoClass.columns(0).search(this.value).draw();
         Services.columns(0).search(this.value).draw();
     });
+});
 </script>
-
-</body>
-
-</html>

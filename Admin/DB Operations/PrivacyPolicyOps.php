@@ -1,6 +1,6 @@
 <?php
 require_once "../../DB Operations/dbconnection.php";
-require_once "../Model/PrivacyPolicyModel.php";
+require_once "../model/PrivacyPolicyModel.php";
 class DBPrivacy
 {
     public static function insert($PrivacyPolicyObj)

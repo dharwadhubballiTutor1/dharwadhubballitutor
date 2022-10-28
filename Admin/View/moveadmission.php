@@ -2,7 +2,7 @@
 require "../../Admin/session.php";
 require "../../Admin/Utilities/Helper.php";
 include "../../Admin/DB Operations/AdmissionsOps.php";
-require "../../Admin/Model/Admissionsmodel.php";
+require "../../Admin/model/Admissionsmodel.php";
 require "../../Model/Registration.php";
 include "../../Admin/DB Operations/CoursesOps.php";
 require "header.php";

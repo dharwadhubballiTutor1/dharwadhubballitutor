@@ -24,7 +24,7 @@ require_once("../dblayer/testimonialsOps.php")
                 <h6 class="m-0 font-weight-bold text-primary">Testimonials</h6>
             </div>
             <div class="col" align="right">
-                <span data-toggle=modal data-target=#postModal>
+                <span data-bs-toggle=modal data-bs-target=#postModal>
                     <button type="button" + class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                 </span>
 
@@ -64,7 +64,7 @@ foreach ($testimonialsList as $testimonials) {
   
   <div class="card-footer" align="right">
   <a class="text-center" href="editTestimonials.php?id=' . $testimonials->getId() . '" class="btn btn-Warning"><i class="fas fa-edit"></i></a>
-  <a data-toggle=modal data-target=#deletePostModal data-id="' . $testimonials->getId() . '"class="text-center" class="btn btn-Warning"><i class="fas fa-eraser"></i></a>
+  <a data-bs-toggle=modal data-bs-target=#deletePostModal data-id="' . $testimonials->getId() . '"class="text-center" class="btn btn-Warning"><i class="fas fa-eraser"></i></a>
   </div></div>
   </div>';
     echo $card;
@@ -78,7 +78,7 @@ echo '</div>';
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Testimonials</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <span id="form_message"></span>
@@ -145,7 +145,7 @@ echo '</div>';
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <input type="submit" name="submit" id="submit_button" class="btn btn-success" value="Add" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -158,7 +158,7 @@ echo '</div>';
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Delete Category</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <p class="lead">
@@ -169,7 +169,7 @@ echo '</div>';
                 <div class="modal-footer">
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="submit" name="submit" id="deletebutton" class="btn btn-danger" value="Confirmed" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </form>

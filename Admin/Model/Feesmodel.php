@@ -1,7 +1,8 @@
-<?php 
-   class Fees
+<?php  
+   class Fees implements JsonSerializable
   {
     private $StudentName;
+    private $Address;
     private $CourseOpted;
     private $Phone;
     private $Admissionid;
@@ -120,7 +121,32 @@
     return $this->feesreceipt;
   }
  
- 
+
+    public function getAddress()
+    {
+        return $this->Address;
+    }
+
+    public function setAddress($Address)
+    {
+        $this->Address = $Address;
+
+        return $this;
+    }
+
+    public function jsonSerialize()
+    {
+        return 
+            [
+                'admitid' => $this->Admissionid,
+                'pfees' => $this->PaidFees,
+                'pendingfees' => $this->PendingFees,
+                'pmode' => $this->PaymentMode,
+                'modifieddate'=>$this->Modified_Date,
+            ];
+        
+    }
+
 
 }
 ?>

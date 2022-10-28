@@ -19,5 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         DBfacebook::insert($facebook);
     }
 } else if ($_SERVER["REQUEST_METHOD"] == "GET") {
+     DBfacebook::getPlugin();
 }
 header("location:../views/facebookchat.php");

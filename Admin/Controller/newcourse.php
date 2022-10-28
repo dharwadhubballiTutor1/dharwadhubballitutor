@@ -1,6 +1,6 @@
 <?php
 //require "session.php";
-require "../Model/Coursesmodel.php";
+require "../model/Coursesmodel.php";
 require "../Utilities/Sanitization.php";
 require "../Utilities/Helper.php";
 // require "../Admin/navbar.php";

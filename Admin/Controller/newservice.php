@@ -1,6 +1,6 @@
 <?php
 //require "session.php";
-require "../Model/Servicemodel.php";
+require "../model/Servicemodel.php";
 require "../Utilities/Sanitization.php";
 require "../Utilities/Helper.php";
 require_once "../DB Operations/ServicesOps.php";

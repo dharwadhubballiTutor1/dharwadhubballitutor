@@ -1,0 +1,2638 @@
+[14-Apr-2022 06:54:54 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `logoImage`='logo1.webp', `aboutBusiness`='<p>We have a vision to collaborate the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships and Service Providers. To start two way contacts and communication between the two cities, in a view to use each others resources to convert our city to a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[14-Apr-2022 07:07:27 UTC] 73
+[14-Apr-2022 07:07:27 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 73
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[14-Apr-2022 07:07:38 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[14-Apr-2022 07:07:38 UTC] 
+[14-Apr-2022 07:07:38 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[14-Apr-2022 07:07:38 UTC] <p>The SOLIDWORKS CAD software is a mechanical design automation application that lets designers quickly sketch out ideas, experiment with features and dimensions, and produce models and detailed drawings. 
+<br />
+</p>
+<h2>Features:</h2>
+<p><strong>SOLIDWORKS 3D CAD:</strong> 
+<br />
+ Create sophisticated part and assembly designs quickly and efficiently using powerful, easy-to-use software. 
+<br />
+ <strong>Design Reuse and Automation:</strong> 
+<br />
+ Easily find and leverage existing engineering data to create new designs and speed up product development. 
+<br />
+ <strong>Part and Assembly Modeling: </strong> 
+<br />
+ Flexible 3D modeling tools cover the full range of design tasks to quickly develop your product concepts. 
+<br />
+ <strong>Interference Check: </strong> 
+<br />
+ Verify that components can be assembled properly before going into production. 
+<br />
+ <strong>Design for Cost: Manufacturing Cost Estimation and Quoting: </strong> 
+<br />
+ Continuously check your designs against cost targets with integrated automated manufacturing cost estimation tools. 
+<br />
+ <strong>2D Drawings: </strong> 
+<br />
+ Create production-ready 2D drawings that communicate how your design should be manufactured and assembled. 
+<br />
+ <strong>Design Analysis:</strong> 
+<br />
+ Verify operation and performance while creating your design with fully integrated simulation and analysis tools. 
+<br />
+ <strong>CAD Library:</strong> 
+<br />
+ Save frequently used parts, features, and templates with easy access from inside the SOLIDWORKS environment. 
+<br />
+ <strong>3D Animations and Photorealistic Renderings:</strong> 
+<br />
+ Quickly and easily create powerful images and animations to communicate your design intent and functionality. 
+<br />
+</p>
+
+[14-Apr-2022 07:07:38 UTC] UPDATE `post` SET 
+    `postTitle`='Solidworks' , `postUrl`='/dharwadhubballitutor/Solidworks' , `appearOnHome`='' , `postDescription`='<p>The SOLIDWORKS CAD software is a mechanical design automation application that lets designers quickly sketch out ideas, experiment with features and dimensions, and produce models and detailed drawings. 
+<br />
+</p>
+<h2>Features:</h2>
+<p><strong>SOLIDWORKS 3D CAD:</strong> 
+<br />
+ Create sophisticated part and assembly designs quickly and efficiently using powerful, easy-to-use software. 
+<br />
+ <strong>Design Reuse and Automation:</strong> 
+<br />
+ Easily find and leverage existing engineering data to create new designs and speed up product development. 
+<br />
+ <strong>Part and Assembly Modeling: </strong> 
+<br />
+ Flexible 3D modeling tools cover the full range of design tasks to quickly develop your product concepts. 
+<br />
+ <strong>Interference Check: </strong> 
+<br />
+ Verify that components can be assembled properly before going into production. 
+<br />
+ <strong>Design for Cost: Manufacturing Cost Estimation and Quoting: </strong> 
+<br />
+ Continuously check your designs against cost targets with integrated automated manufacturing cost estimation tools. 
+<br />
+ <strong>2D Drawings: </strong> 
+<br />
+ Create production-ready 2D drawings that communicate how your design should be manufactured and assembled. 
+<br />
+ <strong>Design Analysis:</strong> 
+<br />
+ Verify operation and performance while creating your design with fully integrated simulation and analysis tools. 
+<br />
+ <strong>CAD Library:</strong> 
+<br />
+ Save frequently used parts, features, and templates with easy access from inside the SOLIDWORKS environment. 
+<br />
+ <strong>3D Animations and Photorealistic Renderings:</strong> 
+<br />
+ Quickly and easily create powerful images and animations to communicate your design intent and functionality. 
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='Solidworks' , `keywords`='Solidworks' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=73
+[14-Apr-2022 07:07:38 UTC] 2
+[14-Apr-2022 07:07:46 UTC] 74
+[14-Apr-2022 07:07:46 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 74
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[14-Apr-2022 07:07:55 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[14-Apr-2022 07:07:55 UTC] 
+[14-Apr-2022 07:07:55 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[14-Apr-2022 07:07:55 UTC] <p><span style="color: #202124;">Ansys Mechanical is </span><strong style="color: #202124">a dynamic tool that</strong><span style="color: #202124;"> has a complete range of analysis tools. Easy to Use, Multi-Purpose Tool. Dynamic, Integrated Platform. Persistent, Dependable, Accurate Solver Technology. Powerful Nonlinear and Linear Solvers.</span> 
+<br />
+</p>
+<h2><strong>Features</strong></h2>
+<ul>
+<li><strong>Fast solvers: </strong>Mechanical Includes multiple solver technologies that run in parallel and scale efficiently. GPU technology can also be leveraged for additional parallel computing power.</li>
+<li><strong>Linear Dynamics: </strong>Modal, harmonic response, random vibration, and spectrum response (seismic or shock) can be solved with Mechanical.</li>
+<li><strong>Acoustics: </strong>Conduct acoustic simulations to better understand the vibroacoustic behavior of systems, with or without structural pre-loading. Though, pre-loading adds authenticity and allows for the simulation of self-weighted, fastened assembly and even squealing breaks.</li>
+<li><strong>Nonlinearities: </strong>In addition to the linear response, users can simulate the behavior of elastic materials as they undergo plastic or even hyperelastic deformation materials like metals and rubber. Viscoelastic response can also be simulated. Nonlinear simulation within Ansys Mechanical also takes into account contact and large deflection of moving parts relative to each other, with or without friction. These capabilities are robust in static or time-domain transient simulations.</li>
+<li><strong>Thermal and Heat Transfer:</strong> Robust steady-state and transient thermal capabilities are included with all levels of Mechanical licenses. Heat transfer via conduction, convection, and radiation are supported. Thermal loading can also be readily transferred from Ansys’ CFD and electromagnetics solvers to Mechanical.</li>
+<li><strong>Fatigue and Fracture:</strong> Extensive fatigue life and damage calculation capabilities are readily available in Ansys Mechanical. Combining fatigue life and fracture mechanic methods allows users to effectively predict the service life of their products and avoid costly warranty issues.</li>
+<li><strong>Fluid-Structure Interaction: </strong>Predict fluid-solid interactions accurately using pressure and/or heat transfer. As the fluid-structure interaction grows and the problem requires a more extensive analysis, Ansys Mechanical has automated, easy-to-use solutions for both one-way and two-way coupling to Ansys Fluent and Ansys CFX.</li>
+</ul>
+<p>
+<br />
+</p>
+
+[14-Apr-2022 07:07:55 UTC] UPDATE `post` SET 
+    `postTitle`='Ansys' , `postUrl`='/dharwadhubballitutor/Ansys' , `appearOnHome`='' , `postDescription`='<p><span style="color: #202124;">Ansys Mechanical is </span><strong style="color: #202124">a dynamic tool that</strong><span style="color: #202124;"> has a complete range of analysis tools. Easy to Use, Multi-Purpose Tool. Dynamic, Integrated Platform. Persistent, Dependable, Accurate Solver Technology. Powerful Nonlinear and Linear Solvers.</span> 
+<br />
+</p>
+<h2><strong>Features</strong></h2>
+<ul>
+<li><strong>Fast solvers: </strong>Mechanical Includes multiple solver technologies that run in parallel and scale efficiently. GPU technology can also be leveraged for additional parallel computing power.</li>
+<li><strong>Linear Dynamics: </strong>Modal, harmonic response, random vibration, and spectrum response (seismic or shock) can be solved with Mechanical.</li>
+<li><strong>Acoustics: </strong>Conduct acoustic simulations to better understand the vibroacoustic behavior of systems, with or without structural pre-loading. Though, pre-loading adds authenticity and allows for the simulation of self-weighted, fastened assembly and even squealing breaks.</li>
+<li><strong>Nonlinearities: </strong>In addition to the linear response, users can simulate the behavior of elastic materials as they undergo plastic or even hyperelastic deformation materials like metals and rubber. Viscoelastic response can also be simulated. Nonlinear simulation within Ansys Mechanical also takes into account contact and large deflection of moving parts relative to each other, with or without friction. These capabilities are robust in static or time-domain transient simulations.</li>
+<li><strong>Thermal and Heat Transfer:</strong> Robust steady-state and transient thermal capabilities are included with all levels of Mechanical licenses. Heat transfer via conduction, convection, and radiation are supported. Thermal loading can also be readily transferred from Ansys’ CFD and electromagnetics solvers to Mechanical.</li>
+<li><strong>Fatigue and Fracture:</strong> Extensive fatigue life and damage calculation capabilities are readily available in Ansys Mechanical. Combining fatigue life and fracture mechanic methods allows users to effectively predict the service life of their products and avoid costly warranty issues.</li>
+<li><strong>Fluid-Structure Interaction: </strong>Predict fluid-solid interactions accurately using pressure and/or heat transfer. As the fluid-structure interaction grows and the problem requires a more extensive analysis, Ansys Mechanical has automated, easy-to-use solutions for both one-way and two-way coupling to Ansys Fluent and Ansys CFX.</li>
+</ul>
+<p>
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='Ansys' , `keywords`='Ansys' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=74
+[14-Apr-2022 07:07:55 UTC] 2
+[14-Apr-2022 07:08:04 UTC] 75
+[14-Apr-2022 07:08:04 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 75
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[14-Apr-2022 07:08:12 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[14-Apr-2022 07:08:12 UTC] 
+[14-Apr-2022 07:08:12 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[14-Apr-2022 07:08:12 UTC] <p>HyperMesh is used to generate and manage the largest and most complex models; it supports a wide variety of CAD and solver interfaces, making it a perfect solution for a majority of verticals and domains. The core competency of HyperMesh is the ability to generate high-quality mesh quickly. 
+<br />
+</p>
+<h2>Benefits</h2>
+<ul>
+<li>Capable of producing meshes that are high quality made with no complexity.</li>
+<li>With comprehensive state of art technologies, evaluation and manufacturing, it reduces the development cost to manifolds.</li>
+<li>Virtual testing and superb designing makes it safe and secure with minimized risk factor.</li>
+<li>The test results obtained through virtual testing are valuable enough to facilitate collaborations and change decisions for further processes.</li>
+<li>Attain accurate and high quality meshes in fractions of seconds, since it supports batch meshing which makes it possible to develop several meshes at once. Flexible enough to accelerate your business abilities as per the changing conditions.</li>
+<li>Get a full access and level of control with the meshing algorithms. Comes with a built in automated supports which adds to its flexibility.</li>
+</ul>
+<p>
+<br />
+</p>
+
+[14-Apr-2022 07:08:12 UTC] UPDATE `post` SET 
+    `postTitle`='Hypermesh' , `postUrl`='/dharwadhubballitutor/Hypermesh' , `appearOnHome`='' , `postDescription`='<p>HyperMesh is used to generate and manage the largest and most complex models; it supports a wide variety of CAD and solver interfaces, making it a perfect solution for a majority of verticals and domains. The core competency of HyperMesh is the ability to generate high-quality mesh quickly. 
+<br />
+</p>
+<h2>Benefits</h2>
+<ul>
+<li>Capable of producing meshes that are high quality made with no complexity.</li>
+<li>With comprehensive state of art technologies, evaluation and manufacturing, it reduces the development cost to manifolds.</li>
+<li>Virtual testing and superb designing makes it safe and secure with minimized risk factor.</li>
+<li>The test results obtained through virtual testing are valuable enough to facilitate collaborations and change decisions for further processes.</li>
+<li>Attain accurate and high quality meshes in fractions of seconds, since it supports batch meshing which makes it possible to develop several meshes at once. Flexible enough to accelerate your business abilities as per the changing conditions.</li>
+<li>Get a full access and level of control with the meshing algorithms. Comes with a built in automated supports which adds to its flexibility.</li>
+</ul>
+<p>
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='Hypermesh' , `keywords`='Hypermesh' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=75
+[14-Apr-2022 07:08:12 UTC] 2
+[14-Apr-2022 07:08:20 UTC] 76
+[14-Apr-2022 07:08:20 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 76
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[14-Apr-2022 07:08:26 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[14-Apr-2022 07:08:26 UTC] 
+[14-Apr-2022 07:08:26 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[14-Apr-2022 07:08:26 UTC] <p><span style="color: #202124;">Creo is </span><strong style="color: #202124">a family of Computer-aided design (CAD) apps supporting product design for discrete manufacturers</strong><span style="color: #202124;"> and is developed by PTC. The suite consists of apps, each delivering a distinct set of capabilities for a user role within product development.</span> 
+<br />
+</p>
+<h2><span style="color: #202124;">Advantages</span></h2>
+<ul>
+<li>Optimised for model-based enterprises.</li>
+<li>Increased engineer productivity.</li>
+<li>Better enabled concept design.</li>
+<li>Increased engineering capabilities.</li>
+<li>Increased manufacturing capabilities.</li>
+<li>Better simulation.</li>
+<li>Design capabilities for additive manufacturing.</li>
+</ul>
+<p>
+<br />
+</p>
+
+[14-Apr-2022 07:08:26 UTC] UPDATE `post` SET 
+    `postTitle`='Creo' , `postUrl`='/dharwadhubballitutor/Creo' , `appearOnHome`='' , `postDescription`='<p><span style="color: #202124;">Creo is </span><strong style="color: #202124">a family of Computer-aided design (CAD) apps supporting product design for discrete manufacturers</strong><span style="color: #202124;"> and is developed by PTC. The suite consists of apps, each delivering a distinct set of capabilities for a user role within product development.</span> 
+<br />
+</p>
+<h2><span style="color: #202124;">Advantages</span></h2>
+<ul>
+<li>Optimised for model-based enterprises.</li>
+<li>Increased engineer productivity.</li>
+<li>Better enabled concept design.</li>
+<li>Increased engineering capabilities.</li>
+<li>Increased manufacturing capabilities.</li>
+<li>Better simulation.</li>
+<li>Design capabilities for additive manufacturing.</li>
+</ul>
+<p>
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='Creo' , `keywords`='Creo' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=76
+[14-Apr-2022 07:08:26 UTC] 2
+[14-Apr-2022 07:08:32 UTC] 77
+[14-Apr-2022 07:08:32 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 77
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[14-Apr-2022 07:08:39 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[14-Apr-2022 07:08:39 UTC] 
+[14-Apr-2022 07:08:39 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[14-Apr-2022 07:08:39 UTC] <p><span style="color: #202124;">Solid Edge Mechanical Design allows you to do things like quickly focus on the task at hand, or to find parts anywhere in the design by using refined searched tools that let you search by component properties such as name, title, document, number, etc.</span> 
+<br />
+</p>
+<h2><span style="color: #202124;">Benefits</span></h2>
+<ul>
+<li><strong>The Solid Edge Portfolio: </strong><span style="color: #424242;">Solid Edge is now a start-to-finish PLM tool that allows users to implement the best solution for their company’s and customer’s needs. This portfolio includes a variety of tools, including simulation, manufacturing, technical publications, data management and applications from third-party software, truly offering unique design-through-manufacturing possibilities.</span></li>
+<li><strong>Scalable Data Management:</strong> Built-in Solid Edge data management allows manufacturers to work with a large volume of CAD files. The Design Manager tool enables users to review and edit the properties of multiple files and to backup, share and synchronize files through a number of cloud-based, file-sharing software. Should the need arrive, Siemens allows for an easy upgrade to Teamcenter. Teamcenter Integration for Solid Edge allows users to capture, manage and share Solid Edge data.</li>
+<li><strong>Design Collaboration:</strong> <span style="color: #424242;">The product collaboration of SolidWorks helps designers share their project with other key stakeholders, and offers a variety of ways to protect data and original design.</span></li>
+<li><strong>Next Generation Design:</strong> <span style="color: #424242;">Generative Design is a feature just added to the 2017 version of SolidWorks. Other improvements to SolidWorks’ design include closing the gap between design and manufacturing with more intelligent designs, predicting next steps.</span></li>
+<li><strong>Sheet Metal Modeling:</strong> <span style="color: #424242;">SolidWorks provides a basic version of sheet metal modeling. Users can design a sheet metal part on its own without any reference to the parts it will enclose, the part in the context of an assembly or the part within a multibody environment.</span></li>
+<li><strong>Assembly Optimization:</strong> <span style="color: #424242;">Because of the history-based functionality of SolidWorks, creating assemblies requires users to build and understand each individual part before creating the whole. And if a customer requires modifications to an assembly, the user will have to modify each part, then make required adjustments to other parts, and possibly the entire assembly.</span></li>
+<li><strong>3D Digital Prototypes:</strong> <span style="color: #424242;">Solid Edge users can build complete 3D digital prototypes and optimize their designs before the production stage, and design an entire assembly with specific machined, cast or stylized components.</span></li>
+<li><strong>Creating 3D Models from 2D Drawings:</strong> <span style="color: #424242;">Solid Edge allows users to create quality 3D models from 2D drawings, and 2D drawings from 3D models. With both functions, Solid Edge provides multiple view options, including standard, auxiliary, section, detail, broke and isometric.</span></li>
+<li><strong>True Direct Editing:</strong> <span style="color: #424242;">Solid Edge’s Synchronous Technology allows users to create and modify a design on the fly, irrespective of the order in which previous elements were assembled. This makes the design more responsive and allows for design changes at the assembly stage. With this feature, users can design, revise and deliver a product faster.</span></li>
+<li><strong>One-Shot, Multi-Part Editing:</strong> <span style="color: #424242;">The one-shot editing of Solid Edge allows users to edit components in an assembly while also maintaining the original design intent of the product or feature. A user can select multiple faces of multiple parts and make quick edits. Synchronous Technology will recognize symmetrical parts of a feature and make corresponding edits when there are any alterations.</span></li>
+</ul>
+
+[14-Apr-2022 07:08:39 UTC] UPDATE `post` SET 
+    `postTitle`='Solid Edge' , `postUrl`='/dharwadhubballitutor/Solid-Edge' , `appearOnHome`='' , `postDescription`='<p><span style="color: #202124;">Solid Edge Mechanical Design allows you to do things like quickly focus on the task at hand, or to find parts anywhere in the design by using refined searched tools that let you search by component properties such as name, title, document, number, etc.</span> 
+<br />
+</p>
+<h2><span style="color: #202124;">Benefits</span></h2>
+<ul>
+<li><strong>The Solid Edge Portfolio: </strong><span style="color: #424242;">Solid Edge is now a start-to-finish PLM tool that allows users to implement the best solution for their company’s and customer’s needs. This portfolio includes a variety of tools, including simulation, manufacturing, technical publications, data management and applications from third-party software, truly offering unique design-through-manufacturing possibilities.</span></li>
+<li><strong>Scalable Data Management:</strong> Built-in Solid Edge data management allows manufacturers to work with a large volume of CAD files. The Design Manager tool enables users to review and edit the properties of multiple files and to backup, share and synchronize files through a number of cloud-based, file-sharing software. Should the need arrive, Siemens allows for an easy upgrade to Teamcenter. Teamcenter Integration for Solid Edge allows users to capture, manage and share Solid Edge data.</li>
+<li><strong>Design Collaboration:</strong> <span style="color: #424242;">The product collaboration of SolidWorks helps designers share their project with other key stakeholders, and offers a variety of ways to protect data and original design.</span></li>
+<li><strong>Next Generation Design:</strong> <span style="color: #424242;">Generative Design is a feature just added to the 2017 version of SolidWorks. Other improvements to SolidWorks’ design include closing the gap between design and manufacturing with more intelligent designs, predicting next steps.</span></li>
+<li><strong>Sheet Metal Modeling:</strong> <span style="color: #424242;">SolidWorks provides a basic version of sheet metal modeling. Users can design a sheet metal part on its own without any reference to the parts it will enclose, the part in the context of an assembly or the part within a multibody environment.</span></li>
+<li><strong>Assembly Optimization:</strong> <span style="color: #424242;">Because of the history-based functionality of SolidWorks, creating assemblies requires users to build and understand each individual part before creating the whole. And if a customer requires modifications to an assembly, the user will have to modify each part, then make required adjustments to other parts, and possibly the entire assembly.</span></li>
+<li><strong>3D Digital Prototypes:</strong> <span style="color: #424242;">Solid Edge users can build complete 3D digital prototypes and optimize their designs before the production stage, and design an entire assembly with specific machined, cast or stylized components.</span></li>
+<li><strong>Creating 3D Models from 2D Drawings:</strong> <span style="color: #424242;">Solid Edge allows users to create quality 3D models from 2D drawings, and 2D drawings from 3D models. With both functions, Solid Edge provides multiple view options, including standard, auxiliary, section, detail, broke and isometric.</span></li>
+<li><strong>True Direct Editing:</strong> <span style="color: #424242;">Solid Edge’s Synchronous Technology allows users to create and modify a design on the fly, irrespective of the order in which previous elements were assembled. This makes the design more responsive and allows for design changes at the assembly stage. With this feature, users can design, revise and deliver a product faster.</span></li>
+<li><strong>One-Shot, Multi-Part Editing:</strong> <span style="color: #424242;">The one-shot editing of Solid Edge allows users to edit components in an assembly while also maintaining the original design intent of the product or feature. A user can select multiple faces of multiple parts and make quick edits. Synchronous Technology will recognize symmetrical parts of a feature and make corresponding edits when there are any alterations.</span></li>
+</ul>
+', `LinkUnder`='2' , `titleTag`='Solid Edge' , `keywords`='Solid Edge' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=77
+[14-Apr-2022 07:08:39 UTC] 2
+[14-Apr-2022 07:09:02 UTC] UPDATE `testimonials` SET 
+            `Name`='Anusha Joshi' , `Description`='Attending courses at DharwadHubballiTutor is a great pleasure because the staff is really encouraging and motivational, and they pleasantly explain ideas.' , `RateNow`='5' , `Image`='Anusha-_499-×-498-px_.webp' , `ImageAlternateText`='' , `Modifiedby`='info@acedecors.in' , `createdby`='info@acedecors.in'  WHERE `Id`=1
+[16-Apr-2022 06:54:47 UTC] 8
+[16-Apr-2022 06:54:47 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 8
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[16-Apr-2022 06:54:50 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[16-Apr-2022 06:54:50 UTC] 
+[16-Apr-2022 06:54:50 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[16-Apr-2022 06:54:50 UTC] <p>C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system. The main features of C language include low-level access to memory, a simple set of keywords, and a clean style, these features make C language suitable for system programmings like an operating system or compiler development. 
+<br />
+ 
+<br />
+</p>
+<h2><strong>Features:</strong> </h2>
+<p> 
+<br />
+</p>
+<ol>
+<li>Procedural Language</li>
+<li>Fast and Efficient</li>
+<li>Modularity</li>
+<li>Statically Type</li>
+<li>General-Purpose Language</li>
+<li>Rich set of built-in Operators</li>
+<li>Libraries with rich Functions</li>
+<li>Middle-Level Language</li>
+<li>Portability</li>
+<li>Easy to Extend</li>
+</ol>
+<p>
+<br />
+</p>
+
+[16-Apr-2022 06:54:50 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[16-Apr-2022 06:54:50 UTC] UPDATE `post` SET 
+    `postTitle`='C Language' , `postUrl`='/dharwadhubballitutor/C-Language' , `appearOnHome`='' , `postDescription`='<p>C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system. The main features of C language include low-level access to memory, a simple set of keywords, and a clean style, these features make C language suitable for system programmings like an operating system or compiler development. 
+<br />
+ 
+<br />
+</p>
+<h2><strong>Features:</strong> </h2>
+<p> 
+<br />
+</p>
+<ol>
+<li>Procedural Language</li>
+<li>Fast and Efficient</li>
+<li>Modularity</li>
+<li>Statically Type</li>
+<li>General-Purpose Language</li>
+<li>Rich set of built-in Operators</li>
+<li>Libraries with rich Functions</li>
+<li>Middle-Level Language</li>
+<li>Portability</li>
+<li>Easy to Extend</li>
+</ol>
+<p>
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='C Language' , `keywords`='C Language' , `modifiedBy`=''  WHERE `postId`=8
+[16-Apr-2022 06:54:50 UTC] 2
+[16-Apr-2022 06:55:10 UTC] 72
+[16-Apr-2022 06:55:10 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 72
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[16-Apr-2022 06:55:12 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[16-Apr-2022 06:55:12 UTC] 
+[16-Apr-2022 06:55:12 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[16-Apr-2022 06:55:12 UTC] <p>CATIA computer-aided three-dimensional interactive application is a multi-platform software suite for computer-aided design (CAD), computer-aided manufacturing (CAM), computer-aided engineering (CAE), 3D modeling and Product lifecycle management (PLM). 
+<br />
+</p>
+<h2>Benefits</h2>
+<ul>
+<li><strong>Product Design &amp; Styling:</strong> This product design program offers updated surface modeling abilities to industrial and transportation designers. The innovative designers can access the tools that help them achieve and explore fundamental ideas. It also supports a unique 3D sketching technology which helps the designers to import 2D sketches.</li>
+<li><strong>3D Atmosphere:</strong> It has a built-in mutual 3D environment that allows the users to diligently take part in the design process anytime. The designs of the products can be accessed and viewed from the 3D dashboards. The designs can share their workings and enhance their designs by collaborating with different people around the globe.</li>
+<li><strong>Multidisciplinary Approach:</strong> It provides a multidisciplinary Approach for product designing and creation. It fulfills the specific requirements of several people to upgrade the concept, process, and development of new products.</li>
+<li><strong>Market Acceptance: </strong>It ensures that the engineers will be adaptive to the marketing rules and fundamentals and demands and on simultaneously reducing the product development cost.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2>Advantages</h2>
+<ul>
+<li>It saves time and money. The software has built-in modification management abilities that help in automatic updates. This technique reduces the effect of changes in the manufacturing process. Through these automatic updates in the initial phase, the user saves his time as well as money without the need to restart the whole process from the beginning.</li>
+<li>The geometric specifications of composite parts can make the creation of these parts complex, and it maximizes the risk of errors. But, It helps the user to control multiple part geometries. These include the core-stiffened parts as well.</li>
+<li>Predict the behavior of parts with complex surfaces and allowing modifications where needed.</li>
+</ul>
+
+[16-Apr-2022 06:55:12 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[16-Apr-2022 06:55:12 UTC] UPDATE `post` SET 
+    `postTitle`='Catia' , `postUrl`='/dharwadhubballitutor/Catia' , `appearOnHome`='' , `postDescription`='<p>CATIA computer-aided three-dimensional interactive application is a multi-platform software suite for computer-aided design (CAD), computer-aided manufacturing (CAM), computer-aided engineering (CAE), 3D modeling and Product lifecycle management (PLM). 
+<br />
+</p>
+<h2>Benefits</h2>
+<ul>
+<li><strong>Product Design &amp; Styling:</strong> This product design program offers updated surface modeling abilities to industrial and transportation designers. The innovative designers can access the tools that help them achieve and explore fundamental ideas. It also supports a unique 3D sketching technology which helps the designers to import 2D sketches.</li>
+<li><strong>3D Atmosphere:</strong> It has a built-in mutual 3D environment that allows the users to diligently take part in the design process anytime. The designs of the products can be accessed and viewed from the 3D dashboards. The designs can share their workings and enhance their designs by collaborating with different people around the globe.</li>
+<li><strong>Multidisciplinary Approach:</strong> It provides a multidisciplinary Approach for product designing and creation. It fulfills the specific requirements of several people to upgrade the concept, process, and development of new products.</li>
+<li><strong>Market Acceptance: </strong>It ensures that the engineers will be adaptive to the marketing rules and fundamentals and demands and on simultaneously reducing the product development cost.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2>Advantages</h2>
+<ul>
+<li>It saves time and money. The software has built-in modification management abilities that help in automatic updates. This technique reduces the effect of changes in the manufacturing process. Through these automatic updates in the initial phase, the user saves his time as well as money without the need to restart the whole process from the beginning.</li>
+<li>The geometric specifications of composite parts can make the creation of these parts complex, and it maximizes the risk of errors. But, It helps the user to control multiple part geometries. These include the core-stiffened parts as well.</li>
+<li>Predict the behavior of parts with complex surfaces and allowing modifications where needed.</li>
+</ul>
+', `LinkUnder`='2' , `titleTag`='Catia' , `keywords`='Catia' , `modifiedBy`=''  WHERE `postId`=72
+[16-Apr-2022 06:55:12 UTC] 2
+[16-Apr-2022 06:55:32 UTC] 11
+[16-Apr-2022 06:55:32 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 11
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[16-Apr-2022 07:00:58 UTC] 1
+[16-Apr-2022 07:00:58 UTC] <p>HTML is an integral part of a syllabus for a web design course and is defined as a Hypertext Markup Language. In this subject, you will get to understand how HTML develops the general structure of a web page design as well as tags and the definition of HTML files. It is a key element of creating a website. 
+<br />
+</p>
+<h2><strong>Features of HTML:</strong> </h2>
+<ul>
+<li>It is easy to learn and easy to use.</li>
+<li>It is platform-independent.</li>
+<li>Images, videos, and audio can be added to a web page.</li>
+<li>Hypertext can be added to the text.</li>
+<li>It is a markup language.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Why learn HTML?</strong> </h2>
+<ul>
+<li>It is a simple markup language. Its implementation is easy.</li>
+<li>It is used to create a website.</li>
+<li>Helps in developing fundamentals about web programming.</li>
+<li>Boost professional career.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Advantages:</strong> </h2>
+<ul>
+<li>HTML is used to build websites.</li>
+<li>It is supported by all browsers.</li>
+<li>It can be integrated with other languages like CSS, JavaScript, etc.</li>
+</ul>
+
+[16-Apr-2022 07:00:58 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[16-Apr-2022 07:00:58 UTC] UPDATE `post` SET 
+    `postTitle`='HTML' , `postUrl`='/dharwadhubballitutor/HTML' , `appearOnHome`='1' , `postDescription`='<p>HTML is an integral part of a syllabus for a web design course and is defined as a Hypertext Markup Language. In this subject, you will get to understand how HTML develops the general structure of a web page design as well as tags and the definition of HTML files. It is a key element of creating a website. 
+<br />
+</p>
+<h2><strong>Features of HTML:</strong> </h2>
+<ul>
+<li>It is easy to learn and easy to use.</li>
+<li>It is platform-independent.</li>
+<li>Images, videos, and audio can be added to a web page.</li>
+<li>Hypertext can be added to the text.</li>
+<li>It is a markup language.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Why learn HTML?</strong> </h2>
+<ul>
+<li>It is a simple markup language. Its implementation is easy.</li>
+<li>It is used to create a website.</li>
+<li>Helps in developing fundamentals about web programming.</li>
+<li>Boost professional career.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Advantages:</strong> </h2>
+<ul>
+<li>HTML is used to build websites.</li>
+<li>It is supported by all browsers.</li>
+<li>It can be integrated with other languages like CSS, JavaScript, etc.</li>
+</ul>
+', `LinkUnder`='2' , `titleTag`='HTML' , `keywords`='HTML' , `modifiedBy`=''  WHERE `postId`=11
+[16-Apr-2022 07:00:58 UTC] 2
+[06-May-2022 11:52:15 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[06-May-2022 11:52:15 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fasting growing and esteemed Software Training institutions in Dharwad. 
+
+</p>
+<p>We offer training right from basics to advanced job-oriented courses. Which includes:
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<li><strong>Data Science with python programming, </strong>this is a well-planned course for data science aspirants </li>
+</ul>
+<p>
+<br />
+Which has helped a lot of our alumni to achieve their dreams.
+
+</p>
+<p>Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+
+</p>
+<p>Also, we are offering software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+
+</p>
+<p>We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[06-May-2022 11:59:35 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[06-May-2022 11:59:35 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+
+</p>
+<p>We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Data Science with python programming, </strong>this is a well-planned course for data science aspirants</li>
+<p>
+<br />
+ Which has helped a lot of our alumni to achieve their dreams.
+
+</p>
+<p>Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+
+</p>
+<p>Also, we are offering software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+
+</p>
+<p>We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[06-May-2022 12:00:34 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[06-May-2022 12:00:34 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p>We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:39:24 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:39:24 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> <span font="serif">is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. </span>
+<br />
+<span font="serif"> </span>
+<br />
+<span font="serif">We offer training right from basics to advanced job-oriented courses. Which includes:</span>
+
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>,</li>
+<p> 
+<br />
+</p>
+<ul>
+<li><strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration.</li>
+<p>Python programming.
+Statistics.
+Machine learning (Supervised and unsupervised).
+Deep learning (Artificial neural networks and basics of transfer learning).
+Intro to Natural language processing.
+Database basic operations.
+
+
+</p>
+<ul>
+<li><strong>Digital Media Marketing course.</strong> </li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Software Testing with Java and Selenium.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Programming Course.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Basics Of Computer.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Advanced Excel.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Civil Design Software.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Mechanical Design Software.</strong></li>
+<p>
+<br />
+<span font="serif">Which has helped a lot of our alumni to achieve their dreams.</span>
+
+</p>
+<p><span font="serif">Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. </span>
+<br />
+<span font="serif">Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.</span>
+
+</p>
+<p><span font="serif">We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. </span>
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:41:58 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:41:58 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+We offer training right from basics to advanced job-oriented courses. Which includes:
+
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<p> 
+<br />
+</p>
+<ul>
+<li><strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration.</li>
+<p>Python programming.
+Statistics.
+Machine learning (Supervised and unsupervised).
+Deep learning (Artificial neural networks and basics of transfer learning).
+Intro to Natural language processing.
+Database basic operations.
+
+
+</p>
+<ul>
+<li><strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.</li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Software Testing with Java and Selenium.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Programming Course.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Basics Of Computer.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Advanced Excel.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Civil Design Software.</strong></li>
+<p><strong> </strong>
+<br />
+</p>
+<ul>
+<li><strong>Mechanical Design Software.</strong></li>
+<p>
+<br />
+Which has helped a lot of our alumni to achieve their dreams.
+
+</p>
+<p>Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+
+</p>
+<p>We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city.  
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:43:48 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:43:48 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes:
+
+</p>
+<p><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.
+<br />
+ 
+<br />
+<strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration.
+<br />
+Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.
+<br />
+<span indent="2">
+</span><br />
+<strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.
+<br />
+<strong> </strong> 
+<br />
+<strong>Software Testing with Java and Selenium.</strong>
+<br />
+<strong> </strong> 
+<br />
+<strong>Programming Course.</strong>
+<br />
+<strong> </strong> 
+<br />
+<strong>Basics Of Computer.</strong>
+<br />
+<strong> </strong> 
+<br />
+<strong>Advanced Excel.</strong>
+<br />
+<strong> </strong> 
+<br />
+<strong>Civil Design Software.</strong>
+<br />
+<strong> </strong> 
+<br />
+<strong>Mechanical Design Software.</strong>
+
+</p>
+<p> Which has helped a lot of our alumni to achieve their dreams.
+
+</p>
+<p>Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+
+</p>
+<p>We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:44:59 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:44:59 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+We offer training right from basics to advanced job-oriented courses. Which includes:
+
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more. </li>
+<p> 
+<br />
+</p>
+<ul>
+<li><strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. </li>
+<p> Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. 
+<br />
+  
+<br />
+ <strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally. 
+<br />
+ <strong> </strong> 
+<br />
+ <strong>Software Testing with Java and Selenium.</strong> 
+<br />
+ <strong> </strong> 
+<br />
+ <strong>Programming Course.</strong> 
+<br />
+ <strong> </strong> 
+<br />
+ <strong>Basics Of Computer.</strong> 
+<br />
+ <strong> </strong> 
+<br />
+ <strong>Advanced Excel.</strong> 
+<br />
+ <strong> </strong> 
+<br />
+ <strong>Civil Design Software.</strong> 
+<br />
+ <strong> </strong> 
+<br />
+ <strong>Mechanical Design Software.</strong>
+<br />
+Which has helped a lot of our alumni to achieve their dreams.
+<br />
+Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+<br />
+We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:47:02 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:47:02 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes:
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<li> <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration.</li>
+<li>Python programming. 
+Statistics. 
+Machine learning (Supervised and unsupervised). 
+Deep learning (Artificial neural networks and basics of transfer learning). 
+Intro to Natural language processing. 
+Database basic operations. 
+<strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally. </li>
+<li><strong>Software Testing with Java and Selenium.</strong> </li>
+<li><strong>Programming Course.</strong> </li>
+<li><strong>Basics Of Computer.</strong> </li>
+<li><strong>Advanced Excel.</strong> </li>
+<li><strong>Civil Design Software.</strong> </li>
+<li><strong>Mechanical Design Software.</strong> </li>
+</ul>
+<p> Which has helped a lot of our alumni to achieve their dreams. 
+
+</p>
+<p>Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+
+</p>
+<p>We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:49:05 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:49:05 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<li> <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration.</li>
+<li>Python programming.
+ Statistics. Machine learning (Supervised and unsupervised). 
+Deep learning (Artificial neural networks and basics of transfer learning). 
+Intro to Natural language processing. Database basic operations.
+ <strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.</li>
+<li><strong>Software Testing with Java and Selenium.</strong></li>
+<li><strong>Programming Course.</strong></li>
+<li><strong>Basics Of Computer.</strong></li>
+<li><strong>Advanced Excel.</strong></li>
+<li><strong>Civil Design Software.</strong></li>
+<li><strong>Mechanical Design Software.</strong></li>
+</ul>
+<p>Which has helped a lot of our alumni to achieve their dreams.
+<br />
+Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+<br />
+We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:50:58 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:50:58 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<li> <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration.</li>
+<li>Python programming. 
+Statistics. Machine learning (Supervised and unsupervised). 
+Deep learning (Artificial neural networks and basics of transfer learning). 
+Intro to Natural language processing. 
+Database basic operations.
+<strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.</li>
+<li><strong>Software Testing with Java and Selenium.</strong></li>
+<li><strong>Programming Course.</strong></li>
+<li><strong>Basics Of Computer.</strong></li>
+<li><strong>Advanced Excel.</strong></li>
+<li><strong>Civil Design Software.</strong></li>
+<li><strong>Mechanical Design Software.</strong></li>
+</ul>
+<p>Which has helped a lot of our alumni to achieve their dreams. 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+<br />
+ We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:53:55 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:53:55 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor</strong> is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<li> <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration.</li>
+<li>Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. <strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.
+<strong>Software Testing with Java and Selenium.</strong></li>
+<li><strong>Programming Course.</strong></li>
+<li><strong>Basics Of Computer.</strong></li>
+<li><strong>Advanced Excel.</strong></li>
+<li><strong>Civil Design Software.</strong></li>
+<li><strong>Mechanical Design Software.</strong></li>
+</ul>
+<p>Which has helped a lot of our alumni to achieve their dreams. 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+<br />
+ We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:56:23 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:56:23 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<li> <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. </li>
+</ul>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally. <strong>Software Testing with Java and Selenium.</strong></li>
+<li><strong>Programming Course.</strong></li>
+<li><strong>Basics Of Computer.</strong></li>
+<li><strong>Advanced Excel.</strong></li>
+<li><strong>Civil Design Software.</strong></li>
+<li><strong>Mechanical Design Software.</strong></li>
+</ul>
+<p>Which has helped a lot of our alumni to achieve their dreams. 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+<br />
+ We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[07-May-2022 03:59:21 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[07-May-2022 03:59:21 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<li> <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.</li>
+</ul>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally. </li>
+<li><strong>Software Testing with Java and Selenium.</strong></li>
+<li><strong>Programming Course.</strong></li>
+<li><strong>Basics Of Computer.</strong></li>
+<li><strong>Advanced Excel.</strong></li>
+<li><strong>Civil Design Software.</strong></li>
+<li><strong>Mechanical Design Software.</strong></li>
+</ul>
+<p>
+<br />
+Which has helped a lot of our alumni to achieve their dreams. 
+
+</p>
+<p>Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+
+</p>
+<p>Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+
+</p>
+<p>We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[09-May-2022 07:49:31 UTC] 11
+[09-May-2022 07:49:31 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 11
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[09-May-2022 10:49:15 UTC] info@acedecors.in
+[10-May-2022 09:00:04 UTC] insert into termsandconditions (`description` ) 
+    values ('<ol>
+<li>100% fee needs to be paid before starting the classes for any course.</li>
+<li>Any damages made to the institution's property</li>
+</ol>
+')
+[13-May-2022 06:29:08 UTC] 11
+[13-May-2022 06:29:08 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 11
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[19-May-2022 05:51:40 UTC] insert into termsandconditions (`description` ) 
+    values ('<ol>
+<li>100% fee needs to be paid before starting the classes for any course.</li>
+<li>Should a student cause any damage to the institution's property, they are to be held responsible for compensation, including total repair costs.</li>
+<li>Students are expected to observe and act upon the class timetable and must attend all classes on time.</li>
+<li>Job assistance would be provided based on the market requirements.</li>
+<li>Back door entry to any company is not entertained.</li>
+<li>We do not have any other branches or our institution in Dharwad and outside Dharwad city.</li>
+<li>The selection of the candidates in the interview provided by us is purely based on the performance of the candidate evaluated by the interviewing company.</li>
+</ol>
+')
+[24-May-2022 07:28:31 UTC] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home/k7ip32bqokgo/public_html/blogadmin/dblayer/categoryOps.php on line 132
+[24-May-2022 07:29:05 UTC] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home/k7ip32bqokgo/public_html/blogadmin/controller/subcategoryController.php on line 28
+[24-May-2022 12:37:45 UTC] info@acedecors.in
+[25-May-2022 09:57:36 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 09:57:36 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes:
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<p>
+<br />
+</p>
+<ul>
+<li> <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.</li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.</li>
+<li><strong>Software Testing with Java and Selenium Framework.</strong></li>
+<li><strong>Programming Course.</strong></li>
+<li><strong>Basics Of Computer.</strong></li>
+<li><strong>Advanced Excel.</strong></li>
+<li><strong>Civil Design Software.</strong></li>
+<li><strong>Mechanical Design Software.</strong></li>
+</ul>
+<p>
+<br />
+ Which has helped a lot of our alumni to achieve their dreams.
+<br />
+Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+<br />
+We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 09:59:37 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 09:59:37 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+</p>
+<ul>
+<li><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.</li>
+<p>
+<br />
+</p>
+<ul>
+<li> <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.</li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.</li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Software Testing with Java and Selenium Framework.</strong></li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Programming Course.</strong></li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Basics Of Computer.</strong></li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Advanced Excel.</strong></li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Civil Design Software.</strong></li>
+<p>
+<br />
+</p>
+<ul>
+<li><strong>Mechanical Design Software.</strong></li>
+<p>
+<br />
+ Which has helped a lot of our alumni to achieve their dreams. 
+
+</p>
+<p> Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+
+</p>
+<p> Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+
+</p>
+<p>We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:00:43 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:00:43 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+
+</p>
+<p><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:01:05 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:01:05 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes:
+
+</p>
+<p><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:01:59 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:01:59 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+We offer training right from basics to advanced job-oriented courses. Which includes:
+
+</p>
+<p><span code-block="1">
+</span><br />
+<span align="justify">
+</span><br />
+<strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more. <span align="justify">
+</span><br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:03:01 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:03:01 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+We offer training right from basics to advanced job-oriented courses. Which includes:
+<br />
+ 
+<br />
+<strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.  
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:04:08 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:04:08 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+<strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more. 
+
+</p>
+<p><strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.
+
+</p>
+<p></p>'WHERE 	businessId=1
+[25-May-2022 10:04:37 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:04:37 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+<strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.
+
+</p>
+<p><strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:05:09 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:05:09 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+ <strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.
+
+</p>
+<p><span code-block="1">
+</span><br />
+<strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:06:30 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:06:30 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+<strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more.
+<br />
+ 
+<br />
+<strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. 
+
+</p>
+<p><span code-block="1">
+</span><br />
+<strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:08:58 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:08:58 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+ <strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more. 
+<br />
+ 
+<br />
+ <strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.
+<br />
+ 
+<br />
+ <strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally. 
+
+</p>
+<p><span code-block="1">
+</span><br />
+<strong>Software Testing with Java and Selenium Framework.</strong>
+
+</p>
+<p><span code-block="1">
+</span><br />
+<strong>Programming Course.</strong>
+
+</p>
+<p><span code-block="1">
+</span><br />
+<strong>Basics Of Computer.</strong>
+
+</p>
+<p><span code-block="1">
+</span><br />
+<strong>Advanced Excel.</strong>
+
+</p>
+<p><span code-block="1">
+</span><br />
+<strong>Civil Design Software.</strong>
+
+</p>
+<p><span code-block="1">
+</span><br />
+<strong>Mechanical Design Software.</strong>
+
+</p>
+<p>Which has helped a lot of our alumni to achieve their dreams.
+
+</p>
+<p><span code-block="1">
+</span><br />
+Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+<span code-block="1">
+
+</span></p>
+<p>Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+
+</p>
+<p><span code-block="1">
+</span><br />
+We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city.
+
+</p>
+<p></p>'WHERE 	businessId=1
+[25-May-2022 10:10:54 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:10:54 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<h2><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. </h2>
+<p> 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Web Design and Development is a Full Stack course</strong>, where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, and Advanced JAVA with Servlets and JSP and much more. </h3>
+<p> 
+<br />
+</p>
+<h3><strong>Data Science with python programming </strong>is a well-planned course for data science aspirants. Here in this course below modules are crafted keeping the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. </h3>
+<p> 
+<br />
+</p>
+<h3><strong>Digital Media Marketing course.</strong> This course is designed for students who are looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.</h3>
+<p> 
+<br />
+</p>
+<h3> <strong>Software Testing with Java and Selenium Framework.</strong></h3>
+<p> 
+<br />
+</p>
+<h3> <strong>Programming Course.</strong></h3>
+<p> 
+<br />
+</p>
+<h3> <strong>Basics Of Computer.</strong></h3>
+<p> 
+<br />
+</p>
+<h3> <strong>Advanced Excel.</strong></h3>
+<p> 
+<br />
+</p>
+<h3> <strong>Civil Design Software.</strong></h3>
+<p> 
+<br />
+</p>
+<h3> <strong>Mechanical Design Software.</strong></h3>
+<p>
+<br />
+<span code-block="1">
+</span><br />
+Which has helped a lot of our alumni to achieve their dreams.
+<br />
+ 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+  
+<br />
+Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front.
+<br />
+ 
+<br />
+ We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city.
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:15:31 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:15:31 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Web Design and Development is a Full Stack course</strong></h3>
+<p><span code-block="1">
+</span><br />
+where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, Advanced JAVA with Servlets and JSP, and much more.
+<br />
+</p>
+<h3></h3>
+<h3><strong>Data Science with python programming </strong></h3>
+<p><span code-block="1">
+</span><br />
+is a well-planned course for data science aspirants. Here in this course, the modules below are crafted to keep the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.
+
+</p>
+<h3><strong>Digital Media Marketing course.</strong> </h3>
+<p><span code-block="1">
+</span><br />
+This course is designed for students looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.
+
+</p>
+<h3><strong>Software Testing with Java and Selenium Framework.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Programming Course.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Basics Of Computer.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Advanced Excel.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Civil Design Software.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Mechanical Design Software.</strong></h3>
+<p>
+<br />
+  
+<br />
+ Which has helped a lot of our alumni to achieve their dreams. 
+<br />
+ 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+<br />
+ 
+<br />
+ We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:16:22 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:16:22 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Web Design and Development is a Full Stack course</strong></h3>
+<p> 
+<br />
+ where the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, Advanced JAVA with Servlets and JSP, and much more. 
+<br />
+<span code-block="1">
+</span><br />
+</p>
+<h3><strong>Data Science with python programming </strong></h3>
+<p> 
+<br />
+ is a well-planned course for data science aspirants. Here in this course, the modules below are crafted to keep the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations.
+<br />
+<span code-block="1">
+</span><br />
+</p>
+<h3><strong>Digital Media Marketing course.</strong></h3>
+<p> 
+<br />
+ This course is designed for students looking to build their careers in digital marketing and entrepreneurs who would like to grow their businesses digitally.
+<br />
+<span code-block="1">
+</span><br />
+</p>
+<h3><strong>Software Testing with Java and Selenium Framework.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Programming Course.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Basics Of Computer.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Advanced Excel.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Civil Design Software.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Mechanical Design Software.</strong></h3>
+<p>
+<br />
+ 
+<br />
+ Which has helped a lot of our alumni to achieve their dreams. 
+<br />
+ 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+<br />
+ 
+<br />
+ We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:26:58 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:26:58 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Web Design and Development is a Full Stack course</strong></h3>
+<p>
+<br />
+Here the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, Advanced JAVA with Servlets and JSP, and much more. 
+<br />
+  
+<br />
+</p>
+<h3><strong>Data Science with python programming </strong></h3>
+<p>
+<br />
+This is a well-planned course for data science aspirants. Here in this course, the modules below are crafted to keep the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. 
+<br />
+  
+<br />
+</p>
+<h3><strong>Digital Media Marketing course.</strong></h3>
+<p>
+<br />
+This course is designed for students looking to build their careers in digital marketing and entrepreneurship, and who would like to grow their businesses digitally. In this course below mentioned concepts are covered in depth.
+<br />
+<span code-block="1">
+</span><br />
+</p>
+<ol>
+<li>Social Media Marketing.</li>
+<li>Search Engine Optimization.</li>
+<li>Search Engine Marketing.</li>
+<li>Email Marketing.</li>
+<li>SMS Marketing.</li>
+<li>WhatsApp Marketing.</li>
+<li>Content Creation.</li>
+<li>Website Development using WordPress.</li>
+</ol>
+<p><span code-block="1">
+
+</span></p>
+<h3><strong>Software Testing with Java and Selenium Framework.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Programming Course.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Basics Of Computer.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Advanced Excel.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Civil Design Software.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Mechanical Design Software.</strong></h3>
+<p>
+<br />
+ 
+<br />
+ Which has helped a lot of our alumni to achieve their dreams. 
+<br />
+ 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+<br />
+ 
+<br />
+We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:28:45 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:28:45 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Web Design and Development is a Full Stack course</strong></h3>
+<p>
+<br />
+ Here the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, Advanced JAVA with Servlets and JSP, and much more. 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Data Science with python programming </strong></h3>
+<p>
+<br />
+ This is a well-planned course for data science aspirants. Here in this course, the modules below are crafted to keep the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Digital Media Marketing course.</strong></h3>
+<p>
+<br />
+ This course is designed for students looking to build their careers in digital marketing and entrepreneurship, and who would like to grow their businesses digitally. In this course below mentioned concepts are covered in depth. 
+<br />
+  
+<br />
+</p>
+<ol>
+<li>Social Media Marketing.</li>
+<li>Search Engine Optimization.</li>
+<li>Search Engine Marketing.</li>
+<li>Email Marketing.</li>
+<li>SMS Marketing.</li>
+<li>WhatsApp Marketing.</li>
+<li>Content Creation.</li>
+<li>Website Development using WordPress.</li>
+<li>Affiliate Marketing.</li>
+<li>How to Create Creative Graphics</li>
+</ol>
+<p> 
+<br />
+</p>
+<h3><strong>Software Testing with Java and Selenium Framework.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Programming Course.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Basics Of Computer.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Advanced Excel.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Civil Design Software.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Mechanical Design Software.</strong></h3>
+<p>
+<br />
+ 
+<br />
+ Which has helped a lot of our alumni to achieve their dreams. 
+<br />
+ 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+<br />
+ 
+<br />
+ We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 10:36:21 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 10:36:21 UTC] UPDATE businessdetails set `businessName`='DharwadHubballiTutor', `businessAddress`='J G Nippani Complex,
+Beside SBI Gandhinagar,
+Dharwad.', `businessContact`='+919741237334', `businessTagLine`='Learn Transform Succeed', `businessEmail`='info@dharwadhubballitutor.com', `businessGSTIN`='22AAAAA0000A1Z5', `aboutBusiness`='<p><strong>DharwadHubballiTutor </strong>is one of the fastest-growing and most esteemed Software Training Institutions in Dharwad. 
+<br />
+ 
+<br />
+ We offer training right from basics to advanced job-oriented courses. Which includes: 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Web Design and Development as Full Stack course</strong></h3>
+<p>
+<br />
+Here the students will enjoy learning the front-end technologies like HTML-5, CSS-3, JavaScript, jQuery, Bootstrap a mobile-first framework, and backend technologies like PHP, Python with Django, ASP .NET, Advanced JAVA with Servlets and JSP, and much more. 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Data Science with python programming </strong></h3>
+<p>
+<br />
+ This is a well-planned course for data science aspirants. Here in this course, the modules below are crafted to keep the young mind into consideration. Python programming. Statistics. Machine learning (Supervised and unsupervised). Deep learning (Artificial neural networks and basics of transfer learning). Intro to Natural language processing. Database basic operations. 
+<br />
+ 
+<br />
+</p>
+<h3><strong>Digital Media Marketing course.</strong></h3>
+<p>
+<br />
+ This course is designed for students looking to build their careers in digital marketing and entrepreneurship, and who would like to grow their businesses digitally. In this course below mentioned concepts are covered in depth. 
+<br />
+ 
+<br />
+</p>
+<ol>
+<li>Social Media Marketing.</li>
+<li>Search Engine Optimization.</li>
+<li>Search Engine Marketing.</li>
+<li>Email Marketing.</li>
+<li>SMS Marketing.</li>
+<li>WhatsApp Marketing.</li>
+<li>Content Creation.</li>
+<li>Website Development using WordPress.</li>
+<li>Affiliate Marketing.</li>
+<li>How to Create Creative Graphics</li>
+</ol>
+<p>
+<br />
+</p>
+<h3><strong>Software Testing with Java and Selenium Framework.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Programming Course.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Basics Of Computer.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Advanced Excel.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Civil Design Software.</strong></h3>
+<p>
+<br />
+</p>
+<h3><strong>Mechanical Design Software.</strong></h3>
+<p>
+<br />
+ 
+<br />
+ Which has helped a lot of our alumni to achieve their dreams. 
+<br />
+ 
+<br />
+ Our Trainers are well qualified with a minimum of 3+ years of Industry experience in the same field as the course aligned. 
+<br />
+ 
+<br />
+ Also, we offer software development, web development, and digital marketing services, which are helping a lot of businesses to achieve their goals on the business front. 
+<br />
+ 
+<br />
+ We have the vision to collaborate with the two cities Dharwad and Hubballi, in terms of Education, Placement opportunity, Internships, and Service Providers. To start two-way contact and communication between the two cities, in a view to using each other''s resources to convert our city into a smart city. 
+<br />
+</p>'WHERE 	businessId=1
+[25-May-2022 11:21:47 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 48
+[25-May-2022 11:21:47 UTC] 
+[25-May-2022 11:21:47 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 49
+[25-May-2022 11:21:48 UTC] INSERT INTO `post`(
+         `postTitle`,
+         `postUrl`,
+         `appearOnHome`, 
+         `postDescription`,
+         `LinkUnder`, 
+         `postCreatedBy`, 
+         `titleTag`, 
+         `keywords`,
+         `modifiedBy`) 
+         values ('Django Internship Training','Django-Internship-Training','','<p>This session was conducted with 6th-semester computer science students of Gangadhar Polytechnic College Dharwad. It was a wonderful experience for us as well as for the trainer to take this course and deliver it up to the mark. Daily a session of 4 hours was planned for the students in which 2 hours were planned for the theory session and 2 hours were planned for the practical session.
+<br />
+<span code-block="1">
+</span><br />
+Here in this training, the topics that were covered were the basics of python programming and the Django Framework to build the web application. Post which students were able to successfully build the calorie calculator.
+
+</p>
+<p>Below are a few words by the students as well about their experience in this training session.
+<br />
+<span code-block="1">
+
+</span></p>
+<p>DhawadHubballitutor is one of the best tutors in Dharwad we had a good experience in the 15 days of our training with <strong>Python with Django framework</strong> it was really fun and a good experience for each of us. The teaching is a very good and very comfortable environment and they give real-time examples for each topic so it is so easy to understand the topics and we are really glad that we had training in such expertise teacher. Thank you so many sirs for your support and guidance with your guidance we can surely gain so much knowledge about Python and Django frameworks we are glad to sir. And they also teach all other growing programming languages such as Web designing, HTML, javascript, graphic designing, software marketing, and so on so do visit the DharwadHubblli tutors for your better experience in a programming language.
+<br />
+</p>
+','2','info@acedecors.in','Django-Internship-Training','Python Internship, Python Programming courses near me, Free Python, HTML, CSS, JavaScript, Django Projects, Django Framework','info@acedecors.in')
+[25-May-2022 11:21:48 UTC] INSERT INTO `postimages`( `postImage`,
+        `createdBy`,
+        `modifiedBy`,
+        `imageAlternateText`,
+        `postId`)
+        VALUES('WhatsApp Image 2022-05-24 at 12.52.58 PM.jpeg','info@acedecors.in','info@acedecors.in','Internship-Inplant-Training',93)
+[25-May-2022 11:25:44 UTC] 93
+[25-May-2022 11:25:44 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 93
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[25-May-2022 11:26:14 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[25-May-2022 11:26:14 UTC] 
+[25-May-2022 11:26:14 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[25-May-2022 11:26:14 UTC] <p>This session was conducted with 6th-semester computer science students of Gangadhar Polytechnic College Dharwad. It was a wonderful experience for us as well as for the trainer to take this course and deliver it up to the mark. Daily a session of 4 hours was planned for the students in which 2 hours were planned for the theory session and 2 hours were planned for the practical session. 
+<br />
+  
+<br />
+ Here in this training, the topics that were covered were the basics of python programming and the Django Framework to build the web application. Post which students were able to successfully build the calorie calculator.
+<br />
+Below are a few words by the students as well about their experience in this training session. 
+<br />
+  
+<br />
+DhawadHubballitutor is one of the best tutors in Dharwad we had a good experience in the 15 days of our training with <strong>Python with Django framework</strong> it was really fun and a good experience for each of us. The teaching is a very good and very comfortable environment and they give real-time examples for each topic so it is so easy to understand the topics and we are really glad that we had training in such expertise teacher. Thank you so many sirs for your support and guidance with your guidance we can surely gain so much knowledge about Python and Django frameworks we are glad to sir. And they also teach all other growing programming languages such as Web designing, HTML, javascript, graphic designing, software marketing, and so on so do visit the DharwadHubblli tutors for your better experience in a programming language. 
+<br />
+</p>
+
+[25-May-2022 11:26:14 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 11:26:14 UTC] UPDATE `post` SET 
+    `postTitle`='Django Internship Training' , `postUrl`='dharwadhubballitutor/Django-Internship-Training' , `appearOnHome`='' , `postDescription`='<p>This session was conducted with 6th-semester computer science students of Gangadhar Polytechnic College Dharwad. It was a wonderful experience for us as well as for the trainer to take this course and deliver it up to the mark. Daily a session of 4 hours was planned for the students in which 2 hours were planned for the theory session and 2 hours were planned for the practical session. 
+<br />
+  
+<br />
+ Here in this training, the topics that were covered were the basics of python programming and the Django Framework to build the web application. Post which students were able to successfully build the calorie calculator.
+<br />
+Below are a few words by the students as well about their experience in this training session. 
+<br />
+  
+<br />
+DhawadHubballitutor is one of the best tutors in Dharwad we had a good experience in the 15 days of our training with <strong>Python with Django framework</strong> it was really fun and a good experience for each of us. The teaching is a very good and very comfortable environment and they give real-time examples for each topic so it is so easy to understand the topics and we are really glad that we had training in such expertise teacher. Thank you so many sirs for your support and guidance with your guidance we can surely gain so much knowledge about Python and Django frameworks we are glad to sir. And they also teach all other growing programming languages such as Web designing, HTML, javascript, graphic designing, software marketing, and so on so do visit the DharwadHubblli tutors for your better experience in a programming language. 
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='Django Internship Training' , `keywords`='Python Internship, Python Programming courses near me, Free Python, HTML, CSS, JavaScript, Django Projects, Django Framework' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=93
+[25-May-2022 11:26:14 UTC] 2
+[25-May-2022 11:29:04 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[25-May-2022 11:29:04 UTC] 
+[25-May-2022 11:29:04 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[25-May-2022 11:29:04 UTC] <p>This session was conducted with 6th-semester computer science students of Gangadhar Polytechnic College Dharwad. It was a wonderful experience for us as well as for the trainer to take this course and deliver it up to the mark. Daily a session of 4 hours was planned for the students in which 2 hours were planned for the theory session and 2 hours were planned for the practical session. 
+<br />
+ 
+<br />
+ Here in this training, the topics that were covered were the basics of python programming and the Django Framework to build the web application. Post which students were able to successfully build the calorie calculator. 
+<br />
+ Below are a few words by the students as well about their experience in this training session. 
+<br />
+ 
+<br />
+ DhawadHubballitutor is one of the best tutors in Dharwad we had a good experience in the 15 days of our training with <strong>Python with Django framework</strong> it was really fun and a good experience for each of us. The teaching is a very good and very comfortable environment and they give real-time examples for each topic so it is so easy to understand the topics and we are really glad that we had training in such expertise teacher. Thank you so many sirs for your support and guidance with your guidance we can surely gain so much knowledge about Python and Django frameworks we are glad to sir. And they also teach all other growing programming languages such as Web designing, HTML, javascript, graphic designing, software marketing, and so on so do visit the DharwadHubblli tutors for your better experience in a programming language. 
+<br />
+</p>
+
+[25-May-2022 11:29:04 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[25-May-2022 11:29:04 UTC] UPDATE `post` SET 
+    `postTitle`='Django Internship Training' , `postUrl`='/dharwadhubballitutor/Django-Internship-Training' , `appearOnHome`='' , `postDescription`='<p>This session was conducted with 6th-semester computer science students of Gangadhar Polytechnic College Dharwad. It was a wonderful experience for us as well as for the trainer to take this course and deliver it up to the mark. Daily a session of 4 hours was planned for the students in which 2 hours were planned for the theory session and 2 hours were planned for the practical session. 
+<br />
+ 
+<br />
+ Here in this training, the topics that were covered were the basics of python programming and the Django Framework to build the web application. Post which students were able to successfully build the calorie calculator. 
+<br />
+ Below are a few words by the students as well about their experience in this training session. 
+<br />
+ 
+<br />
+ DhawadHubballitutor is one of the best tutors in Dharwad we had a good experience in the 15 days of our training with <strong>Python with Django framework</strong> it was really fun and a good experience for each of us. The teaching is a very good and very comfortable environment and they give real-time examples for each topic so it is so easy to understand the topics and we are really glad that we had training in such expertise teacher. Thank you so many sirs for your support and guidance with your guidance we can surely gain so much knowledge about Python and Django frameworks we are glad to sir. And they also teach all other growing programming languages such as Web designing, HTML, javascript, graphic designing, software marketing, and so on so do visit the DharwadHubblli tutors for your better experience in a programming language. 
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='Django Internship Training' , `keywords`='Python Internship, Python Programming courses near me, Free Python, HTML, CSS, JavaScript, Django Projects, Django Framework' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=93
+[25-May-2022 11:29:04 UTC] 2
+[26-May-2022 07:41:27 UTC] on
+[26-May-2022 07:41:27 UTC] insert into category (`categoryName`,
+     `categoryDescription`,
+     `HasSubcategory`,
+     `categoryCreatedBy`,
+     `categorytModifiedBy`) 
+      values ('Jobs','Jobs','1','info@acedecors.in','info@acedecors.in')
+[26-May-2022 07:41:40 UTC] PHP Warning:  error_log() expects parameter 1 to be string, object given in /home/k7ip32bqokgo/public_html/blogadmin/dblayer/categoryOps.php on line 132
+[26-May-2022 07:42:37 UTC] PHP Warning:  error_log() expects parameter 1 to be string, array given in /home/k7ip32bqokgo/public_html/blogadmin/controller/subcategoryController.php on line 28
+[28-May-2022 07:59:40 UTC] 10
+[28-May-2022 07:59:40 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 10
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[30-May-2022 04:39:34 UTC] info@acedecors.in
+[30-May-2022 04:53:36 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 48
+[30-May-2022 04:53:36 UTC] 
+[30-May-2022 04:53:36 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 49
+[30-May-2022 04:53:36 UTC] INSERT INTO `post`(
+         `postTitle`,
+         `postUrl`,
+         `appearOnHome`, 
+         `postDescription`,
+         `LinkUnder`, 
+         `postCreatedBy`, 
+         `titleTag`, 
+         `keywords`,
+         `modifiedBy`) 
+         values ('Job on Manual and Automation Software Testing','/dharwadhubballitutor/Software-Testing-Job','','<h2><strong>Job Description:</strong></h2>
+<p>
+<br />
+<span code-block="1">
+</span><br />
+</p>
+<ol>
+<li>Candidate should have sound knowledge on Software Engineering Subject.</li>
+<li>Candidates should have good communication and analytical skill.</li>
+<li>Candidates should be interested in working on software testing profiles on manual and automation.</li>
+<li>Candidates must be from BCA, BE CS/IT, MCA, Bsc CS, or Msc CS, background.</li>
+<li>Currently, the work location is work from home. The company might call for work from the office in the future.</li>
+<li>Salary Depends on the interview performance.</li>
+</ol>
+<p><span code-block="1">
+</span><br />
+For Futher details please contact us on +91-8007961759/ +91-9741237334
+<br />
+</p>
+','2','info@acedecors.in','Job on Manual and Automation Software Testing','Job on manual and automation testing, Jobs near me, Software jobs, Jobs for BCA MCA Msc Bsc, IT jobs, Computer science,Graduations','info@acedecors.in')
+[30-May-2022 04:53:36 UTC] INSERT INTO `postimages`( `postImage`,
+        `createdBy`,
+        `modifiedBy`,
+        `imageAlternateText`,
+        `postId`)
+        VALUES('1_sllYRUilK-ueEikFP98XhQ.jpeg','info@acedecors.in','info@acedecors.in','Software testing job',94)
+[10-Jun-2022 13:09:45 UTC] 11
+[10-Jun-2022 13:09:45 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 11
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[10-Jun-2022 13:12:13 UTC] 1
+[10-Jun-2022 13:12:13 UTC] <p>HTML is an integral part of a syllabus for a web design course and is defined as a Hypertext Markup Language. In this subject, you will get to understand how HTML develops the general structure of a web page design as well as tags and the definition of HTML files. It is a key element of creating a website. 
+<br />
+</p>
+<h2><strong>Features of HTML:</strong> </h2>
+<ul>
+<li>It is easy to learn and easy to use.</li>
+<li>It is platform-independent.</li>
+<li>Images, videos, and audio can be added to a web page.</li>
+<li>Hypertext can be added to the text.</li>
+<li>It is a markup language.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Why learn HTML?</strong> </h2>
+<ul>
+<li>It is a simple markup language. Its implementation is easy.</li>
+<li>It is used to create a website.</li>
+<li>Helps in developing fundamentals about web programming.</li>
+<li>Boost professional career.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Advantages:</strong> </h2>
+<ul>
+<li>HTML is used to build websites.</li>
+<li>It is supported by all browsers.</li>
+<li>It can be integrated with other languages like CSS, JavaScript, etc.</li>
+</ul>
+
+[10-Jun-2022 13:12:13 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[10-Jun-2022 13:12:13 UTC] UPDATE `post` SET 
+    `postTitle`='HTML' , `postUrl`='/dharwadhubballitutor/HTML' , `appearOnHome`='1' , `postDescription`='<p>HTML is an integral part of a syllabus for a web design course and is defined as a Hypertext Markup Language. In this subject, you will get to understand how HTML develops the general structure of a web page design as well as tags and the definition of HTML files. It is a key element of creating a website. 
+<br />
+</p>
+<h2><strong>Features of HTML:</strong> </h2>
+<ul>
+<li>It is easy to learn and easy to use.</li>
+<li>It is platform-independent.</li>
+<li>Images, videos, and audio can be added to a web page.</li>
+<li>Hypertext can be added to the text.</li>
+<li>It is a markup language.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Why learn HTML?</strong> </h2>
+<ul>
+<li>It is a simple markup language. Its implementation is easy.</li>
+<li>It is used to create a website.</li>
+<li>Helps in developing fundamentals about web programming.</li>
+<li>Boost professional career.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Advantages:</strong> </h2>
+<ul>
+<li>HTML is used to build websites.</li>
+<li>It is supported by all browsers.</li>
+<li>It can be integrated with other languages like CSS, JavaScript, etc.</li>
+</ul>
+', `LinkUnder`='2' , `titleTag`='HTML' , `keywords`='Web design and development course in Hubli ,Digital Marketing course in Hubli , Civil Designing, Mechanical Designing, Programming courses in Hubli and dharwad' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=11
+[10-Jun-2022 13:12:13 UTC] 2
+[10-Jun-2022 13:15:07 UTC] 12
+[10-Jun-2022 13:15:07 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 12
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[10-Jun-2022 13:21:46 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[10-Jun-2022 13:21:46 UTC] 
+[10-Jun-2022 13:21:46 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[10-Jun-2022 13:21:46 UTC] <p>Cascading style sheets a.k.a CSS is the language used to understand the overall appearance of a web page that consists of its layout, fonts, colors, and themes. <span style="color: #4d5156;">Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</span> 
+<br />
+</p>
+<h2>Features</h2>
+<ul>
+<li>Opportunity in Web designing: If anyone wants to begin a career in web designing professionally, it is essential to have knowledge of CSS and HTML.</li>
+<li><strong style="color: #504b3a">Website Design: </strong>With the use of CSS, we can control various styles, such as the text color, the font style, the spacing among paragraphs, column size and layout, background color and images, design of the layout, display variations for distinct screens and device sizes, and many other effects as well.</li>
+<li><strong style="color: #504b3a">Web Control: </strong>CSS has controlling power over the documents of HTML, so it is easy to learn. It is integrated with the HTML and the XHTML markup languages.</li>
+<li><strong style="color: #504b3a">Other Languages: </strong>Once we have knowledge of some basics of CSS and HTML, other associated technologies like Angular, PHP, and JavaScript have become clearer to understand.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2>Advantages of CSS:</h2>
+<ul>
+<li><strong>CSS saves time:</strong> <span style="color: #000000;">You can write CSS once and then reuse the same sheet on multiple HTML pages. You can define a style for each HTML element and apply it to as many Web pages as you want.</span></li>
+<li><strong>Pages load faster:</strong> <span style="color: #000000;">If you are using CSS, you do not need to write HTML tag attributes every time. Just write one CSS rule of a tag and apply it to all the occurrences of that tag. So less code means faster download times.</span></li>
+<li><strong>Easy maintenance: </strong><span style="color: #000000;">To make a global change, simply change the style, and all elements in all the web pages will be updated automatically.</span></li>
+<li><strong>Superior styles to HTML: </strong><span style="color: #000000;">CSS has a much wider array of attributes than HTML, so you can give a far better look to your HTML page in comparison to HTML attributes.</span></li>
+<li><strong>Multiple Device Compatibility:</strong> <span style="color: #000000;">Style sheets allow content to be optimized for more than one type of device. By using the same HTML document, different versions of a website can be presented for handheld devices such as PDAs and cell phones or for printing.</span></li>
+<li><strong>Global web standards: </strong><span style="color: #000000;">Now HTML attributes are being deprecated and it is being recommended to use CSS. So it''s a good idea to start using CSS in all the HTML pages to make them compatible with future browsers.</span></li>
+</ul>
+<p>
+<br />
+</p>
+
+[10-Jun-2022 13:21:46 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[10-Jun-2022 13:21:46 UTC] UPDATE `post` SET 
+    `postTitle`='CSS' , `postUrl`='/dharwadhubballitutor/Cascading-style-sheet' , `appearOnHome`='' , `postDescription`='<p>Cascading style sheets a.k.a CSS is the language used to understand the overall appearance of a web page that consists of its layout, fonts, colors, and themes. <span style="color: #4d5156;">Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</span> 
+<br />
+</p>
+<h2>Features</h2>
+<ul>
+<li>Opportunity in Web designing: If anyone wants to begin a career in web designing professionally, it is essential to have knowledge of CSS and HTML.</li>
+<li><strong style="color: #504b3a">Website Design: </strong>With the use of CSS, we can control various styles, such as the text color, the font style, the spacing among paragraphs, column size and layout, background color and images, design of the layout, display variations for distinct screens and device sizes, and many other effects as well.</li>
+<li><strong style="color: #504b3a">Web Control: </strong>CSS has controlling power over the documents of HTML, so it is easy to learn. It is integrated with the HTML and the XHTML markup languages.</li>
+<li><strong style="color: #504b3a">Other Languages: </strong>Once we have knowledge of some basics of CSS and HTML, other associated technologies like Angular, PHP, and JavaScript have become clearer to understand.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2>Advantages of CSS:</h2>
+<ul>
+<li><strong>CSS saves time:</strong> <span style="color: #000000;">You can write CSS once and then reuse the same sheet on multiple HTML pages. You can define a style for each HTML element and apply it to as many Web pages as you want.</span></li>
+<li><strong>Pages load faster:</strong> <span style="color: #000000;">If you are using CSS, you do not need to write HTML tag attributes every time. Just write one CSS rule of a tag and apply it to all the occurrences of that tag. So less code means faster download times.</span></li>
+<li><strong>Easy maintenance: </strong><span style="color: #000000;">To make a global change, simply change the style, and all elements in all the web pages will be updated automatically.</span></li>
+<li><strong>Superior styles to HTML: </strong><span style="color: #000000;">CSS has a much wider array of attributes than HTML, so you can give a far better look to your HTML page in comparison to HTML attributes.</span></li>
+<li><strong>Multiple Device Compatibility:</strong> <span style="color: #000000;">Style sheets allow content to be optimized for more than one type of device. By using the same HTML document, different versions of a website can be presented for handheld devices such as PDAs and cell phones or for printing.</span></li>
+<li><strong>Global web standards: </strong><span style="color: #000000;">Now HTML attributes are being deprecated and it is being recommended to use CSS. So it''s a good idea to start using CSS in all the HTML pages to make them compatible with future browsers.</span></li>
+</ul>
+<p>
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='CSS' , `keywords`='Web design courses from top universities and industry leaders. Learn web designing online with courses like Web Design for Everybody: Basics of Web Development & Coding and HTML, CSS, and Javascript for Web Developers.' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=12
+[10-Jun-2022 13:21:46 UTC] 2
+[10-Jun-2022 13:23:46 UTC] 10
+[10-Jun-2022 13:23:46 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 10
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[10-Jun-2022 13:24:38 UTC] 1
+[10-Jun-2022 13:24:38 UTC] <p>Java is a language for programming and a forum. Java is a high-level, robust programming language that is object-oriented and stable. In 1995, Java was developed by Sun Microsystems (which is now Oracle''s subsidiary).Java is a general-purpose, class-based, object-oriented programming language designed for having lesser implementation dependencies. It is a computing platform for application development. Java is fast, secure, and reliable, therefore. It is widely used for developing Java applications in laptops, data centers, game consoles, scientific supercomputers, cell phones, etc. One of the most widely used programming languages, Java is used as the server-side language for most back-end development projects, including those involving big data and Android development. Java is also commonly used for desktop computing, other mobile computing, games, and numerical computing. 
+<br />
+<span code-block="1">
+</span><br />
+</p>
+<h2>Features of Java</h2>
+<ul>
+<li>It is one of the easy-to-use programming languages to learn.</li>
+<li>Write code once and run it on almost any computing platform.</li>
+<li>Java is platform-independent. Some programs developed in one machine can be executed in another machine.</li>
+<li>It is designed for building object-oriented applications.</li>
+<li>It is a multithreaded language with automatic memory management.</li>
+<li>It is created for the distributed environment of the Internet.</li>
+<li>Facilitates distributed computing as its network-centric.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2>What is Java used for?</h2>
+<ul>
+<li>It is used for developing Android Apps</li>
+<li>Helps you to create Enterprise Software</li>
+<li>Wide range of Mobile java Applications</li>
+<li>Scientific Computing Applications</li>
+<li>Use for Big Data Analytics</li>
+<li>Java Programming of Hardware devices</li>
+<li>Used for Server-Side Technologies like Apache, JBoss, GlassFish, etc.</li>
+</ul>
+<p>
+<br />
+ 
+<br />
+</p>
+
+[10-Jun-2022 13:24:38 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[10-Jun-2022 13:24:38 UTC] UPDATE `post` SET 
+    `postTitle`='Java' , `postUrl`='/dharwadhubballitutor/Java' , `appearOnHome`='1' , `postDescription`='<p>Java is a language for programming and a forum. Java is a high-level, robust programming language that is object-oriented and stable. In 1995, Java was developed by Sun Microsystems (which is now Oracle''s subsidiary).Java is a general-purpose, class-based, object-oriented programming language designed for having lesser implementation dependencies. It is a computing platform for application development. Java is fast, secure, and reliable, therefore. It is widely used for developing Java applications in laptops, data centers, game consoles, scientific supercomputers, cell phones, etc. One of the most widely used programming languages, Java is used as the server-side language for most back-end development projects, including those involving big data and Android development. Java is also commonly used for desktop computing, other mobile computing, games, and numerical computing. 
+<br />
+<span code-block="1">
+</span><br />
+</p>
+<h2>Features of Java</h2>
+<ul>
+<li>It is one of the easy-to-use programming languages to learn.</li>
+<li>Write code once and run it on almost any computing platform.</li>
+<li>Java is platform-independent. Some programs developed in one machine can be executed in another machine.</li>
+<li>It is designed for building object-oriented applications.</li>
+<li>It is a multithreaded language with automatic memory management.</li>
+<li>It is created for the distributed environment of the Internet.</li>
+<li>Facilitates distributed computing as its network-centric.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2>What is Java used for?</h2>
+<ul>
+<li>It is used for developing Android Apps</li>
+<li>Helps you to create Enterprise Software</li>
+<li>Wide range of Mobile java Applications</li>
+<li>Scientific Computing Applications</li>
+<li>Use for Big Data Analytics</li>
+<li>Java Programming of Hardware devices</li>
+<li>Used for Server-Side Technologies like Apache, JBoss, GlassFish, etc.</li>
+</ul>
+<p>
+<br />
+ 
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='Java' , `keywords`='Java' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=10
+[10-Jun-2022 13:24:38 UTC] 2
+[10-Jun-2022 13:25:00 UTC] 8
+[10-Jun-2022 13:25:00 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 8
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[10-Jun-2022 13:29:10 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[10-Jun-2022 13:29:10 UTC] 
+[10-Jun-2022 13:29:10 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[10-Jun-2022 13:29:10 UTC] <p>C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system. The main features of the C language include low-level access to memory, a simple set of keywords, and a clean style, these features make the C language suitable for system programs like an operating system or compiler development. <span align="justify">
+</span><br />
+ 
+<br />
+</p>
+<h2><strong>Features:</strong> </h2>
+<p> 
+<br />
+</p>
+<ol>
+<li>Procedural Language</li>
+<li>Fast and Efficient</li>
+<li>Modularity</li>
+<li>Statically Type</li>
+<li>General-Purpose Language</li>
+<li>Rich set of built-in Operators</li>
+<li>Libraries with rich Functions</li>
+<li>Middle-Level Language</li>
+<li>Portability</li>
+<li>Easy to Extend</li>
+</ol>
+<p>
+<br />
+</p>
+
+[10-Jun-2022 13:29:10 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[10-Jun-2022 13:29:10 UTC] UPDATE `post` SET 
+    `postTitle`='C Language' , `postUrl`='/dharwadhubballitutor/C-Language' , `appearOnHome`='' , `postDescription`='<p>C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system. The main features of the C language include low-level access to memory, a simple set of keywords, and a clean style, these features make the C language suitable for system programs like an operating system or compiler development. <span align="justify">
+</span><br />
+ 
+<br />
+</p>
+<h2><strong>Features:</strong> </h2>
+<p> 
+<br />
+</p>
+<ol>
+<li>Procedural Language</li>
+<li>Fast and Efficient</li>
+<li>Modularity</li>
+<li>Statically Type</li>
+<li>General-Purpose Language</li>
+<li>Rich set of built-in Operators</li>
+<li>Libraries with rich Functions</li>
+<li>Middle-Level Language</li>
+<li>Portability</li>
+<li>Easy to Extend</li>
+</ol>
+<p>
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='C Language' , `keywords`='C Language' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=8
+[10-Jun-2022 13:29:10 UTC] 2
+[10-Jun-2022 13:29:23 UTC] 16
+[10-Jun-2022 13:29:23 UTC] SELECT
+    sub.subCategoryId,
+    sub.subCategoryName,
+    CASE WHEN TEMP.postId IS NULL THEN
+    FALSE
+    ELSE
+    TRUE
+    END AS postId
+    FROM subcategory AS sub
+    LEFT JOIN (SELECT p.postId AS postId,
+         M.subCatId AS subCatId
+     FROM
+         post AS p
+     LEFT JOIN postsubcatmapping AS M
+     ON
+         p.postId = M.postId
+     WHERE
+         p.postId = 16
+ ) AS TEMP
+ ON
+     sub.subCategoryId = TEMP.subCatId
+[10-Jun-2022 13:31:07 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 15
+[10-Jun-2022 13:31:07 UTC] 
+[10-Jun-2022 13:31:07 UTC] PHP Notice:  Undefined index: onHome in /home/k7ip32bqokgo/public_html/blogadmin/controller/postController.php on line 16
+[10-Jun-2022 13:31:07 UTC] <p><span style="color: #333333;">PHP is an open-source, interpreted, and object-oriented scripting language that can be executed on the server-side. PHP is well suited for web development. Therefore, it is used to develop web applications.</span> 
+<br />
+</p>
+<h2><span style="color: #333333;">Features:</span></h2>
+<ul>
+<li><strong>Performance:</strong> PHP script is executed much faster than those scripts which are written in other languages such as JSP and ASP. PHP uses its own memory, so the server workload and loading time are automatically reduced, which results in faster processing speed and better performance.</li>
+<li><strong>Open Source: </strong>PHP source code and software are freely available on the web. You can develop all the versions of PHP according to your requirement without paying any cost. All its components are free to download and use.</li>
+<li><strong>Familiarity with the syntax: </strong>PHP has easily understandable syntax. Programmers are comfortable coding with it.</li>
+<li><strong>Embedded:</strong> PHP code can be easily embedded within HTML tags and scripts.</li>
+<li><strong>Platform Independent:</strong> PHP is available for WINDOWS, MAC, LINUX &amp; UNIX operating systems. A PHP application developed in one OS can be easily executed in another OS also.</li>
+<li><strong>Database Support: </strong>PHP supports all the leading databases such as MySQL, SQLite, ODBC, etc.</li>
+<li><strong>Error Reporting:</strong> PHP has predefined error reporting constants to generate an error notice or warning at runtime.</li>
+<li><strong>Loosely Typed Language:</strong> PHP allows us to use a variable without declaring its data type. It will be taken automatically at the time of execution based on the type of data it contains on its value.</li>
+<li><strong>Web servers Support:</strong> PHP is compatible with almost all local servers used today like Apache, Netscape, Microsoft IIS, etc.</li>
+<li><strong>Security:</strong> PHP is a secure language to develop the website. It consists of multiple layers of security to prevent threats and malicious attacks.</li>
+<li><strong>Control: </strong>Different programming languages require long scripts or code, whereas PHP can do the same work in a few lines of code. It has maximum control over the websites like you can make changes easily whenever you want.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Advantages:</strong>  </h2>
+<ol>
+<li>The most important advantage of PHP is that it’s open-source and free from cost. It can be downloaded anywhere and is readily available to use for events or web applications. </li>
+<li>It is platform-independent. PHP-based applications can run on any OS like UNIX, Linux, and Windows, etc. </li>
+<li>Applications can easily be loaded which are based on PHP and connected to the database. It’s mainly used due to its faster rate of loading over slow internet speed than other programming language. </li>
+<li>It has less learning curve because it is simple and straightforward to use. Someone familiar with C programming can easily work on PHP. </li>
+<li>It is more stable for a few years with the assistance of providing continuous support to various versions. </li>
+<li>It helps in reusing an equivalent code and not got have to write lengthy code and sophisticated structure for events of web applications. </li>
+<li>It helps in managing code easily. </li>
+<li>It has powerful library support to use various function modules for data representation. </li>
+<li>PHP’s built-in database connection modules help in the connecting database easily reducing trouble and time for the development of web applications and content-based sites. </li>
+<li>The popularity of PHP gave rise to the various communities of developers, a fraction of which may be potential candidates for hire. </li>
+<li>Flexibility makes PHP ready to effectively combine with many other programming languages in order that the software package could use foremost effective technology for every particular feature.</li>
+</ol>
+<p>
+<br />
+</p>
+
+[10-Jun-2022 13:31:07 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/k7ip32bqokgo/public_html/blogadmin/Utilities/Helper.php on line 13
+[10-Jun-2022 13:31:07 UTC] UPDATE `post` SET 
+    `postTitle`='PHP' , `postUrl`='/dharwadhubballitutor/PHP' , `appearOnHome`='' , `postDescription`='<p><span style="color: #333333;">PHP is an open-source, interpreted, and object-oriented scripting language that can be executed on the server-side. PHP is well suited for web development. Therefore, it is used to develop web applications.</span> 
+<br />
+</p>
+<h2><span style="color: #333333;">Features:</span></h2>
+<ul>
+<li><strong>Performance:</strong> PHP script is executed much faster than those scripts which are written in other languages such as JSP and ASP. PHP uses its own memory, so the server workload and loading time are automatically reduced, which results in faster processing speed and better performance.</li>
+<li><strong>Open Source: </strong>PHP source code and software are freely available on the web. You can develop all the versions of PHP according to your requirement without paying any cost. All its components are free to download and use.</li>
+<li><strong>Familiarity with the syntax: </strong>PHP has easily understandable syntax. Programmers are comfortable coding with it.</li>
+<li><strong>Embedded:</strong> PHP code can be easily embedded within HTML tags and scripts.</li>
+<li><strong>Platform Independent:</strong> PHP is available for WINDOWS, MAC, LINUX &amp; UNIX operating systems. A PHP application developed in one OS can be easily executed in another OS also.</li>
+<li><strong>Database Support: </strong>PHP supports all the leading databases such as MySQL, SQLite, ODBC, etc.</li>
+<li><strong>Error Reporting:</strong> PHP has predefined error reporting constants to generate an error notice or warning at runtime.</li>
+<li><strong>Loosely Typed Language:</strong> PHP allows us to use a variable without declaring its data type. It will be taken automatically at the time of execution based on the type of data it contains on its value.</li>
+<li><strong>Web servers Support:</strong> PHP is compatible with almost all local servers used today like Apache, Netscape, Microsoft IIS, etc.</li>
+<li><strong>Security:</strong> PHP is a secure language to develop the website. It consists of multiple layers of security to prevent threats and malicious attacks.</li>
+<li><strong>Control: </strong>Different programming languages require long scripts or code, whereas PHP can do the same work in a few lines of code. It has maximum control over the websites like you can make changes easily whenever you want.</li>
+</ul>
+<p>
+<br />
+</p>
+<h2><strong>Advantages:</strong>  </h2>
+<ol>
+<li>The most important advantage of PHP is that it’s open-source and free from cost. It can be downloaded anywhere and is readily available to use for events or web applications. </li>
+<li>It is platform-independent. PHP-based applications can run on any OS like UNIX, Linux, and Windows, etc. </li>
+<li>Applications can easily be loaded which are based on PHP and connected to the database. It’s mainly used due to its faster rate of loading over slow internet speed than other programming language. </li>
+<li>It has less learning curve because it is simple and straightforward to use. Someone familiar with C programming can easily work on PHP. </li>
+<li>It is more stable for a few years with the assistance of providing continuous support to various versions. </li>
+<li>It helps in reusing an equivalent code and not got have to write lengthy code and sophisticated structure for events of web applications. </li>
+<li>It helps in managing code easily. </li>
+<li>It has powerful library support to use various function modules for data representation. </li>
+<li>PHP’s built-in database connection modules help in the connecting database easily reducing trouble and time for the development of web applications and content-based sites. </li>
+<li>The popularity of PHP gave rise to the various communities of developers, a fraction of which may be potential candidates for hire. </li>
+<li>Flexibility makes PHP ready to effectively combine with many other programming languages in order that the software package could use foremost effective technology for every particular feature.</li>
+</ol>
+<p>
+<br />
+</p>
+', `LinkUnder`='2' , `titleTag`='PHP' , `keywords`='PHP' , `modifiedBy`='info@acedecors.in'  WHERE `postId`=16
+[10-Jun-2022 13:31:07 UTC] 2
+[22-Jun-2022 05:49:58 UTC] insert into privacypolicy (`description` ) 
+      values ('<ol>
+<li>We collect your basic information like name, phone, email address, and aadhar details.</li>
+<li>We do not share your information collected with any third party.</li>
+<li>The information collect is not published anywhere on the internet.</li>
+</ol>
+')
+[22-Jun-2022 05:55:09 UTC] insert into termsandconditions (`description` ) 
+    values ('<ol>
+<li>100% fee needs to be paid before starting the classes for any course.</li>
+<li>Should a student cause any damage to the institution's property, they are to be held responsible for compensation including full costs of repair.</li>
+<li>Students are expected to observe and act upon the class timetable and must attend all classes on time.</li>
+<li>Once the fee is paid, it will not be refunded.</li>
+<li>After Making the payment if the student doesn't attend any class for a month, then the fees paid would get lapsed and further students need to make repayment of a fee to take the classes again.</li>
+</ol>
+')
+[25-Jul-2022 10:55:23 UTC] info@acedecors.in

@@ -66,8 +66,9 @@
 <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
 <script>
     var config = {
-        "developmentPath": window.location.origin + "/dharwadhubballitutor",
-        "productionPath": window.location.origin
+        "productionPath": window.location.origin + "/dharwadhubballitutor",
+        "developmentPath": window.location.origin
+        
     };
 </script>
 
@@ -83,17 +84,18 @@
         console.log(array);  
        
         console.log('#myTab button[data-bs-target="#'+array[1]+'"]');
-        var triggerEl = document.querySelector('#myTab button[data-bs-target="#'+array[1]+'"]')
-        var tabTrigger = new bootstrap.Tab(triggerEl)
-        tabTrigger.show()
+        var triggerEl = document.querySelector('#myTab button[data-bs-target="#'+array[1]+'"]');
+        console.log(triggerEl);
+        var tabTrigger = new bootstrap.Tab(triggerEl);
+        tabTrigger.show();
 
-        var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
+        var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'));
         triggerTabList.forEach(function(triggerEl) {
-            var tabTrigger = new bootstrap.Tab(triggerEl)
+            var tabTrigger = new bootstrap.Tab(triggerEl);
 
             triggerEl.addEventListener('click', function(event) {
                 event.preventDefault()
-                tabTrigger.show()
+                tabTrigger.show();
             })
         });
     });

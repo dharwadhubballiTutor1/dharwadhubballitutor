@@ -35,4 +35,22 @@ class DBfacebook
     if ($connectionObj->query($sql) === true) {
     }
   }
+  
+  public static function getPlugin(){
+      $db = ConnectDb::getInstance();
+    $connectionObj = $db->getConnection();
+    $sql = "SELECT * FROM facebookchatplugin ";
+    $result = $connectionObj->query($sql);
+    $count = mysqli_num_rows($result);
+        if($count>0){
+          while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+            $plugin=new facebook();
+            $plugin->setId($row["Id"]);
+            $plugin->setPluginCode($row["PluginCode"]);
+            
+          }
+        }
+        return $plugin;
+  }
+  
 }

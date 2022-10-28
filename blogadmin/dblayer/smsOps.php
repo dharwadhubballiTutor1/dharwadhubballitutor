@@ -53,6 +53,28 @@ class DBsms
         }
         return $sms;
     }
+
+    public static function getAllsmsDetails()
+    {
+        $db = ConnectDb::getInstance();
+        $connectionObj = $db->getConnection();
+        $sql = "SELECT * FROM smsdetails";
+        $result = $connectionObj->query($sql);
+        $count = mysqli_num_rows($result);
+       
+        if ($count > 0) {
+            while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                $sms = new Sms();
+                $sms->settest($row["test"]);
+                $sms->setusername($row["username"]);
+                $sms->setAPIkey($row["APIkey"]);
+                $sms->setKey($row["key"]);
+                
+            }
+        }
+        return $sms;
+    }
+
     public static function update($sms)
     {
         $db = ConnectDb::getInstance();

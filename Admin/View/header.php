@@ -1,4 +1,4 @@
-<?php
+ <?php
 require_once "../DB Operations/notificationOps.php";
 
 ?>
@@ -40,6 +40,13 @@ require_once "../DB Operations/notificationOps.php";
         #editor-container {
             height: 375px;
         }
+        
+        div.auto{
+            width : 310px;
+            height : 310px;
+            overflow : auto;
+        }
+        
     </style>
 </head>
 
@@ -56,13 +63,16 @@ $notification = DBnotification::getnotifications();
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
                 <div class="sidebar-brand-icon">
-                    <h3 class="brandName text-center">DharwadHubballiTutor</h3> <br>
+                    <br/>
+                    
+                    <h3 class="brandName text-center">DharwadHubballi Tutor</h3> <br>
                 </div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-            <li class="nav-item">
+
+            <li class="nav-item" <?php if($_SESSION['Role_Id']==2){echo "style='display:none'";} ?>>
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-tachometer-alt"></i>
                     <span> Dashboard</span>
@@ -79,6 +89,21 @@ $notification = DBnotification::getnotifications();
                     <span>Admissions </span>
                 </a>
             </li>
+            
+             <li class="nav-item">
+                <a class="nav-link" href="company.php">
+                <i class="fas fa-building"></i>
+                    <span>Company </span>
+                </a>
+            </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" href="Expense.php">
+                <i class="fas fa-money-bill-alt"></i>
+                    <span>Expense </span>
+                </a>
+            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="trainers.php">
                     <i class="fas fa-user-circle" aria-hidden="true"></i>
@@ -161,17 +186,21 @@ $notification = DBnotification::getnotifications();
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
+                                       
                                         <span class="">
+                                             <div class="auto">
                                             <?php
                                             $result = "";
                                             $notificationlist = DBnotification::getAllnotifications();
                                             foreach ($notificationlist as $notification) {
                                                 $result .= '<a class="dropdown-item my-2"  href="enquiries.php?id=' . $notification->getCategory() . '">
-                                                 ' . $notification->getId() .  '  ' . $notification->getMessage() .  '</a>';
+                                                   ' . $notification->getMessage() .  '</a>';
                                             }
                                             echo $result;
                                             ?>
+                                                                                    </div>
                                         </span>
+
                                     </div>
                                 </li>
                             </ul>

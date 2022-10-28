@@ -97,7 +97,7 @@ $template = DBtemplate::getAlltemplate();
         <div class="row ">
             <div class="card-header">Template</div>
             <div class="col" align="right">
-                <span data-toggle=modal data-target=#addModal>
+                <span data-bs-toggle=modal data-bs-target=#addModal>
                     <button type="button" + class="btn btn-warning btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                 </span>
             </div>
@@ -122,23 +122,23 @@ $template = DBtemplate::getAlltemplate();
                         <button class='btn btn-secondary dropdown-toggle' 
                         type='button' 
                         id='dropdownMenu2' 
-                        data-toggle='dropdown' 
+                        data-bs-toggle='dropdown' 
                         aria-expanded='false'>
                         Actions
                         </button>
                         <div class='dropdown-menu' 
                         aria-labelledby='dropdownMenu2'>
                             <button class='btn btn-primary dropdown-item'
-                            data-toggle='modal' 
-                            data-target='#editModal' 
+                            data-bs-toggle='modal' 
+                            data-bs-target='#editModal' 
                             role='button' 
                             data-id='" . $template->getmessageId() . "'>
                             <i class='fas fa-user-edit'></i> 
                                 Edit template
                            </button>
                            <button class='btn btn-primary dropdown-item'
-                           data-toggle='modal' 
-                           data-target='#deleteModal' 
+                           data-bs-toggle='modal' 
+                           data-bs-target='#deleteModal' 
                            name='delete_button' 
                            role='button' 
                            data-id='" . $template->getmessageId() . "'>
@@ -164,7 +164,7 @@ $template = DBtemplate::getAlltemplate();
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Template</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <span id="form_message"></span>
@@ -188,7 +188,7 @@ $template = DBtemplate::getAlltemplate();
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <input type="submit" name="submit" id="submit_button" class="btn btn-success" value="Add" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -202,7 +202,7 @@ $template = DBtemplate::getAlltemplate();
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Template</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <span id="form_message"></span>
@@ -241,7 +241,7 @@ $template = DBtemplate::getAlltemplate();
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <input type="submit" name="submit" id="editbutton" class="btn btn-success" value="Save" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -254,7 +254,7 @@ $template = DBtemplate::getAlltemplate();
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Delete Template</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <p class="lead">
@@ -265,7 +265,7 @@ $template = DBtemplate::getAlltemplate();
                 <div class="modal-footer">
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="submit" name="submit" id="deletebutton" class="btn btn-danger" value="Confirmed" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </form>

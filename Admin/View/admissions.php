@@ -3,7 +3,7 @@ require "../session.php";
 require_once "../DB Operations/enqueryOps.php";
 require_once "../../Admin/DB Operations/AdmissionsOps.php";
 include "../../Admin/DB Operations/CoursesOps.php";
-require_once "../../Admin/Model/Admissionsmodel.php";
+require_once "../../Admin/model/Admissionsmodel.php";
 require_once "header.php"
 ?>
 <div class="card">
@@ -103,7 +103,7 @@ require_once "header.php"
                         <div class="col-md-6">
                             <label for="qualification" class="col-md-6 control-label">Qualification</label>
                             <div class="col-sm-12">
-                                <input type="text" id="qualification" name="qualification" placeholder="Your Qualification" class="form-control" pattern="[A-Za-z]+" required>
+                                <input type="text" id="qualification" name="qualification" placeholder="Your Qualification" class="form-control"  required>
                             </div>
                         </div>
                         <br />
@@ -193,7 +193,7 @@ require_once "header.php"
                     <thead>
                         <tr>
                             <th style='display:none'> Id</th>
-                            <th>Creted Date</th>
+                            <th>Created Date</th>
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Email</th>
@@ -207,7 +207,7 @@ require_once "header.php"
                     </thead>
                     <?php
                     echo  "<tbody>";
-                    $admissionlist = DBadmission::searchadmission();
+                    $admissionlist = DBadmission::selectall();
                     foreach ($admissionlist as $admission) {
                         echo "<tr><td style='display:none'> "  . $admission->get_id() .
                         "</td><td>"  . $admission->getCreateddate() .

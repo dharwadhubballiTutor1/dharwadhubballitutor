@@ -1,11 +1,11 @@
 <?php
 class userLoginModel
     {
-
         private $user_name;
         private $user_password;
         private $user_type;
         private $user_status;
+        private $user_role;
         
         function set_username($username){
             $this->user_name= $username;
@@ -35,5 +35,24 @@ class userLoginModel
             return $this->user_status;
         }
     
+
+        /**
+         * Get the value of user_role
+         */
+        public function getUserRole()
+        {
+                return $this->user_role;
+        }
+
+
+        /**
+         * Set the value of user_role
+         */
+        public function setUserRole($user_role)
+        {
+                $this->user_role = $user_role;
+
+                return $this;
+        }
     }
 ?>

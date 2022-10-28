@@ -38,6 +38,27 @@ class DBtemplate
     return $templatelist;
   }
 
+
+  public static function getSenderandMessage()
+  {
+    $db = ConnectDb::getInstance();
+    $connectionObj = $db->getConnection();
+    $sql = "SELECT * FROM template";
+    $result = $connectionObj->query($sql);
+    $count = mysqli_num_rows($result);
+    if ($count > 0) {
+      while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        $template = new template();
+        $template->setmessageId($row['messageId']);
+        $template->setsender($row['sender']);
+        $template->setmessage($row['message']);
+      }
+    } else {
+      echo "";
+    }
+    return $template;
+  }
+
   public static function update($templateobj)
   {
     $db = ConnectDb::getInstance();

@@ -13,7 +13,7 @@ require_once("../model/subcategorymodel.php");
                 <h6 class="m-0 font-weight-bold text-primary">SubCategory</h6>
             </div>
             <div class="col" align="right">
-                <span data-toggle=modal data-target=#subcatModal>
+                <span data-bs-toggle=modal data-bs-target=#subcatModal>
                     <button type="button" + class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                 </span>
             </div>
@@ -41,22 +41,22 @@ require_once("../model/subcategorymodel.php");
                         <button class='btn btn-secondary dropdown-toggle' 
                         type='button' 
                         id='dropdownMenu2' 
-                        data-toggle='dropdown' 
+                        data-bs-toggle='dropdown' 
                         aria-expanded='false'>
                         Actions
                         </button>
                         <div class='dropdown-menu' 
                         aria-labelledby='dropdownMenu2'>
                             <button class='btn btn-primary dropdown-item'
-                            data-toggle='modal' 
-                            data-target='#edititemsubcatModal' 
+                            data-bs-toggle='modal' 
+                            data-bs-target='#edititemsubcatModal' 
                             role='button' 
                             data-id='" . $itemsubcat->getSubCategoryId() . "'>
                             <i class='fas fa-user-edit'></i> 
                                 Edit SubCategory
                            </button>
                            <button class='btn btn-primary dropdown-item'
-                           data-toggle='modal' data-target='#deleteSubCategoryModal' 
+                           data-bs-toggle='modal' data-bs-target='#deleteSubCategoryModal' 
                            name='delete_button' 
                            role='button' 
                            data-id='" . $itemsubcat->getSubCategoryId() . "'>
@@ -76,11 +76,11 @@ require_once("../model/subcategorymodel.php");
 <?php include('footer.php'); ?>
 <div class="modal fade" id=subcatModal tabindex=-1 role=dialog aria-hidden=true>
     <div class="modal-dialog modal-lg">
-        <form method="post" id="user_form" action="../Controller/subcategoryController.php">
+        <form method="post" id="user_form" action="../controller/subcategoryController.php">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Add SubCategory</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -130,7 +130,7 @@ require_once("../model/subcategorymodel.php");
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="hidden" name="action" id="action" value="Add" />
                     <input type="submit" name="submit" id="submit_button" class="btn btn-success" value="Add" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </form>
@@ -138,11 +138,11 @@ require_once("../model/subcategorymodel.php");
 </div>
 <div class="modal fade" id=edititemsubcatModal tabindex=-1 role=dialog aria-hidden=true>
     <div class="modal-dialog modal-lg">
-        <form method="post" id="itemsubcat_form" action="../Controller/subcategoryController.php">
+        <form method="post" id="itemsubcat_form" action="../controller/subcategoryController.php">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Edit SubCategory</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <span id="form_message"></span>
@@ -196,7 +196,7 @@ require_once("../model/subcategorymodel.php");
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="hidden" name="action" id="action" value="Add" />
                     <input type="submit" name="submit" id="editbutton" class="btn btn-success" value="Save" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </form>
@@ -208,7 +208,7 @@ require_once("../model/subcategorymodel.php");
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Delete Sub Category</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <p class="lead">
@@ -219,52 +219,62 @@ require_once("../model/subcategorymodel.php");
                 <div class="modal-footer">
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="submit" name="submit" id="deletebutton" class="btn btn-danger" value="Confirmed" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
 <script>
+ 
     $(document).ready(function() {
 
         isCategorySet = false;
-        $('#edititemsubcatModal').on('show.bs.modal', function(e) {
+        $('#edititemsubcatModal').on('shown.bs.modal', function(e) {
+            debugger;
             var rowid = $(e.relatedTarget).data('id');
             $('#itemsubcatid').val(rowid);
-                $('#editcategoryCheckBox').empty();
-                var checked=""
-              
-                $.getJSON(config.developmentPath + "/blogadmin/Controller/categoryController.php/?subCatId="+rowid, function(data) {
-                    $.each(data, function(index, value) {
-                        if(value.mappedSubCategory==0){
+                
+                var checked="";
+                console.log(config.developmentPath + "/blogadmin/controller/categoryController.php/?subCatId=" + rowid);
+                 $.getJSON(config.developmentPath + "/blogadmin/controller/categoryController.php/?subCatId=" + rowid, function(data) {
+                     $('#editcategoryCheckBox').empty();
+                     $.each(data, function(index, value) {
+                        if(value.MappedSubCategory==0){
                              checked=false;
                         }else{
                              checked=true;
                         }
-                        $('#editcategoryCheckBox').append($(document.createElement('div')).prop({
-                            class: "form-check form-switch form-check-inline"
-                        }));
-                        $('#editcategoryCheckBox div:last').append($(document.createElement('input')).prop({
-                            class: "form-check-input",
-                            type: "checkbox",
-                            name: "category[]",
-                            checked:checked,
-                            value: value.itemcatid
-                        }));
-                        $('#editcategoryCheckBox div:last').append($(document.createElement('label')).prop({
-                            class: "form-check-label",
-                            for: "flexSwitchCheckDefault",
-                            innerHTML: value.itemcatname
-                        }));
+                        $('#editcategoryCheckBox').append(
+                    $(document.createElement('div')).prop({
+                        class: 'form-check form-switch form-check-inline'
+                    }).append(
+                        $(document.createElement('input')).prop({
+                            class: 'form-check-input me-1',
+                            id: 'editcategoryCheckBox',
+                            name: 'category[]',
+                            checked: checked,
+                            value: value.CategoryId,
+                            type: 'checkbox',
+
+                        })).append(
+                        $(document.createElement('label')).prop({
+                            for: 'myCheckBox'
+                        }).html(value.CategoryName)
+                    ).append(document.createElement('br')));
+                        
                     });
                 });
-                
+                   
         });
         var dataTable = $('#subcat_table').DataTable({});
+
         $('#subcatModal').on('show.bs.modal', function(e) {
+                  debugger;
             if (isCategorySet == false) {
-                $.getJSON(config.developmentPath + "/blogadmin/Controller/categoryController.php", function(data) {
+                console.log(config.developmentPath + "/blogadmin/controller/categoryController.php");
+                $.getJSON(config.developmentPath + "/blogadmin/controller/categoryController.php", function(data) {
+                    
                     $.each(data, function(index, value) {
                         $('#categoryCheckBox').append($(document.createElement('div')).prop({
                             class: "form-check form-switch form-check-inline"
@@ -273,12 +283,12 @@ require_once("../model/subcategorymodel.php");
                             class: "form-check-input",
                             type: "checkbox",
                             name: "category[]",
-                            value: value.itemcatid
+                            value: value.CategoryId
                         }));
                         $('#categoryCheckBox div:last').append($(document.createElement('label')).prop({
                             class: "form-check-label",
                             for: "flexSwitchCheckDefault",
-                            innerHTML: value.itemcatname
+                            innerHTML: value.CategoryName
                         }));
                     });
                 });

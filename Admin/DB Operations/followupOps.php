@@ -1,7 +1,7 @@
 <?php
 // require "../Admin/session.php";
 require_once "../../DB Operations/dbconnection.php";
-require_once "../Model/followupmodel.php";
+require_once "../model/followupmodel.php";
 class DBfollow
 {
   public static function getFollowUpByEnqId($enqId)

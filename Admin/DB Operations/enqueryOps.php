@@ -1,7 +1,7 @@
 <?php
 // require "../Admin/session.php";
 require_once "../../DB Operations/dbconnection.php";
-require_once "../../Admin/Model/EnqueryModel.php";
+require_once "../../Admin/model/EnqueryModel.php";
 
 class DBenquery
 {
@@ -52,12 +52,14 @@ class DBenquery
                 error_log($sql);
                 $followup = mysqli_query($connectionObj, $sql);
                 $row2 = mysqli_fetch_assoc($followup);
-
-                $enqueryModel->set_followenqid($row2["followup_enq_id"]);
-                $enqueryModel->set_followupDate($row2["followupDate"]);
-                $enqueryModel->set_status($row2["status"]);
-                array_push($enquirylist, $enqueryModel);
-
+                $count = mysqli_num_rows($followup);
+                if ($count > 0) {
+                    $enqueryModel->set_followenqid($row2["followup_enq_id"]);
+                    $enqueryModel->set_followupDate((date('d-m-y', strtotime($row2["followupDate"])) == '01-01-70') ? "" : date('d-m-y', strtotime($row2["followupDate"])));
+                    $enqueryModel->set_status($row2["status"]);
+                    array_push($enquirylist, $enqueryModel);
+                }
+                
             }
         } else {
             echo "0 results";

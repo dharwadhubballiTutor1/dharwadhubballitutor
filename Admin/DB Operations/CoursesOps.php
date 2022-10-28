@@ -1,14 +1,14 @@
 <?php
 // require "../Admin/session.php";
 $dirPath1 = "DB Operations/dbconnection.php";
-$dirPath2 = "Admin/Model/Coursesmodel.php";
+$dirPath2 = "Admin/model/Coursesmodel.php";
 
 if (file_exists($dirPath1) && file_exists($dirPath2)) {
   require_once "DB Operations/dbconnection.php";
-  require_once "Admin/Model/Coursesmodel.php";
+  require_once "Admin/model/Coursesmodel.php";
 } else {
   require_once "../../DB Operations/dbconnection.php";
-  require_once "../../Admin/Model/Coursesmodel.php";
+  require_once "../../Admin/model/Coursesmodel.php";
 }
 class DBcourse
 {
@@ -98,5 +98,23 @@ class DBcourse
       $row = mysqli_fetch_assoc($result);
       return $row['CName'];
     }
+  }
+  
+  public static function getCourseByAdmissionid($admitid)
+  {
+    $db = ConnectDb::getInstance();
+    $connectionObj = $db->getConnection();
+    $result = mysqli_query($db->getConnection(), 'SELECT CoursesOpted FROM admissions where id =' . $admitid . '');
+    error_log("SELECT CoursesOpted FROM admissions where id=' . $admitid . '");
+    if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        $view = new Admissions();
+      
+        $view->set_coursesopted($row['CoursesOpted']);
+      }
+    } else {
+      echo "0 results";
+    }
+    return $view;
   }
 }

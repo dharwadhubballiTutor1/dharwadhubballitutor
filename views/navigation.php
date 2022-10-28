@@ -10,6 +10,7 @@ require_once ("blogadmin/dblayer/PrivacyPolicyOps.php");
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
 <?php
   $courselist = DBcourse::selectall();
@@ -83,7 +84,7 @@ require_once ("blogadmin/dblayer/PrivacyPolicyOps.php");
         <div class="col-md-1"></div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?php echo $configs['app_info']['appName'] ?>">Home</a>
+            <a class="nav-link active" aria-current="page" href="/dharwadhubballitutor/">Home</a>
           </li>
           <?php
           $categoryList = DBcategory::getAllCategory();

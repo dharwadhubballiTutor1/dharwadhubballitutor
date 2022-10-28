@@ -129,6 +129,7 @@ class DBcategory
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     $result = mysqli_query($connectionObj, 'SELECT categoryId, categoryName FROM category where HasSubcategory =1');
+      error_log($result);
     $itemcatlist = [];
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_assoc($result)) {
@@ -170,7 +171,8 @@ class DBcategory
     LEFT JOIN ( SELECT subC.subCategoryId AS subCatId, 
     M.catId AS catId from subcategory AS subC 
     LEFT JOIN catsubcatmapping AS M on subC.subCategoryId=M.sucatId 
-    WHERE subC.subCategoryId=" . $subCategoryId . " ) AS TEMP ON C.categoryId= TEMP.catId WHERE C.HasSubcategory=1";
+    WHERE subC.subCategoryId=" . $subCategoryId . " ) AS TEMP ON C.categoryId= TEMP.catId WHERE C.HasSubcategory=1 ";
+    error_log($sql);
     $result = mysqli_query($connectionObj, $sql);
     $itemcatlist = [];
     error_log(mysqli_num_rows($result));

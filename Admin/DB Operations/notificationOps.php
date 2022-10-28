@@ -1,7 +1,7 @@
 <?php
 // require "../Admin/session.php";
 require_once "../../DB Operations/dbconnection.php";
-require_once "../../Admin/Model/notificationModel.php";
+require_once "../../Admin/model/notificationModel.php";
 
 class DBnotification
 {
@@ -27,7 +27,7 @@ class DBnotification
   {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
-    $sql = 'SELECT * FROM notification';
+    $sql = 'SELECT * FROM notification ORDER BY Id DESC';
     $result = $connectionObj->query($sql);
     $count = mysqli_num_rows($result);
     $notificationlist = [];

@@ -3,6 +3,8 @@ require "../../Model/Registration.php";
 require "../Utilities/Sanitization.php";
 include "../../Admin/DB Operations/enqueryOps.php";
 include "../../Admin/DB Operations/notificationOps.php";
+include "../../blogadmin/dblayer/smsOps.php";
+include "../../blogadmin/dblayer/templateOps.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['id'])) {
@@ -67,8 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <html>
 
-<head>
-</head>
+    $reg->set_trainings(Sanitization::test_input($_POST["trainings2"]));
+    $reg->set_demo(Sanitization::test_input($_POST["democlass"]));
+    $reg->set_internship(Sanitization::test_input($_POST["internship2"]));
+    $reg->set_services(Sanitization::test_input($_POST["services"]));
 
 <body>
 
@@ -76,7 +80,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   header("location:../View/enquiries.php");
   ?>
 
+    $smsDetails=DBsms::getAllsmsDetails();
+    $SenderMessage=DBtemplate::getSenderandMessage();
+    $message=new sms();
+    $message->setNumbers($reg->get_phone());
+    
+   $msg= str_replace("{name}",$reg->get_name(),$SenderMessage->getmessage())   ; 
+   error_log($msg);
+   error_log($reg->get_phone());
+   $message->setMessage($msg); 
+    $message->setSender($SenderMessage->getsender());     
+    $message->setusername($smsDetails->getusername());     
+    $message->setAPIkey($smsDetails->getAPIkey()); 
+    $message->setKey($smsDetails->getKey());
+    DBenquery::insert($reg);
+    $message->sendSMS(); 
+    $notification = new Notification();
+    $notification->setStatus('1');
 
-</body>
+  if (!empty($_POST['trainings2'])) {
+      $notification->setMessage('There Has Been an enquiry for Training');
+      $notification->setCategory('trainings-tab-content');
+    } else if (!empty($_POST['internship2'])) {
+      $notification->setMessage('There Has Been an enquiry for Internship');
+      $notification->setCategory('Internship-tab-content');
+    } else if (!empty($_POST['services'])) {
+      $notification->setMessage('There Has Been an enquiry for Services');
+      $notification->setCategory('services-tab-content');
+    } else if (!empty($_POST['democlass'])) {
+      $notification->setMessage('There Has Been an enquiry for democlass');
+      $notification->setCategory('democlass-tab-content');
+    }
+    DBnotification::insert($notification);
+  }
+}
 
-</html>
+if(Sanitization::test_input($_POST["front"])=="front"){
+    header("location:../../");
+}else{
+  
+  header("location:../View/enquiries.php");
+}
+?>

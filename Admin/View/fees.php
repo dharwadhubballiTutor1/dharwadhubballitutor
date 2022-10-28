@@ -1,7 +1,7 @@
 <?php
 require "../../Admin/session.php";
 include "../../Admin/DB Operations/FeesOps.php";
-require "../../Admin/Model/Feesmodel.php";
+// require "../../Admin/model/Feesmodel.php";
 require_once "header.php";
 ?>
 <div class="card">

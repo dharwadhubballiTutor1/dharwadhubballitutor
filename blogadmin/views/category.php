@@ -13,7 +13,7 @@ require_once("../model/categoryModel.php");
                 <h6 class="m-0 font-weight-bold text-primary">Category</h6>
             </div>
             <div class="col" align="right">
-                <span data-toggle=modal data-target=#itemcatModal>
+                <span data-bs-toggle=modal data-bs-target=#itemcatModal>
                     <button type="button" + class="btn btn-success btn-circle btn-sm"><i class="fas fa-plus"></i></button>
                 </span>
             </div>
@@ -42,23 +42,23 @@ require_once("../model/categoryModel.php");
                         <button class='btn btn-secondary dropdown-toggle' 
                         type='button' 
                         id='dropdownMenu2' 
-                        data-toggle='dropdown' 
+                        data-bs-toggle='dropdown' 
                         aria-expanded='false'>
                         Actions
                         </button>
                         <div class='dropdown-menu' 
                         aria-labelledby='dropdownMenu2'>
                             <button class='btn btn-primary dropdown-item'
-                            data-toggle='modal' 
-                            data-target='#editItemcatModal' 
+                            data-bs-toggle='modal' 
+                            data-bs-target='#editItemcatModal' 
                             role='button' 
                             data-id='" . $itemcat->getCategoryId() . "'>
                             <i class='fas fa-user-edit'></i> 
                                 Edit Category
                            </button>
                            <button class='btn btn-primary dropdown-item'
-                           data-toggle='modal' 
-                           data-target='#deleteCategoryModal' 
+                           data-bs-toggle='modal' 
+                           data-bs-target='#deleteCategoryModal' 
                            name='delete_button' 
                            role='button' 
                            data-id='" . $itemcat->getCategoryId() . "'>
@@ -82,7 +82,7 @@ require_once("../model/categoryModel.php");
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Category</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <span id="form_message"></span>
@@ -136,7 +136,7 @@ require_once("../model/categoryModel.php");
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <input type="submit" name="submit" id="submit_button" class="btn btn-success" value="Add" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -149,7 +149,7 @@ require_once("../model/categoryModel.php");
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Category</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <span id="form_message"></span>
@@ -202,7 +202,7 @@ require_once("../model/categoryModel.php");
                         <input type="hidden" name="hidden_id" id="hidden_id" />
                         <input type="hidden" name="action" id="action" value="Add" />
                         <input type="submit" name="submit" id="editbutton" class="btn btn-success" value="Save" />
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -215,7 +215,7 @@ require_once("../model/categoryModel.php");
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal_title">Delete Category</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <p class="lead">
@@ -226,7 +226,7 @@ require_once("../model/categoryModel.php");
                 <div class="modal-footer">
                     <input type="hidden" name="hidden_id" id="hidden_id" />
                     <input type="submit" name="submit" id="deletebutton" class="btn btn-danger" value="Confirmed" />
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </form>

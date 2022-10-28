@@ -162,14 +162,16 @@ class DefaultCss
 			'PADDING-LEFT' => '40px',
 		],
 		'TABLE' => [
+		    'BORDER'=>'solid 1px Black',
 			'MARGIN' => '0',
-			'BORDER-COLLAPSE' => 'separate',
+			'BORDER-COLLAPSE' => 'collapse',
 			'BORDER-SPACING' => '2px',
 			'EMPTY-CELLS' => 'show',
 			'LINE-HEIGHT' => '1.2',
 			'VERTICAL-ALIGN' => 'middle',
 			'HYPHENS' => 'manual',
 			'FONT-KERNING' => 'auto',
+			'WIDTH' =>'100%',
 		],
 		'THEAD' => [],
 		'TFOOT' => [],
@@ -178,14 +180,16 @@ class DefaultCss
 			'TEXT-ALIGN' => 'center',
 			'PADDING-LEFT' => '0.1em',
 			'PADDING-RIGHT' => '0.1em',
-			'PADDING-TOP' => '0.1em',
-			'PADDING-BOTTOM' => '0.1em',
+			'PADDING-TOP' => '1em',
+			'PADDING-BOTTOM' => '1em',
+			'BORDER'=>'solid 1px Black',
 		],
 		'TD' => [
 			'PADDING-LEFT' => '0.1em',
 			'PADDING-RIGHT' => '0.1em',
-			'PADDING-TOP' => '0.1em',
-			'PADDING-BOTTOM' => '0.1em',
+			'PADDING-TOP' => '1em',
+			'PADDING-BOTTOM' => '1em',
+			'BORDER'=>'solid 1px Black',
 		],
 		'CAPTION' => [
 			'TEXT-ALIGN' => 'center',
@@ -213,5 +217,11 @@ class DefaultCss
 		'MARK' => [
 			'BACKGROUND-COLOR' => 'yellow',
 		],
+		
+		'#HEADER'=>[
+		    
+		    'WIDTH' =>'25%',
+		    
+		    ],
 	];
 }

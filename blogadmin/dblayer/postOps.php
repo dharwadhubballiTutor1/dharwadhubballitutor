@@ -191,9 +191,10 @@ class DBpost
     error_log($sql);
     $result = $connectionObj->query($sql);
     $count = mysqli_num_rows($result);
-    $post = new Post();
+ 
     if ($count > 0) {
       while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+             $post = new Post();
         $post->setPostId($row["postId"]);
         $post->setPostTitle($row["postTitle"]);
         $post->setPostDescription($row["postDescription"]);

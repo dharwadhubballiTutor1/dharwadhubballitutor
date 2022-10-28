@@ -1,10 +1,12 @@
 <?php
 // require "../Admin/session.php";
 require_once "../../DB Operations/dbconnection.php";
-require_once "../../Admin/Model/Admissionsmodel.php";
+require_once "../../Admin/model/Admissionsmodel.php";
+require_once "../../Admin/model/Feesmodel.php";
 class DBfees
 {
   public static function insert($feesObj)
+  
   {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
@@ -61,6 +63,7 @@ class DBfees
     $sql = "SELECT A.id, 
          A.Courseid,
          A.Phone,
+         A.Address,
          Name, 
          CoursesOpted, 
          TotalFees, 
@@ -75,6 +78,7 @@ class DBfees
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_assoc($result)) {
         $view->set_phone($row['Phone']);
+        $view->setAddress($row['Address']);
         $view->set_tfees($row['TotalFees']);
         $view->set_admitid($row['id']);
         $view->set_courseid($row['Courseid']);
@@ -99,7 +103,7 @@ class DBfees
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_assoc($result)) {
         $view = new Fees();
-        $view->set_modifieddate($row['Modified_Date']);
+        $view->set_modifieddate(date('d-m-y', strtotime($row["Modified_Date"])));
         $view->set_pfees($row['PaidFees']);
         $view->set_pendingfees($row['PendingFees']);
         $view->set_pmode($row['PaymentMode']);
@@ -112,4 +116,53 @@ class DBfees
     }
     return $feesdetails;
   }
+
+  public static function Transactiondetails($viewObj)
+  {
+    $db = ConnectDb::getInstance();
+    $connectionObj = $db->getConnection();
+    $sql = "select Modified_Date,Admissionid,PaidFees,PendingFees,PaymentMode,feesreceipt from fees where Admissionid=$viewObj";
+    error_log($sql);
+    $result = mysqli_query($db->getConnection(), $sql);
+    $feesdetails = [];
+    if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        $view = new Fees();
+        $view->set_modifieddate(date('d-m-y', strtotime($row["Modified_Date"])));
+        $view->set_pfees($row['PaidFees']);
+        $view->set_pendingfees($row['PendingFees']);
+        $view->set_pmode($row['PaymentMode']);
+        $view->set_admitid($row['Admissionid']);
+        $view->set_feereceipt($row['feesreceipt']);
+        array_push($feesdetails, $view);
+
+      }
+      
+      
+    } else {
+      echo "No entries ";
+    }
+    foreach($feesdetails as $fees){
+      error_log($fees->get_pfees());
+    }
+    header('Content-Type: application/json');
+    echo json_encode($feesdetails);
+  }
+  public static function updateFileName($FeeObj)
+    {
+      $db = ConnectDb::getInstance();
+      $connectionObj = $db->getConnection();
+      $sql = "UPDATE fees SET ";
+    
+        $sql.="feesreceipt='".$FeeObj->get_feereceipt();
+  
+      //  $sql.= "', modifiedby='" . $purchaseObj->get_modifiedby() .
+        "' WHERE Admissionid" . $FeeObj->get_admitid();
+        error_log($sql);
+      if ($connectionObj->query($sql) === TRUE) {
+      } else {
+        echo "Error: " . $sql . "<br>" . $connectionObj->error;
+      }
+    }
+
 }

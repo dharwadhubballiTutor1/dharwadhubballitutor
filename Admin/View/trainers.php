@@ -1,7 +1,7 @@
 <?php
 require "../../Admin/session.php";
 include "../../Admin/DB Operations/TrainerOps.php";
-include "../../Admin/Model/Trainermodel.php";
+include "../../Admin/model/Trainermodel.php";
 include "../../Admin/DB Operations/CoursesOps.php";
 include "header.php";
 ?>

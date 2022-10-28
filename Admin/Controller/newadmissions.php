@@ -1,6 +1,7 @@
 <?php
 require_once "../session.php";
-require_once "../Model/Admissionsmodel.php";
+
+require_once "../model/Admissionsmodel.php";
 require_once "../Utilities/Sanitization.php";
 require_once "../Utilities/Helper.php";
 //require "../Admin/navbar.php";

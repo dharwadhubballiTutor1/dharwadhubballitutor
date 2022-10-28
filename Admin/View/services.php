@@ -1,7 +1,7 @@
 <?php
 require "../../Admin/session.php";
 include "../../Admin/DB Operations/enqueryOps.php";
-require_once "../../Admin/Model/Coursesmodel.php";
+require_once "../../Admin/model/Coursesmodel.php";
 require_once "../../Admin/DB Operations/CoursesOps.php";
 require_once "header.php";
 ?>

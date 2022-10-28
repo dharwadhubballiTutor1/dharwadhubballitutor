@@ -1,9 +1,9 @@
 <?php
 $configs = require_once "../../views/config.php";
 require_once $_SERVER['DOCUMENT_ROOT'].$configs['app_info']['appName']."/DB Operations/dbconnection.php";
-require_once "../Model/usermodel.php";
-require_once("../Model/userLoginModel.php");
-class DBuser
+require_once "../model/usermodel.php";
+require_once("../model/userLoginModel.php");
+class DBuser 
     {
       public static function insert($userObj)
       {
@@ -26,12 +26,14 @@ class DBuser
         $db=ConnectDb::getInstance();
         $connectionObj=$db->getConnection();
         $sql = "SELECT * FROM  user WHERE user_name = '".$userObj->get_username()."' AND user_password = '".$userObj->get_userpassword()."'";
+        error_log($sql);
         $result = $connectionObj->query($sql);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $count = mysqli_num_rows($result);
         if($count==1){
         $userObj->set_usertype($row['user_type']);
         $userObj->set_userstatus($row['user_status']);
+        $userObj->setUserRole($row['roleId']);
         return $userObj;
         }
         return 0;

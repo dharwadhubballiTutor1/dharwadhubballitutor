@@ -7,7 +7,8 @@ $query = "SELECT * FROM `coursebasedenq`";
 $courseBasedEnq = mysqli_query($db->getConnection(), $query);
 $query = "SELECT A.Admissions AS Admission, E.Enqueries AS Enqueries, E.MONTH AS MONTH FROM admissionsforlastq AS A JOIN enqueriesforlastq AS E ON A.MONTH=E.MONTH";
 $EnqAndAdmission = mysqli_query($db->getConnection(), $query);
-
+$query="SELECT * FROM `monthlyIncome`";
+$monthlyFeesCollected=mysqli_query($db->getConnection(), $query);
 $result = mysqli_query($db->getConnection(), "SELECT count(*) as total from candidates");
 $totalenquiries = mysqli_fetch_assoc($result);
 
@@ -283,7 +284,16 @@ if ($totalfees['total'] > 0) {
             </br>
 
             <div class="row">
-
+                 <div class="col">
+                <div class="card">
+                        <div class="card-header">
+                            Month Wise Amount Recieved
+                        </div>
+                        <div class="card-body">
+                            <div id="monthlyIncome_div"></div>
+                        </div>
+                </div>
+                </div>
             </div>
         </div>
     </div>
@@ -303,6 +313,7 @@ if ($totalfees['total'] > 0) {
     // Set a callback to run when the Google Visualization API is loaded.
     google.charts.setOnLoadCallback(drawChart);
     google.charts.setOnLoadCallback(drawadmissionsChart);
+    google.charts.setOnLoadCallback(drawCollectedFeesChart);
     // Callback that creates and populates a data table,
     // instantiates the pie chart, passes in the data and
     // draws it.
@@ -354,6 +365,26 @@ if ($totalfees['total'] > 0) {
             'height': 300
         };
         var chart = new google.visualization.ColumnChart(document.getElementById('admissions_div'));
+        chart.draw(data, options);
+
+    }
+    function drawCollectedFeesChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['MONTH', 'Fees Collected'],
+            <?php
+            while ($row = mysqli_fetch_array($monthlyFeesCollected)) {
+
+                echo "['" . $row['MONTH'] . "'," . intval($row['AmountCollected']) . "],";
+            }
+            ?>
+        ]);
+
+        var options = {
+            'title': '',
+            'width': 900,
+            'height': 300
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById('monthlyIncome_div'));
         chart.draw(data, options);
 
     }
