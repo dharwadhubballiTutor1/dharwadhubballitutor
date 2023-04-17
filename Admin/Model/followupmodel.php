@@ -1,5 +1,5 @@
 <?php
-class Enqfollowup 
+class Enqfollowup implements JsonSerializable
 {
     private $followupid;
     private $followup_enq_id ;
@@ -10,6 +10,21 @@ class Enqfollowup
     private $followup_on;
     private $enqStatus;
     private $table_name="enquiry_followup";
+    public function jsonSerialize()
+    {
+        return 
+            [
+                'id' => $this->followupid,
+                'enq_id' => $this->followup_enq_id,
+                'comments' => $this->followup_comments,
+                'followup_by' => $this->followup_by,
+                'status' =>$this->status,
+                'followup_on'=>$this->followup_on,
+                'enqStatus'=>$this->enqStatus,
+                'followupDate'=>$this->followupDate
+            ];
+        
+    }
     function set_followupOn($followupOn)
     {
         $this->followup_on=$followupOn;
@@ -59,7 +74,7 @@ class Enqfollowup
         return $this->followupDate;
     }
 
-    function set_followupDate($followupDate): self
+    function set_followupDate($followupDate) 
     {
         $this->followupDate = $followupDate;
 
@@ -71,7 +86,7 @@ class Enqfollowup
         return $this->status;
     }
 
-    function set_Status($status): self
+    function set_Status($status) 
     {
         $this->status = $status;
 
