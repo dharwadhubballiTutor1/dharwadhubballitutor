@@ -25,7 +25,8 @@ class DBfollow
         array_push($followUpList, $followUp);
       }
     }
-    return $followUpList;
+    header('Content-Type: application/json');
+    echo json_encode($followUpList);
   }
   public static function insert($followObj)
   {
