@@ -5,6 +5,8 @@ include "../../Admin/DB Operations/followupOps.php";
 require "../../Model/Registration.php";
 require_once "header.php";
 $id = $_GET["id"];
+global $followUpList;
+
 ?>
 <div class="card">
     <div class="card-header">

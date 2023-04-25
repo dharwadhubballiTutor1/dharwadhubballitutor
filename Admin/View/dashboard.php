@@ -16,11 +16,11 @@ $result = mysqli_query($db->getConnection(), "SELECT count(*) as total from admi
 $totalstudents = mysqli_fetch_assoc($result);
 
 $query = mysqli_query($db->getConnection(), "SELECT Sum(PaidFees) as total FROM feescollectionlastm");
-$paidfees = mysqli_fetch_assoc($query);
+$paidfees = mysqli_fetch_assoc($result);
 
 $query = mysqli_query($db->getConnection(), "SELECT Sum(TotalFees) as total FROM feescollectionlastm");
-$totalfees = mysqli_fetch_assoc($query);
-
+$totalfees = mysqli_fetch_assoc($result);
+ 
 $sql = 'SELECT * FROM feescollectionlastm';
 $result = mysqli_query($db->getConnection(), $sql);
 

@@ -37,11 +37,17 @@ require_once "header.php";
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services-tab-content" type="button" role="tab" aria-controls="services" aria-selected="false"><b>Services</b></button>
             </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="followup-tab" data-bs-toggle="tab" data-bs-target="#followup-tab-content" type="button" role="tab" aria-controls="followup" aria-selected="false"><b>FollowUp</b></button>
+            </li>
+
             <li class="nav-item " role="presentation">
                 <button class="nav-link " id="enquiry-tab" data-bs-toggle="tab" data-bs-target="#enquiry" type="button" role="tab" aria-controls="enquiry" aria-selected="false"><b>Add
                         Enquiry</b></button>
             </li>
         </ul>
+     
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active table-responsive" id="trainings-tab-content" role="tabpanel" aria-labelledby="trainings-tab">
                 <table id="training" class="display table table-bordered ">
@@ -66,7 +72,7 @@ require_once "header.php";
                     echo  "<tbody>";
                     $enquirylist = DBenquery::getAllEnqueryBySection("Trainings");
                     foreach ($enquirylist as $enquiry) {
-                        if ($enquiry->get_followupDate() && $enquiry->get_followupDate() != '0000-00-00 00:00:00') {
+                        if ($enquiry->get_followupDate() && $enquiry->get_followupDate() != '00-00-0000') {
 
                             if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
                                 $rowClass = "table-danger";
@@ -106,8 +112,7 @@ require_once "header.php";
                     }
                     echo  "</tbody>";
                     ?>
-                </table>
-            </div>
+                </table></div>
             <div class="tab-pane fade table-responsive" id="Internship-tab-content" role="tabpanel" aria-labelledby="internship-tab">
                 <table id="Internship" class="table table-bordered w-100">
                     <thead>
@@ -294,6 +299,75 @@ require_once "header.php";
 
                 </table>
             </div>
+            <div class="tab-pane fade" id="followup-tab-content" role="tabpanel" aria-labelledby="followup-tab">
+             
+                        <table class="table table-bordered" id="TableFollowup">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    
+                                    <th style="display:none">Id</th>
+                            <th>DOE</th>
+                            <th>FupD</th>
+                            <th>Name<i class="bi bi-arrow-down-up"></i></th>
+                            <th style="display:none">Email</th>
+                            <th>Phone</th>
+                            <th style="display:none">Qualification</th>
+                            <th>Status</th>
+                            <th>Branch</th>
+                            <th style="display:none">Source</th>
+                            <th>Trainings</th>
+                
+                            <th>Action</th>
+                                </tr>
+                            </thead>
+                            <?php
+                            echo  "<tbody>";
+                            $enquirylist = DBenquery::getTodaysFollowUps();
+                            foreach ($enquirylist as $enquiry) {
+                                if ($enquiry->get_followupDate() && $enquiry->get_followupDate() != '00-00-0000') {
+        
+                                    if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
+                                        $rowClass = "table-danger";
+                                    } else {
+                                        $rowClass = " ";
+                                    }
+                                } else {
+                                    $rowClass = " ";
+                                }
+                                echo "<tr class=" . $rowClass . ">
+                                <td class='details-control'></td>
+                                <td style=display:none> " . $enquiry->get_id() . "</td>
+                                
+                                <td> " . $enquiry->get_enqcreatedon() . "</td>
+                                <td> " . $enquiry->get_followupDate() . "</td>
+                                <td> " . $enquiry->get_name() . "</td>
+                                <td style=display:none>" . $enquiry->get_email() . "</td>
+                                <td>" . $enquiry->get_phone() . "</td>
+                                <td style=display:none>" . $enquiry->get_qualification() . "</td>
+                                <td>" . $enquiry->get_Status() . "</td>
+                                <td>" . $enquiry->getBranch() . "</td>    
+                                <td style=display:none>" . $enquiry->get_Source() . "  </td>
+                                <td>" . $enquiry->get_enqueryFor() . "</td>          
+                                        <td>
+                                            <div class='dropdown'>
+                                                <button class='btn btn-secondary btn-sm dropdown-toggle' type='button' id='dropdownMenu2' data-bs-toggle='dropdown' aria-expanded='false'>
+                                                <i class='fas fa-info-circle'></i>
+                                                </button>
+                                            <div class='dropdown-menu' aria-labelledby='dropdownMenu2'>
+                                                <a class='btn  dropdown-item' role='button' href='editenquiry.php?id=" . $enquiry->get_id() . "'> 
+                                                    <i class='fas fa-info'></i>
+                                                    Edit Enquiry
+                                                </a>
+                                            </div> 
+                                            </div>
+                                        </td></tr>";
+                            }
+                            echo  "</tbody>";
+                            ?>
+                        </table>
+                   
+            </div>
             <div class="tab-pane fade" id="enquiry" role="tabpanel" aria-labelledby="enquiry-tab">
 
                 <form class="form-horizontal" id="addenquiry_form" action="../Controller/newenquiry.php" method="POST" role="form" autocomplete="off" enctype="multipart/form-data" name="enquiryform" onsubmit="return FormValidation()">
@@ -457,6 +531,7 @@ require_once "header.php";
         var internship = $('#Internship').DataTable();
         var DemoClass = $('#Tabledemoclass').DataTable();
         var Services = $('#Services').DataTable();
+       
         $('#column3_search').on('keyup', function() {
             table.columns(0).search(this.value).draw();
             internship.columns(0).search(this.value).draw();
@@ -465,13 +540,14 @@ require_once "header.php";
         });
 
         
-
+        var FollowUp = $('#TableFollowup').DataTable({
+        });
         var table = $('#training').DataTable({
 
         });
 
         // Add event listener for opening and closing details
-        $('#training tbody').on('click', 'td.details-control', function() {
+        $('#training tbody').on('click', 'td.details-control',  function () {
             var tr = $(this).closest('tr');
             var row = table.row(tr);
 
@@ -485,7 +561,7 @@ require_once "header.php";
                 <thead>
                     <tr>
                         <th>Follwed By</th>
-                        <th>FollowUp Date</th>
+                        <th> FollowUp Date</th>
                         <th>Comments</th>
                         <th>Status</th>
                         <th>Date</th>
@@ -499,10 +575,10 @@ require_once "header.php";
                     $.each(data, function(index, value) {
 
                         template += `<tr><td>${value.followup_by}</td>
-                        <td>${value.followup_on}</td>
+                        <td>${value.followupDate}</td>
                         <td>${value.comments}</td>
                         <td>${value.status}</td>
-                        <td>${value.followupDate}</td>
+                        <td>${value.followup_on}</td>
                       
                         </tr>`;
                     });
@@ -562,5 +638,98 @@ require_once "header.php";
                 tr.addClass('shown');
             }
         });
+        $('#TableFollowup tbody').on('click', 'td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var row = FollowUp.row(tr);
+
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                let template = `<table class="table table-bordered" id="followuptable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Follwed By</th>
+                        <th> FollowUp Date</th>
+                        <th>Comments</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead><tbody>`;
+
+                let followUpUrl = config.developmentPath + "/Admin/controller/newfollowup.php?id=" + row.data()[1];
+
+                $.getJSON(followUpUrl).done(function(data) {
+                    console.log(data);
+                    $.each(data, function(index, value) {
+
+                        template += `<tr><td>${value.followup_by}</td>
+                        <td>${value.followupDate}</td>
+                        <td>${value.comments}</td>
+                        <td>${value.status}</td>
+                        <td>${value.followup_on}</td>
+                      
+                        </tr>`;
+                    });
+
+                    template += `</tbody></table><br><br><form method="post" id="followup_form" action="../Controller/newfollowup.php">
+          
+          <div class="form-group">
+              <div class="row">
+                  <div class="col-md-6">
+                      <label for="followupDate" class="col-md-6 control-label">FollowUp Date</label>
+                      <div class="col-sm-12">
+                          <input type="date" id="followupDate" name="followupDate" class="form-control" required>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+                      <label for="status" class="col-md-6 control-label">Status</label>
+                      <div class="col-sm-12">
+                          <select class="custom-select" id="status" name="status">
+                              <option value="">Select</option>
+                              <option value="In Progress">In Progress</option>
+                              <option value="Converted">Converted</option>
+                              <option value="Bad">Bad</option>
+                              <option value="Demo Class">Demo Class</option>
+
+                          </select>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="row">
+                  <div class="col-md-12">
+                      <fieldset>
+                          <legend>Comments:</legend>
+                          <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a comment here" id="followcomment" style="height: 100px" data-parsley-pattern="/^[a-zA-Z\s]+$/" data-parsley-trigger="keyup" name="followcomment"></textarea>
+                              <label for="followcomment">Comments</label>
+                          </div>
+                          <input type="hidden" name="followenqid" id="followenqid" value="${row.data()[1]}">
+                          <fieldset>
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="row">
+                  <div class="col-md-8">
+                      <input type="hidden" name="followupBy" id="followupBy" class="form-control" required data-parsley-type="integer" data-parsley-minlength="10" data-parsley-maxlength="12" data-parsley-trigger="keyup" value=<?php echo $_SESSION['login_user']; ?> />
+                  </div>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-warning">FollowUp</button>
+          </form>`;
+                    row.child(template).show();
+                });
+                
+                tr.addClass('shown');
+            }
+        } );
+   
+   
     });
 </script>
