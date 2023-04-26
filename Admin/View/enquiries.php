@@ -72,7 +72,7 @@ require_once "header.php";
                     echo  "<tbody>";
                     $enquirylist = DBenquery::getAllEnqueryBySection("Trainings");
                     foreach ($enquirylist as $enquiry) {
-                        if ($enquiry->get_followupDate() && $enquiry->get_followupDate() != '00-00-0000') {
+                        if ($enquiry->get_followupDate() && $enquiry->get_followupDate() != '0000-00-00 00:00:00') {
 
                             if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
                                 $rowClass = "table-danger";
@@ -299,10 +299,10 @@ require_once "header.php";
 
                 </table>
             </div>
-            <div class="tab-pane fade" id="followup-tab-content" role="tabpanel" aria-labelledby="followup-tab">
+            <div class="tab-pane fade table-responsive " id="followup-tab-content" role="tabpanel" aria-labelledby="followup-tab">
              
-                        <table class="table table-bordered" id="TableFollowup">
-                            <thead>
+                        <table class="table table-bordered  id="TableFollowup">
+                            <thead width="100%">
                                 <tr>
                                     <th></th>
                                     
@@ -323,18 +323,20 @@ require_once "header.php";
                             </thead>
                             <?php
                             echo  "<tbody>";
+
                             $enquirylist = DBenquery::getTodaysFollowUps();
-                            foreach ($enquirylist as $enquiry) {
-                                if ($enquiry->get_followupDate() && $enquiry->get_followupDate() != '00-00-0000') {
-        
-                                    if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
-                                        $rowClass = "table-danger";
+                            
+                                foreach ($enquirylist as $enquiry) {
+                                    if ($enquiry->get_followupDate() && $enquiry->get_followupDate() != '0000-00-00 00:00:00') {
+            
+                                        if (date_diff(date_create(date('d-m-Y', strtotime($enquiry->get_followupDate()))), date_create(date("d-m-Y")))->format("%R%a") > 0) {
+                                            $rowClass = "table-danger";
+                                        } else {
+                                            $rowClass = " ";
+                                        }
                                     } else {
                                         $rowClass = " ";
-                                    }
-                                } else {
-                                    $rowClass = " ";
-                                }
+                                    }   
                                 echo "<tr class=" . $rowClass . ">
                                 <td class='details-control'></td>
                                 <td style=display:none> " . $enquiry->get_id() . "</td>
@@ -472,6 +474,8 @@ require_once "header.php";
                                 </select>
                             </div>
                         </div>
+                       
+                        <br />
                         <br />
                         <br />
                         <div class="col-md-3">

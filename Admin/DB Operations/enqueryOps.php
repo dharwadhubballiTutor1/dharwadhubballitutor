@@ -50,7 +50,7 @@ class DBenquery
                 $enqueryModel->set_phone($row["Phone"]);
                 $enqueryModel->set_Source($row["source"]);
                 $enqueryModel->setBranch($row["branch"]);
-                //$enqueryModel->set_enqueryFor($row["$enqueryFor"]);
+                $enqueryModel->set_enqueryFor($row["Trainings"]);
                 $sql = "SELECT followup_enq_id,followupDate,status FROM `enquiry_followup` WHERE followup_enq_id ='" . $enqueryModel->get_Id() . "' ORDER BY followup_id DESC LIMIT 1 ";
                 error_log($sql);
                 $followup = mysqli_query($connectionObj, $sql);
