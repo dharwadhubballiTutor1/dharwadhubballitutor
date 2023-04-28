@@ -5,6 +5,7 @@
     private $Address;
     private $CourseOpted;
     private $Phone;
+    private $Charges;
     private $Admissionid;
     private $Courseid;
     private $TotalFees;
@@ -16,6 +17,7 @@
     private $PaymentDescription;
     private $Modified_Date;
     private $feesreceipt;
+    private $finance;
     private $table_name="fees";
     
     function set_admitid($admitid) {
@@ -73,6 +75,7 @@
    function get_phone() {
     return $this->Phone;
    }
+
 
    function set_feesplan($feesplan) {
     $this->Feesplan = $feesplan;
@@ -134,6 +137,42 @@
         return $this;
     }
 
+    /**
+     * Get the value of finance
+     */
+    public function getFinance()
+    {
+        return $this->finance;
+    }
+
+    /**
+     * Set the value of finance
+     */
+    public function setFinance($finance): self
+    {
+        $this->finance = $finance;
+
+        return $this;
+    }
+
+
+    /**
+     * Get the value of Charges
+     */
+    public function getCharges()
+    {
+        return $this->Charges;
+    }
+
+    /**
+     * Set the value of Charges
+     */
+    public function setCharges($Charges): self
+    {
+        $this->Charges = $Charges;
+
+        return $this;
+    }
     public function jsonSerialize()
     {
         return 
@@ -143,10 +182,14 @@
                 'pendingfees' => $this->PendingFees,
                 'pmode' => $this->PaymentMode,
                 'modifieddate'=>$this->Modified_Date,
+                'DueDate'=>$this->DueDate,
+                'feesplan'=>$this->Feesplan,
+                'charges'=>$this->Charges
+                
             ];
         
     }
 
 
-}
+  }
 ?>
