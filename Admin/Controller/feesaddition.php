@@ -16,6 +16,7 @@ require_once "../DB Operations/FeesOps.php";
     $admit->set_pfees(Sanitization::test_input($_POST["pfees"]));
     $admit->set_pendingfees(Sanitization::test_input($_POST["pendingfees"]));
     $admit->set_feesplan(Sanitization::test_input($_POST["feesplan"]));
+    $admit->setCharges(Sanitization::test_input($_POST["charges"]));
     if (isset($_POST["duedate"])){
       $admit->set_duedate(Sanitization::test_input($_POST["duedate"]));
     }else{
@@ -23,7 +24,7 @@ require_once "../DB Operations/FeesOps.php";
     }
     $admit->set_pmode(Sanitization::test_input($_POST["pmode"]));
     $admit->set_pdescription(Sanitization::test_input($_POST["pdescription"]));
-    $filename="". $admit->get_name().date("Y-m-d").".pdf";
+    $filename="". $admit->get_name().date("d-m-Y").".pdf";
     $admit->set_feereceipt($filename);
     DBfees::insert($admit);
     // $receipt=DBfees::collectionoffees($admit->get_admitid());

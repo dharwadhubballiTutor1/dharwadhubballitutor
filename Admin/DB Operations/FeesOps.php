@@ -11,8 +11,8 @@ class DBfees
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
     if ($feesObj->get_duedate() == "") {
-      $sql = "insert into fees (`Admissionid`,`Courseid`,`TotalFees`, `PaidFees`,`PendingFees`, `Feesplan`,`PaymentMode`,`PaymentDescription`,`feesreceipt`) 
-                values ('" . $feesObj->get_admitid() . "','" . $feesObj->get_courseid() . "','" . $feesObj->get_tfees() . "','" . $feesObj->get_pfees() . "','" . $feesObj->get_pendingfees() . "','" . $feesObj->get_feesplan() . "','" . $feesObj->get_pmode() . "','" . $feesObj->get_pdescription() . "','" . $feesObj->get_feereceipt() . "')";
+      $sql = "insert into fees (`Admissionid`,`Courseid`,`TotalFees`, `PaidFees`,`PendingFees`, `Feesplan`,`PaymentMode`,`PaymentDescription`,`feesreceipt`,`charges`) 
+                values ('" . $feesObj->get_admitid() . "','" . $feesObj->get_courseid() . "','" . $feesObj->get_tfees() . "','" . $feesObj->get_pfees() . "','" . $feesObj->get_pendingfees() . "','" . $feesObj->get_feesplan() . "','" . $feesObj->get_pmode() . "','" . $feesObj->get_pdescription() . "','" . $feesObj->get_feereceipt() . "','".$feesObj->getCharges()."')";
     } else {
       $sql = "insert into fees (`Admissionid`,`Courseid`,`TotalFees`, `PaidFees`,`PendingFees`, `Feesplan`,`DueDate`,`PaymentMode`,`PaymentDescription`,`feesreceipt`) 
                 values ('" . $feesObj->get_admitid() . "','" . $feesObj->get_courseid() . "','" . $feesObj->get_tfees() . "','" . $feesObj->get_pfees() . "','" . $feesObj->get_pendingfees() . "','" . $feesObj->get_feesplan() . "','" . $feesObj->get_duedate() . "','" . $feesObj->get_pmode() . "','" . $feesObj->get_pdescription() . "','" . $feesObj->get_feereceipt() . "')";
@@ -32,7 +32,7 @@ class DBfees
     if (isset($_POST['submit']))
       $searchadmission = $_POST["search"];
     echo $searchadmission;
-    $sql = "Select A.id, A.Courseid,A.Phone,Name, CoursesOpted , TotalFees, SUM(PaidFees) as PaidFees from admissions as A 
+    $sql = "Select A.id, A.Courseid,A.Phone,Name, CoursesOpted , Charges,TotalFees, SUM(PaidFees) as PaidFees from admissions as A 
          LEFT JOIN fees as F on A.id=F.Admissionid 
           GROUP BY Name,CoursesOpted,TotalFees";
     error_log($sql);
@@ -47,6 +47,7 @@ class DBfees
         $view->set_tfees($row['TotalFees']);
         $view->set_pfees($row['PaidFees']);
         $view->set_pendingfees($row['TotalFees'] - $row["PaidFees"]);
+        
         array_push($admissionlist, $view);
       }
     } else {
@@ -66,7 +67,9 @@ class DBfees
          A.Address,
          Name, 
          CoursesOpted, 
-         TotalFees, 
+         TotalFees,
+         Feesplan,
+         Charges,
          SUM(PaidFees) AS PaidFees 
          from admissions AS A 
          LEFT JOIN fees AS F ON A.id=F.Admissionid
@@ -86,7 +89,12 @@ class DBfees
         $view->set_name($row['Name']);
         $view->set_coursesopted($row['CoursesOpted']);
         $view->set_pendingfees($row['TotalFees'] - $row["PaidFees"]);
+        $view->set_feesplan($row["Feesplan"]);
+        $view->setCharges($row['Charges']);
+      
       }
+      
+      
     } else {
       $view = NULL;
     }
@@ -97,7 +105,7 @@ class DBfees
   {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
-    $sql = "select Modified_Date,Admissionid,PaidFees,PendingFees,PaymentMode,feesreceipt from fees where Admissionid=$viewObj";
+    $sql = "select Modified_Date,Admissionid,PaidFees,PendingFees,PaymentMode,feesreceipt,duedate from fees where Admissionid=$viewObj";
     $result = mysqli_query($db->getConnection(), $sql);
     $feesdetails = [];
     if (mysqli_num_rows($result) > 0) {
@@ -106,6 +114,7 @@ class DBfees
         $view->set_modifieddate(date('d-m-y', strtotime($row["Modified_Date"])));
         $view->set_pfees($row['PaidFees']);
         $view->set_pendingfees($row['PendingFees']);
+        $view->set_duedate($row['duedate']);
         $view->set_pmode($row['PaymentMode']);
         $view->set_admitid($row['Admissionid']);
         $view->set_feereceipt($row['feesreceipt']);
@@ -121,7 +130,7 @@ class DBfees
   {
     $db = ConnectDb::getInstance();
     $connectionObj = $db->getConnection();
-    $sql = "select Modified_Date,Admissionid,PaidFees,PendingFees,PaymentMode,feesreceipt from fees where Admissionid=$viewObj";
+    $sql = "select Modified_Date,Admissionid,PaidFees,PendingFees,PaymentMode,feesreceipt,DueDate,Feesplan from fees where Admissionid=$viewObj";
     error_log($sql);
     $result = mysqli_query($db->getConnection(), $sql);
     $feesdetails = [];
@@ -134,6 +143,8 @@ class DBfees
         $view->set_pmode($row['PaymentMode']);
         $view->set_admitid($row['Admissionid']);
         $view->set_feereceipt($row['feesreceipt']);
+        $view->set_duedate($row["DueDate"]);
+        $view->set_feesplan($row['Feesplan']);
         array_push($feesdetails, $view);
 
       }
